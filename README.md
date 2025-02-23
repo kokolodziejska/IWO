@@ -10,4 +10,5 @@ Podczas pracy nad repozytorium chciałabym wszystkich prosić o przestrzeganie k
 
 
 Poniżej znajdziecie dokument z opisem zajęć: 
+
 [IWOP_Projekt_2025L_1.0.pdf](https://github.com/user-attachments/files/18933121/IWOP_Projekt_2025L_1.0.pdf)
