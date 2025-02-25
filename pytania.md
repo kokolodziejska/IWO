@@ -23,3 +23,9 @@
 11. Czy aplikacja wymaga posiadania konta do korzystania?
 
 12. Jakie formaty danych przewiduje system?
+
+13. Jakie metadane o zbiorach danych mają być przechowywane?
+
+14. Jakie formaty danych mają być importowane/eksportowane przez system?
+
+15. Co ma system zrobić w przypadku niepomyślnej weryfikacji zgodności dystrybucji zbioru danych ze schematem?
