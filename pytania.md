@@ -5,3 +5,9 @@
 2. Czy oceny i uwagi mają być przetwarzane przed dostarczniem ich do klienta np. sortowane?
 
 3. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
+
+4. W jaki sposób użytkownicy będą mogli filtrować dane?
+
+5. Czy system będzie umożliwiał integrację z innymi platformami udostępniającymi dane publiczne?
+
+6. Czy system będzie posiadał funkcję powiadomień o nowych lub zaktualizowanych danych?
