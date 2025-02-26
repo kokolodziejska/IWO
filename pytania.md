@@ -41,3 +41,11 @@
 20. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
 
 21. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
+
+22. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
+
+23. Jaki jest szacowana liczba użytkowników tego systemu?
+
+24. Z którymi ograniczeniami środowiskowymi mamy się zmierzyć?
+
+25. Kto będzie zatwierdzał dodanie nowych danych do systemu?
