@@ -12,8 +12,14 @@
 
 6. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
 
-7. Jakimi danymi publicznymi ma zarządzać system?
+7. W jaki sposób użytkownicy będą mogli filtrować dane?
 
-8. Czy aplikacja wymaga posiadania konta do korzystania?
+8. Czy system będzie umożliwiał integrację z innymi platformami udostępniającymi dane publiczne?
 
-9. Jakie formaty danych przewiduje system?
+9. Czy system będzie posiadał funkcję powiadomień o nowych lub zaktualizowanych danych?
+
+10. Jakimi danymi publicznymi ma zarządzać system?
+
+11. Czy aplikacja wymaga posiadania konta do korzystania?
+
+12. Jakie formaty danych przewiduje system?
