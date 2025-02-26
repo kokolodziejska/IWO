@@ -12,3 +12,9 @@
 
 6. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
 
+7. W jaki sposób użytkownicy będą mogli filtrować dane?
+
+8. Czy system będzie umożliwiał integrację z innymi platformami udostępniającymi dane publiczne?
+
+9. Czy system będzie posiadał funkcję powiadomień o nowych lub zaktualizowanych danych?
+
