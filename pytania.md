@@ -23,3 +23,9 @@
 11. Czy aplikacja wymaga posiadania konta do korzystania?
 
 12. Jakie formaty danych przewiduje system?
+
+13. W jaki sposób system będzie monitorował jakość danych pochodzących z różnych źródeł (plików, systemów zewnętrznych, urządzeń pomiarowych itp.)?
+
+14. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
+
+15. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
