@@ -24,8 +24,14 @@
 
 12. Jakie formaty danych przewiduje system?
 
-13. Jak zabezpieczyć system ocen przed nadużyciami?
+13. Jakie metadane o zbiorach danych mają być przechowywane?
 
-14. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+14. Jakie formaty danych mają być importowane/eksportowane przez system?
 
-15. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
+15. Co ma system zrobić w przypadku niepomyślnej weryfikacji zgodności dystrybucji zbioru danych ze schematem?
+
+16. Jak zabezpieczyć system ocen przed nadużyciami?
+
+17. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+
+18. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
