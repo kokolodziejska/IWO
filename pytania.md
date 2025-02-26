@@ -24,8 +24,20 @@
 
 12. Jakie formaty danych przewiduje system?
 
-13. W jaki sposób system będzie monitorował jakość danych pochodzących z różnych źródeł (plików, systemów zewnętrznych, urządzeń pomiarowych itp.)?
+13. Jakie metadane o zbiorach danych mają być przechowywane?
 
-14. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
+14. Jakie formaty danych mają być importowane/eksportowane przez system?
 
-15. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
+15. Co ma system zrobić w przypadku niepomyślnej weryfikacji zgodności dystrybucji zbioru danych ze schematem?
+
+16. W jaki sposób system ma wspierać proces wersjonowania danych, aby umożliwić użytkownikom dostęp do poprzednich wersji zbiorów danych?
+
+17. W jaki sposób należy kontrolować jakość danych, czy dane będą podlegać walidacjom? Jakim?
+
+18. Czy system przewiduje udostępnienie modułów umożliwiających wizualizację udostępnionych danych?
+
+19. W jaki sposób system będzie monitorował jakość danych pochodzących z różnych źródeł (plików, systemów zewnętrznych, urządzeń pomiarowych itp.)?
+
+20. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
+
+21. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
