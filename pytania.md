@@ -23,3 +23,9 @@
 11. Czy aplikacja wymaga posiadania konta do korzystania?
 
 12. Jakie formaty danych przewiduje system?
+
+22. W jaki sposób system ma wspierać proces wersjonowania danych, aby umożliwić użytkownikom dostęp do poprzednich wersji zbiorów danych?
+
+23. W jaki sposób należy kontrolować jakość danych, czy dane będą podlegać walidacjom? Jakim?
+
+24. Czy system przewiduje udostępnienie modułów umożliwiających wizualizację udostępnionych danych?
