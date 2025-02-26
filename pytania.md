@@ -18,3 +18,8 @@
 
 9. Czy system będzie posiadał funkcję powiadomień o nowych lub zaktualizowanych danych?
 
+10. Jakimi danymi publicznymi ma zarządzać system?
+
+11. Czy aplikacja wymaga posiadania konta do korzystania?
+
+12. Jakie formaty danych przewiduje system?
