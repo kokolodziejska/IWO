@@ -29,3 +29,9 @@
 14. Jakie formaty danych mają być importowane/eksportowane przez system?
 
 15. Co ma system zrobić w przypadku niepomyślnej weryfikacji zgodności dystrybucji zbioru danych ze schematem?
+
+22. W jaki sposób system ma wspierać proces wersjonowania danych, aby umożliwić użytkownikom dostęp do poprzednich wersji zbiorów danych?
+
+23. W jaki sposób należy kontrolować jakość danych, czy dane będą podlegać walidacjom? Jakim?
+
+24. Czy system przewiduje udostępnienie modułów umożliwiających wizualizację udostępnionych danych?
