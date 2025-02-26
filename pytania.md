@@ -5,3 +5,9 @@
 2. Czy oceny i uwagi mają być przetwarzane przed dostarczniem ich do klienta np. sortowane?
 
 3. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
+
+4. Jaki jest szacowana liczba użytkowników tego systemu?
+
+5. Z którymi ograniczeniami środowiskowymi mamy się zmierzyć?
+
+6. Kto będzie zatwierdzał dodanie nowych danych do systemu?
