@@ -23,3 +23,9 @@
 11. Czy aplikacja wymaga posiadania konta do korzystania?
 
 12. Jakie formaty danych przewiduje system?
+
+13. Jak zabezpieczyć system ocen przed nadużyciami?
+
+14. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+
+15. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
