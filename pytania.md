@@ -41,3 +41,7 @@
 20. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
 
 21. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
+
+22. W jaki sposób system będzie zapewniał zgodność z wymogami prawnymi dotyczącymi ochrony danych osobowych i bezpieczeństwa informacji? 
+23. Jakie mechanizmy system ma wdrożyć, aby zapobiegać duplikacji danych w zbiorach?
+24. Czy system powinien umożliwiać użytkownikom definiowanie własnych schematów metadanych i reguł walidacji?
