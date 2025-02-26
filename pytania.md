@@ -30,8 +30,14 @@
 
 15. Co ma system zrobić w przypadku niepomyślnej weryfikacji zgodności dystrybucji zbioru danych ze schematem?
 
-22. W jaki sposób system ma wspierać proces wersjonowania danych, aby umożliwić użytkownikom dostęp do poprzednich wersji zbiorów danych?
+16. W jaki sposób system ma wspierać proces wersjonowania danych, aby umożliwić użytkownikom dostęp do poprzednich wersji zbiorów danych?
 
-23. W jaki sposób należy kontrolować jakość danych, czy dane będą podlegać walidacjom? Jakim?
+17. W jaki sposób należy kontrolować jakość danych, czy dane będą podlegać walidacjom? Jakim?
 
-24. Czy system przewiduje udostępnienie modułów umożliwiających wizualizację udostępnionych danych?
+18. Czy system przewiduje udostępnienie modułów umożliwiających wizualizację udostępnionych danych?
+
+19. W jaki sposób system będzie monitorował jakość danych pochodzących z różnych źródeł (plików, systemów zewnętrznych, urządzeń pomiarowych itp.)?
+
+20. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
+
+21. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
