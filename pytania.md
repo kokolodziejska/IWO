@@ -30,8 +30,28 @@
 
 15. Co ma system zrobić w przypadku niepomyślnej weryfikacji zgodności dystrybucji zbioru danych ze schematem?
 
-16. Jak zabezpieczyć system ocen przed nadużyciami?
+16. W jaki sposób system ma wspierać proces wersjonowania danych, aby umożliwić użytkownikom dostęp do poprzednich wersji zbiorów danych?
 
-17. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+17. W jaki sposób należy kontrolować jakość danych, czy dane będą podlegać walidacjom? Jakim?
 
-18. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
+18. Czy system przewiduje udostępnienie modułów umożliwiających wizualizację udostępnionych danych?
+
+19. W jaki sposób system będzie monitorował jakość danych pochodzących z różnych źródeł (plików, systemów zewnętrznych, urządzeń pomiarowych itp.)?
+
+20. Jak system będzie obsługiwał różne poziomy dostępu i uprawnień dla użytkowników zarządzających danymi publicznymi?
+
+21. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
+
+22. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
+
+23. Jaki jest szacowana liczba użytkowników tego systemu?
+
+24. Z którymi ograniczeniami środowiskowymi mamy się zmierzyć?
+
+25. Kto będzie zatwierdzał dodanie nowych danych do systemu?
+
+26. Jak zabezpieczyć system ocen przed nadużyciami?
+
+27. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+
+28. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
