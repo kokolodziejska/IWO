@@ -49,3 +49,9 @@
 24. Z którymi ograniczeniami środowiskowymi mamy się zmierzyć?
 
 25. Kto będzie zatwierdzał dodanie nowych danych do systemu?
+
+26. Jak zabezpieczyć system ocen przed nadużyciami?
+
+27. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+
+28. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
