@@ -42,6 +42,20 @@
 
 21. W jaki sposób system będzie wspierał proces analizy i raportowania w oparciu o zgromadzone dane publiczne?
 
-22. W jaki sposób system będzie zapewniał zgodność z wymogami prawnymi dotyczącymi ochrony danych osobowych i bezpieczeństwa informacji? 
-23. Jakie mechanizmy system ma wdrożyć, aby zapobiegać duplikacji danych w zbiorach?
-24. Czy system powinien umożliwiać użytkownikom definiowanie własnych schematów metadanych i reguł walidacji?
+22. Jaki jest proces archiwizowania lub usuwania nieaktualnych danych?
+
+23. Jaki jest szacowana liczba użytkowników tego systemu?
+
+24. Z którymi ograniczeniami środowiskowymi mamy się zmierzyć?
+
+25. Kto będzie zatwierdzał dodanie nowych danych do systemu?
+
+26. Jak zabezpieczyć system ocen przed nadużyciami?
+
+27. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
+
+28. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
+
+29. W jaki sposób system będzie zapewniał zgodność z wymogami prawnymi dotyczącymi ochrony danych osobowych i bezpieczeństwa informacji? 
+30. Jakie mechanizmy system ma wdrożyć, aby zapobiegać duplikacji danych w zbiorach?
+31. Czy system powinien umożliwiać użytkownikom definiowanie własnych schematów metadanych i reguł walidacji?
