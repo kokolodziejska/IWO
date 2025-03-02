@@ -1,0 +1,17 @@
+@startuml
+
+|#palegreen|U| Użytkownik
+start
+:Wyszukanie zbioru danych;
+:Wyświetlenie zbioru danych;
+:Zgłoszenie uwagi;
+
+|#lightblue|R| Redaktor
+:Obsłużenie uwagi;
+if (Uwaga zostaje zaakceptowana?) then (Tak)
+  :Zaakceptowanie uwagi;
+else (Nie)
+  :Odrzucenie uwagi;
+endif
+stop
+@enduml

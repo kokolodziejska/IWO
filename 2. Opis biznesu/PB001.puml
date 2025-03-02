@@ -1,0 +1,26 @@
+@startuml
+|#palegreen|Z| Zgłaszający
+start
+:Zgłoszenie zapotrzebowania na otwarcie danych;
+
+|#lightblue|A| Administrator
+:Analiza możliwości udostępnienia;
+if (Czy można udostępnić?) then (Tak)
+  :Weryfikacja istnienia danych;
+  if (Dane istnieją?) then (Tak)
+    :Przechodzimy dalej;
+  else (Nie)
+    :Tworzenie danych;
+  endif
+
+  |#gold|R| Redaktor
+  :Zdefiniowanie metadanych;
+  :Przygotowanie danych;
+  :Udostępnienie danych;
+  stop
+|#lightblue|A| Administrator
+else (Nie)
+  :Brak możliwości udostępnienia;
+  stop
+endif
+@enduml
