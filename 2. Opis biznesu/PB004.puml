@@ -1,0 +1,18 @@
+@startuml
+
+|#palegreen|R| Redaktor
+start
+:Wyszukanie zbioru danych;
+:Zdefiniowanie schematu;
+
+|#lightblue|S| System
+:Weryfikacja schematu;
+if (Dane są zgodne ze schematem) then (Tak)
+else (Nie)
+    |R|
+    :Poprawa schematu;
+endif
+|R|
+:Publikacja schematu;
+stop
+@enduml
