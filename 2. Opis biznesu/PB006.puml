@@ -1,0 +1,19 @@
+@startuml
+|#palegreen|U| Użytkownik
+start
+:Wyszukanie zbioru danych;
+:Zgłoszenie chęci pobrania danych w innym formacie niż dostępne;
+
+|#lightblue|S| System
+:Analiza schematu danych;
+if (Czy dane mają przypisany schemat?) then (Tak)
+    :Konwersja danych do odpowiedniego formatu;
+
+    |U|
+    :Pobranie danych;
+else (Nie)
+    |U|
+    :Zgłoszenie uwagi;
+endif
+stop
+@enduml
