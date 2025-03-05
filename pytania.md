@@ -55,3 +55,9 @@
 27. W jaki sposób system będzie chronił dane przed nieautoryzowanym dostępem?
 
 28. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
+
+29. Jakie mechanizmy automatyzacji można wdrożyć w systemie, aby minimalizować ręczną interwencję w procesach przetwarzania danych?
+
+30. Jakie kroki zostaną podjęte w przypadku wykrycia błędów lub niezgodności w danych po ich publikacji?
+
+31. W jaki sposób system będzie wspierał audyt i śledzenie zmian w danych, aby zapewnić zgodność z regulacjami prawnymi i wewnętrznymi politykami?
