@@ -16,10 +16,10 @@ F007: System powinien umożliwiać administratorowi zarządzanie i konfigurowani
 
 F008: System musi umożliwiać użytkownikowi subskrypcję do powiadomień o zmianach w wybranych zbiorach danych.
 
-F009: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
+F009: System musi umożliwiać dynamiczne udostępnianie danych np. poprzez api
 
-J010: System powinien zawierać aplikację webową i aplikację mobilną.
+F010: System powinien umożliwiać zarządzanie metadanymi udostępnionych zbiorów danych. 
 
-F011: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
+J011: System powinien umożliwiać łatwe utrzymanie i testowanie oprogramowania. 
 
-J012: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
+J012: System powinien spełniać wymagania RODO 
