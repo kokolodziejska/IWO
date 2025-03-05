@@ -17,3 +17,10 @@ F007: System powinien umożliwiać administratorowi zarządzanie i konfigurowani
 F008: System musi umożliwiać użytkownikowi subskrypcję do powiadomień o zmianach w wybranych zbiorach danych.
 
 F009: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
+
+F010: System musi umożliwiać integrację z zewnętrznymi API w celu automatycznego pobierania i aktualizowania zbiorów danych.
+
+J011: System musi chronić prywatność użytkowników i spełniać wymagania dotyczące ochrony danych.
+
+F012: System musi pozwalać użytkownikom na filtrowanie i sortowanie danych według różnych kryteriów.
+
