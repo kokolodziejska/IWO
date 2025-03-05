@@ -23,3 +23,9 @@ F010: System powinien umożliwiać zarządzanie metadanymi udostępnionych zbior
 J011: System powinien umożliwiać łatwe utrzymanie i testowanie oprogramowania. 
 
 J012: System powinien spełniać wymagania RODO 
+
+F012: System musi umożliwiać generowanie raportów i statystyk na podstawie zgromadzonych danych.
+
+F013: System powinien zapewniać mechanizm wersjonowania zbiorów danych, umożliwiając dostęp do poprzednich wersji
+
+J013: System musi zapewniać mechanizmy ochrony przed nieautoryzowanym dostępem i cyberatakami, w tym szyfrowanie danych i autoryzację użytkowników
