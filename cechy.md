@@ -23,3 +23,13 @@ J010: System powinien zawierać aplikację webową i aplikację mobilną.
 F011: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
 
 J012: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
+
+F013: System powinien umożliwiać wizualizację przystosowanych do tego danych
+
+F014: System powinien umożliwiać upublicznienie nowego zbioru danych 
+
+F015: System powinien umożliwić udostępnienie różnych dystrybucji tego samego zbioru danych
+
+F016: System powinien umożliwiać filtrowanie zbiorów danych na podstawie ich metadanych
+
+F017: System powinien umożliwiać określenie schematu metadanych dla każdego zbioru
