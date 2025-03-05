@@ -23,3 +23,11 @@ F010: System powinien umożliwiać zarządzanie metadanymi udostępnionych zbior
 J011: System powinien umożliwiać łatwe utrzymanie i testowanie oprogramowania. 
 
 J012: System powinien spełniać wymagania RODO 
+
+J013: System powinien zawierać aplikację webową i aplikację mobilną.
+
+F014: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
+
+J015: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
+
+F016: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
