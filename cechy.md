@@ -12,8 +12,14 @@ F005: System powinien umożliwiać łatwe wyszukiwanie konkretnego zbioru danych
 
 J006: System musi gwarantować, że dane spełniają określone standardy, w tym zgodność z DCAT i CKAN.
 
-J007: System powinien zawierać aplikację webową i aplikację mobilną.
+F007: System powinien umożliwiać administratorowi zarządzanie i konfigurowanie systemu.
 
-F008: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
+F008: System musi umożliwiać użytkownikowi subskrypcję do powiadomień o zmianach w wybranych zbiorach danych.
 
-J009: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
+F009: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
+
+J010: System powinien zawierać aplikację webową i aplikację mobilną.
+
+F011: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
+
+J012: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
