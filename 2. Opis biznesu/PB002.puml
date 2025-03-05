@@ -1,0 +1,24 @@
+@startuml
+
+|#palegreen|U| Użytkownik
+start
+:Rozpoczęcie przeglądania (wyszukiwanie);
+
+|#lightblue|S| System
+:Sprawdzenie dostępności danych;
+if (Czy dane odnaleziono?) then (Nie)
+  :Brak danych;
+  stop
+else (Tak)
+  if (Czy możliwa wizualizacja?) then (Tak)
+    |U|
+    :Wyświetlanie danych;
+    stop
+  else (Nie)
+    |U|
+    :Pobranie danych;
+    stop
+  endif
+endif
+
+@enduml
