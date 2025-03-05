@@ -1,0 +1,14 @@
+@startuml
+|#palegreen|U| Użytkownik
+start
+:Wyszukanie zbioru danych;
+:Subskrybcja do zbioru danych;
+
+|#lightblue|S| System
+while (Dane się zmieniły?) is (Tak)
+    :Wysłanie powiadomienia o zmianie danych;
+endwhile
+
+-[hidden]->
+detach
+@enduml
