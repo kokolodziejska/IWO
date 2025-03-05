@@ -18,10 +18,16 @@ F008: System musi umożliwiać użytkownikowi subskrypcję do powiadomień o zmi
 
 F009: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
 
-F010: System musi umożliwiać wystawienie opinii o konkretnym zbiorze danych
+J010: System powinien zawierać aplikację webową i aplikację mobilną.
 
-J011: System powinien umożliwiać łatwe wyszukiwanie konkretnego zbioru danych
+F011: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
 
-J012: System musi gwarantować, że dane spełniają określone standardy, w tym zgodność z DCAT i CKAN
+J012: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
 
-J013: System musi być dostępny 24/7 z gwarantowanym poziomem dostępności 99,9%
+F013: System musi umożliwiać wystawienie opinii o konkretnym zbiorze danych
+
+J014: System powinien umożliwiać łatwe wyszukiwanie konkretnego zbioru danych
+
+J015: System musi gwarantować, że dane spełniają określone standardy, w tym zgodność z DCAT i CKAN
+
+J016: System musi być dostępny 24/7 z gwarantowanym poziomem dostępności 99,9%
