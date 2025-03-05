@@ -23,3 +23,9 @@ J010: System powinien zawierać aplikację webową i aplikację mobilną.
 F011: System musi umożliwiać administratorowi zarządzanie rolami użytkowników, w celu określenia poziomów dostępu i uprawnień w systemie.
 
 J012: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
+
+F013: System powinien automatycznie wysyłać powiadomienia o wykryciu zmiany w subskrybowanym zbiorze.
+
+F014: System powinien umożliwiać zgłaszanie zapotrzebowania na dane.
+
+F015: System powinien automatycznie walidować zbiory danych względem przypisanych schematów.
