@@ -17,3 +17,11 @@ F007: System powinien umożliwiać administratorowi zarządzanie i konfigurowani
 F008: System musi umożliwiać użytkownikowi subskrypcję do powiadomień o zmianach w wybranych zbiorach danych.
 
 F009: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
+
+F010: System musi umożliwiać wystawienie opinii o konkretnym zbiorze danych
+
+J011: System powinien umożliwiać łatwe wyszukiwanie konkretnego zbioru danych
+
+J012: System musi gwarantować, że dane spełniają określone standardy, w tym zgodność z DCAT i CKAN
+
+J013: System musi być dostępny 24/7 z gwarantowanym poziomem dostępności 99,9%
