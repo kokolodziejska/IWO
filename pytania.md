@@ -56,6 +56,12 @@
 
 28. W jaki sposób system będzie skalowalny i odporny na obciążenia związane z dużą ilością danych oraz użytkowników?
 
-29. W jaki sposób system będzie zapewniał zgodność z wymogami prawnymi dotyczącymi ochrony danych osobowych i bezpieczeństwa informacji? 
-30. Jakie mechanizmy system ma wdrożyć, aby zapobiegać duplikacji danych w zbiorach?
-31. Czy system powinien umożliwiać użytkownikom definiowanie własnych schematów metadanych i reguł walidacji?
+29. Jakie mechanizmy automatyzacji można wdrożyć w systemie, aby minimalizować ręczną interwencję w procesach przetwarzania danych?
+
+30. Jakie kroki zostaną podjęte w przypadku wykrycia błędów lub niezgodności w danych po ich publikacji?
+
+31. W jaki sposób system będzie zapewniał zgodność z wymogami prawnymi dotyczącymi ochrony danych osobowych i bezpieczeństwa informacji? 
+ 
+32. Jakie mechanizmy system ma wdrożyć, aby zapobiegać duplikacji danych w zbiorach?
+ 
+33. Czy system powinien umożliwiać użytkownikom definiowanie własnych schematów metadanych i reguł walidacji?
