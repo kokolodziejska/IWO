@@ -60,4 +60,8 @@
 
 30. Jakie kroki zostaną podjęte w przypadku wykrycia błędów lub niezgodności w danych po ich publikacji?
 
-31. W jaki sposób system będzie wspierał audyt i śledzenie zmian w danych, aby zapewnić zgodność z regulacjami prawnymi i wewnętrznymi politykami?
+31. W jaki sposób system będzie zapewniał zgodność z wymogami prawnymi dotyczącymi ochrony danych osobowych i bezpieczeństwa informacji? 
+ 
+32. Jakie mechanizmy system ma wdrożyć, aby zapobiegać duplikacji danych w zbiorach?
+ 
+33. Czy system powinien umożliwiać użytkownikom definiowanie własnych schematów metadanych i reguł walidacji?
