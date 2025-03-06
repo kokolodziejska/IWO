@@ -36,4 +36,4 @@ F017: System powinien pozwalać na dodanie, edycję i usunięcie praw administra
 
 J018: System powinien być odporny na cyber ataki.
 
-J019: Klientu systemu powinny działać niezawodnie na komputerach z Windows 10/11. 
+J019: Klienty systemu powinny działać niezawodnie na komputerach z Windows 10/11. 
