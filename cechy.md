@@ -31,3 +31,9 @@ F014: System musi umożliwiać administratorowi zarządzanie rolami użytkownik�
 J015: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
 
 F016: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
+
+F017: System powinien pozwalać na dodanie, edycję i usunięcie praw administratorskich.
+
+J018: System powinien być odporny na cyber ataki.
+
+J019: Klientu systemu powinny działać niezawodnie na komputerach z Windows 10/11. 
