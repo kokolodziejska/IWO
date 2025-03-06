@@ -43,3 +43,11 @@ F020: System musi umożliwiać administratorowi zarządzanie rolami użytkownik�
 J021: System powinien umożliwiać ciągłą aktualizację danych i automatyczne udostępnianie zaktualizowanych danych w cyklach sekundowych.
 
 F022: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
+
+J022: System powinien spełniać wymagania RODO 
+
+F022: System musi umożliwiać generowanie raportów i statystyk na podstawie zgromadzonych danych.
+
+F023: System powinien zapewniać mechanizm wersjonowania zbiorów danych, umożliwiając dostęp do poprzednich wersji
+
+J023: System musi zapewniać mechanizmy ochrony przed nieautoryzowanym dostępem i cyberatakami, w tym szyfrowanie danych i autoryzację użytkowników
