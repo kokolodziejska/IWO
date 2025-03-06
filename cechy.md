@@ -51,3 +51,7 @@ F022: System musi umożliwiać generowanie raportów i statystyk na podstawie zg
 F023: System powinien zapewniać mechanizm wersjonowania zbiorów danych, umożliwiając dostęp do poprzednich wersji
 
 J023: System musi zapewniać mechanizmy ochrony przed nieautoryzowanym dostępem i cyberatakami, w tym szyfrowanie danych i autoryzację użytkowników
+
+F024: System powinien umożliwiać zgłaszanie zapotrzebowania na dane.
+
+F025: System powinien automatycznie walidować zbiory danych względem przypisanych schematów.
