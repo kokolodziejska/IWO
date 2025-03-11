@@ -1,0 +1,1 @@
+# Pomysły na przypadki użycia
