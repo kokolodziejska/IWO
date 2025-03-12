@@ -5,6 +5,8 @@
 2.  Pobiera anonimowo zbiory danych
 3.  Przegląda zbiory danych
 4.  Zgłasza uwagi do zbioru danych
+5.  Pobiera dane poprzez API
+6.  Przegląda metadane udostępnionych zbiorów danych
 
 ## Administrator
 1. Dezaktywuje konto użytkownika
@@ -15,3 +17,4 @@
 6. Zarządza zgłoszonymi uwagami do zbiorów danych
 7. Zmienia status zgłoszenia
 8. Wysyła komunikaty o stanie uwagi
+9. Zarządza dostępem do API dla użytkowników i aplikacji zewnętrznych
