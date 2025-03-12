@@ -8,9 +8,10 @@
 5.  Wybiera kanał powiadomień którymi chce otrzymywać powiadomienia dotyczące zmiany danych w wybranych zbiorach.
 6.  Wyłącza powiadomienia dla danego zbioru danych.
 7.  Całkowicie rezygnuje z powiadomień.
-8.  Zgłasza uwagi do zbioru danych
-9.  Pobiera dane poprzez API
-10.  Przegląda metadane udostępnionych zbiorów danych
+8.  Zgłasza problemy z danymi
+9.  Porównuje wersje zbiorów danych
+10.  Pobiera dane poprzez API
+11.  Przegląda metadane udostępnionych zbiorów danych
 
 ## Administrator
 1. Dezaktywuje konto użytkownika
@@ -23,4 +24,5 @@
 8. Zmienia status zgłoszenia
 9. Wysyła komunikaty o stanie uwagi
 10. Zarządza indeksowaniem
-11. Zarządza dostępem do API dla użytkowników i aplikacji zewnętrznych
+11. Monitoruje jakość danych
+12. Zarządza dostępem do API dla użytkowników i aplikacji zewnętrznych
