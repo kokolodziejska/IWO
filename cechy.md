@@ -44,14 +44,14 @@ J021: System powinien umożliwiać ciągłą aktualizację danych i automatyczne
 
 F022: System musi umożliwiać użytkownikowi zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
 
-J022: System powinien spełniać wymagania RODO 
+J023: System powinien spełniać wymagania RODO 
 
-F022: System musi umożliwiać generowanie raportów i statystyk na podstawie zgromadzonych danych.
+F024: System musi umożliwiać generowanie raportów i statystyk na podstawie zgromadzonych danych.
 
-F023: System powinien zapewniać mechanizm wersjonowania zbiorów danych, umożliwiając dostęp do poprzednich wersji
+F025: System powinien zapewniać mechanizm wersjonowania zbiorów danych, umożliwiając dostęp do poprzednich wersji
 
-J023: System musi zapewniać mechanizmy ochrony przed nieautoryzowanym dostępem i cyberatakami, w tym szyfrowanie danych i autoryzację użytkowników
+J026: System musi zapewniać mechanizmy ochrony przed nieautoryzowanym dostępem i cyberatakami, w tym szyfrowanie danych i autoryzację użytkowników
 
-F024: System powinien umożliwiać zgłaszanie zapotrzebowania na dane.
+F027: System powinien umożliwiać zgłaszanie zapotrzebowania na dane.
 
-F025: System powinien automatycznie walidować zbiory danych względem przypisanych schematów.
+F028: System powinien automatycznie walidować zbiory danych względem przypisanych schematów.
