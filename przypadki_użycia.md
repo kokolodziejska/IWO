@@ -12,3 +12,7 @@
 ## Administrator
 1. Dezaktywuje konto użytkownika
 2. Zarządza indeksowaniem
+3. Pobieranie danych w różnych formatach poprzez API
+4. Dezaktywuje konto użytkownika
+5. Zarządzanie wersjami i dystrybucjami API
+6. Monitorowanie wykorzystania API
