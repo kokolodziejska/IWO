@@ -10,6 +10,9 @@
 7.  Całkowicie rezygnuje z powiadomień.
 8.  Zgłasza problemy z danymi
 9.  Porównuje wersje zbiorów danych
+10. Ogląda wizualizację zbioru danych.
+11. Eksportuje dane z wybranego zbioru danych do określonego formatu. 
+12. Personalizuje widok danych.
 
 ## Administrator
 1. Dezaktywuje konto użytkownika
