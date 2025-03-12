@@ -1,3 +1,5 @@
+permissions:
+  contents: write
 name: Generate dokumentacja.pdf from dokumentacja.md
 
 on:
