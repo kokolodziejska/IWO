@@ -8,8 +8,10 @@
 
 ## Administrator
 1. Dezaktywuje konto użytkownika
-2. Przegląda zgłoszone uwagi do zbiorów danych
-3. Zarządza zgłoszonymi uwagami do zbiorów danych
-4. Zmienia status zgłoszenia
-5. Wysyła komunikaty o stanie uwagi
-   
+2. Zarządzanie wersjami i dystrybucjami API
+3. Monitorowanie wykorzystania API
+4. Pobieranie danych w różnych formatach poprzez API
+5. Wyświetla zgłoszone uwagi do zbiorów danych
+6. Zarządza zgłoszonymi uwagami do zbiorów danych
+7. Zmienia status zgłoszenia
+8. Wysyła komunikaty o stanie uwagi
