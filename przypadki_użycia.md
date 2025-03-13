@@ -18,6 +18,9 @@
 15. Przegląda metadane udostępnionych zbiorów danych.
 16. Wyszukuje zbiór danych po kryteriach
 17. Wyświetla zbiór danych
+18. Ogląda wizualizację zbioru danych.
+19. Eksportuje dane z wybranego zbioru danych do określonego formatu. 
+20. Personalizuje widok danych.
 
 ## Administrator
 1. Dezaktywuje konto użytkownika.
