@@ -16,8 +16,11 @@
 13. Porównuje wersje zbiorów danych.
 14. Pobiera dane poprzez API.
 15. Przegląda metadane udostępnionych zbiorów danych.
+
 16. Przegląda wizualizacje zbiorów danych.
 17. Otrzymuje ogłoszenie o upoblicznieniu nowego zbioru danych.
+18. Wyszukuje zbiór danych po kryteriach
+19. Wyświetla zbiór danych
 
 ## Administrator
 1. Dezaktywuje konto użytkownika.
@@ -36,5 +39,8 @@
 14. Monitoruje jakość danych.
 15. Zarządza dostępem do API dla użytkowników i aplikacji zewnętrznych.
 16. Zgłasza uwagi do zbioru danych.
+
 17. Dodaje zgłoszenie o przygotowaniu wizualizacji zbiorów danych.
 18. Upublicznia nowy zbiór danych.
+
+
