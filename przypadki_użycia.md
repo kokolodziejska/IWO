@@ -16,6 +16,8 @@
 13. Porównuje wersje zbiorów danych.
 14. Pobiera dane poprzez API.
 15. Przegląda metadane udostępnionych zbiorów danych.
+16. Wyszukuje zbiór danych po kryteriach
+17. Wyświetla zbiór danych
 
 ## Administrator
 1. Dezaktywuje konto użytkownika.
