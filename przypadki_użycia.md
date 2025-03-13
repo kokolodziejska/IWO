@@ -10,6 +10,8 @@
 7.  Całkowicie rezygnuje z powiadomień.
 8.  Zgłasza problemy z danymi
 9.  Porównuje wersje zbiorów danych
+10.  Pobiera dane poprzez API
+11.  Przegląda metadane udostępnionych zbiorów danych
 
 ## Administrator
 1. Dezaktywuje konto użytkownika
@@ -23,4 +25,4 @@
 9. Wysyła komunikaty o stanie uwagi
 10. Zarządza indeksowaniem
 11. Monitoruje jakość danych
-
+12. Zarządza dostępem do API dla użytkowników i aplikacji zewnętrznych
