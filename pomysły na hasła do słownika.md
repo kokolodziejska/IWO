@@ -8,5 +8,5 @@
 6. Subskrypcja zbioru danych – funkcja pozwalająca użytkownikowi otrzymywać powiadomienia o zmianach w wybranych zbiorach.
 7. Zgodność z RODO – zapewnienie zgodności systemu z europejskimi przepisami o ochronie danych osobowych. 
 8. Użytkownik systemu – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
-   
-
+9. Uwaga do zbioru danych – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
+10. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
