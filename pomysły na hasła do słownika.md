@@ -8,5 +8,5 @@
 6. Subskrypcja zbioru danych – funkcja pozwalająca użytkownikowi otrzymywać powiadomienia o zmianach w wybranych zbiorach.
 7. Zgodność z RODO – zapewnienie zgodności systemu z europejskimi przepisami o ochronie danych osobowych. 
 8. Użytkownik systemu – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
-   
-
+9. Logowanie do systemu – proces uwierzytelnienia użytkownika przed uzyskaniem dostępu do konta.
+10. Kanał powiadomień – metoda dostarczania informacji o zmianach w danych, np. e-mail, SMS.
