@@ -8,5 +8,6 @@
 6. Subskrypcja zbioru danych – funkcja pozwalająca użytkownikowi otrzymywać powiadomienia o zmianach w wybranych zbiorach.
 7. Zgodność z RODO – zapewnienie zgodności systemu z europejskimi przepisami o ochronie danych osobowych. 
 8. Użytkownik systemu – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
-   
+9. Kopia zapasowa danych - duplikat danych tworzony w celu ochrony przed ich utratą, uszkodzeniem lub nieautoryzowaną modyfikacją.
+10. Interfejs API - mechanizm umożliwiający programistyczny dostęp do funkcji systemu i pobierania danych.
 
