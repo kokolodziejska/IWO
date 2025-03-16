@@ -16,3 +16,5 @@
 14. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
 15. Logowanie do systemu – proces uwierzytelnienia użytkownika przed uzyskaniem dostępu do konta.
 16. Kanał powiadomień – metoda dostarczania informacji o zmianach w danych, np. e-mail, SMS.
+17. Administrator systemu – Osoba lub grupa osób odpowiedzialna za zarządzanie systemem otwartych danych, w tym za analizę możliwości udostępnienia danych, weryfikację ich istnienia oraz ewentualne zalecenie ich utworzenia. Administrator systemu sprawuje także kontrolę dostępu oraz zarządza użytkownikami.
+18. Redaktor – Osoba odpowiedzialna za definiowanie metadanych opisujących zbiór danych, przygotowanie danych do udostępnienia (np. formatowanie, przeredagowanie), a następnie za udostępnienie tych danych w serwisie.
