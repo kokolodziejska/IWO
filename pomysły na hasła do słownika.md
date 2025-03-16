@@ -8,7 +8,9 @@
 6. Subskrypcja zbioru danych – funkcja pozwalająca użytkownikowi otrzymywać powiadomienia o zmianach w wybranych zbiorach.
 7. Zgodność z RODO – zapewnienie zgodności systemu z europejskimi przepisami o ochronie danych osobowych. 
 8. Użytkownik systemu – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
-9. Zarządzanie dostępem do API – nadawanie i odbieranie uprawnień do korzystania z interfejsu API.
-10. Monitorowanie wykorzystania API – analiza statystyk zapytań do API. 
-11. Uwaga do zbioru danych – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
-12. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
+9. Kopia zapasowa danych - duplikat danych tworzony w celu ochrony przed ich utratą, uszkodzeniem lub nieautoryzowaną modyfikacją.
+10. Interfejs API - mechanizm umożliwiający programistyczny dostęp do funkcji systemu i pobierania danych.
+11. Zarządzanie dostępem do API – nadawanie i odbieranie uprawnień do korzystania z interfejsu API.
+12. Monitorowanie wykorzystania API – analiza statystyk zapytań do API. 
+13. Uwaga do zbioru danych – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
+14. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
