@@ -8,5 +8,7 @@
 6. Subskrypcja zbioru danych – funkcja pozwalająca użytkownikowi otrzymywać powiadomienia o zmianach w wybranych zbiorach.
 7. Zgodność z RODO – zapewnienie zgodności systemu z europejskimi przepisami o ochronie danych osobowych. 
 8. Użytkownik systemu – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
+9. Zarządzanie dostępem do API – nadawanie i odbieranie uprawnień do korzystania z interfejsu API.
+10. Monitorowanie wykorzystania API – analiza statystyk zapytań do API. 
    
 
