@@ -14,3 +14,5 @@
 12. Monitorowanie wykorzystania API – analiza statystyk zapytań do API. 
 13. Uwaga do zbioru danych – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
 14. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
+15. Logowanie do systemu – proces uwierzytelnienia użytkownika przed uzyskaniem dostępu do konta.
+16. Kanał powiadomień – metoda dostarczania informacji o zmianach w danych, np. e-mail, SMS.
