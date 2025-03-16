@@ -10,5 +10,5 @@
 8. Użytkownik systemu – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
 9. Kopia zapasowa danych - duplikat danych tworzony w celu ochrony przed ich utratą, uszkodzeniem lub nieautoryzowaną modyfikacją.
 10. Interfejs API - mechanizm umożliwiający programistyczny dostęp do funkcji systemu i pobierania danych.
-10. Uwaga do zbioru danych – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
-11. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
+11. Uwaga do zbioru danych – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
+12. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
