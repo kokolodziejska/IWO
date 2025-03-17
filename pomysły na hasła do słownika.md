@@ -16,3 +16,6 @@
 14. Schemat danych – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych
 15. Logowanie do systemu – proces uwierzytelnienia użytkownika przed uzyskaniem dostępu do konta.
 16. Kanał powiadomień – metoda dostarczania informacji o zmianach w danych, np. e-mail, SMS.
+17. Analityka danych – proces przetwarzania i interpretacji danych w celu wyciągnięcia wartościowych wniosków oraz identyfikacji wzorców i trendów.
+18. Format danych – sposób strukturyzowania informacji w zbiorze danych, np. CSV, JSON, XML.
+19. Licencja na dane – określenie warunków korzystania z danych, w tym praw do ich udostępniania, modyfikacji i redystrybucji.
