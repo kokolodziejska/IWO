@@ -1131,3 +1131,386 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   **Akceptowalne wartości pomiaru**:  
    ≤30 minut.
+
+### 6. Przypadki użycia
+
+#### 6.1. Użytkownik
+  **Diagram**
+
+  ```puml
+  @startuml Uzytkownik
+  left to right direction
+
+  actor "Użytkownik" as User
+
+  usecase "PU001: Logowanie\n do systemu" as UC1
+  usecase "PU002: Przejrzenie\n katalogu danych" as UC2
+  usecase "PU003: Wyszukanie\n zbioru danych" as UC3
+  usecase "PU004: Pobranie dystrybucji\n zbioru danych" as UC4
+  usecase "PU005: Subskrybowanie\n zbioru danych" as UC5
+  usecase "PU006: Generowanie opisów\n bibliograficznych" as UC6
+  usecase "PU007: Zgłoszenie uwagi\n do zbioru danych" as UC7
+
+  User --> UC1
+  User --> UC2
+  User --> UC3
+  UC3 ..> UC6 : <<invoke>>
+  UC3 ..> UC7 : <<invoke>>
+  UC3 ..> UC4 : <<invoke>>
+  UC2 ..> UC5 : <<invoke>>
+  UC3 ..> UC5 : <<invoke>>
+  UC2 ..> UC4 : <<invoke>>
+  UC2 ..> UC7 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU001) Logowanie do systemu**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik systemu loguje się za pomocą swoich danych uwierzytelniających, aby uzyskać dostęp do funkcji systemu.
+
+  - **(PU002) Przejrzenie katalogu danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik przegląda katalog dostępnych zbiorów danych bez konieczności wyszukiwania konkretnej pozycji.
+
+  - **(PU003) Wyszukanie zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik przeszukuje dostępny katalog danych, aby znaleźć interesujący go zbiór.
+
+  - **(PU004) Pobranie dystrybucji zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik pobiera dane z wybranego zbioru w wybranym formacie do dalszego użytku.
+
+  - **(PU005) Subskrybowanie zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik systemu, zainteresowany otrzymywaniem informacji o zmianach, wybiera zbiór danych i aktywuje jego subskrypcję.
+
+  - **(PU006) Generowanie opisów bibliograficznych**
+
+    **Waga:** Niska | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik pobiera opis bibliograficzny dla wybranego zbioru danych.
+
+  - **(PU007) Zgłoszenie uwagi do zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik zgłasza uwagi lub błędy dotyczące konkretnego zbioru danych.
+
+#### 6.2. Zarządca danych
+  **Diagram**
+
+  ```puml
+  @startuml ZarzadcaDanych
+
+  left to right direction
+  actor "Zarządca danych" as User
+
+  usecase "PU008: Wyświetlenie\n listy zgłoszeń" as UC1
+  usecase "PU009: Usunięcie\n zgłoszenia" as UC2
+  usecase "PU010: Obsługa\n zgłoszenia" as UC3
+  usecase "PU011: Zlecenie wprowadzenia\n nowego zbioru danych" as UC4
+
+  User --> UC1
+  User --> UC4
+  UC1 ..> UC2 : <<invoke>>
+  UC1 ..> UC3 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU008) Wyświetlenie listy zgłoszeń**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych przegląda listę zgłoszonych uwag lub błędów dotyczących zbiorów danych.
+
+  - **(PU009) Usunięcie zgłoszenia**
+
+    **Waga:** Niska | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych usuwa zgłoszenie po jego rozpatrzeniu lub w przypadku błędu.
+
+  - **(PU010) Obsługa zgłoszenia**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych obsługuje istniejące zgłoszenie poprzez akceptację lub odrzucenie.
+
+  - **(PU011) Zlecenie wprowadzenia nowego zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych inicjuje proces dodania nowego zbioru danych do systemu.
+
+#### 6.3. Subskrybent
+  **Diagram**
+
+  ```puml
+  @startuml Subskrybent
+  left to right direction
+
+  actor "Subskrybent" as User
+
+  usecase "PU012: Wyświetlenie\n listy subskrypcji" as UC1
+  usecase "PU013: Zmiana subskrybcji\n danych" as UC2
+
+  User --> UC1
+  UC1 ..> UC2 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU012) Wyświetlenie listy subskrypcj**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Subskrybent przegląda listę swoich subskrybowanych zbiorów danych.
+
+  - **(PU013) Zmiana subskrypcji danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Subskrybent zmienia ustawienia subskrypcji, dodając lub usuwając zbiory danych, edytuje kanał dla otrzymania powiadomień.
+
+#### 6.4. Dostawca danych
+  **Diagram**
+
+  ```puml
+  @startuml DostawcaDanych
+  left to right direction
+
+  actor "Dostawca danych" as Provider
+
+  usecase "PU014: Wyświetlenie listy\n przypisanych zbiorów\n danych" as UC1
+  usecase "PU015: Dodanie\n zbioru danych" as UC2
+  usecase "PU016: Usunięcie\n zbioru danych" as UC3
+  usecase "PU017: Edycja\n zbioru danych" as UC4
+
+  Provider --> UC1
+  UC1 ..> UC2 : <<invoke>>
+  UC1 ..> UC3 : <<invoke>>
+  UC1 ..> UC4 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU014) Wyświetlenie listy przypisanych zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Dostawca danych przegląda listę zbiorów danych, za które jest odpowiedzialny.
+
+  - **(PU015) Dodanie zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Dostawca danych dodaje nowy zbiór danych do systemu, który staje się dostępny dla użytkowników.
+
+  - **(PU016) Usunięcie zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Dostawca danych usuwa nieaktualny lub błędny zbiór danych z systemu.
+
+  - **(PU017) Edycja zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Dostawca danych modyfikuje istniejący zbiór danych, aby poprawić jego dokładność lub dostosować zawartość.
+
+#### 6.5. Czas
+  **Diagram**
+
+  ```puml
+  @startuml Czas
+  left to right direction
+
+  actor "Czas" as Time
+
+  usecase "PU018: Generowanie raportów\n częstotliwości pobrań\n zbiorów danych" as UC1
+  usecase "PU019: Wysłanie powiadomienia\n o zmianach w zbiorze danych\n subskrybentom" as UC2
+  usecase "PU020: Tworzenie backup'u" as UC3
+
+  Time --> UC1
+  Time --> UC2
+  Time --> UC3
+
+  @enduml
+  ```
+
+  - **(PU018) Generowanie raportów częstotliwości pobrań zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    System automatycznie generuje raporty dotyczące częstotliwości pobierania danych przez użytkowników w określonych odstępach czasu.
+
+  - **(PU019) Wysyłanie powiadomień o zmianach w zbiorze danych subskrybentom**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    System automatycznie powiadamia subskrybentów o zmianach w subskrybowanych zbiorach danych zgodnie z harmonogramem.
+
+  - **(PU020) Tworzenie backup'u**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    System okresowo tworzy kopię zapasową danych, aby zabezpieczyć je przed utratą.
+
+#### 6.6. Weryfikator
+  **Diagram**
+
+  ```puml
+  @startuml Weryfikator
+  left to right direction
+
+  actor "Weryfikator" as Verifier
+
+  usecase "PU021: Ocena jakości danych" as UC1
+  usecase "PU022: Obsługa zgłoszeń" as UC2
+  usecase "PU023: Zatwierdzenie zmian w\n zbiorach danych" as UC3
+  usecase "PU024: Wygenerowanie raportu\n jakości danych" as UC4
+
+  Verifier --> UC1
+  Verifier --> UC2
+  Verifier --> UC3
+  Verifier --> UC4
+
+  @enduml
+  ```
+
+  - **(PU021) Ocena jakości danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Weryfikator analizuje dane i metadane pod kątem ich jakości i poprawności.
+
+  - **(PU022) Obsługa zgłoszeń**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Weryfikator przetwarza zgłoszenia błędów lub uwag do zbiorów danych.
+
+  - **(PU023) Zatwierdzenie zmian w zbiorach danych**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    Weryfikator zatwierdza zmiany wprowadzone w istniejących zbiorach danych, aby mogły być udostępniane użytkownikom.
+
+  - **(PU024) Wygenerowanie raportu jakości danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Weryfikator generuje raport podsumowujący ocenę jakości danych w systemie.
+
+#### 6.7. Administrator
+  **Diagram**
+
+  ```puml
+  @startuml Administrator
+  left to right direction
+
+  actor "Administrator" as Admin
+
+  usecase "PU025: Zarządzanie\n użytkownikami" as UC1
+  usecase "PU026: Nadanie uprawnień\n użytkownikowi" as UC2
+  usecase "PU027: Dodanie konta\n użytkownika" as UC3
+  usecase "PU028: Edycja konta\n użytkownika" as UC4
+  usecase "PU029: Usunięcie konta\n użytkownika" as UC5
+  usecase "PU030: Monitorowanie\n stanu systemu" as UC6
+  usecase "PU031: Konfiguracja\n systemu" as UC7
+
+  Admin --> UC1
+  Admin --> UC6
+  Admin --> UC7
+
+  UC1 ..> UC2 : <<include>>
+  UC1 ..> UC3 : <<include>>
+  UC1 ..> UC4 : <<include>>
+  UC1 ..> UC5 : <<include>>
+
+  @enduml
+  ```
+
+  - **(PU025) Zarządzanie użytkownikami**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    Administrator zarządza kontami użytkowników — dodaje, edytuje, usuwa oraz nadaje uprawnienia.
+
+  - **(PU026) Nadanie uprawnień użytkownikowi**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Administrator nadaje użytkownikowi odpowiednie prawa do zarządzania przypisanymi zbiorami danych.
+
+  - **(PU027) Dodanie konta użytkownika**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Administrator tworzy nowe konto użytkownika w systemie, aby umożliwić dostęp do danych.
+
+  - **(PU028) Edycja konta użytkownika**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Administrator modyfikuje dane lub uprawnienia konta użytkownika.
+
+  - **(PU029) Usunięcie konta użytkownika**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Administrator usuwa konto użytkownika.
+
+  - **(PU030) Monitorowanie stanu systemu**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Administrator śledzi działanie systemu, monitorując jego stan i identyfikując ewentualne problemy.
+    
+  - **(PU031) Konfiguracja systemu**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    Administrator dostosowuje ustawienia systemowe, aby zoptymalizować działanie i zabezpieczenia systemu.

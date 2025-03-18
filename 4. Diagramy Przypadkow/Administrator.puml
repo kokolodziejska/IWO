@@ -1,0 +1,23 @@
+@startuml Administrator
+left to right direction
+
+actor "Administrator" as Admin
+
+usecase "PU025: Zarządzanie\n użytkownikami" as UC1
+usecase "PU026: Nadanie uprawnień\n użytkownikowi" as UC2
+usecase "PU027: Dodanie konta\n użytkownika" as UC3
+usecase "PU028: Edycja konta\n użytkownika" as UC4
+usecase "PU029: Usunięcie konta\n użytkownika" as UC5
+usecase "PU030: Monitorowanie\n stanu systemu" as UC6
+usecase "PU031: Konfiguracja\n systemu" as UC7
+
+Admin --> UC1
+Admin --> UC6
+Admin --> UC7
+
+UC1 ..> UC2 : <<include>>
+UC1 ..> UC3 : <<include>>
+UC1 ..> UC4 : <<include>>
+UC1 ..> UC5 : <<include>>
+
+@enduml

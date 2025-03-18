@@ -1,0 +1,14 @@
+@startuml Czas
+left to right direction
+
+actor "Czas" as Time
+
+usecase "PU018: Generowanie raportów\n częstotliwości pobrań\n zbiorów danych" as UC1
+usecase "PU019: Wysłanie powiadomienia\n o zmianach w zbiorze danych\n subskrybentom" as UC2
+usecase "PU020: Tworzenie backup'u" as UC3
+
+Time --> UC1
+Time --> UC2
+Time --> UC3
+
+@enduml
