@@ -29,7 +29,7 @@
 - W jaki sposób będzie wyglądać proces rejestracji do subskrypcji powiadomień? Czy będzie on wymagał logowania się, czy może użytkownicy będą mogli korzystać z funkcji anonimowo?
 - Czy subskrybenci będą mogli dostosować częstotliwość otrzymywania powiadomień (np. natychmiastowo, codziennie, co tydzień)?
 - Czy subskrybcja będzie płatna?
-- #### 12. Kanał powiadomień 
+#### 12. Kanał powiadomień 
 
 ## Bezpieczeństwo i zgodność z regulacjami
 #### 13. Zgodność z RODO 
