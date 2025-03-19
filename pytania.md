@@ -27,7 +27,13 @@
 
 ## Bezpieczeństwo i zgodność z regulacjami
 #### 13. Zgodność z RODO 
-#### 14. Kopia zapasowa danych 
+#### 14. Kopia zapasowa danych - Maciej Rukat
+- Jak często powinna być tworzona kopia zapasowa danych?
+- Jakie dane powinny być uwzględniane w kopii zapasowej? 
+- W jakich lokalizacjach powinny być przechowywane kopie zapasowe?
+- Jak długo powinny być przechowywane kopie zapasowe przed ich usunięciem?
+- Kto powinien mieć dostęp do kopii zapasowych i możliwość ich przywracania?
+
     
 ## Użytkownicy i dostęp do systemu
 #### 15.  Użytkownik systemu 
