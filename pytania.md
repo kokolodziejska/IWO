@@ -9,8 +9,14 @@
 - W jaki sposób będzie zapewniana jakość i aktualność metadanych? Czy będą prowadzone jakieś procesy weryfikacji?
   
 #### 3. Dystrybucja zbioru danych
-#### 4. Otwarte dane publiczne 
-#### 5. Schemat danych 
+#### 4.  Otwarte dane publiczne 
+#### 5.  Schemat danych - Michał Ciechan
+- Jak ma wyglądać proces zatwierdzania nowych lub uaktualnionych schematów danych?
+  - Kto ma ustalać schemat danych? Weryfikator czy dostawca danych?
+  - Czy system ma walidować istniejący zbiór danych, czy tylko nowe dane? Co w przypadku niepomyślnej walidacji?
+- Czy schemat danych ma być powiązany ze zbiorem danych czy dystrybucją? Czyli jeden schemat dla różnych formatów, czy jeden schemat dla jednego formatu danych?
+- Czy istnieją obowiązujące przepisy lub standardy branżowe nakładające wymagania na schematy danych?
+- Jakie elementy powinny być zawarte w schemacie danych (np. nazwy pól, typy danych, formaty, relacje)?
 
 ## Dostęp i zarządzanie danymi
 #### 6. Interfejs API 
@@ -38,8 +44,13 @@
 - Jakie procedury zostaną wdrożone w systemie na wypadek naruszenia ochrony danych osobowych (data breach)?
 - Czy system będzie wymagał zgody użytkowników na przetwarzanie danych osobowych w określonych celach? Jeśli tak, w jaki sposób zgoda będzie zbierana, dokumentowana i zarządzana (w tym możliwość jej wycofania)?
 - Jakie mechanizmy kontroli dostępu zostaną zaimplementowane, aby zapewnić, że tylko upoważnione osoby mają dostęp do danych osobowych?
-#### 14. Kopia zapasowa danych 
-    
+#### 14. Kopia zapasowa danych - Maciej Rukat
+- Jak często powinna być tworzona kopia zapasowa danych?
+- Jakie dane powinny być uwzględniane w kopii zapasowej? 
+- W jakich lokalizacjach powinny być przechowywane kopie zapasowe?
+- Jak długo powinny być przechowywane kopie zapasowe przed ich usunięciem?
+- Kto powinien mieć dostęp do kopii zapasowych i możliwość ich przywracania?
+
 ## Użytkownicy i dostęp do systemu
 #### 15.  Użytkownik systemu 
 #### 16.  Logowanie do systemu 
