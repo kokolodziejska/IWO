@@ -27,7 +27,7 @@
 
 ## Dostęp i zarządzanie danymi
 #### 6. Interfejs API 
-#### 7. Zarządzanie dostępem do API 
+#### 7. Zarządzanie dostępem do API  - Bartłomiej Janota
 - W jaki sposób system będzie umożliwiał zarządzanie dostępem do API dla użytkowników i aplikacji zewnętrznych? 
 - Jakie role lub uprawnienia będą definiowane w systemie w kontekście korzystania z API?
 - Czy system będzie wspierał różne metody uwierzytelniania i autoryzacji dostępu do API (np. klucze API, token OAuth 2.0 itp.)?
