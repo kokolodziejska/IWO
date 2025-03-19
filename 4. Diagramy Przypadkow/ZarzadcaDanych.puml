@@ -1,0 +1,16 @@
+@startuml ZarzadcaDanych
+
+left to right direction
+actor "Zarządca danych" as User
+
+usecase "PU008: Wyświetlenie\n listy zgłoszeń" as UC1
+usecase "PU009: Usunięcie\n zgłoszenia" as UC2
+usecase "PU010: Obsługa\n zgłoszenia" as UC3
+usecase "PU011: Zlecenie wprowadzenia\n nowego zbioru danych" as UC4
+
+User --> UC1
+User --> UC4
+UC1 ..> UC2 : <<invoke>>
+UC1 ..> UC3 : <<invoke>>
+
+@enduml
