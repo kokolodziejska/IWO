@@ -35,7 +35,13 @@
 #### 10. Uwaga do zbioru danych
     
 ## Subskrypcja i powiadomienia
-#### 11. Subskrypcja zbioru danych 
+#### 11. Subskrypcja zbioru danych - Michał Jagodziński
+- Czy użytkownicy będą mogli wybierać konkretne typy zmian w danych, o których chcą otrzymywać powiadomienia (np. tylko aktualizacje, zmiany w metadanych, nowe dane)? 
+- Jakie informacje będą zawarte w powiadomieniach o zmianach zbiorów danych?
+- Czy użytkownicy będą mogli subskrybować powiadomienia dla wielu zbiorów danych jednocześnie?
+- W jaki sposób będzie wyglądać proces rejestracji do subskrypcji powiadomień? Czy będzie on wymagał logowania się, czy może użytkownicy będą mogli korzystać z funkcji anonimowo?
+- Czy subskrybenci będą mogli dostosować częstotliwość otrzymywania powiadomień (np. natychmiastowo, codziennie, co tydzień)?
+- Czy subskrybcja będzie płatna?
 #### 12. Kanał powiadomień 
 
 ## Bezpieczeństwo i zgodność z regulacjami
