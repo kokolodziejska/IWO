@@ -8,7 +8,14 @@
 - Czy użytkownicy będą mieli dostęp do historii zmian metadanych dla poszczególnych zbiorów danych?
 - W jaki sposób będzie zapewniana jakość i aktualność metadanych? Czy będą prowadzone jakieś procesy weryfikacji?
   
-#### 3. Dystrybucja zbioru danych
+#### 3. Dystrybucja zbioru danych - Łukasz Gumienniczuk
+- Jakie formaty danych są używane podczas dystrybucji? (Metody dostarczania danych)
+- Jakie są wymagania dotyczące bezpieczeństwa podczas dystrybucji danych? (podpisy cyfrowe, historia wersji)
+- Czy użytkownicy będą mogli pobierać tylko całe zbiory, czy także ich wybrane fragmenty?
+- Czy powinno istnieć ograniczenie liczby pobrań w określonym czasie (rate limiting)?
+- Czy istnieją limity dotyczące wielkości lub częstotliwości przesyłania danych?
+- Czy użytkownicy powinni mieć możliwość pobrania danych w formie paczek ZIP?
+- Czy w przypadku posiadania historii wersji, użytkownik jest w stanie pobrać starszą wersję udostępnionych danych
 #### 4.  Otwarte dane publiczne 
 #### 5.  Schemat danych - Michał Ciechan
 - Jak ma wyglądać proces zatwierdzania nowych lub uaktualnionych schematów danych?
