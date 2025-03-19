@@ -30,9 +30,19 @@
 #### 7. Zarządzanie dostępem do API 
 #### 8. Monitorowanie wykorzystania API 
 
-## Prezentacja i interakcja z danymi
+
+### Prezentacja i interakcja z danymi
 #### 9. Wizualizacja danych 
-#### 10. Uwaga do zbioru danych
+#### 10. Uwaga do zbioru danych - Mikołaj Tradecki
+- Jakie konkretnie informacje powinny być zbierane od użytkownika w momencie zgłaszania uwagi do zbioru danych?
+- W jaki sposób użytkownik będzie mógł zgłosić uwagę?
+- Czy użytkownik powinien mieć możliwość śledzenia statusu zgłoszonej przez siebie uwagi?
+- Kto będzie odpowiedzialny za analizę zgłoszeń użytkowników?
+- Czy system powinien rejestrować historię wszystkich zgłoszeń?
+- Czy użytkownicy powinni mieć możliwość przeglądania uwag zgłoszonych przez innych użytkowników do danego zbioru danych?
+- Czy przewidywana jest możliwość wystawiania opinii o zbiorze danych powiązanych ze zgłoszoną uwagą?
+- Czy zgłoszone uwagi powinny być w jakiś sposób powiązane z metadanymi zbioru danych?
+
     
 ## Subskrypcja i powiadomienia
 #### 11. Subskrypcja zbioru danych - Michał Jagodziński
