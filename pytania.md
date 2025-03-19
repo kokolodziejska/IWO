@@ -23,8 +23,11 @@
     
 ## Subskrypcja i powiadomienia
 #### 11. Subskrypcja zbioru danych 
-#### 12. Kanał powiadomień 
-
+#### 12. Kanał powiadomień - Mateusz Borka
+ - Jakie kanały powiadomień będą dostępne dla użytkowników (e-mail, SMS, powiadomienia push, komunikaty w systemie)?
+ - Czy użytkownicy będą mogli konfigurować preferencje dotyczące powiadomień (częstotliwość, rodzaj informacji)?
+ - W jakich sytuacjach system będzie wysyłał automatyczne powiadomienia (aktualizacja danych, błędy systemowe, zmiany w dostępie do API)?
+ - Jak będzie zapewniona zgodność z RODO w kontekście przesyłania powiadomień (zgody użytkowników, prawo do rezygnacji)?Jak będzie zapewniona zgodność z RODO w kontekście przesyłania powiadomień (zgody użytkowników, prawo do rezygnacji)?
 ## Bezpieczeństwo i zgodność z regulacjami
 #### 13. Zgodność z RODO 
 #### 14. Kopia zapasowa danych - Maciej Rukat
