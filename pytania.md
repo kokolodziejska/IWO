@@ -10,7 +10,13 @@
   
 #### 3. Dystrybucja zbioru danych
 #### 4.  Otwarte dane publiczne 
-#### 5.  Schemat danych 
+#### 5.  Schemat danych - Michał Ciechan
+- Jak ma wyglądać proces zatwierdzania nowych lub uaktualnionych schematów danych?
+  - Kto ma ustalać schemat danych? Weryfikator czy dostawca danych?
+  - Czy system ma walidować istniejący zbiór danych, czy tylko nowe dane? Co w przypadku niepomyślnej walidacji?
+- Czy schemat danych ma być powiązany ze zbiorem danych czy dystrybucją? Czyli jeden schemat dla różnych formatów, czy jeden schemat dla jednego formatu danych?
+- Czy istnieją obowiązujące przepisy lub standardy branżowe nakładające wymagania na schematy danych?
+- Jakie elementy powinny być zawarte w schemacie danych (np. nazwy pól, typy danych, formaty, relacje)?
 
 ## Dostęp i zarządzanie danymi
 #### 6. Interfejs API 
