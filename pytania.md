@@ -16,7 +16,15 @@
 - Czy istnieją limity dotyczące wielkości lub częstotliwości przesyłania danych?
 - Czy użytkownicy powinni mieć możliwość pobrania danych w formie paczek ZIP?
 - Czy w przypadku posiadania historii wersji, użytkownik jest w stanie pobrać starszą wersję udostępnionych danych
-#### 4.  Otwarte dane publiczne 
+- 
+#### 4.  Otwarte dane publiczne - Jakub Klenkiewicz
+- Jakie wymagania prawne lub regulacje dotyczące otwartych danych publicznych należy uwzględnić przy publikacji zbiorów danych?
+- Kto będzie odpowiedzialny za weryfikację kompletności i poprawności otwartych danych publicznych przed ich udostępnieniem?
+- Czy system będzie prowadził rejestr aktualnie dostępnych otwartych danych publicznych oraz ich wersji?
+- W jaki sposób będą określane zasady ponownego wykorzystywania opublikowanych otwartych danych publicznych (np. czy zostaną opracowane wewnętrzne regulaminy lub wzory umów)?
+- Czy planowane jest udostępnianie mechanizmów umożliwiających automatyczne publikowanie lub aktualizowanie otwartych danych publicznych (np. poprzez integrację z systemami wewnętrznymi)?
+- Czy użytkownicy będą mogli składać wnioski o publikację nowych zbiorów w trybie otwartym, a jeśli tak, w jaki sposób zostanie zorganizowany proces rozpatrywania tych wniosków (np. formularz online, weryfikacja przez dedykowany zespół)?
+- 
 #### 5.  Schemat danych - Michał Ciechan
 - Jak ma wyglądać proces zatwierdzania nowych lub uaktualnionych schematów danych?
   - Kto ma ustalać schemat danych? Weryfikator czy dostawca danych?
