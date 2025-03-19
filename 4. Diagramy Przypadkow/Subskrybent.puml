@@ -1,0 +1,12 @@
+@startuml Subskrybent
+left to right direction
+
+actor "Subskrybent" as User
+
+usecase "PU012: Wyświetlenie\n listy subskrypcji" as UC1
+usecase "PU013: Zmiana subskrybcji\n danych" as UC2
+
+User --> UC1
+UC1 ..> UC2 : <<invoke>>
+
+@enduml
