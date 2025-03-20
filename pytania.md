@@ -7,7 +7,6 @@
 - W jaki sposób proces wprowadzania metadanych zostanie zorganizowany? Czy będzie to proces manualny, automatyczny, czy mieszany?
 - Czy użytkownicy będą mieli dostęp do historii zmian metadanych dla poszczególnych zbiorów danych?
 - W jaki sposób będzie zapewniana jakość i aktualność metadanych? Czy będą prowadzone jakieś procesy weryfikacji?
-  
 #### 3. Dystrybucja zbioru danych - Łukasz Gumienniczuk
 - Jakie formaty danych są używane podczas dystrybucji? (Metody dostarczania danych)
 - Jakie są wymagania dotyczące bezpieczeństwa podczas dystrybucji danych? (podpisy cyfrowe, historia wersji)
@@ -16,7 +15,6 @@
 - Czy istnieją limity dotyczące wielkości lub częstotliwości przesyłania danych?
 - Czy użytkownicy powinni mieć możliwość pobrania danych w formie paczek ZIP?
 - Czy w przypadku posiadania historii wersji, użytkownik jest w stanie pobrać starszą wersję udostępnionych danych
-- 
 #### 4.  Otwarte dane publiczne - Jakub Klenkiewicz
 - Jakie wymagania prawne lub regulacje dotyczące otwartych danych publicznych należy uwzględnić przy publikacji zbiorów danych?
 - Kto będzie odpowiedzialny za weryfikację kompletności i poprawności otwartych danych publicznych przed ich udostępnieniem?
@@ -24,7 +22,6 @@
 - W jaki sposób będą określane zasady ponownego wykorzystywania opublikowanych otwartych danych publicznych (np. czy zostaną opracowane wewnętrzne regulaminy lub wzory umów)?
 - Czy planowane jest udostępnianie mechanizmów umożliwiających automatyczne publikowanie lub aktualizowanie otwartych danych publicznych (np. poprzez integrację z systemami wewnętrznymi)?
 - Czy użytkownicy będą mogli składać wnioski o publikację nowych zbiorów w trybie otwartym, a jeśli tak, w jaki sposób zostanie zorganizowany proces rozpatrywania tych wniosków (np. formularz online, weryfikacja przez dedykowany zespół)?
-- 
 #### 5.  Schemat danych - Michał Ciechan
 - Jak ma wyglądać proces zatwierdzania nowych lub uaktualnionych schematów danych?
   - Kto ma ustalać schemat danych? Weryfikator czy dostawca danych?
@@ -41,7 +38,6 @@
 - Czy system będzie wspierał różne metody uwierzytelniania i autoryzacji dostępu do API (np. klucze API, token OAuth 2.0 itp.)?
 - Czy system będzie rejestrował i monitorował próby dostępu do API, w tym informacje o użytkowniku/aplikacji, czasie dostępu i wykorzystanych zasobach?
 #### 8. Monitorowanie wykorzystania API 
-
 
 ### Prezentacja i interakcja z danymi
 #### 9. Wizualizacja danych - Dominika Kalinowska
@@ -60,7 +56,6 @@
 - Czy przewidywana jest możliwość wystawiania opinii o zbiorze danych powiązanych ze zgłoszoną uwagą?
 - Czy zgłoszone uwagi powinny być w jakiś sposób powiązane z metadanymi zbioru danych?
 
-    
 ## Subskrypcja i powiadomienia
 #### 11. Subskrypcja zbioru danych - Michał Jagodziński
 - Czy użytkownicy będą mogli wybierać konkretne typy zmian w danych, o których chcą otrzymywać powiadomienia (np. tylko aktualizacje, zmiany w metadanych, nowe dane)? 
