@@ -44,7 +44,12 @@
 
 
 ### Prezentacja i interakcja z danymi
-#### 9. Wizualizacja danych 
+#### 9. Wizualizacja danych - Dominika Kalinowska
+- Jakie formy wizualizacji danych będzie oferował system (np. wykresy liniowe, słupkowe, kołowe, mapy, tabele przestawne itp.)?
+- Czy system umożliwi dostosowywanie wizualizacji (np. wybór rodzaju wykresu, zmiana kolorów, etykiet, osi)?
+- Czy system będzie oferował interaktywne elementy w wizualizacjach (np. możliwość powiększania, filtrowania danych bezpośrednio na wykresie)?
+- W jaki sposób system będzie sobie radził z wizualizacją dużych zbiorów danych, aby zapewnić płynność i responsywność?
+- Czy system umożliwi eksport wizualizacji do różnych formatów (np. PNG, JPEG, PDF)?
 #### 10. Uwaga do zbioru danych - Mikołaj Tradecki
 - Jakie konkretnie informacje powinny być zbierane od użytkownika w momencie zgłaszania uwagi do zbioru danych?
 - W jaki sposób użytkownik będzie mógł zgłosić uwagę?
