@@ -99,3 +99,10 @@
 - Jakie polityki dotyczące haseł zostaną wdrożone (np. minimalna długość, złożoność, czas ważności)?
 - Jakie mechanizmy zabezpieczeń będą stosowane w celu wykrywania i blokowania nieautoryzowanych prób logowania (np. blokada konta po określonej liczbie nieudanych prób)
 
+## Audyt i zgodność operacyjna - Daria Koval
+- Jakie mechanizmy audytu zostaną wdrożone w celu monitorowania operacji na danych?
+- Czy system będzie przechowywał historię zmian danych i operacji użytkowników?
+- Jakie procedury zostaną zastosowane do wykrywania i zgłaszania naruszeń polityki bezpieczeństwa?
+- Czy przewidziane są okresowe przeglądy zgodności operacyjnej systemu z regulacjami prawnymi i standardami branżowymi?
+- Jakie raporty dotyczące audytu będą generowane i kto będzie miał do nich dostęp?
+- Czy system będzie obsługiwał mechanizmy automatycznego wykrywania anomalii w operacjach użytkowników?
