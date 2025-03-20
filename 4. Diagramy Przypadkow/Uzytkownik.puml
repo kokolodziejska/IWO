@@ -1,0 +1,25 @@
+@startuml Uzytkownik
+left to right direction
+
+actor "Użytkownik" as User
+
+usecase "PU001: Logowanie\n do systemu" as UC1
+usecase "PU002: Przejrzenie\n katalogu danych" as UC2
+usecase "PU003: Wyszukanie\n zbioru danych" as UC3
+usecase "PU004: Pobranie dystrybucji\n zbioru danych" as UC4
+usecase "PU005: Subskrybowanie\n zbioru danych" as UC5
+usecase "PU006: Generowanie opisów\n bibliograficznych" as UC6
+usecase "PU007: Zgłoszenie uwagi\n do zbioru danych" as UC7
+
+User --> UC1
+User --> UC2
+User --> UC3
+UC3 ..> UC6 : <<invoke>>
+UC3 ..> UC7 : <<invoke>>
+UC3 ..> UC4 : <<invoke>>
+UC2 ..> UC5 : <<invoke>>
+UC3 ..> UC5 : <<invoke>>
+UC2 ..> UC4 : <<invoke>>
+UC2 ..> UC7 : <<invoke>>
+
+@enduml

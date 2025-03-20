@@ -1,0 +1,16 @@
+@startuml DostawcaDanych
+left to right direction
+
+actor "Dostawca danych" as Provider
+
+usecase "PU014: Wyświetlenie listy\n przypisanych zbiorów\n danych" as UC1
+usecase "PU015: Dodanie\n zbioru danych" as UC2
+usecase "PU016: Usunięcie\n zbioru danych" as UC3
+usecase "PU017: Edycja\n zbioru danych" as UC4
+
+Provider --> UC1
+UC1 ..> UC2 : <<invoke>>
+UC1 ..> UC3 : <<invoke>>
+UC1 ..> UC4 : <<invoke>>
+
+@enduml
