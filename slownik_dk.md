@@ -1,54 +1,59 @@
-## Słownik pojęć
+# Słownik pojęć
 
-### Dane i ich struktura
+## **Dane i ich struktura**
+- **Zbiór danych** – jednostka organizacyjna systemu, zawierająca dane publiczne powiązane tematycznie lub funkcjonalnie.
+- **Metadane** – informacje opisujące zbiór danych, określające jego źródło, zakres, format, datę aktualizacji oraz warunki ponownego wykorzystania.
+- **Dystrybucja** – konkretna instancja zbioru danych, dostępna w określonym formacie i udostępniana przez system.
+- **Schemat danych** – zestaw reguł opisujących strukturę zbioru danych, w tym nazwy pól, typy wartości oraz dopuszczalne formaty.
+- **Wersja zbioru danych** – historyczny zapis stanu zbioru danych, pozwalający na dostęp do wcześniejszych iteracji.
+- **Otwarte dane publiczne** – dane pochodzące z administracji publicznej, udostępnione w sposób umożliwiający ich ponowne wykorzystanie.
+- **Standard DCAT** – międzynarodowa specyfikacja opisu metadanych, umożliwiająca interoperacyjność katalogów danych publicznych.
+- **Standard DCAT/AP** – europejski profil aplikacyjny standardu DCAT, określający sposób opisu zbiorów danych w rejestrach publicznych.
+- **Standard RDF** – model reprezentacji danych na poziomie piątej gwiazdki otwartości (5-star), ułatwiający semantyczne przetwarzanie i integrację zbiorów danych.
+- **Walidacja danych** – proces sprawdzania zgodności zbioru danych z przypisanym mu schematem lub standardem jakości.
 
-- **Zbiór danych** – zestaw powiązanych danych publicznych dostępnych w systemie.
-- **Metadane** – informacje opisujące zbiór danych, np. źródło, data aktualizacji, format.
-- **Dystrybucja zbioru danych** – konkretna i zarządzana instancja danego zbioru danych, udostępniona w określonym formacie i poprzez określony sposób dostępu.
-- **Otwarte dane publiczne** – informacje udostępniane publicznie w sposób umożliwiający ich swobodne wykorzystanie.
-- **Schemat danych** – opis struktury zbioru danych, sprawdzany przez system w celu umożliwienia ewentualnej konwersji formatu danych oraz weryfikacji zgodności dystrybucji zbiorów danych.
-- **Wersjonowanie danych** – mechanizm pozwalający przechowywać i zarządzać różnymi wersjami tego samego zbioru danych, umożliwiając dostęp do historycznych wersji danych.
-- **Walidacja danych** – automatyczne sprawdzanie zgodności zbioru danych z przypisanym mu schematem.
-- **Standard DCAT** – międzynarodowy standard opisu metadanych zbiorów danych, stosowany w celu zapewnienia interoperacyjności zbiorów danych publicznych.
-- **Standard DCAT/AP** – profil aplikacyjny standardu DCAT dla danych publicznych, wymagany do automatycznej walidacji i zapewnienia spójności danych importowanych do systemu.
-- **Standard RDF (Resource Description Framework)** – format danych umożliwiający publikację danych na najwyższym (piątym) poziomie otwartości według klasyfikacji 5-star, umożliwiający ich automatyczne przetwarzanie i integrację.
+## **Zarządzanie danymi**
+- **Rejestr zbiorów danych** – centralna baza opisująca dostępne w systemie zbiory danych oraz ich metadane.
+- **Źródło danych** – system lub podmiot dostarczający dane do platformy.
+- **Dynamiczne dane** – dane, które są aktualizowane w krótkich odstępach czasu lub w czasie rzeczywistym.
+- **Indeks danych** – struktura umożliwiająca szybkie wyszukiwanie informacji w zbiorach danych systemu.
+- **Interoperacyjność danych** – zdolność zbiorów danych do wymiany informacji z innymi systemami zgodnie z ustalonymi standardami.
 
-### Dostęp i zarządzanie danymi
+## **Przetwarzanie i prezentacja danych**
+- **Widok danych** – sposób prezentacji zbioru danych w systemie, obejmujący tabele, wykresy, mapy i inne formaty.
+- **Wizualizacja danych** – graficzne przedstawienie informacji w celu ułatwienia analizy i interpretacji danych.
+- **Filtrowanie danych** – mechanizm selekcji rekordów zbioru danych na podstawie określonych kryteriów.
+- **Eksport danych** – proces udostępniania zbiorów danych w różnych formatach do pobrania przez użytkowników.
+- **Import danych** – proces wprowadzania danych do systemu z plików lub zewnętrznych źródeł.
+- **Transformacja danych** – proces konwersji danych do określonego schematu lub formatu zgodnego ze standardami systemu.
+- **Raport systemowy** – zbiór zagregowanych danych wygenerowany przez system na potrzeby analizy lub audytu.
 
-- **Interfejs API** – mechanizm umożliwiający programistyczny dostęp do funkcji systemu i pobierania danych.
-- **Zarządzanie dostępem do API** – nadawanie i odbieranie uprawnień do korzystania z interfejsu API.
-- **Monitorowanie wykorzystania API** – analiza statystyk zapytań do API.
-- **Dynamiczne udostępnianie danych** – automatyczna publikacja danych w czasie rzeczywistym poprzez API.
-- **Indeksowanie danych** – proces optymalizacji danych w systemie pod kątem ich odnajdywania przez wyszukiwarki internetowe, poprawiający widoczność danych.
+## **Subskrypcja i powiadomienia**
+- **Subskrypcja danych** – funkcja umożliwiająca użytkownikowi otrzymywanie powiadomień o zmianach w zbiorach danych.
+- **Powiadomienie systemowe** – automatycznie generowana informacja o zdarzeniach w systemie, takich jak aktualizacja zbioru danych czy zmiana uprawnień.
+- **Kanał powiadomień** – medium dostarczania informacji do użytkownika, np. e-mail, SMS, powiadomienie wewnętrzne w systemie.
 
-### Prezentacja i interakcja z danymi
+## **Bezpieczeństwo i zgodność**
+- **Kopia zapasowa** – duplikat danych przechowywany w celu przywrócenia w razie utraty lub awarii systemu.
+- **Zgodność z RODO** – dostosowanie systemu do wymagań Rozporządzenia o Ochronie Danych Osobowych w zakresie przechowywania i przetwarzania informacji.
+- **Dwuskładnikowa autoryzacja (2FA)** – mechanizm zwiększający bezpieczeństwo kont użytkowników poprzez dodatkowy składnik uwierzytelnienia.
+- **Zarządzanie sesją użytkownika** – mechanizm kontroli aktywnych sesji użytkowników, w tym ich automatyczne wylogowywanie po okresie bezczynności.
+- **Model uprawnień** – zestaw reguł definiujących dostęp użytkowników do danych i funkcji systemu.
 
-- **Wizualizacja danych** – graficzne przedstawienie zbioru danych, dobrane zgodnie z rodzajem danych oraz ich przeznaczeniem.
-- **Uwaga do zbioru danych** – informacja przekazywana przez użytkownika do systemu, zawierająca komentarze lub zastrzeżenia dotyczące zbioru danych, na przykład brak schematu.
-- **Interaktywna wizualizacja** – wizualizacja danych umożliwiająca użytkownikom manipulowanie parametrami, filtrowanie oraz eksplorację danych.
-- **Generowanie opisów bibliograficznych** – automatyczne tworzenie opisów cytowań zbiorów danych w standardowych formatach bibliograficznych.
+## **Użytkownicy i role systemowe**
+- **Konto użytkownika** – unikalna tożsamość użytkownika w systemie, umożliwiająca dostęp do jego funkcji zgodnie z przypisanymi uprawnieniami.
+- **Administrator systemu** – użytkownik posiadający najwyższy poziom uprawnień, odpowiedzialny za konfigurację systemu, zarządzanie danymi i użytkownikami.
+- **Anonimowy użytkownik** – osoba korzystająca z systemu bez logowania, z ograniczonym dostępem do funkcjonalności.
+- **Rola użytkownika** – zestaw uprawnień przypisanych użytkownikowi w systemie, określający zakres jego dostępu do danych i funkcji.
 
-### Subskrypcja i powiadomienia
+## **Integracja z systemami zewnętrznymi**
+- **CKAN** – otwarte oprogramowanie do zarządzania danymi publicznymi, z którym system może wymieniać informacje.
+- **Integracja systemowa** – mechanizm połączenia systemu z innymi platformami, umożliwiający wymianę danych i automatyczne aktualizacje.
+- **Format danych** – standard struktury plików wykorzystywanych do importu i eksportu, np. CSV, JSON, XML, RDF.
+- **Harmonizacja danych** – proces standaryzacji danych pochodzących z różnych źródeł, zapewniający ich zgodność z określonym schematem.
 
-- **Subskrypcja zbioru danych** – funkcja pozwalająca użytkownikowi otrzymywać powiadomienia o zmianach w wybranych zbiorach.
-- **Kanał powiadomień** – metoda dostarczania informacji o zmianach w danych, np. e-mail, SMS.
-- **Statystyki użycia/pobrań danych** – raporty prezentujące częstotliwość wykorzystania lub pobierania danych przez użytkowników systemu.
-
-### Bezpieczeństwo i zgodność z regulacjami
-
-- **Zgodność z RODO** – zapewnienie zgodności systemu z europejskimi przepisami o ochronie danych osobowych.
-- **Kopia zapasowa danych** – duplikat danych tworzony w celu ochrony przed ich utratą, uszkodzeniem lub nieautoryzowaną modyfikacją.
-- **Dwuskładnikowa autoryzacja (2FA)** – metoda uwierzytelniania użytkowników za pomocą dwóch niezależnych składników, zapewniająca wyższy poziom bezpieczeństwa.
-- **Captcha** – mechanizm weryfikacji użytkowników chroniący przed spamem i botami.
-
-### Użytkownicy i dostęp do systemu
-
-- **Użytkownik systemu** – każda osoba korzystająca z systemu, np. obywatel, analityk, przedsiębiorca, administrator.
-- **Logowanie do systemu** – proces uwierzytelnienia użytkownika przed uzyskaniem dostępu do konta.
-- **Zarządzanie użytkownikami** – proces tworzenia, edytowania, usuwania kont użytkowników oraz przypisywania im uprawnień.
-- **Anonimowy dostęp** – możliwość korzystania z wybranych funkcji systemu bez konieczności logowania się przez użytkownika.
-
-### Integracja z innymi systemami
-
-- **Integracja CKAN** – możliwość wymiany danych oraz metadanych z systemem CKAN za pomocą API, umożliwiająca interoperacyjność pomiędzy platformami otwartych danych.
-- **Obsługa formatów danych** – wsparcie dla różnych formatów danych (np. CSV, XML, JSON, RDF) w celu umożliwienia łatwej integracji oraz wymiany danych z innymi systemami.
+## **Monitorowanie i analiza**
+- **Statystyki systemowe** – zbiór wskaźników dotyczących funkcjonowania systemu, np. liczba pobrań zbiorów danych, aktywność użytkowników.
+- **Monitorowanie API** – mechanizm rejestracji i analizy zapytań kierowanych do interfejsu API w celu optymalizacji jego wydajności i bezpieczeństwa.
+- **Śledzenie wersji danych** – mechanizm umożliwiający odtworzenie wcześniejszych wersji zbiorów danych oraz zmian w ich strukturze.
+- **Rejestrowanie zdarzeń** – zapis operacji wykonywanych w systemie przez użytkowników i procesy automatyczne.
