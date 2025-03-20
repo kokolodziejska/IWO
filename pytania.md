@@ -80,4 +80,10 @@
 
 ## Użytkownicy i dostęp do systemu
 #### 15.  Użytkownik systemu 
-#### 16.  Logowanie do systemu 
+#### 16.  Logowanie do systemu - Mikołaj Frączek
+- Jakie metody uwierzytelniania będą dostępne w systemie (np. login i hasło, 2FA, biometria, klucze sprzętowe)?
+- Czy system będzie wspierał uwierzytelnianie wieloskładnikowe (MFA)? Jeśli tak, jakie metody MFA będą dostępne?
+- Czy system będzie umożliwiał logowanie przy użyciu zewnętrznych dostawców tożsamości (np. Google, Microsoft, SSO)?
+- Jakie polityki dotyczące haseł zostaną wdrożone (np. minimalna długość, złożoność, czas ważności)?
+- Jakie mechanizmy zabezpieczeń będą stosowane w celu wykrywania i blokowania nieautoryzowanych prób logowania (np. blokada konta po określonej liczbie nieudanych prób)
+
