@@ -16,7 +16,6 @@
 - **Źródło danych** – podmiot lub system dostarczający dane do systemu IWO.
 - **Indeks danych** – struktura umożliwiająca szybkie wyszukiwanie i dostęp do informacji w zbiorach danych.
 - **Interoperacyjność danych** – zdolność do wymiany i współdziałania zbiorów danych z innymi systemami informatycznymi.
-- **Harmonizacja danych** – proces ujednolicania struktury i formatów danych pochodzących z różnych źródeł.
 
 ## **Użytkownicy i role systemowe**
 - **Użytkownik** – każda osoba posiadająca konto w systemie, korzystająca z dostępnych funkcji zgodnie z przypisanymi uprawnieniami.
