@@ -1,60 +1,69 @@
-# **Słownik pojęć**
+# Słownik pojęć
 
-## **Dane i ich struktura**
-- **Zbiór danych** – zestaw uporządkowanych informacji publicznych, posiadający metadane oraz określone dystrybucje dostępne w systemie.
-- **Metadane** – zbiór informacji opisujących zbiór danych, obejmujący m.in. nazwę, opis, datę aktualizacji, format oraz warunki dostępu.
-- **Dystrybucja** – konkretna instancja zbioru danych, dostępna w określonym formacie i udostępniana zgodnie z regułami systemu.
-- **Schemat danych** – struktura opisująca pola, formaty i relacje między danymi w zbiorze, wykorzystywana do walidacji poprawności.
-- **Wersja zbioru danych** – unikalna instancja zbioru danych odpowiadająca określonemu stanowi na dany moment, przechowywana w ramach wersjonowania.
-- **Standard DCAT** – międzynarodowy standard opisu metadanych, zapewniający interoperacyjność katalogów danych publicznych.
-- **Standard DCAT/AP** – profil aplikacyjny DCAT dla Unii Europejskiej, zapewniający zgodność opisu metadanych z wymogami instytucji UE.
-- **Standard RDF** – model publikacji danych na najwyższym poziomie otwartości (5-star), umożliwiający ich powiązywanie i automatyczne przetwarzanie.
-- **Walidacja danych** – proces automatycznej weryfikacji poprawności zbioru danych względem określonego schematu i standardów jakości.
+## **1. Dane i ich struktura**
+- **Zbiór danych** – logicznie powiązany zestaw informacji publicznych dostępnych w systemie.  
+- **Metadane** – opis zbioru danych zawierający m.in. tytuł, źródło, format, licencję, datę publikacji i schemat.  
+- **Dystrybucja zbioru** – konkretna instancja zbioru danych dostępna w określonym formacie i metodzie dostępu.  
+- **Wersja zbioru** – konkretna iteracja zbioru danych przechowywana w systemie w celu zachowania historii zmian.  
+- **Schemat danych** – strukturalna definicja pól zbioru danych, zawierająca ich typy, formaty i relacje.  
+- **Walidacja** – proces sprawdzania poprawności zbioru danych względem schematu oraz obowiązujących standardów.  
+- **Źródło danych** – system, organizacja lub podmiot dostarczający dane do systemu.  
+- **Rejestr zbiorów** – centralna baza informacji o zbiorach, ich dystrybucjach i metadanych.  
+- **Standard DCAT** – międzynarodowy standard metadanych zbiorów danych zapewniający interoperacyjność.  
+- **Standard DCAT/AP** – europejski profil aplikacyjny DCAT wymagany do walidacji i wymiany danych publicznych.  
+- **Standard RDF** – format publikacji danych umożliwiający semantyczne powiązania i automatyczne przetwarzanie.  
+- **Indeks danych** – zoptymalizowana struktura umożliwiająca szybkie wyszukiwanie zbiorów danych.  
 
-## **Zarządzanie danymi**
-- **Rejestr zbiorów danych** – centralna baza informacji o zbiorach danych dostępnych w systemie, zawierająca ich metadane i historię zmian.
-- **Źródło danych** – podmiot lub system dostarczający dane do systemu IWO.
-- **Indeks danych** – struktura umożliwiająca szybkie wyszukiwanie i dostęp do informacji w zbiorach danych.
-- **Interoperacyjność danych** – zdolność do wymiany i współdziałania zbiorów danych z innymi systemami informatycznymi.
+---
 
-## **Użytkownicy i role systemowe**
-- **Użytkownik** – każda osoba posiadająca konto w systemie, korzystająca z dostępnych funkcji zgodnie z przypisanymi uprawnieniami.
-- **Administrator** – użytkownik z najwyższym poziomem uprawnień, odpowiedzialny za konfigurację systemu, zarządzanie użytkownikami oraz moderowanie zbiorów danych.
-- **Właściciel zbioru danych** – użytkownik odpowiedzialny za dany zbiór danych, posiadający prawo do jego modyfikacji, zarządzania wersjami oraz ustawień dostępu.
-- **Redaktor** – użytkownik posiadający uprawnienia do edytowania treści metadanych oraz zarządzania publikacją danych.
-- **Użytkownik zewnętrzny** – osoba lub system korzystający z publicznych funkcji systemu bez posiadania konta.
-- **Anonimowy użytkownik** – osoba przeglądająca dane publiczne bez konieczności logowania, bez możliwości edycji czy zapisu ustawień.
-- **Subskrybent** – użytkownik, który zapisał się do powiadomień o zmianach w wybranym zbiorze danych.
+## **2. Dostęp i struktura uprawnień**
+- **Uprawnienia** – zestaw reguł określających poziom dostępu użytkownika do zasobów systemu.  
+- **Rola użytkownika** – zbiór uprawnień przypisanych użytkownikowi, definiujący jego możliwości w systemie.  
+- **Organizacja** – podmiot posiadający konto w systemie i publikujący dane.  
+- **Anonimowy dostęp** – możliwość przeglądania wybranych zasobów systemu bez logowania.  
+- **Rekord dostępu** – zapis operacji użytkownika związanych z pobieraniem i edycją danych.  
 
-## **Dostęp i bezpieczeństwo**
-- **Poziom uprawnień** – zakres dostępu użytkownika do funkcji systemu, definiowany przez przypisaną mu rolę.
-- **Model uprawnień** – system kontroli dostępu określający, które operacje są dostępne dla poszczególnych ról użytkowników.
-- **Kopia zapasowa** – archiwalna wersja zbiorów danych oraz ustawień systemowych, przechowywana na wypadek awarii lub konieczności przywrócenia danych.
-- **Dwuskładnikowa autoryzacja (2FA)** – dodatkowa metoda weryfikacji tożsamości użytkownika podczas logowania w celu zwiększenia bezpieczeństwa.
-- **Zgodność z RODO** – dostosowanie systemu do wymagań Rozporządzenia o Ochronie Danych Osobowych, zapewniające prawidłowe przetwarzanie danych użytkowników.
+---
 
-## **Przetwarzanie i prezentacja danych**
-- **Widok danych** – sposób prezentacji zbioru danych w systemie, np. tabela, wykres, mapa.
-- **Wizualizacja danych** – graficzne przedstawienie informacji w celu ich łatwiejszej interpretacji i analizy.
-- **Filtrowanie danych** – mechanizm selekcji rekordów zbioru danych na podstawie określonych kryteriów.
-- **Eksport danych** – generowanie plików z danymi w formatach dostępnych do pobrania przez użytkownika.
-- **Import danych** – wczytywanie danych do systemu z plików lub źródeł zewnętrznych.
-- **Transformacja danych** – konwersja struktury i formatu danych do standardu obsługiwanego przez system.
-- **Raport systemowy** – wygenerowany zestaw informacji statystycznych o danych lub działaniach w systemie.
+## **3. Struktura użytkowników**
+- **Użytkownik** – osoba posiadająca konto w systemie i dostęp do jego zasobów.  
+- **Administrator** – użytkownik z pełnymi uprawnieniami do konfiguracji systemu oraz kontroli dostępu.  
+- **Właściciel zbioru** – użytkownik mający prawo do edycji i publikacji określonego zbioru danych.  
+- **Subskrybent** – użytkownik otrzymujący powiadomienia o zmianach w wybranych zbiorach danych.  
+- **Konto użytkownika** – identyfikator w systemie umożliwiający logowanie i autoryzację dostępu.  
 
-## **Subskrypcja i powiadomienia**
-- **Subskrypcja zbioru danych** – mechanizm umożliwiający użytkownikowi otrzymywanie powiadomień o zmianach w wybranych zbiorach danych.
-- **Powiadomienie systemowe** – komunikat informujący użytkownika o zdarzeniach, takich jak aktualizacja zbioru czy zmiana uprawnień.
-- **Kanał powiadomień** – metoda przekazywania powiadomień, np. e-mail, SMS, API.
+---
 
-## **Integracja z systemami zewnętrznymi**
-- **CKAN** – otwarta platforma do zarządzania danymi publicznymi, z którą system IWO może wymieniać informacje.
-- **Integracja systemowa** – proces połączenia systemu z innymi platformami w celu wymiany danych i synchronizacji.
-- **Format danych** – standard zapisu danych używany do importu i eksportu, np. CSV, JSON, XML, RDF.
-- **API systemowe** – zestaw funkcji umożliwiających programistyczny dostęp do danych i operacji w systemie.
+## **4. Przetwarzanie i prezentacja danych**
+- **Widok danych** – sposób prezentacji zbioru danych w systemie, np. tabela, wykres, mapa.  
+- **Wizualizacja** – graficzna reprezentacja zbioru danych w celu ułatwienia analizy.  
+- **Filtr danych** – mechanizm umożliwiający selekcję rekordów według określonych kryteriów.  
+- **Eksport** – mechanizm umożliwiający zapisanie zbioru danych w określonym formacie.  
+- **Import** – mechanizm umożliwiający dodanie nowych zbiorów danych do systemu.  
+- **Opis bibliograficzny** – sformatowana informacja pozwalająca na prawidłowe cytowanie zbioru danych.  
+- **Uwaga do zbioru** – adnotacja użytkownika dotycząca jakości, kompletności lub struktury zbioru danych.  
 
-## **Monitorowanie i analiza**
-- **Statystyki systemowe** – wskaźniki dotyczące funkcjonowania systemu, np. liczba pobrań zbiorów danych, aktywność użytkowników.
-- **Monitorowanie API** – analiza zapytań kierowanych do interfejsu API w celu optymalizacji wydajności i bezpieczeństwa.
-- **Rejestrowanie zdarzeń** – mechanizm zapisu operacji wykonywanych przez użytkowników oraz automatyczne procesy systemowe.
-- **Śledzenie wersji danych** – funkcjonalność pozwalająca na odtworzenie wcześniejszych wersji zbiorów danych oraz historii zmian.
+---
+
+## **5. Powiadomienia i subskrypcje**
+- **Subskrypcja** – zapis użytkownika na automatyczne powiadomienia o zmianach w zbiorze danych.  
+- **Powiadomienie** – automatyczna informacja o zdarzeniach w systemie, np. aktualizacji zbioru.  
+- **Kanał powiadomień** – medium dostarczania powiadomień, np. e-mail, SMS, API.  
+- **Historia powiadomień** – zapis wszystkich wysłanych powiadomień przypisanych do użytkownika.  
+
+---
+
+## **6. Bezpieczeństwo i zgodność**
+- **Kopia zapasowa** – archiwalna wersja danych przechowywana w celu ich przywrócenia po awarii.  
+- **Polityka dostępu** – zbiór zasad określających warunki korzystania z zasobów systemu.  
+- **Zgodność z RODO** – spełnienie wymagań europejskiego rozporządzenia o ochronie danych osobowych.  
+- **Polityka przechowywania** – zasady dotyczące długości przechowywania danych w systemie.  
+- **Dwuskładnikowa autoryzacja (2FA)** – metoda uwierzytelniania wymagająca dwóch niezależnych czynników weryfikacji.  
+
+---
+
+## **7. Integracja z systemami zewnętrznymi**
+- **CKAN** – zewnętrzny system katalogowania i udostępniania otwartych danych, zgodny z wymaganiami systemu IWO.  
+- **Pobieranie z CKAN** – proces pozyskiwania zbiorów danych z platformy CKAN do systemu.  
+- **Interoperacyjność** – możliwość współdziałania systemu IWO z zewnętrznymi platformami danych.  
+- **Format danych** – standard przechowywania i wymiany danych, np. CSV, JSON, XML, RDF.  
