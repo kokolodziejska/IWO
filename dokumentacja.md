@@ -1172,40 +1172,40 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     Użytkownik systemu loguje się za pomocą swoich danych uwierzytelniających, aby uzyskać dostęp do funkcji systemu.
 
-  - **(PU002) Przejrzenie katalogu danych**
+  - **(PU002) Wyświetlenie listy zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Użytkownik przegląda katalog dostępnych zbiorów danych bez konieczności wyszukiwania konkretnej pozycji.
 
-  - **(PU003) Wyszukanie zbioru danych**
+  - **(PU003) Wyświetlenie szczegółów zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik przeszukuje dostępny katalog danych, aby znaleźć interesujący go zbiór.
+    Użytkownik przegląda szczegółowe informacje o wybranym zbiorze danych, w tym jego strukturę, metadane i dostępne formaty.
 
-  - **(PU004) Pobranie dystrybucji zbioru danych**
+  - **(PU004) Wyświetlenie wizualizacji zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:
+    Użytkownik ogląda graficzną reprezentację danych z wybranego zbioru, np. wykresy lub tabele dynamiczne.      
+.
+  - **(PU005) Zmienienie parametrów wizualizacji**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Użytkownik dostosowuje sposób prezentacji danych, np. zmienia typ wykresu, zakres danych lub sposób agregacji.
+
+  - **(PU006) Pobranie dystrybucji zbioru danych**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Użytkownik pobiera dane z wybranego zbioru w wybranym formacie do dalszego użytku.
-
-  - **(PU005) Subskrybowanie zbioru danych**
-
-    **Waga:** Wysoka | **Trudność**: Średnia
-
-    **Opis**:  
-    Użytkownik systemu, zainteresowany otrzymywaniem informacji o zmianach, wybiera zbiór danych i aktywuje jego subskrypcję.
-
-  - **(PU006) Generowanie opisów bibliograficznych**
-
-    **Waga:** Niska | **Trudność**: Niska
-
-    **Opis**:  
-    Użytkownik pobiera opis bibliograficzny dla wybranego zbioru danych.
 
   - **(PU007) Zgłoszenie uwagi do zbioru danych**
 
@@ -1213,6 +1213,37 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
     **Opis**:  
     Użytkownik zgłasza uwagi lub błędy dotyczące konkretnego zbioru danych.
+
+  - **(PU008) Zasubskrybowanie zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik systemu, zainteresowany otrzymywaniem informacji o zmianach, wybiera zbiór danych i aktywuje jego subskrypcję.
+
+  - **(PU009) Wygenerowanie opisów bibliograficznych**
+
+    **Waga:** Niska | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik pobiera opis bibliograficzny dla wybranego zbioru danych.
+
+  - **(PU010) Wyświetlenie listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych, aby zobaczyć potencjalne problemy lub sugestie
+
+  - **(PU011) Wyświetlenie szczegółów zgłoszenia**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:  
+    Użytkownik przegląda pełne informacje o wybranym zgłoszeniu, w tym jego treść, status i ewentualne odpowiedzi.
+    
+
+  
 
 #### 6.2. Zarządca danych
   **Diagram**
@@ -1236,33 +1267,83 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   @enduml
   ```
 
-  - **(PU008) Wyświetlenie listy zgłoszeń**
+  - **(PU012) Wyświetlenie listy zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
-    **Opis**:  
-    Zarządca danych przegląda listę zgłoszonych uwag lub błędów dotyczących zbiorów danych.
+    **Opis**:    
+    Zarządca danych przegląda katalog dostępnych zbiorów danych w celu zarządzania nimi.
 
-  - **(PU009) Usunięcie zgłoszenia**
+  - **(PU013) Dodanie zbioru danych**
 
-    **Waga:** Niska | **Trudność**: Niska
-
-    **Opis**:  
-    Zarządca danych usuwa zgłoszenie po jego rozpatrzeniu lub w przypadku błędu.
-
-  - **(PU010) Obsługa zgłoszenia**
-
-    **Waga:** Średnia | **Trudność**: Niska
+    **Waga:** Wysoka  | **Trudność**: Średnia 
 
     **Opis**:  
-    Zarządca danych obsługuje istniejące zgłoszenie poprzez akceptację lub odrzucenie.
+    Zarządca danych rejestruje nowy zbiór w systemie, podając wymagane informacje, takie jak nazwa, opis i format danych.
 
-  - **(PU011) Zlecenie wprowadzenia nowego zbioru danych**
+  - **(PU014) Edytowanie zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych modyfikuje istniejący zbiór, zmieniając jego właściwości lub dodając nowe metadane.
+
+  - **(PU015) Usunięcie zbioru danych**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Zarządca danych inicjuje proces dodania nowego zbioru danych do systemu.
+    Zarządca danych usuwa zbiór danych z systemu, co może wymagać dodatkowego potwierdzenia.
+
+  - **(PU016) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  Zarządca danych przegląda listę zgłoszonych uwag, które zostały zweryfikowane i wymagają dalszej analizy.
+
+  - **(PU017) Wyświetlenie szczegółów zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych przegląda pełne informacje o konkretnej uwadze, w tym jej status oraz historię działań.
+
+
+  - **(PU018) Zmiana statusu zgłoszenia**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych aktualizuje status zgłoszonej uwagi, np. oznaczając ją jako rozwiązana lub wymagającą dalszego przetwarzania.
+
+  - **(PU019) Wyświetlenie listy schematów**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych przegląda dostępne schematy danych, które mogą być wykorzystywane przy dodawaniu nowych zbiorów.    
+  - **(PU020) Dodanie schematu**
+
+    **Waga:** Wysoka  | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych rejestruje nowy schemat danych w systemie, określając jego strukturę i format.
+
+  - **(PU021) Edytowanie schematu**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych aktualizuje istniejący schemat, np. dodając nowe pola lub zmieniając ich typy.
+
+  - **(PU022) Usunięcie schematu**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych usuwa schemat z systemu, co może wymagać sprawdzenia, czy nie jest on wykorzystywany przez inne zbiory.
+
+ 
 
 #### 6.3. Subskrybent
   **Diagram**
@@ -1282,19 +1363,26 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   @enduml
   ```
 
-  - **(PU012) Wyświetlenie listy subskrypcj**
+  - **(PU023) Wyświetlenie listy subskrypcj**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Subskrybent przegląda listę swoich subskrybowanych zbiorów danych.
 
-  - **(PU013) Zmiana subskrypcji danych**
+  - **(PU024) Edytowanie ustawień subskrybcji**
 
-    **Waga:** Średnia | **Trudność**: Średnia
+    **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Subskrybent zmienia ustawienia subskrypcji, dodając lub usuwając zbiory danych, edytuje kanał dla otrzymania powiadomień.
+    Subskrybent zmienia ustawienia swojej subskrypcji, np. częstotliwość powiadomień lub sposób otrzymywania informacji o aktualizacjach.
+    
+   - **(PU003) Wyświetlenie szczegółów zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik przegląda szczegółowe informacje o wybranym zbiorze danych, w tym jego strukturę, metadane i dostępne formaty.
 
 #### 6.4. Dostawca danych
   **Diagram**
@@ -1318,33 +1406,33 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   @enduml
   ```
 
-  - **(PU014) Wyświetlenie listy przypisanych zbiorów danych**
+  - **(PU025) Wyświetlenie listy przypisanych zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Dostawca danych przegląda listę zbiorów danych, za które jest odpowiedzialny.
 
-  - **(PU015) Dodanie zbioru danych**
+  - **(PU026) Dodanie dystrybucji**
 
-    **Waga:** Wysoka | **Trudność**: Średnia
+    **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    Dostawca danych dodaje nowy zbiór danych do systemu, który staje się dostępny dla użytkowników.
+    Dostawca danych dodaje nową dystrybucję do istniejącego zbioru danych, określając format, dostępność i sposób pobierania.
 
-  - **(PU016) Usunięcie zbioru danych**
+  - **(PU027) Edytowanie dystrybucji**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Dostawca danych usuwa nieaktualny lub błędny zbiór danych z systemu.
+    Dostawca danych aktualizuje szczegóły istniejącej dystrybucji, np. zmienia jej format, ścieżkę dostępu lub metadane.
 
-  - **(PU017) Edycja zbioru danych**
+  - **(PU028) Usunięcie dystrybucji**
 
-    **Waga:** Średnia | **Trudność**: Średnia
+    **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Dostawca danych modyfikuje istniejący zbiór danych, aby poprawić jego dokładność lub dostosować zawartość.
+    Dostawca danych usuwa wybraną dystrybucję ze zbioru danych, co powoduje jej niedostępność dla użytkowników systemu.
 
 #### 6.5. Czas
   **Diagram**
@@ -1366,21 +1454,21 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   @enduml
   ```
 
-  - **(PU018) Generowanie raportów częstotliwości pobrań zbiorów danych**
-
-    **Waga:** Średnia | **Trudność**: Średnia
-
-    **Opis**:  
-    System automatycznie generuje raporty dotyczące częstotliwości pobierania danych przez użytkowników w określonych odstępach czasu.
-
-  - **(PU019) Wysyłanie powiadomień o zmianach w zbiorze danych subskrybentom**
+  - **(PU029) Wysłanie powiadomień o zmianach w zbiorze danych subskrybentom**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     System automatycznie powiadamia subskrybentów o zmianach w subskrybowanych zbiorach danych zgodnie z harmonogramem.
 
-  - **(PU020) Tworzenie backup'u**
+  - **(PU030) Wygenerowanie raportów częstotliwości pobrań zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    System automatycznie generuje raporty dotyczące częstotliwości pobierania danych przez użytkowników w określonych odstępach czasu.
+
+  - **(PU031) Stworzenie backup'u**
 
     **Waga:** Wysoka | **Trudność**: Wysoka
 
@@ -1408,34 +1496,63 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   @enduml
   ```
+  - **(PU032) Wyświetlenie listy zbiorów danych**
 
-  - **(PU021) Ocena jakości danych**
+    **Waga:** Średnia | **Trudność**: Niska
 
-    **Waga:** Wysoka | **Trudność**: Średnia
+    **Opis**:    
+    Weryfikator przegląda listę dostępnych zbiorów danych w systemie, aby ocenić ich jakość i poprawność.
+
+  - **(PU033) Dodanie zbioru danych**
+
+    **Waga:** Wysoka  | **Trudność**: Średnia
 
     **Opis**:  
-    Weryfikator analizuje dane i metadane pod kątem ich jakości i poprawności.
+    Weryfikator dodaje nowy zbiór danych do systemu po dokonaniu weryfikacji jego jakości i zgodności z wytycznymi.
 
-  - **(PU022) Obsługa zgłoszeń**
-
-    **Waga:** Średnia | **Trudność**: Średnia
-
-    **Opis**:  
-    Weryfikator przetwarza zgłoszenia błędów lub uwag do zbiorów danych.
-
-  - **(PU023) Zatwierdzenie zmian w zbiorach danych**
+  - **(PU034) Edytowanie zbioru danych**
 
     **Waga:** Wysoka | **Trudność**: Wysoka
 
     **Opis**:  
     Weryfikator zatwierdza zmiany wprowadzone w istniejących zbiorach danych, aby mogły być udostępniane użytkownikom.
 
-  - **(PU024) Wygenerowanie raportu jakości danych**
+  - **(PU035) Usunięcie zbioru danych**
+
+    **Waga:** Wysoka  | **Trudność**: Niska
+
+    **Opis**:  
+    Weryfikator usuwa zbiór danych, który nie spełnia wymagań jakościowych lub zawiera błędy.
+
+  - **(PU036) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Weryfikator przegląda listę zgłoszonych uwag, które zostały już zweryfikowane i sklasyfikowane pod kątem poprawności.
+
+  - **(PU037) Wyświetlenie szczegółów zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Weryfikator przegląda szczegóły zgłoszenia, w tym jego treść, status i ewentualne komentarze innych użytkowników.
+
+  - **(PU038) Zmiana statusu zgłoszenia**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Weryfikator aktualizuje status zgłoszonej uwagi, np. oznaczając ją jako zaakceptowaną, odrzuconą lub wymagającą dodatkowej analizy.
+
+  - **(PU039) Wygenerowanie raportu jakości danych**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
     Weryfikator generuje raport podsumowujący ocenę jakości danych w systemie.
+
+
 
 #### 6.7. Administrator
   **Diagram**
@@ -1465,50 +1582,49 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   @enduml
   ```
+  - **(PU040) Wyświetlenie logów systemu**
 
-  - **(PU025) Zarządzanie użytkownikami**
-
-    **Waga:** Wysoka | **Trudność**: Wysoka
+    **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Administrator zarządza kontami użytkowników — dodaje, edytuje, usuwa oraz nadaje uprawnienia.
+    Administrator czyta łogi, śledzi działanie systemu, monitorując jego stan i identyfikując ewentualne problemy.
 
-  - **(PU026) Nadanie uprawnień użytkownikowi**
+  - **(PU038) Wyświetlenie listy użytkowników**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Administrator przegląda listę użytkowników w systemie, aby zarządzać ich kontami i uprawnieniami.
+
+  - **(PU042) Nadanie uprawnień użytkownikowi**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Administrator nadaje użytkownikowi odpowiednie prawa do zarządzania przypisanymi zbiorami danych.
 
-  - **(PU027) Dodanie konta użytkownika**
+  - **(PU043) Dodanie konta użytkownika**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Administrator tworzy nowe konto użytkownika w systemie, aby umożliwić dostęp do danych.
 
-  - **(PU028) Edycja konta użytkownika**
+  - **(PU044) Edytowanie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Administrator modyfikuje dane lub uprawnienia konta użytkownika.
 
-  - **(PU029) Usunięcie konta użytkownika**
+  - **(PU045) Usunięcie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Administrator usuwa konto użytkownika.
-
-  - **(PU030) Monitorowanie stanu systemu**
-
-    **Waga:** Wysoka | **Trudność**: Średnia
-
-    **Opis**:  
-    Administrator śledzi działanie systemu, monitorując jego stan i identyfikując ewentualne problemy.
     
-  - **(PU031) Konfiguracja systemu**
+  - **(PU046) Zmienienie parametrów systemu**
 
     **Waga:** Wysoka | **Trudność**: Wysoka
 
