@@ -120,7 +120,7 @@ Np. System będzie zawierał interfejs wspierający automatyzację testów narz�
 
 ### Łukasz	Gumienniczuk ( Modularność / Reużywalność)
 
-System musi umożliwiać niezależne wdrażanie i aktualizowanie poszczególnych modułów bez wpływu na działanie innych komponentów oraz zawierać moduły, które mogą być wykorzystywane w innych aplikacjach bez konieczności ich modyfikacji.
+System musi umożliwiać niezależne wdrażanie i aktualizowanie poszczególnych modułów bez wpływu na działanie innych komponentów oraz zawierać moduły, które mogą być wielokrotnie wykorzystywane zarówno w różnych częściach aplikacji, jak i w innych systemach, bez konieczności ich modyfikacji.
 
 ### Michał	Jagodziński (Łatwość analizy / Łatwość zmiany / Testowalność)
 
