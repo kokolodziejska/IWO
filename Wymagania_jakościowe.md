@@ -134,6 +134,4 @@ Np. System będzie instalowany automatycznie przez App Shop.
 Np. Nowy system będzie realizował wszystkie funkcje systemu XYZ w wersji 3.4.
  
 ### Daria	Koval
-## Przenośność
-
-Np. System musi być zdolny do uruchomienia w środowisku macOS, Windows oraz Linux bez konieczności modyfikacji kodu źródłowego.
+System musi być zdolny do uruchomienia w środowisku macOS, Windows oraz Linux bez konieczności modyfikacji kodu źródłowego.
