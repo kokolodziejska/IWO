@@ -119,6 +119,9 @@ Np. Projekt będzie zgodny z metodyką ABC, wspierającą łatwą modyfikację i
 Np. System będzie zawierał interfejs wspierający automatyzację testów narzędziem XYZ.
 
 ### Łukasz	Gumienniczuk ( Modularność / Reużywalność)
+
+System musi umożliwiać niezależne wdrażanie i aktualizowanie poszczególnych modułów bez wpływu na działanie innych komponentów oraz zawierać moduły, które mogą być wykorzystywane w innych aplikacjach bez konieczności ich modyfikacji.
+
 ### Michał	Jagodziński (Łatwość analizy / Łatwość zmiany / Testowalność)
 
 ## Przenośność
