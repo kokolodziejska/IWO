@@ -30,7 +30,7 @@ Np. System powinien mieć możliwość odczytywania danych z systemu magazynoweg
 Np. System powinien udostępniać API umożliwiające odczyt i modyfikację parametrów przez aplikacje zewnętrzne.
 
 ### Michał	Bibrzycki
-
+System musi zapewniać możliwość łatwej integracji z systemami zewnętrznymi, szczególnie z systemem CKAN, umożliwiając wymianę danych oraz ich metadanych.
 
 ## Użyteczność
 Dotyczy dostosowania sposobu użycia systemu do potrzeb użytkowników.
