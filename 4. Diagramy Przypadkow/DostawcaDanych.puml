@@ -3,14 +3,15 @@ left to right direction
 
 actor "Dostawca danych" as Provider
 
-usecase "PU014: Wyświetlenie listy\n przypisanych zbiorów\n danych" as UC1
-usecase "PU015: Dodanie\n zbioru danych" as UC2
-usecase "PU016: Usunięcie\n zbioru danych" as UC3
-usecase "PU017: Edycja\n zbioru danych" as UC4
+usecase "PU025: Wyświetlenie listy\nprzypisanych zbiorów danych" as PU025
+usecase "PU026: Dodanie dystrybucji" as PU026
+usecase "PU027: Edytowanie dystrybucji" as PU027
+usecase "PU028: Usunięcie dystrybucji" as PU028
 
-Provider --> UC1
-UC1 ..> UC2 : <<invoke>>
-UC1 ..> UC3 : <<invoke>>
-UC1 ..> UC4 : <<invoke>>
+Provider --> PU025
+
+PU025 --> PU026 : <<invoke>>
+PU025 --> PU027 : <<invoke>>
+PU025 --> PU028 : <<invoke>>
 
 @enduml

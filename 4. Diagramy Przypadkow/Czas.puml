@@ -3,12 +3,12 @@ left to right direction
 
 actor "Czas" as Time
 
-usecase "PU018: Generowanie raportów\n częstotliwości pobrań\n zbiorów danych" as UC1
-usecase "PU019: Wysłanie powiadomienia\n o zmianach w zbiorze danych\n subskrybentom" as UC2
-usecase "PU020: Tworzenie backup'u" as UC3
+usecase "PU029: Wysłanie powiadomienia\no zmianach w zbiorze danych\nsubskrybentom" as PU029
+usecase "PU030: Wygenerowanie raportów\nczęstotliwości pobrań\nzbiorów danych" as PU030
+usecase "PU031: Stworzenie backup'u" as PU031
 
-Time --> UC1
-Time --> UC2
-Time --> UC3
+Time --> PU029
+Time --> PU030
+Time --> PU031
 
 @enduml
