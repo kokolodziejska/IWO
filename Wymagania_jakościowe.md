@@ -133,7 +133,5 @@ Np. System będzie instalowany automatycznie przez App Shop.
 - Łatwość zamiany (ang. replaceability)
 Np. Nowy system będzie realizował wszystkie funkcje systemu XYZ w wersji 3.4.
  
- ### Daria	Koval
- 
-
-
+### Daria	Koval
+System musi być zdolny do uruchomienia w środowisku macOS, Windows oraz Linux bez konieczności modyfikacji kodu źródłowego.

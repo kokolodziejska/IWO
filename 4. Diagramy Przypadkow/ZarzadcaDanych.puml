@@ -1,16 +1,35 @@
 @startuml ZarzadcaDanych
 
 left to right direction
-actor "Zarządca danych" as User
 
-usecase "PU008: Wyświetlenie\n listy zgłoszeń" as UC1
-usecase "PU009: Usunięcie\n zgłoszenia" as UC2
-usecase "PU010: Obsługa\n zgłoszenia" as UC3
-usecase "PU011: Zlecenie wprowadzenia\n nowego zbioru danych" as UC4
+actor "Zarządca danych" as Admin
 
-User --> UC1
-User --> UC4
-UC1 ..> UC2 : <<invoke>>
-UC1 ..> UC3 : <<invoke>>
+usecase "PU012:\nWyświetlenie listy\nzbiorów danych" as PU012
+usecase "PU013:\nDodanie\nzbioru danych" as PU013
+usecase "PU014:\nEdytowanie\nzbioru danych" as PU014
+usecase "PU015:\nUsunięcie\nzbioru danych" as PU015
+
+usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
+usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+usecase "PU018:\nZmiana statusu\nzgłoszenia" as PU018
+
+usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
+usecase "PU020:\nDodanie schematu" as PU020
+usecase "PU021:\nEdytowanie schematu" as PU021
+usecase "PU022:\nUsunięcie schematu" as PU022
+
+Admin --> PU012
+PU012 ..> PU013 : <<invoke>>
+PU012 ..> PU014 : <<invoke>>
+PU012 ..> PU015 : <<invoke>>
+
+Admin --> PU016
+PU016 ..> PU017 : <<invoke>>
+PU017 ..> PU018 : <<invoke>>
+
+Admin --> PU019
+PU019 ..> PU020 : <<invoke>>
+PU019 ..> PU021 : <<invoke>>
+PU019 ..> PU022 : <<invoke>>
 
 @enduml

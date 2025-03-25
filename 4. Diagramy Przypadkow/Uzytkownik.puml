@@ -3,23 +3,30 @@ left to right direction
 
 actor "Użytkownik" as User
 
-usecase "PU001: Logowanie\n do systemu" as UC1
-usecase "PU002: Przejrzenie\n katalogu danych" as UC2
-usecase "PU003: Wyszukanie\n zbioru danych" as UC3
-usecase "PU004: Pobranie dystrybucji\n zbioru danych" as UC4
-usecase "PU005: Subskrybowanie\n zbioru danych" as UC5
-usecase "PU006: Generowanie opisów\n bibliograficznych" as UC6
-usecase "PU007: Zgłoszenie uwagi\n do zbioru danych" as UC7
+usecase "PU001:\nLogowanie do systemu" as PU001
+usecase "PU002:\nWyświetlenie listy\nzbiorów danych" as PU002
+usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
+usecase "PU004:\nWyświetlenie wizualizacji\nzbioru danych" as PU004
+usecase "PU005:\nZmienienie parametrów\nwizualizacji" as PU005
+usecase "PU006:\nPobranie dystrybucji\nzbioru danych" as PU006
+usecase "PU007:\nZgłoszenie uwagi\ndo zbioru danych" as PU007
+usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
+usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
+usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
+usecase "PU011:\nWyświetlenie szczegółów\nzgłoszenia" as PU011
 
-User --> UC1
-User --> UC2
-User --> UC3
-UC3 ..> UC6 : <<invoke>>
-UC3 ..> UC7 : <<invoke>>
-UC3 ..> UC4 : <<invoke>>
-UC2 ..> UC5 : <<invoke>>
-UC3 ..> UC5 : <<invoke>>
-UC2 ..> UC4 : <<invoke>>
-UC2 ..> UC7 : <<invoke>>
+User --> PU001
+User --> PU002
+User --> PU010
+
+PU002 ..> PU003 : <<invoke>>
+PU003 ..> PU004 : <<invoke>>
+PU003 ..> PU007 : <<invoke>>
+PU003 ..> PU008 : <<invoke>>
+PU003 ..> PU006 : <<invoke>>
+PU003 ..> PU009 : <<invoke>>
+PU004 ..> PU005 : <<invoke>>
+
+PU010 ..> PU011 : <<invoke>>
 
 @enduml

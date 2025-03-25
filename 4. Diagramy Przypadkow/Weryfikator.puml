@@ -3,14 +3,28 @@ left to right direction
 
 actor "Weryfikator" as Verifier
 
-usecase "PU021: Ocena jakości danych" as UC1
-usecase "PU022: Obsługa zgłoszeń" as UC2
-usecase "PU023: Zatwierdzenie zmian w\n zbiorach danych" as UC3
-usecase "PU024: Wygenerowanie raportu\n jakości danych" as UC4
+usecase "PU032:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU032
+usecase "PU033:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU033
+usecase "PU034:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
+usecase "PU035:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
 
-Verifier --> UC1
-Verifier --> UC2
-Verifier --> UC3
-Verifier --> UC4
+usecase "PU036:\nWyświetlenie listy\nzgłoszonych uwag" as PU036
+usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+usecase "PU037:\nPrzesłanie uwagi\ndo zarządcy danych" as PU037
+usecase "PU038:\nOdrzucenie uwagi" as PU038
+
+usecase "PU039:\nWygenerowanie raportu\njakości danych" as PU039
+
+Verifier --> PU032
+Verifier --> PU036
+Verifier --> PU039
+
+PU032 ..> PU033 : <<invoke>>
+PU033 ..> PU034 : <<invoke>>
+PU033 ..> PU035 : <<invoke>>
+
+PU036 ..> PU017 : <<invoke>>
+PU017 ..> PU037 : <<invoke>>
+PU017 ..> PU038 : <<invoke>>
 
 @enduml
