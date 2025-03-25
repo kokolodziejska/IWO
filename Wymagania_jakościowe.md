@@ -121,6 +121,8 @@ Np. System będzie zawierał interfejs wspierający automatyzację testów narz�
 ### Łukasz	Gumienniczuk ( Modularność / Reużywalność)
 ### Michał	Jagodziński (Łatwość analizy / Łatwość zmiany / Testowalność)
 
+System powinien zawierać zestaw testów jednostkowych i integracyjnych, które pokrywają co najmniej 90% funkcjonalności krytycznych, a ich uruchomienie nie powinno przekraczać 5 minut.
+
 ## Przenośność
 Dotyczy możliwości działania systemu w różnych środowiskach.
 
