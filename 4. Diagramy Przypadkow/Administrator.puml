@@ -3,21 +3,21 @@ left to right direction
 
 actor "Administrator" as Admin
 
-usecase "PU040: Wyświetlenie\nlogów systemu" as PU040
-usecase "PU041: Wyświetlenie listy\nużytkowników" as PU041
-usecase "PU042: Nadanie uprawnień\nużytkownikowi" as PU042
-usecase "PU043: Dodanie konta\nużytkownika" as PU043
-usecase "PU044: Edytowanie konta\nużytkownika" as PU044
-usecase "PU045: Usunięcie konta\nużytkownika" as PU045
-usecase "PU046: Zmienienie parametrów\nsystemu" as PU046
+usecase "PU040:\nWyświetlenie\nlogów systemu" as PU040
+usecase "PU041:\nWyświetlenie listy\nużytkowników" as PU041
+usecase "PU042:\nNadanie uprawnień\nużytkownikowi" as PU042
+usecase "PU043:\nDodanie konta\nużytkownika" as PU043
+usecase "PU044:\nEdytowanie konta\nużytkownika" as PU044
+usecase "PU045:\nUsunięcie konta\nużytkownika" as PU045
+usecase "PU046:\nZmienienie parametrów\nsystemu" as PU046
 
 Admin --> PU040
 Admin --> PU041
 Admin --> PU046
 
-PU041 --> PU042 : <<invoke>>
-PU041 --> PU043 : <<invoke>>
-PU041 --> PU044 : <<invoke>>
-PU041 --> PU045 : <<invoke>>
+PU041 ..> PU042 : <<invoke>>
+PU041 ..> PU043 : <<invoke>>
+PU041 ..> PU044 : <<invoke>>
+PU041 ..> PU045 : <<invoke>>
 
 @enduml

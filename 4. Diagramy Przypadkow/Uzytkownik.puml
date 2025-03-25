@@ -3,30 +3,30 @@ left to right direction
 
 actor "Użytkownik" as User
 
-usecase "PU001: Logowanie\ndo systemu" as PU001
-usecase "PU002: Wyświetlenie listy\nzbiorów danych" as PU002
-usecase "PU003: Wyświetlenie szczegółów\nzbioru danych" as PU003
-usecase "PU004: Wyświetlenie wizualizacji\nzbioru danych" as PU004
-usecase "PU005: Zmienienie parametrów\nwizualizacji" as PU005
-usecase "PU006: Pobranie dystrybucji\nzbioru danych" as PU006
-usecase "PU007: Zgłoszenie uwagi\ndo zbioru danych" as PU007
-usecase "PU008: Zasubskrybowanie\nzbioru danych" as PU008
-usecase "PU009: Wygenerowanie opisów\nbibliograficznych" as PU009
-usecase "PU010: Wyświetlenie listy\nzgłoszonych uwag" as PU010
-usecase "PU011: Wyświetlenie szczegółów\nzgłoszenia" as PU011
+usecase "PU001:\nLogowanie do systemu" as PU001
+usecase "PU002:\nWyświetlenie listy\nzbiorów danych" as PU002
+usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
+usecase "PU004:\nWyświetlenie wizualizacji\nzbioru danych" as PU004
+usecase "PU005:\nZmienienie parametrów\nwizualizacji" as PU005
+usecase "PU006:\nPobranie dystrybucji\nzbioru danych" as PU006
+usecase "PU007:\nZgłoszenie uwagi\ndo zbioru danych" as PU007
+usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
+usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
+usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
+usecase "PU011:\nWyświetlenie szczegółów\nzgłoszenia" as PU011
 
 User --> PU001
 User --> PU002
 User --> PU010
 
-PU002 --> PU003 : <<invoke>>
-PU003 --> PU004 : <<invoke>>
-PU003 --> PU007 : <<invoke>>
-PU003 --> PU008 : <<invoke>>
-PU003 --> PU006 : <<invoke>>
-PU003 --> PU009 : <<invoke>>
-PU004 --> PU005 : <<invoke>>
+PU002 ..> PU003 : <<invoke>>
+PU003 ..> PU004 : <<invoke>>
+PU003 ..> PU007 : <<invoke>>
+PU003 ..> PU008 : <<invoke>>
+PU003 ..> PU006 : <<invoke>>
+PU003 ..> PU009 : <<invoke>>
+PU004 ..> PU005 : <<invoke>>
 
-PU010 --> PU011 : <<invoke>>
+PU010 ..> PU011 : <<invoke>>
 
 @enduml

@@ -1,12 +1,14 @@
 @startuml Subskrybent
 left to right direction
 
-actor "Subskrybent" as User
+actor "Subskrybent" as U
 
-usecase "PU012: Wyświetlenie\n listy subskrypcji" as UC1
-usecase "PU013: Zmiana subskrybcji\n danych" as UC2
+usecase "PU023:\nWyświetlenie listy\nsubskrypcji" as PU023
+usecase "PU024:\nEdytowanie ustawień\nsubskrypcji" as PU024
+usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
 
-User --> UC1
-UC1 ..> UC2 : <<invoke>>
+U --> PU023
+PU023 ..> PU024 : <<invoke>>
+PU023 ..> PU003 : <<invoke>>
 
 @enduml

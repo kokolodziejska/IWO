@@ -4,32 +4,32 @@ left to right direction
 
 actor "Zarządca danych" as Admin
 
-usecase "PU012: Wyświetlenie listy\nzbiorów danych" as PU012
-usecase "PU013: Dodanie zbioru danych" as PU013
-usecase "PU014: Edytowanie zbioru danych" as PU014
-usecase "PU015: Usunięcie zbioru danych" as PU015
+usecase "PU012:\nWyświetlenie listy\nzbiorów danych" as PU012
+usecase "PU013:\nDodanie\nzbioru danych" as PU013
+usecase "PU014:\nEdytowanie\nzbioru danych" as PU014
+usecase "PU015:\nUsunięcie\nzbioru danych" as PU015
 
-usecase "PU016: Wyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
-usecase "PU017: Wyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
-usecase "PU018: Zmiana statusu zgłoszenia" as PU018
+usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
+usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+usecase "PU018:\nZmiana statusu\nzgłoszenia" as PU018
 
-usecase "PU019: Wyświetlenie listy\nschematów" as PU019
-usecase "PU020: Dodanie schematu" as PU020
-usecase "PU021: Edytowanie schematu" as PU021
-usecase "PU022: Usunięcie schematu" as PU022
+usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
+usecase "PU020:\nDodanie schematu" as PU020
+usecase "PU021:\nEdytowanie schematu" as PU021
+usecase "PU022:\nUsunięcie schematu" as PU022
 
 Admin --> PU012
-PU012 --> PU013 : <<invoke>>
-PU012 --> PU014 : <<invoke>>
-PU012 --> PU015 : <<invoke>>
+PU012 ..> PU013 : <<invoke>>
+PU012 ..> PU014 : <<invoke>>
+PU012 ..> PU015 : <<invoke>>
 
 Admin --> PU016
-PU016 --> PU017 : <<invoke>>
-PU017 --> PU018 : <<invoke>>
+PU016 ..> PU017 : <<invoke>>
+PU017 ..> PU018 : <<invoke>>
 
 Admin --> PU019
-PU019 --> PU020 : <<invoke>>
-PU019 --> PU021 : <<invoke>>
-PU019 --> PU022 : <<invoke>>
+PU019 ..> PU020 : <<invoke>>
+PU019 ..> PU021 : <<invoke>>
+PU019 ..> PU022 : <<invoke>>
 
 @enduml
