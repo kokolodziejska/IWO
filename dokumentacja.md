@@ -1212,14 +1212,14 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych, np. błędy w metadanych lub nieaktualne informacje. Zgłoszenie jest następnie przesyłane do administratora systemu w celu weryfikacji.
+    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych, np. błędy w metadanych lub nieaktualne informacje. Zgłoszenie jest następnie przesyłane do weryfikatora systemu w celu weryfikacji.
 
   - **(PU008) Zasubskrybowanie zbioru danych**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące częstotliwości powiadomień oraz ich formy (e-mail, powiadomienie systemowe itp.).
+    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące formy powiadomień (e-mail, powiadomienie systemowe itp.).
 
   - **(PU009) Wygenerowanie opisów bibliograficznych**
 
@@ -1240,7 +1240,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:  
-    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi administratora. Może również zobaczyć historię działań związanych ze zgłoszeniem.
+    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszeniem.
     
 
   
@@ -1293,7 +1293,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Zarządca danych usuwa zbiór danych z systemu, co może wymagać dodatkowego potwierdzenia.
+    Zarządca danych usuwa zbiór danych z systemu.
 
   - **(PU016) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
 
@@ -1376,14 +1376,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Subskrybent zmienia ustawienia subskrypcji, takie jak częstotliwość powiadomień, preferowany sposób otrzymywania informacji lub status aktywności subskrypcji. Wprowadzone zmiany są natychmiastowo zapisywane w systemie.
-    
-   - **(PU003) Wyświetlenie szczegółów zbiorów danych**
-     
-    **Waga:** Średnia | **Trudność**: Niska
-
-    **Opis**:  
-    Użytkownik przegląda szczegółowe informacje o wybranym zbiorze danych, w tym jego strukturę, metadane i dostępne formaty.
+    Subskrybent zmienia ustawienia subskrypcji, takie jak preferowany sposób otrzymywania informacji lub status aktywności subskrypcji. Wprowadzone zmiany są natychmiastowo zapisywane w systemie.
 
 #### 6.4. Dostawca danych
   **Diagram**
@@ -1419,14 +1412,14 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    Dostawca danych dodaje nową dystrybucję do istniejącego zbioru, określając jej format, ścieżkę dostępu oraz metadane. System automatycznie weryfikuje zgodność dystrybucji z wymaganiami przed jej opublikowaniem.
+    Dostawca danych dodaje nową dystrybucję do istniejącego zbioru, określając jej format oraz ścieżkę dostępu. System automatycznie weryfikuje zgodność dystrybucji z wymaganiami przed jej opublikowaniem.
 
   - **(PU027) Edytowanie dystrybucji**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry, takie jak format, ścieżka dostępu, licencja czy metadane. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
+    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry, takie jak format, ścieżka dostępu, czy licencja. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
 
   - **(PU028) Usunięcie dystrybucji**
 
@@ -1523,7 +1516,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka  | **Trudność**: Niska
 
     **Opis**:  
-    Weryfikator usuwa zbiór danych z systemu, jeśli nie spełnia on wymagań jakościowych lub zawiera błędy. Proces usuwania wymagać podania uzasadnienia decyzji przez Weryfikatora.
+    Weryfikator usuwa zbiór danych z systemu, jeśli nie spełnia on wymagań jakościowych lub zawiera błędy. Proces usuwania wymaga podania uzasadnienia decyzji przez Weryfikatora.
 
   - **(PU036) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
 
@@ -1595,7 +1588,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi, takimi jak nazwa, rola i status konta. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
+    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi, takimi jak nazwa i rola. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
 
   - **(PU042) Nadanie uprawnień użytkownikowi**
 
@@ -1609,7 +1602,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Administrator tworzy nowe konto użytkownika, podając jego dane, takie jak imię, nazwisko, adres e-mail oraz przypisując odpowiednią rolę. Konto może wymagać aktywacji przez użytkownika lub administratora.
+    Administrator tworzy nowe konto użytkownika, podając jego dane, takie jak imię, nazwisko, adres e-mail oraz przypisując odpowiednią rolę.
 
   - **(PU044) Edytowanie konta użytkownika**
 
