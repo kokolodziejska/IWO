@@ -54,7 +54,14 @@ Np. System musi zapewniać zgodność kolorystyki interfejsu z księgą identyfi
 - Przystępność (ang. accessibility)
 Np. System musi umożliwiać dostosowanie rozmiaru czcionek do użytkowników ze słabym wzrokiem (np. stopień C–).
 
-### Bartek	Janota (Rozpoznawalność odpowiedniości / Łatwość nauczenia)
+### Bartek	Janota
+
+## Rozpoznawalność odpowiedniości
+- System powinien zapewniać kontekstowe podpowiedzi i wskazówki dla każdej głównej funkcjonalności, tak aby użytkownik natychmiast rozpoznawał, czy dana opcja jest adekwatna do realizowanego zadania.
+
+## Łatwość uczenia
+- System powinien udostępniać krótki, interaktywny przewodnik przy pierwszym uruchomieniu nowych funkcji, aby skrócić czas potrzebny na opanowanie podstaw.
+
 ### Mikołaj 	Tradecki (Operatywność / Zabezpieczenie przed błędami użytkownika)
 System powinien charakteryzować się wysoką operatywnością, zapewniając użytkownikom możliwość efektywnego i szybkiego wykonywania kluczowych zadań związanych z przeglądaniem zbiorów danych, przy minimalnym wysiłku i liczbie interakcji
 
