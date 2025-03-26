@@ -56,6 +56,8 @@ Np. System musi umożliwiać dostosowanie rozmiaru czcionek do użytkowników ze
 
 ### Bartek	Janota (Rozpoznawalność odpowiedniości / Łatwość nauczenia)
 ### Mikołaj 	Tradecki (Operatywność / Zabezpieczenie przed błędami użytkownika)
+System powinien charakteryzować się wysoką operatywnością, zapewniając użytkownikom możliwość efektywnego i szybkiego wykonywania kluczowych zadań związanych z przeglądaniem zbiorów danych, przy minimalnym wysiłku i liczbie interakcji
+
 ### Mikołaj 	Frączek (Estetyka interfejsu użytkownika / Przystępność)
 
 ## Niezawodność
