@@ -1132,6 +1132,8 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Akceptowalne wartości pomiaru**:  
    ≤30 minut.
 
+
+
 ### 6. Przypadki użycia
 
 #### 6.1. Użytkownik
@@ -1143,24 +1145,31 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Użytkownik" as User
 
-  usecase "PU001: Logowanie\n do systemu" as UC1
-  usecase "PU002: Przejrzenie\n katalogu danych" as UC2
-  usecase "PU003: Wyszukanie\n zbioru danych" as UC3
-  usecase "PU004: Pobranie dystrybucji\n zbioru danych" as UC4
-  usecase "PU005: Subskrybowanie\n zbioru danych" as UC5
-  usecase "PU006: Generowanie opisów\n bibliograficznych" as UC6
-  usecase "PU007: Zgłoszenie uwagi\n do zbioru danych" as UC7
+  usecase "PU001:\nLogowanie do systemu" as PU001
+  usecase "PU002:\nWyświetlenie listy\nzbiorów danych" as PU002
+  usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
+  usecase "PU004:\nWyświetlenie wizualizacji\nzbioru danych" as PU004
+  usecase "PU005:\nZmienienie parametrów\nwizualizacji" as PU005
+  usecase "PU006:\nPobranie dystrybucji\nzbioru danych" as PU006
+  usecase "PU007:\nZgłoszenie uwagi\ndo zbioru danych" as PU007
+  usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
+  usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
+  usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
+  usecase "PU011:\nWyświetlenie szczegółów\nzgłoszenia" as PU011
 
-  User --> UC1
-  User --> UC2
-  User --> UC3
-  UC3 ..> UC6 : <<invoke>>
-  UC3 ..> UC7 : <<invoke>>
-  UC3 ..> UC4 : <<invoke>>
-  UC2 ..> UC5 : <<invoke>>
-  UC3 ..> UC5 : <<invoke>>
-  UC2 ..> UC4 : <<invoke>>
-  UC2 ..> UC7 : <<invoke>>
+  User --> PU001
+  User --> PU002
+  User --> PU010
+
+  PU002 ..> PU003 : <<invoke>>
+  PU003 ..> PU004 : <<invoke>>
+  PU003 ..> PU007 : <<invoke>>
+  PU003 ..> PU008 : <<invoke>>
+  PU003 ..> PU006 : <<invoke>>
+  PU003 ..> PU009 : <<invoke>>
+  PU004 ..> PU005 : <<invoke>>
+
+  PU010 ..> PU011 : <<invoke>>
 
   @enduml
   ```
@@ -1243,8 +1252,6 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszeniem.
     
 
-  
-
 #### 6.2. Zarządca danych
   **Diagram**
 
@@ -1252,17 +1259,36 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   @startuml ZarzadcaDanych
 
   left to right direction
-  actor "Zarządca danych" as User
 
-  usecase "PU008: Wyświetlenie\n listy zgłoszeń" as UC1
-  usecase "PU009: Usunięcie\n zgłoszenia" as UC2
-  usecase "PU010: Obsługa\n zgłoszenia" as UC3
-  usecase "PU011: Zlecenie wprowadzenia\n nowego zbioru danych" as UC4
+  actor "Zarządca danych" as Admin
 
-  User --> UC1
-  User --> UC4
-  UC1 ..> UC2 : <<invoke>>
-  UC1 ..> UC3 : <<invoke>>
+  usecase "PU012:\nWyświetlenie listy\nzbiorów danych" as PU012
+  usecase "PU013:\nDodanie\nzbioru danych" as PU013
+  usecase "PU014:\nEdytowanie\nzbioru danych" as PU014
+  usecase "PU015:\nUsunięcie\nzbioru danych" as PU015
+
+  usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
+  usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+  usecase "PU018:\nZmiana statusu\nzgłoszenia" as PU018
+
+  usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
+  usecase "PU020:\nDodanie schematu" as PU020
+  usecase "PU021:\nEdytowanie schematu" as PU021
+  usecase "PU022:\nUsunięcie schematu" as PU022
+
+  Admin --> PU012
+  PU012 ..> PU013 : <<invoke>>
+  PU012 ..> PU014 : <<invoke>>
+  PU012 ..> PU015 : <<invoke>>
+
+  Admin --> PU016
+  PU016 ..> PU017 : <<invoke>>
+  PU017 ..> PU018 : <<invoke>>
+
+  Admin --> PU019
+  PU019 ..> PU020 : <<invoke>>
+  PU019 ..> PU021 : <<invoke>>
+  PU019 ..> PU022 : <<invoke>>
 
   @enduml
   ```
@@ -1345,7 +1371,6 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Zarządca danych usuwa schemat z systemu, co może wymagać wcześniejszej weryfikacji, czy nie jest on powiązany z aktywnymi zbiorami. W razie potrzeby użytkownicy są informowani o konieczności migracji danych.
 
  
-
 #### 6.3. Subskrybent
   **Diagram**
 
@@ -1353,13 +1378,15 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   @startuml Subskrybent
   left to right direction
 
-  actor "Subskrybent" as User
+  actor "Subskrybent" as U
 
-  usecase "PU012: Wyświetlenie\n listy subskrypcji" as UC1
-  usecase "PU013: Zmiana subskrybcji\n danych" as UC2
+  usecase "PU023:\nWyświetlenie listy\nsubskrypcji" as PU023
+  usecase "PU024:\nEdytowanie ustawień\nsubskrypcji" as PU024
+  usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
 
-  User --> UC1
-  UC1 ..> UC2 : <<invoke>>
+  U --> PU023
+  PU023 ..> PU024 : <<invoke>>
+  PU023 ..> PU003 : <<invoke>>
 
   @enduml
   ```
@@ -1378,6 +1405,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     Subskrybent zmienia ustawienia subskrypcji, takie jak preferowany sposób otrzymywania informacji lub status aktywności subskrypcji. Wprowadzone zmiany są natychmiastowo zapisywane w systemie.
 
+
 #### 6.4. Dostawca danych
   **Diagram**
 
@@ -1387,15 +1415,16 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Dostawca danych" as Provider
 
-  usecase "PU014: Wyświetlenie listy\n przypisanych zbiorów\n danych" as UC1
-  usecase "PU015: Dodanie\n zbioru danych" as UC2
-  usecase "PU016: Usunięcie\n zbioru danych" as UC3
-  usecase "PU017: Edycja\n zbioru danych" as UC4
+  usecase "PU025:\nWyświetlenie listy\nprzypisanych zbiorów danych" as PU025
+  usecase "PU026:\nDodanie dystrybucji" as PU026
+  usecase "PU027:\nEdytowanie dystrybucji" as PU027
+  usecase "PU028:\nUsunięcie dystrybucji" as PU028
 
-  Provider --> UC1
-  UC1 ..> UC2 : <<invoke>>
-  UC1 ..> UC3 : <<invoke>>
-  UC1 ..> UC4 : <<invoke>>
+  Provider --> PU025
+
+  PU025 ..> PU026 : <<invoke>>
+  PU025 ..> PU027 : <<invoke>>
+  PU025 ..> PU028 : <<invoke>>
 
   @enduml
   ```
@@ -1428,6 +1457,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     Dostawca danych usuwa dystrybucję z przypisanego zbioru, co skutkuje jej natychmiastowym usunięciem z systemu. W przypadku aktywnych subskrybentów system może wysłać automatyczne powiadomienie o zmianie.
 
+
 #### 6.5. Czas
   **Diagram**
 
@@ -1437,13 +1467,13 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Czas" as Time
 
-  usecase "PU018: Generowanie raportów\n częstotliwości pobrań\n zbiorów danych" as UC1
-  usecase "PU019: Wysłanie powiadomienia\n o zmianach w zbiorze danych\n subskrybentom" as UC2
-  usecase "PU020: Tworzenie backup'u" as UC3
+  usecase "PU029:\nWysłanie powiadomienia\no zmianach w zbiorze danych\nsubskrybentom" as PU029
+  usecase "PU030:\nWygenerowanie raportów\nczęstotliwości pobrań\nzbiorów danych" as PU030
+  usecase "PU031:\nStworzenie backup'u" as PU031
 
-  Time --> UC1
-  Time --> UC2
-  Time --> UC3
+  Time --> PU029
+  Time --> PU030
+  Time --> PU031
 
   @enduml
   ```
@@ -1469,6 +1499,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     System automatycznie tworzy kopie zapasowe zbiorów danych oraz ich metadanych w określonych odstępach czasu. Backup jest przechowywany w zabezpieczonym repozytorium i może zostać przywrócony w przypadku awarii.
 
+
 #### 6.6. Weryfikator
   **Diagram**
 
@@ -1478,15 +1509,29 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Weryfikator" as Verifier
 
-  usecase "PU021: Ocena jakości danych" as UC1
-  usecase "PU022: Obsługa zgłoszeń" as UC2
-  usecase "PU023: Zatwierdzenie zmian w\n zbiorach danych" as UC3
-  usecase "PU024: Wygenerowanie raportu\n jakości danych" as UC4
+  usecase "PU032:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU032
+  usecase "PU033:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU033
+  usecase "PU034:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
+  usecase "PU035:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
 
-  Verifier --> UC1
-  Verifier --> UC2
-  Verifier --> UC3
-  Verifier --> UC4
+  usecase "PU036:\nWyświetlenie listy\nzgłoszonych uwag" as PU036
+  usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+  usecase "PU037:\nPrzesłanie uwagi\ndo zarządcy danych" as PU037
+  usecase "PU038:\nOdrzucenie uwagi" as PU038
+
+  usecase "PU039:\nWygenerowanie raportu\njakości danych" as PU039
+
+  Verifier --> PU032
+  Verifier --> PU036
+  Verifier --> PU039
+
+  PU032 ..> PU033 : <<invoke>>
+  PU033 ..> PU034 : <<invoke>>
+  PU033 ..> PU035 : <<invoke>>
+
+  PU036 ..> PU017 : <<invoke>>
+  PU017 ..> PU037 : <<invoke>>
+  PU017 ..> PU038 : <<invoke>>
 
   @enduml
   ```
@@ -1547,7 +1592,6 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Weryfikator tworzy raport podsumowujący jakość danych w systemie, zawierający statystyki dotyczące liczby zgłoszonych uwag, ich kategorii oraz procentu zatwierdzonych zmian. Raport może być zapisany w formacie PDF lub CSV.
 
 
-
 #### 6.7. Administrator
   **Diagram**
 
@@ -1557,22 +1601,22 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Administrator" as Admin
 
-  usecase "PU025: Zarządzanie\n użytkownikami" as UC1
-  usecase "PU026: Nadanie uprawnień\n użytkownikowi" as UC2
-  usecase "PU027: Dodanie konta\n użytkownika" as UC3
-  usecase "PU028: Edycja konta\n użytkownika" as UC4
-  usecase "PU029: Usunięcie konta\n użytkownika" as UC5
-  usecase "PU030: Monitorowanie\n stanu systemu" as UC6
-  usecase "PU031: Konfiguracja\n systemu" as UC7
+  usecase "PU040:\nWyświetlenie\nlogów systemu" as PU040
+  usecase "PU041:\nWyświetlenie listy\nużytkowników" as PU041
+  usecase "PU042:\nNadanie uprawnień\nużytkownikowi" as PU042
+  usecase "PU043:\nDodanie konta\nużytkownika" as PU043
+  usecase "PU044:\nEdytowanie konta\nużytkownika" as PU044
+  usecase "PU045:\nUsunięcie konta\nużytkownika" as PU045
+  usecase "PU046:\nZmienienie parametrów\nsystemu" as PU046
 
-  Admin --> UC1
-  Admin --> UC6
-  Admin --> UC7
+  Admin --> PU040
+  Admin --> PU041
+  Admin --> PU046
 
-  UC1 ..> UC2 : <<include>>
-  UC1 ..> UC3 : <<include>>
-  UC1 ..> UC4 : <<include>>
-  UC1 ..> UC5 : <<include>>
+  PU041 ..> PU042 : <<invoke>>
+  PU041 ..> PU043 : <<invoke>>
+  PU041 ..> PU044 : <<invoke>>
+  PU041 ..> PU045 : <<invoke>>
 
   @enduml
   ```
