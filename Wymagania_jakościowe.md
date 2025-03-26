@@ -18,9 +18,9 @@ Np. System będzie zapewniał przechowywanie co najmniej 5 mln rekordów transak
 
 ### Kornelia Kołodziejska
 
-System powinien umożliwiać użytkownikom wyszukiwanie zbiorów danych w średnim czasie nie dłuższym niż 3 sekundy.
+- System powinien umożliwiać użytkownikom wyszukiwanie zbiorów danych w średnim czasie nie dłuższym niż 3 sekundy.
 
-System musi być w stanie obsłużyć co najmniej 300 zapytań o dane na sekundę podczas szczytowego obciążenia. 
+- System musi być w stanie obsłużyć co najmniej 300 zapytań o dane na sekundę podczas szczytowego obciążenia. 
 
 
 
