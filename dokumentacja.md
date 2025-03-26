@@ -1140,7 +1140,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml Uzytkownik
+  @startuml
   left to right direction
 
   actor "Użytkownik" as User
@@ -1256,7 +1256,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml ZarzadcaDanych
+  @startuml
 
   left to right direction
 
@@ -1375,7 +1375,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml Subskrybent
+  @startuml
   left to right direction
 
   actor "Subskrybent" as U
@@ -1410,7 +1410,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml DostawcaDanych
+  @startuml
   left to right direction
 
   actor "Dostawca danych" as Provider
@@ -1462,7 +1462,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml Czas
+  @startuml
   left to right direction
 
   actor "Czas" as Time
@@ -1504,7 +1504,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml Weryfikator
+  @startuml
   left to right direction
 
   actor "Weryfikator" as Verifier
@@ -1596,7 +1596,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Diagram**
 
   ```puml
-  @startuml Administrator
+  @startuml
   left to right direction
 
   actor "Administrator" as Admin
