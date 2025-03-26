@@ -56,6 +56,8 @@ Np. System musi umożliwiać dostosowanie rozmiaru czcionek do użytkowników ze
 
 ### Bartek	Janota (Rozpoznawalność odpowiedniości / Łatwość nauczenia)
 ### Mikołaj 	Tradecki (Operatywność / Zabezpieczenie przed błędami użytkownika)
+System powinien charakteryzować się wysoką operatywnością, zapewniając użytkownikom możliwość efektywnego i szybkiego wykonywania kluczowych zadań związanych z przeglądaniem zbiorów danych, przy minimalnym wysiłku i liczbie interakcji
+
 ### Mikołaj 	Frączek (Estetyka interfejsu użytkownika / Przystępność)
 
 ## Niezawodność
@@ -97,6 +99,8 @@ Np. System musi dodawać identyfikator użytkownika do każdej transakcji sprzed
 Np. Każdy dokument musi być podpisywany podpisem elektronicznym zgodnym ze standardem Beta Plus.
 
 ### Jakub	Klenkiewicz (Poufność / Integralność )
+- System powinien umożliwiać definiowanie ról i uprawnień, aby dostęp do poufnych danych mieli wyłącznie autoryzowani użytkownicy.
+
 
 ### Michał	Ciechan (Niezaprzeczalność / Odpowiedzialność ) 
 System musi prowadzić szczegółowy dziennik zdarzeń, zawierający datę, czas, użytkownika oraz opis wykonanej akcji, który nie może zostać usunięty ani zmodyfikowany bez śladu.
@@ -122,7 +126,12 @@ Np. Projekt będzie zgodny z metodyką ABC, wspierającą łatwą modyfikację i
 Np. System będzie zawierał interfejs wspierający automatyzację testów narzędziem XYZ.
 
 ### Łukasz	Gumienniczuk ( Modularność / Reużywalność)
+
+System musi umożliwiać niezależne wdrażanie i aktualizowanie poszczególnych modułów bez wpływu na działanie innych komponentów oraz zawierać moduły, które mogą być wielokrotnie wykorzystywane zarówno w różnych częściach aplikacji, jak i w innych systemach, bez konieczności ich modyfikacji.
+
 ### Michał	Jagodziński (Łatwość analizy / Łatwość zmiany / Testowalność)
+
+System powinien zawierać zestaw testów jednostkowych i integracyjnych, które pokrywają co najmniej 90% funkcjonalności krytycznych, a ich uruchomienie nie powinno przekraczać 5 minut.
 
 ## Przenośność
 Dotyczy możliwości działania systemu w różnych środowiskach.
