@@ -99,10 +99,12 @@ Np. System musi dodawać identyfikator użytkownika do każdej transakcji sprzed
 Np. Każdy dokument musi być podpisywany podpisem elektronicznym zgodnym ze standardem Beta Plus.
 
 ### Jakub	Klenkiewicz (Poufność / Integralność )
-
 - System powinien umożliwiać definiowanie ról i uprawnień, aby dostęp do poufnych danych mieli wyłącznie autoryzowani użytkownicy.
 
+
 ### Michał	Ciechan (Niezaprzeczalność / Odpowiedzialność ) 
+System musi prowadzić szczegółowy dziennik zdarzeń, zawierający datę, czas, użytkownika oraz opis wykonanej akcji, który nie może zostać usunięty ani zmodyfikowany bez śladu.
+
 ### Maciej 	Ruakt ( Autentyczność)
 
 ## Łatwość utrzymania
