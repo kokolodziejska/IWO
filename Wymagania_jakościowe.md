@@ -115,6 +115,7 @@ Np. Każdy dokument musi być podpisywany podpisem elektronicznym zgodnym ze sta
 System musi prowadzić szczegółowy dziennik zdarzeń, zawierający datę, czas, użytkownika oraz opis wykonanej akcji, który nie może zostać usunięty ani zmodyfikowany bez śladu.
 
 ### Maciej 	Ruakt ( Autentyczność)
+System musi zapewniać autentyczność informacji poprzez automatyczną weryfikację źródła danych przy każdej operacji, gwarantując, że pochodzą one z autoryzowanych źródeł.
 
 ## Łatwość utrzymania
 Dotyczy nakładów pracy podczas modyfikacji i rozwoju systemu.
