@@ -89,6 +89,9 @@ Np. System musi zapewniać średni czas między awariami na poziomie 1 awarii kl
 Np. System musi przywrócić dane po awarii klasy 2 w czasie 1 godziny z utratą danych mniejszą niż 2 minuty.
 
 ### Dominika	Kalinowska ( Dojrzałość / Dostępność)
+Dojrzałość - System powinien działać stabilnie przez minimum 30 dni bez restartu usług głównych 
+Dostępność - System powinien być dostępny dla użytkowników końcowych przez co najmniej 99,9% czasu w skali miesiąca.
+
 ### Mateusz	Borka (Odporność na błędy / Odtwarzalność)
 
  - System powinien automatycznie przełączać się na zapasowy serwer w przypadku awarii głównej maszyny, minimalizując czas przestoju do maksymalnie 30 sekund.
