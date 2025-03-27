@@ -1155,7 +1155,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
   usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
   usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
-  usecase "PU011:\nWyświetlenie szczegółów\nzgłoszenia" as PU011
+  usecase "PU011:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU011
 
   User --> PU001
   User --> PU002
@@ -1244,7 +1244,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych, zawierającą informacje takie jak treść, data dodania oraz status zgłoszenia. Uwagi są uporządkowane według kryteriów, np. daty dodania lub statusu przetwarzania.
 
-  - **(PU011) Wyświetlenie szczegółów zgłoszenia**
+  - **(PU011) Wyświetlenie szczegółów zgłoszonej uwagi**
 
     **Waga:** Średnia | **Trudność**: Niska 
 
@@ -1269,7 +1269,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
   usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
-  usecase "PU018:\nZmiana statusu\nzgłoszenia" as PU018
+  usecase "PU018:\nZmiana statusu\nzgłoszonej uwagi" as PU018
 
   usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
   usecase "PU020:\nDodanie schematu" as PU020
@@ -1335,7 +1335,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     Zarządca danych przegląda pełne informacje o konkretnej uwadze, w tym jej status oraz historię działań.
 
-  - **(PU018) Zmiana statusu zgłoszenia**
+  - **(PU018) Zmiana statusu zgłoszonej uwagi**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
@@ -1470,10 +1470,12 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   usecase "PU029:\nWysłanie powiadomienia\no zmianach w zbiorze danych\nsubskrybentom" as PU029
   usecase "PU030:\nWygenerowanie raportów\nczęstotliwości pobrań\nzbiorów danych" as PU030
   usecase "PU031:\nStworzenie backup'u" as PU031
+  usecase "PU032:\nEksport danych do\nsystemu CKAN" as PU032
 
   Time --> PU029
   Time --> PU030
   Time --> PU031
+  Time --> PU032
 
   @enduml
   ```
@@ -1499,6 +1501,13 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     System automatycznie tworzy kopie zapasowe zbiorów danych oraz ich metadanych w określonych odstępach czasu. Backup jest przechowywany w zabezpieczonym repozytorium i może zostać przywrócony w przypadku awarii.
 
+  - **(PU032) Eksport danych do systemu CKAN**
+
+    **Waga:** x | **Trudność**: x
+
+    **Opis**:  
+    x
+
 
 #### 6.6. Weryfikator
   **Diagram**
@@ -1509,82 +1518,82 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Weryfikator" as Verifier
 
-  usecase "PU032:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU032
-  usecase "PU033:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU033
-  usecase "PU034:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
-  usecase "PU035:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
+  usecase "PU033:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU033
+  usecase "PU034:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
+  usecase "PU035:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
+  usecase "PU036:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU036
 
-  usecase "PU036:\nWyświetlenie listy\nzgłoszonych uwag" as PU036
+  usecase "PU037:\nWyświetlenie listy\nzgłoszonych uwag" as PU037
   usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
-  usecase "PU037:\nPrzesłanie uwagi\ndo zarządcy danych" as PU037
-  usecase "PU038:\nOdrzucenie uwagi" as PU038
+  usecase "PU038:\nPrzesłanie zgłoszonej uwagi\ndo zarządcy danych" as PU038
+  usecase "PU039:\nOdrzucenie zgłoszonej\nuwagi" as PU039
 
-  usecase "PU039:\nWygenerowanie raportu\njakości danych" as PU039
+  usecase "PU040:\nWygenerowanie raportu\njakości danych" as PU040
 
-  Verifier --> PU032
-  Verifier --> PU036
-  Verifier --> PU039
+  Verifier --> PU033
+  Verifier --> PU037
+  Verifier --> PU040
 
-  PU032 ..> PU033 : <<invoke>>
   PU033 ..> PU034 : <<invoke>>
-  PU033 ..> PU035 : <<invoke>>
+  PU034 ..> PU035 : <<invoke>>
+  PU034 ..> PU036 : <<invoke>>
 
-  PU036 ..> PU017 : <<invoke>>
-  PU017 ..> PU037 : <<invoke>>
+  PU037 ..> PU017 : <<invoke>>
   PU017 ..> PU038 : <<invoke>>
+  PU017 ..> PU039 : <<invoke>>
 
   @enduml
   ```
-  - **(PU032) Wyświetlenie listy zbiorów danych**
+  - **(PU033) Wyświetlenie listy zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:    
     Weryfikator przegląda listę dostępnych zbiorów danych w systemie, zawierającą informacje takie jak nazwa, źródło oraz status weryfikacji. Zbiory mogą być filtrowane i sortowane według wybranych kryteriów.
 
-  - **(PU033) Dodanie zbioru danych**
+  - **(PU034) Wyświetlenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** Wysoka  | **Trudność**: Średnia
-
-    **Opis**:  
-    Weryfikator rejestruje nowy zbiór danych w systemie, wprowadzając jego nazwę, opis oraz źródło po wcześniejszej analizie jakości i zgodności z wytycznymi.
-
-  - **(PU034) Edytowanie zbioru danych**
-
-    **Waga:** Wysoka | **Trudność**: Wysoka
+    **Waga:** x  | **Trudność**: x
 
     **Opis**:  
-    Weryfikator aktualizuje informacje o istniejącym zbiorze danych, zmieniając jego nazwę, opis lub inne parametry. Po wprowadzeniu zmian zbiór przechodzi ponowną weryfikację przed zatwierdzeniem.
+    x
 
-  - **(PU035) Usunięcie zbioru danych**
+  - **(PU035) Zatwierdzenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** Wysoka  | **Trudność**: Niska
-
-    **Opis**:  
-    Weryfikator usuwa zbiór danych z systemu, jeśli nie spełnia on wymagań jakościowych lub zawiera błędy. Proces usuwania wymaga podania uzasadnienia decyzji przez Weryfikatora.
-
-  - **(PU036) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
-
-    **Waga:** Średnia | **Trudność**: Niska
+    **Waga:** x | **Trudność**: x
 
     **Opis**:  
-    Weryfikator przegląda listę zgłoszonych uwag dotyczących zbiorów danych, które zostały zweryfikowane pod kątem zasadności. Lista zawiera informacje takie jak treść uwagi, data zgłoszenia oraz status decyzji.
+    x
 
-  - **(PU037) Wyświetlenie szczegółów zgłoszonej uwagi**
+  - **(PU036) Odrzucenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** Średnia | **Trudność**: Niska
-
-    **Opis**:  
-    Weryfikator otwiera szczegółowy widok zgłoszonej uwagi, w którym widoczna jest jej treść, data dodania oraz aktualny status. Możliwe jest także przejrzenie historii zmian statusu zgłoszenia.
-
-  - **(PU038) Zmiana statusu zgłoszenia**
-
-    **Waga:** Średnia | **Trudność**: Średnia
+    **Waga:** x | **Trudność**: x
 
     **Opis**:  
-    Weryfikator aktualizuje status zgłoszonej uwagi, wybierając spośród dostępnych opcji, takich jak „zaakceptowana”, „odrzucona” lub „wymaga dalszej analizy”. Zmiana statusu może być opatrzona uzasadnieniem.
+    x
 
-  - **(PU039) Wygenerowanie raportu jakości danych**
+  - **(PU037) Wyświetlenie listy zgłoszonych uwag**
+
+    **Waga:** x | **Trudność**: x
+
+    **Opis**:  
+    x
+
+  - **(PU038) Przesłanie zgłoszonej uwagi do zarządcy danych**
+
+    **Waga:** x | **Trudność**: x
+
+    **Opis**:  
+    x
+
+  - **(PU039) Odrzucenie zgłoszonej uwagi**
+
+    **Waga:** x | **Trudność**: x
+
+    **Opis**:  
+    x
+
+  - **(PU040) Wygenerowanie raportu jakości danych**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
@@ -1601,68 +1610,68 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Administrator" as Admin
 
-  usecase "PU040:\nWyświetlenie\nlogów systemu" as PU040
-  usecase "PU041:\nWyświetlenie listy\nużytkowników" as PU041
-  usecase "PU042:\nNadanie uprawnień\nużytkownikowi" as PU042
-  usecase "PU043:\nDodanie konta\nużytkownika" as PU043
-  usecase "PU044:\nEdytowanie konta\nużytkownika" as PU044
-  usecase "PU045:\nUsunięcie konta\nużytkownika" as PU045
-  usecase "PU046:\nZmienienie parametrów\nsystemu" as PU046
+  usecase "PU041:\nWyświetlenie\nlogów systemu" as PU041
+  usecase "PU042:\nWyświetlenie listy\nużytkowników" as PU042
+  usecase "PU043:\nNadanie uprawnień\nużytkownikowi" as PU043
+  usecase "PU044:\nDodanie konta\nużytkownika" as PU044
+  usecase "PU045:\nEdytowanie konta\nużytkownika" as PU045
+  usecase "PU046:\nUsunięcie konta\nużytkownika" as PU046
+  usecase "PU047:\nZmienienie parametrów\nsystemu" as PU047
 
-  Admin --> PU040
   Admin --> PU041
-  Admin --> PU046
+  Admin --> PU042
+  Admin --> PU047
 
-  PU041 ..> PU042 : <<invoke>>
-  PU041 ..> PU043 : <<invoke>>
-  PU041 ..> PU044 : <<invoke>>
-  PU041 ..> PU045 : <<invoke>>
+  PU042 ..> PU043 : <<invoke>>
+  PU042 ..> PU044 : <<invoke>>
+  PU042 ..> PU045 : <<invoke>>
+  PU042 ..> PU046 : <<invoke>>
 
   @enduml
   ```
-  - **(PU040) Wyświetlenie logów systemu**
+  - **(PU041) Wyświetlenie logów systemu**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Administrator przegląda logi systemowe, które zawierają informacje o operacjach wykonywanych w systemie, błędach oraz innych zdarzeniach technicznych. Logi mogą być filtrowane według zakresu dat, typu zdarzenia i użytkownika.
 
-  - **(PU041) Wyświetlenie listy użytkowników**
+  - **(PU042) Wyświetlenie listy użytkowników**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi, takimi jak nazwa i rola. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
 
-  - **(PU042) Nadanie uprawnień użytkownikowi**
+  - **(PU043) Nadanie uprawnień użytkownikowi**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Administrator przypisuje użytkownikowi odpowiednie uprawnienia, wybierając z dostępnych ról i poziomów dostępu. Po zapisaniu zmian użytkownik może korzystać z dodatkowych funkcji systemu zgodnie z nadanymi uprawnieniami.
     
-  - **(PU043) Dodanie konta użytkownika**
+  - **(PU044) Dodanie konta użytkownika**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Administrator tworzy nowe konto użytkownika, podając jego dane, takie jak imię, nazwisko, adres e-mail oraz przypisując odpowiednią rolę.
 
-  - **(PU044) Edytowanie konta użytkownika**
+  - **(PU045) Edytowanie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Administrator aktualizuje dane konta użytkownika, zmieniając informacje takie jak adres e-mail, imię i nazwisko lub przypisane role. Zmiany są od razu zapisywane i obowiązują przy kolejnym logowaniu użytkownika.
 
-  - **(PU045) Usunięcie konta użytkownika**
+  - **(PU046) Usunięcie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Administrator usuwa konto użytkownika z systemu, dezaktywując dostęp i usuwając powiązane dane zgodnie z polityką retencji. Usunięcie konta może wymagać potwierdzenia decyzji.
     
-  - **(PU046) Zmienienie parametrów systemu**
+  - **(PU047) Zmienienie parametrów systemu**
 
     **Waga:** Wysoka | **Trudność**: Wysoka
 
