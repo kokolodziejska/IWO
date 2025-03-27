@@ -68,6 +68,8 @@ Np. System musi umożliwiać dostosowanie rozmiaru czcionek do użytkowników ze
 System powinien charakteryzować się wysoką operatywnością, zapewniając użytkownikom możliwość efektywnego i szybkiego wykonywania kluczowych zadań związanych z przeglądaniem zbiorów danych, przy minimalnym wysiłku i liczbie interakcji
 
 ### Mikołaj 	Frączek (Estetyka interfejsu użytkownika / Przystępność)
+- System musi automatycznie przełączać motyw kolorystyczny (jasny/ciemny) w zależności od preferencji systemowych użytkownika.
+- System powinien obsługiwać pełną nawigację za pomocą klawiatury, w tym dostęp do wszystkich przycisków, formularzy i elementów interaktywnych.
 
 ## Niezawodność
 Dotyczy utrzymania określonego poziomu działania systemu w danym czasie.
