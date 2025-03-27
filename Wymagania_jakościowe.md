@@ -89,6 +89,9 @@ Np. System musi przywrócić dane po awarii klasy 2 w czasie 1 godziny z utratą
 ### Dominika	Kalinowska ( Dojrzałość / Dostępność)
 ### Mateusz	Borka (Odporność na błędy / Odtwarzalność)
 
+ - System powinien automatycznie przełączać się na zapasowy serwer w przypadku awarii głównej maszyny, minimalizując czas przestoju do maksymalnie 30 sekund.
+ - System musi posiadać mechanizm automatycznych kopii zapasowych tworzonych co 12 godzin, umożliwiający pełne przywrócenie danych w czasie krótszym niż 10 minut.
+
 ## Bezpieczeństwo
 Dotyczy ochrony danych i kontroli dostępu do systemu.
 
