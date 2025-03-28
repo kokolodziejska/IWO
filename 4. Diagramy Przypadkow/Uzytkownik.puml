@@ -13,7 +13,7 @@ usecase "PU007:\nZgłoszenie uwagi\ndo zbioru danych" as PU007
 usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
 usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
 usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
-usecase "PU011:\nWyświetlenie szczegółów\nzgłoszenia" as PU011
+usecase "PU011:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU011
 
 User --> PU001
 User --> PU002

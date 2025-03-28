@@ -11,7 +11,7 @@ usecase "PU015:\nUsunięcie\nzbioru danych" as PU015
 
 usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
 usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
-usecase "PU018:\nZmiana statusu\nzgłoszenia" as PU018
+usecase "PU018:\nZmiana statusu\nzgłoszonej uwagi" as PU018
 
 usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
 usecase "PU020:\nDodanie schematu" as PU020

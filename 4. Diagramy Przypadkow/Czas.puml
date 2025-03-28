@@ -6,9 +6,11 @@ actor "Czas" as Time
 usecase "PU029:\nWysłanie powiadomienia\no zmianach w zbiorze danych\nsubskrybentom" as PU029
 usecase "PU030:\nWygenerowanie raportów\nczęstotliwości pobrań\nzbiorów danych" as PU030
 usecase "PU031:\nStworzenie backup'u" as PU031
+usecase "PU032:\nEksport danych do\nsystemu CKAN" as PU032
 
 Time --> PU029
 Time --> PU030
 Time --> PU031
+Time --> PU032
 
 @enduml
