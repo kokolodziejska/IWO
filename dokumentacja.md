@@ -1179,35 +1179,35 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Użytkownik wprowadza swoje dane uwierzytelniające, takie jak login i hasło, aby uzyskać dostęp do systemu. Po pomyślnym zalogowaniu zostaje przekierowany do ekranu głównego, gdzie ma dostęp do dostępnych funkcji.
+    Użytkownik wprowadza swoje dane uwierzytelniające aby uzyskać dostęp do systemu. Po pomyślnym zalogowaniu zostaje przekierowany do ekranu głównego, gdzie ma dostęp do dostępnych funkcji.
 
   - **(PU002) Wyświetlenie listy zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik przegląda katalog dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje, takie jak nazwa, krótki opis i dostępne formaty. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
+    Użytkownik przegląda katalog dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
 
   - **(PU003) Wyświetlenie szczegółów zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik otwiera szczegółowy widok wybranego zbioru danych, w którym znajdują się informacje o jego strukturze, dostępnych formatach oraz metadanych. Może również zobaczyć historię aktualizacji oraz opcje pobrania lub subskrypcji.
+    Użytkownik otwiera szczegółowy widok wybranego zbioru danych. Może również zobaczyć historię aktualizacji oraz opcje pobrania lub subskrypcji.
 
   - **(PU004) Wyświetlenie wizualizacji zbioru danych**
 
     **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:
-    Użytkownik ogląda interaktywną wizualizację danych w postaci wykresów, tabel lub map, które przedstawiają kluczowe aspekty zbioru. Może korzystać z narzędzi do manipulacji danymi, np. zmiany zakresu wartości lub sposobu ich grupowania   
+    Użytkownik ogląda interaktywną wizualizację danych w postaci wykresów, tabel lub map, które przedstawiają kluczowe aspekty zbioru. Może korzystać z narzędzi do manipulacji danymi.
 .
   - **(PU005) Zmienienie parametrów wizualizacji**
 
     **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    Użytkownik dostosowuje sposób prezentacji danych, wybierając różne typy wizualizacji, zmieniając kolory, oś wartości lub filtrując wybrane kategorie. Zmiany są dynamicznie odzwierciedlane na ekranie, umożliwiając precyzyjną analizę danych.
+    Użytkownik dostosowuje sposób prezentacji danych. Zmiany są dynamicznie odzwierciedlane na ekranie, umożliwiając precyzyjną analizę danych.
 
   - **(PU006) Pobranie dystrybucji zbioru danych**
 
@@ -1221,7 +1221,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych, np. błędy w metadanych lub nieaktualne informacje. Zgłoszenie jest następnie przesyłane do weryfikatora systemu w celu weryfikacji.
+    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych. Zgłoszona uwaga jest następnie przesyłane do weryfikatora systemu w celu weryfikacji.
 
   - **(PU008) Zasubskrybowanie zbioru danych**
 
@@ -1249,7 +1249,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:  
-    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszeniem.
+    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszoną uwagą.
     
 
 #### 6.2. Zarządca danych
@@ -1298,7 +1298,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:    
-    Zarządca danych przegląda katalog dostępnych zbiorów danych, zawierający informacje takie jak nazwa, opis, oraz format. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
+    Zarządca danych przegląda katalog dostępnych zbiorów danych. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
 
   - **(PU013) Dodanie zbioru danych**
 
@@ -1396,7 +1396,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Subskrybent przegląda listę subskrybowanych zbiorów danych, która zawiera informacje takie jak nazwa zbioru, data subskrypcji oraz ustawienia powiadomień. Lista jest uporządkowana w sposób umożliwiający szybkie znalezienie interesujących pozycji.
+    Subskrybent przegląda listę subskrybowanych zbiorów danych. Lista jest uporządkowana w sposób umożliwiający szybkie znalezienie interesujących pozycji.
 
   - **(PU024) Edytowanie ustawień subskrybcji**
 
@@ -1448,7 +1448,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry, takie jak format, ścieżka dostępu, czy licencja. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
+    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
 
   - **(PU028) Usunięcie dystrybucji**
 
@@ -1485,7 +1485,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    System automatycznie wysyła powiadomienia do subskrybentów, informując ich o zmianach w subskrybowanych zbiorach danych, takich jak nowe wersje, dodane dystrybucje czy aktualizacje metadanych. Powiadomienia są dostarczane zgodnie z preferencjami użytkownika.
+    System automatycznie wysyła powiadomienia do subskrybentów, informując ich o zmianach w subskrybowanych zbiorach danych. Powiadomienia są dostarczane zgodnie z preferencjami użytkownika.
 
   - **(PU030) Wygenerowanie raportów częstotliwości pobrań zbiorów danych**
 
@@ -1503,10 +1503,10 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   - **(PU032) Eksport danych do systemu CKAN**
 
-    **Waga:** x | **Trudność**: x
+    **Waga:** Wysoka | **Trudność**: Wysoka
 
     **Opis**:  
-    x
+    System eksportuje dane do systemu CKAN. Eksport obejmuje dane oraz metadane, które są przekształcane i przygotowywane zgodnie z wymaganiami CKAN.
 
 
 #### 6.6. Weryfikator
@@ -1553,52 +1553,52 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   - **(PU034) Wyświetlenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** x  | **Trudność**: x
+    **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    x
+    Weryfikator przegląda szczegóły wprowadzonych zmian w zbiorze danych. Zmiany są przedstawiane w przejrzysty sposób, umożliwiając ich dokładną weryfikację.
 
   - **(PU035) Zatwierdzenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** x | **Trudność**: x
+    **Waga:** Wysoka | **Trudność**: Średnia 
 
     **Opis**:  
-    x
+    Weryfikator zatwierdza wprowadzone zmiany w zbiorze danych po ich weryfikacji. Zatwierdzenie zmian sprawia, że stają się one częścią ostatecznego zbioru danych w systemie.
 
   - **(PU036) Odrzucenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** x | **Trudność**: x
+    **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    x
+    Weryfikator odrzuca wprowadzone zmiany w zbiorze danych, jeśli zmiany nie spełniają określonych standardów lub zawierają błędy.
 
   - **(PU037) Wyświetlenie listy zgłoszonych uwag**
 
-    **Waga:** x | **Trudność**: x
+    **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:  
-    x
+    Weryfikator przegląda listę zgłoszonych uwag dotyczących jakości danych. Lista zawiera informacje o każdej uwadze, takie jak jej status oraz powiązanie z odpowiednim zbiorem danych.
 
   - **(PU038) Przesłanie zgłoszonej uwagi do zarządcy danych**
 
-    **Waga:** x | **Trudność**: x
+    **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    x
+    Weryfikator przesyła zgłoszoną uwagę do zarządcy danych w celu dalszego rozpatrzenia. Przesłanie uwagi obejmuje szczegóły dotyczące problemu, który wymaga interwencji.
 
   - **(PU039) Odrzucenie zgłoszonej uwagi**
 
-    **Waga:** x | **Trudność**: x
+    **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:  
-    x
+    Weryfikator odrzuca zgłoszoną uwagę, jeśli uzna ją za niezasadną. Odrzucenie uwagi oznacza, że nie będzie ona więcej rozpatrywana.
 
   - **(PU040) Wygenerowanie raportu jakości danych**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Weryfikator tworzy raport podsumowujący jakość danych w systemie, zawierający statystyki dotyczące liczby zgłoszonych uwag, ich kategorii oraz procentu zatwierdzonych zmian. Raport może być zapisany w formacie PDF lub CSV.
+    Weryfikator tworzy raport podsumowujący jakość danych w systemie, zawierający statystyki dotyczące liczby zgłoszonych uwag oraz ich kategorii. Raport może być zapisany w formacie PDF lub CSV.
 
 
 #### 6.7. Administrator
@@ -1655,14 +1655,14 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Administrator tworzy nowe konto użytkownika, podając jego dane, takie jak imię, nazwisko, adres e-mail oraz przypisując odpowiednią rolę.
+    Administrator tworzy nowe konto użytkownika, podając jego dane oraz przypisując odpowiednią rolę.
 
   - **(PU045) Edytowanie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Administrator aktualizuje dane konta użytkownika, zmieniając informacje takie jak adres e-mail, imię i nazwisko lub przypisane role. Zmiany są od razu zapisywane i obowiązują przy kolejnym logowaniu użytkownika.
+    Administrator aktualizuje dane konta użytkownika, zmieniając dane lub przypisane role. Zmiany są od razu zapisywane i obowiązują przy kolejnym logowaniu użytkownika.
 
   - **(PU046) Usunięcie konta użytkownika**
 
