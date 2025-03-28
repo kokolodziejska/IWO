@@ -1186,7 +1186,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik przegląda katalog dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
+    Użytkownik przegląda listę dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
 
   - **(PU003) Wyświetlenie szczegółów zbiorów danych**
 
@@ -1298,7 +1298,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:    
-    Zarządca danych przegląda katalog dostępnych zbiorów danych. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
+    Zarządca danych przegląda listę dostępnych zbiorów danych. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
 
   - **(PU013) Dodanie zbioru danych**
 
