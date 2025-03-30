@@ -5,7 +5,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 - **Priorytet** – poziom ważności,
 - **Trudność** – oszacowanie trudności realizacji,
 - **Sposób pomiaru** – opis procedury testowej,
-- **Oczekiwane wartość** – kryteria akceptacji.
+- **Oczekiwana wartość** – kryteria akceptacji.
 
 ---
 
@@ -19,7 +19,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Średni*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Wykonanie testów obciążeniowych (np. za pomocą JMeter) na próbie 1000 operacji wyszukiwania, przy użyciu oprogramowania pomiarowego (dokładność 0,01 sekundy). |
-| **Oczekiwane wartość** | Średni czas wyszukiwania ≤ 0,5 sekundy; odchylenie standardowe ≤ 0,1 sekundy.                                             |
+| **Oczekiwana wartość** | Średni czas wyszukiwania ≤ 0,5 sekundy; odchylenie standardowe ≤ 0,1 sekundy.                                             |
 
 ---
 
@@ -31,7 +31,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Wysoka*                                                                                                               |
 | **Sposób pomiaru**   | Testy wydajnościowe symulujące 100 000 równoczesnych użytkowników (np. przy użyciu Gatling) oraz 100 prób przy różnych poziomach obciążenia. |
-| **Oczekiwane wartość** | Średni czas wyszukiwania ≤ 3 sekundy przy maksymalnym obciążeniu; najgorszy wynik nie przekracza 5 sekund.                 |
+| **Oczekiwana wartość** | Średni czas wyszukiwania ≤ 3 sekundy przy maksymalnym obciążeniu; najgorszy wynik nie przekracza 5 sekund.                 |
 
 ---
 
@@ -43,7 +43,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Wysoka*                                                                                                               |
 | **Sposób pomiaru**   | Przeprowadzenie testów obciążeniowych, mierzenie liczby zapytań przetwarzanych na sekundę przy użyciu narzędzia (np. Apache JMeter). |
-| **Oczekiwane wartość** | System przetwarza minimum 300 zapytań na sekundę, przy zachowaniu stabilności (300–320 zapytań/s).                         |
+| **Oczekiwana wartość** | System przetwarza minimum 300 zapytań na sekundę, przy zachowaniu stabilności (300–320 zapytań/s).                         |
 
 ---
 
@@ -57,7 +57,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Wysoka*                                                                                                               |
 | **Sposób pomiaru**   | Przeprowadzenie testów integracyjnych – weryfikacja mapowania danych oraz wymiany metadanych przez API CKAN, przy użyciu testów automatycznych. |
-| **Oczekiwane wartość** | 100% zgodności przesyłu metadanych ze specyfikacją CKAN; brak błędów mapowania w 100% przypadków.                         |
+| **Oczekiwana wartość** | 100% zgodności przesyłu metadanych ze specyfikacją CKAN; brak błędów mapowania w 100% przypadków.                         |
 
 ---
 #### (J0005) Kompatybilność z popularnymi przeglądarkami internetowymi
@@ -68,7 +68,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Średni*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                            |
 | **Sposób pomiaru**   | Przeprowadzenie testów kompatybilności przy użyciu narzędzi automatycznych (np. Selenium) na przeglądarkach: Chrome, Firefox, Edge oraz Safari. |
-| **Oczekiwane wartość** | 95% lub więcej przypadków testowych wykonanych poprawnie we wszystkich wymienionych przeglądarkach.                      |
+| **Oczekiwana wartość** | 95% lub więcej przypadków testowych wykonanych poprawnie we wszystkich wymienionych przeglądarkach.                      |
 
 ---
 ## 3. Użyteczność
@@ -81,7 +81,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Przeprowadzenie testów użyteczności z udziałem minimum 15 użytkowników oraz ankietowanie intuicyjności na skali 1–10.      |
-| **Oczekiwane wartość** | Średnia ocena intuicyjności ≥ 8; czas nauki podstawowych funkcji ≤ 5 minut.                                             |
+| **Oczekiwana wartość** | Średnia ocena intuicyjności ≥ 8; czas nauki podstawowych funkcji ≤ 5 minut.                                             |
 
 ---
 
@@ -93,7 +93,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Średni*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Testy użyteczności – pomiar czasu dodania nowego zbioru danych przez 10 użytkowników wykonujących ustalony scenariusz.    |
-| **Oczekiwane wartość** | Średni czas dodania zbioru danych ≤ 1 minuta; najgorszy wynik nie przekracza 1,5 minuty.                                  |
+| **Oczekiwana wartość** | Średni czas dodania zbioru danych ≤ 1 minuta; najgorszy wynik nie przekracza 1,5 minuty.                                  |
 
 ---
 
@@ -105,7 +105,7 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Średni*                                                                                                               |
 | **Trudność**         | *Niska*                                                                                                                |
 | **Sposób pomiaru**   | Testy funkcjonalne – pomiar liczby operacji wykonanych przy użyciu skrótów w porównaniu z nawigacją tradycyjną, wraz z rejestracją czasu. |
-| **Oczekiwane wartość** | Skróty skracają czas wykonania operacji o co najmniej 20% w porównaniu do nawigacji; liczba błędów związanych ze skrótami ≤ 2 na 100 operacji. |
+| **Oczekiwana wartość** | Skróty skracają czas wykonania operacji o co najmniej 20% w porównaniu do nawigacji; liczba błędów związanych ze skrótami ≤ 2 na 100 operacji. |
 
 ---
 ## 4. Niezawodność
@@ -118,11 +118,23 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Wysoka*                                                                                                               |
 | **Sposób pomiaru**   | Monitorowanie systemu przy użyciu narzędzi do pomiaru uptime (np. UptimeRobot) przez okres minimum 1 miesiąca w środowisku produkcyjnym. |
-| **Oczekiwane wartość** | Uptime ≥ 99,9% (nie więcej niż 43 minuty niedostępności miesięcznie).                                                   |
+| **Oczekiwana wartość** | Uptime ≥ 98% (nie więcej niż 14 godzin i 24 minut niedostępności miesięcznie).                                                   |
 
 ---
 
-#### (J0010) Stabilność działania przez długi okres
+#### (J0010) Automatyczne przełączenie na zapasowy serwer w razie awarii
+
+|                        |                                                                                                                       |
+| ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
+| **Typ**              | *Niezawodność*                                                                                                         |
+| **Priorytet**        | *Kluczowy*                                                                                                             |
+| **Trudność**         | *Średnia*                                                                                                               |
+| **Sposób pomiaru**   | Symulacja awarii głównego serwera w środowisku testowym z monitorowaniem czasu od wykrycia awarii do pełnego przywrócenia działania usług na serwerze zapasowym. |
+| **Oczekiwana wartość** | System automatycznie przełącza się na zapasowy serwer w czasie nie dłuższym niż 10 minut; brak utraty danych i konieczności interwencji użytkownika.                                                   |
+
+---
+
+#### (J0011) Stabilność działania przez długi okres
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
@@ -130,12 +142,12 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Wysoka*                                                                                                               |
 | **Sposób pomiaru**   | Symulacja ciągłego działania systemu w środowisku testowym przez 30 dni przy rzeczywistym obciążeniu.                    |
-| **Oczekiwane wartość** | Brak restartów systemu; liczba krytycznych błędów ≤ 1 na 30 dni.                                                       |
+| **Oczekiwana wartość** | Brak restartów systemu; liczba krytycznych błędów ≤ 1 na 30 dni.                                                       |
 
 ---
 
 
-#### (J0011) Automatyczne kopie zapasowe i przywracanie danych
+#### (J0012) Automatyczne kopie zapasowe i przywracanie danych
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
@@ -143,13 +155,13 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Symulacja awarii i test przywracania danych, mierzenie czasu od inicjacji przywracania do pełnej operacyjności systemu.   |
-| **Oczekiwane wartość** | Kopie zapasowe tworzone co 12 godzin; czas przywracania ≤ 10 minut; utrata danych nie przekracza 2 minut operacyjnego czasu. |
+| **Oczekiwana wartość** | Kopie zapasowe tworzone co 12 godzin; czas przywracania ≤ 10 minut; utrata danych nie przekracza 2 minut operacyjnego czasu. |
 
 ---
 
 ## 5. Bezpieczeństwo
 
-#### (J0012) Definicja ról i uprawnień
+#### (J0013) Definicja ról i uprawnień
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
@@ -157,11 +169,11 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Audyt bezpieczeństwa oraz testy penetracyjne skoncentrowane na kontroli dostępu, weryfikacja polityki ról przy użyciu narzędzi audytowych. |
-| **Oczekiwane wartość** | 100% zgodność z założeniami polityki dostępu; brak możliwości nieautoryzowanego dostępu.                                 |
+| **Oczekiwana wartość** | 100% zgodność z założeniami polityki dostępu; brak możliwości nieautoryzowanego dostępu.                                 |
 
 ---
 
-#### (J0013) Prowadzenie dziennika zdarzeń
+#### (J0014) Prowadzenie dziennika zdarzeń
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
@@ -169,25 +181,37 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Kluczowy*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Testy audytowe – symulacja operacji, a następnie próba modyfikacji dziennika przy użyciu sum kontrolnych i mechanizmów zabezpieczających. |
-| **Oczekiwane wartość** | Każda operacja jest niezmiennie zapisywana; wszelkie próby modyfikacji kończą się niepowodzeniem.                      |
+| **Oczekiwana wartość** | Każda operacja jest niezmiennie zapisywana; wszelkie próby modyfikacji kończą się niepowodzeniem.                      |
 
 ---
 
 ## 6. Łatwość utrzymania
 
-#### (J0014) Modularność i reużywalność komponentów
+#### (J0015) Niezależne wdrażanie i aktualizowanie modułów
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
 | **Typ**              | *Łatwość utrzymania*                                                                                                   |
 | **Priorytet**        | *Średni*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
-| **Sposób pomiaru**   | Audyt architektury systemu przeprowadzony przez niezależnych ekspertów, oceniający możliwość modyfikacji pojedynczych modułów bez wpływu na całość. |
-| **Oczekiwane wartość** | Ocena ekspercka ≥ 90% zgodności z wymaganiami modułowości; modyfikacja jednego modułu nie wpływa na działanie innych.      |
+| **Sposób pomiaru**   | Audyt architektury systemu przeprowadzony przez niezależnych ekspertów. Weryfikacja, czy wdrożenie nowej wersji modułu nie wymaga restartu ani modyfikacji innych komponentów. |
+| **Oczekiwana wartość** | Ocena ekspercka ≥ 90% zgodności z wymaganiami modułowości; możliwość wdrażania i aktualizowania pojedynczych modułów bez wpływu na działanie pozostałych części systemu.      |
 
 ---
 
-#### (J0015) Testowalność krytycznych funkcji
+#### (J0016) Reużywalność komponentów
+
+|                        |                                                                                                                       |
+| ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
+| **Typ**              | *Łatwość utrzymania*                                                                                                   |
+| **Priorytet**        | *Średni*                                                                                                             |
+| **Trudność**         | *Średnia*                                                                                                              |
+| **Sposób pomiaru**   | Audyt kodu źródłowego – ocena stopnia niezależności oraz stopnia zależności od kontekstu systemowego. |
+| **Oczekiwana wartość** | Ocena ekspercka ≥ 90% zgodności z wymaganiami modułowości.      |
+
+---
+
+#### (J0017) Testowalność krytycznych funkcji
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
@@ -195,13 +219,13 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Średni*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Wykorzystanie narzędzi do analizy pokrycia kodu (np. SonarQube) oraz pomiar czasu wykonania pełnego zestawu testów automatycznych. |
-| **Oczekiwane wartość** | Pokrycie krytycznych funkcji = 100%; czas wykonania testów ≤ 5 minut.                                                    |
+| **Oczekiwana wartość** | Pokrycie krytycznych funkcji = 100%; czas wykonania testów ≤ 5 minut.                                                    |
 
 ---
 
 ## 7. Przenośność
 
-#### (J0016) Uruchomienie systemu na różnych systemach operacyjnych
+#### (J0018) Uruchomienie systemu na różnych systemach operacyjnych
 
 |                        |                                                                                                                       |
 | ---------------------: | :-------------------------------------------------------------------------------------------------------------------- |
@@ -209,4 +233,4 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Priorytet**        | *Średni*                                                                                                             |
 | **Trudność**         | *Średnia*                                                                                                              |
 | **Sposób pomiaru**   | Testy instalacyjne przeprowadzone na systemach macOS, Windows oraz Linux przy użyciu automatycznych skryptów instalacyjnych oraz manualna weryfikacja funkcjonalności. |
-| **Oczekiwane wartość** | System uruchamia się bez modyfikacji kodu źródłowego na wszystkich trzech platformach; funkcjonalność identyczna (zgodność 100%). |
+| **Oczekiwana wartość** | System uruchamia się bez modyfikacji kodu źródłowego na wszystkich trzech platformach; funkcjonalność identyczna (zgodność 100%). |
