@@ -1228,21 +1228,21 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące formy powiadomień (e-mail, powiadomienie systemowe itp.).
+    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące formy powiadomień.
 
   - **(PU009) Wygenerowanie opisów bibliograficznych**
 
     **Waga:** Niska | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik wybiera zbiór danych i generuje opis bibliograficzny zgodny z wybranym standardem cytowania (np. APA, MLA). Może pobrać opis w formacie tekstowym lub skopiować go do schowka.
+    Użytkownik wybiera zbiór danych i generuje opis bibliograficzny zgodny z wybranym standardem cytowania. Może pobrać opis w wybranym formacie lub skopiować go do schowka.
 
   - **(PU010) Wyświetlenie listy zgłoszonych uwag**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych, zawierającą informacje takie jak treść, data dodania oraz status zgłoszenia. Uwagi są uporządkowane według kryteriów, np. daty dodania lub statusu przetwarzania.
+    Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych. Uwagi są uporządkowane według kryteriów, np. daty dodania lub statusu przetwarzania.
 
   - **(PU011) Wyświetlenie szczegółów zgłoszonej uwagi**
 
@@ -1305,7 +1305,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka  | **Trudność**: Średnia 
 
     **Opis**:  
-    Zarządca danych rejestruje nowy zbiór, podając kluczowe informacje, takie jak nazwa, opis, format i powiązane schematy. Po zatwierdzeniu zbiór jest dostępny dla użytkowników systemu.
+    Zarządca danych rejestruje nowy zbiór, podając kluczowe informacje. Po zatwierdzeniu zbiór jest dostępny dla użytkowników systemu.
 
   - **(PU014) Edytowanie zbioru danych**
 
@@ -1326,14 +1326,14 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Zarządca danych przegląda listę uwag dotyczących zbiorów danych, które przeszły proces weryfikacji. Każda uwaga zawiera treść, datę zgłoszenia oraz status.
+    Zarządca danych przegląda listę uwag dotyczących zbiorów danych, które przeszły proces weryfikacji.
 
   - **(PU017) Wyświetlenie szczegółów zgłoszonej uwagi**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Zarządca danych przegląda pełne informacje o konkretnej uwadze, w tym jej status oraz historię działań.
+    Zarządca danych przegląda pełne informacje o konkretnej uwadze.
 
   - **(PU018) Zmiana statusu zgłoszonej uwagi**
 
@@ -1506,7 +1506,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Wysoka
 
     **Opis**:  
-    System eksportuje dane do systemu CKAN. Eksport obejmuje dane oraz metadane, które są przekształcane i przygotowywane zgodnie z wymaganiami CKAN.
+    System eksportuje metadane do systemu CKAN.
 
 
 #### 6.6. Weryfikator
@@ -1549,7 +1549,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:    
-    Weryfikator przegląda listę dostępnych zbiorów danych w systemie, zawierającą informacje takie jak nazwa, źródło oraz status weryfikacji. Zbiory mogą być filtrowane i sortowane według wybranych kryteriów.
+    Weryfikator przegląda listę dostępnych zbiorów danych w systemie. Zbiory mogą być filtrowane i sortowane według wybranych kryteriów.
 
   - **(PU034) Wyświetlenie wprowadzonych zmian w zbiorze danych**
 
@@ -1577,7 +1577,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:  
-    Weryfikator przegląda listę zgłoszonych uwag dotyczących jakości danych. Lista zawiera informacje o każdej uwadze, takie jak jej status oraz powiązanie z odpowiednim zbiorem danych.
+    Weryfikator przegląda listę zgłoszonych uwag dotyczących jakości danych.
 
   - **(PU038) Przesłanie zgłoszonej uwagi do zarządcy danych**
 
@@ -1598,7 +1598,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Weryfikator tworzy raport podsumowujący jakość danych w systemie, zawierający statystyki dotyczące liczby zgłoszonych uwag oraz ich kategorii. Raport może być zapisany w formacie PDF lub CSV.
+    Weryfikator tworzy raport podsumowujący jakość danych w systemie. Raport może być zapisany w wybranym formacie.
 
 
 #### 6.7. Administrator
@@ -1634,14 +1634,14 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Administrator przegląda logi systemowe, które zawierają informacje o operacjach wykonywanych w systemie, błędach oraz innych zdarzeniach technicznych. Logi mogą być filtrowane według zakresu dat, typu zdarzenia i użytkownika.
+    Administrator przegląda logi systemowe. Logi mogą być filtrowane.
 
   - **(PU042) Wyświetlenie listy użytkowników**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi, takimi jak nazwa i rola. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
+    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
 
   - **(PU043) Nadanie uprawnień użytkownikowi**
 
