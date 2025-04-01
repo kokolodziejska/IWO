@@ -1,122 +1,156 @@
-# Słownik Dziedziny
+# Słownik dziedziny
 
 ## 1. **Zbiór danych**
 
-**Opis:**  
-Zestaw informacji o wspólnych cechach (np. temat, pochodzenie), który może być wersjonowany i udostępniany w różnych formatach.
+**Opis:**
+Zestaw powiązanych ze sobą informacji.
 
 **Atrybuty:**
 
-- `identyfikator` – unikalny numer lub kod wskazujący zbiór danych.
-- `wersja` – oznaczenie wersji (np. 1.0, 1.1), pozwalające identyfikować konkretne zmiany.
-- `opis` – krótki opis zawartości i zastosowania zbioru danych.
-- `słowa kluczowe` – terminy pomagające w wyszukiwaniu zbioru.
-- `punkty kontaktowe` – informacje kontaktowe odpowiedzialnych osób lub instytucji.
-- `licencja dostępu` – zasady korzystania (np. otwarta, komercyjna, wymaga zgody).
+* `identyfikator: string`
+* `licencja dostępu: Licencja` (enum)
+* `modyfikacje: Data [0..*]`
+* `opis: string [1..*]`
+* `słowa kluczowe: list<string>`
+* `tytul: string [1..*]`
+* `wersja: int`
 
 ---
 
 ## 2. **Punkt kontaktowy**
 
-**Opis:**  
-Dane osoby lub organizacji odpowiedzialnej za zbiór danych lub inną część systemu.
+**Opis:**
+Dane osoby lub organizacji kontaktowej.
 
 **Atrybuty:**
 
-- `nazwa` – imię i nazwisko, dział lub firma.
-- `email` – adres e-mail.
-- `telefon` – numer telefonu.
-- `adres` – fizyczny adres (ulica, kod pocztowy, miasto).
+* `adres: string`
+* `email: string`
+* `nazwa: string`
+* `telefon: string`
 
 ---
 
 ## 3. **Dystrybucja danych**
 
-**Opis:**  
-Sposób udostępnienia zbioru danych (np. plik do pobrania, API).
+**Opis:**
+Konkretna forma udostępnienia zbioru danych.
 
 **Atrybuty:**
 
-- `format` – typ pliku lub formatu (CSV, JSON, XML).
-- `url` – adres do pobrania lub przeglądania danych.
+* `format: Format` (enum)
+* `opis: string [1..*]`
+* `tytul: string [1..*]`
+* `url: string`
 
 ---
 
 ## 4. **Schemat danych**
 
-**Opis:**  
-Definicja struktury zbioru danych — opis pól, ich nazw i typów.
+**Opis:**
+Definicja struktury zbioru danych.
 
 **Atrybuty:**
 
-- `opis pól` – szczegóły każdego pola (nazwa, typ, wymagalność).
+* `nazwa: string`
+* `opis: string`
+* `struktura: string [1..*]`
+* `wersja: int`
 
 ---
 
 ## 5. **Uwaga do zbioru danych**
 
-**Opis:**  
-Komentarz lub sugestia zgłoszona do danego zbioru (np. błędy, propozycje zmian).
+**Opis:**
+Komentarz lub sugestia dotycząca zbioru danych.
 
 **Atrybuty:**
 
-- `tekst` – treść uwagi.
-- `data` – data zgłoszenia (dzień, miesiąc, rok).
-- `użytkownik` – osoba zgłaszająca uwagę.
-- `zbiór danych` – odniesienie do konkretnego zbioru danych.
-- `dystrybucja` _(opcjonalnie)_ – jeżeli uwaga dotyczy konkretnej dystrybucji.
+* `data: Data`
+* `dystrybucja: Format` (enum)
+* `tekst: string`
 
 ---
 
 ## 6. **Użytkownik**
 
-**Opis:**  
-Osoba korzystająca z systemu – może się rejestrować, logować, pobierać dane, zgłaszać uwagi itp.
+**Opis:**
+Osoba lub system korzystający z portalu.
 
 **Atrybuty:**
 
-- `imię` – imię użytkownika.
-- `nazwisko` – nazwisko użytkownika.
-- `punkty kontaktowe` – dane kontaktowe użytkownika.
+* `imie: string [0..1]`
+* `nazwisko: string [0..1]`
 
 ---
 
 ## 7. **Parametry wizualizacji**
 
-**Opis:**  
-Ustawienia prezentacji danych dla użytkownika.
+**Opis:**
+Ustawienia konfigurujące wizualizację danych.
 
-**Atrybuty (przykładowe):**
+**Atrybuty:**
 
-- `rodzaj wizualizacji` – typ wykresu (np. słupkowy, liniowy).
-- `zakres danych` – część danych objęta wizualizacją.
-- `motyw` – styl prezentacji (np. jasny / ciemny).
-- `skalowanie` – sposób filtrowania lub skalowania danych.
+* `motyw: motyw` (enum)
+* `zakres danych: Zakres danych` (enum)
 
 ---
 
 ## 8. **Subskrypcja**
 
-**Opis:**  
-Mechanizm powiązania użytkownika z danym zbiorem danych w celu otrzymywania powiadomień o zmianach.
+**Opis:**
+Mechanizm powiadamiania o zmianach w zbiorze danych.
 
 **Atrybuty:**
 
-- `zbiór danych` – zbiór objęty subskrypcją.
-- `użytkownik` – użytkownik subskrybujący zbiór.
-- `częstotliwość` – jak często są wysyłane powiadomienia (np. natychmiast, raz dziennie).
-- `typ zmiany` – rodzaj zmian wywołujących powiadomienie (np. nowa wersja, zmiana licencji).
+* `częstotliwość: int`
+* `typ zmiany: typ zmiany` (enum)
 
 ---
 
 ## 9. **Powiadomienie**
 
-**Opis:**  
-Informacja wysyłana do użytkownika w ramach subskrypcji.
+**Opis:**
+Informacja wysyłana w ramach subskrypcji.
 
 **Atrybuty:**
 
-- `subskrypcja` – źródło powiadomienia.
-- `data` – data/godzina wysłania powiadomienia.
+* `data: Data`
+
+---
+
+## 10. **Wizualizacja**
+
+**Opis:**
+Definicja sposobu graficznej prezentacji danych.
+
+**Atrybuty:**
+
+* `rodzaj wizualizacji: Rodzaj wizualizacji` (enum)
+
+---
+
+## 11. **Dane Logowania**
+
+**Opis:**
+Dane uwierzytelniające użytkownika.
+
+**Atrybuty:**
+
+* `email: string`
+* `haslo: string`
+* `nazwa użytkownika: string`
+
+---
+
+## 12. **Typy Danych i Wyliczeniowe**
+
+* **`Data` (DataType):** Struktura przechowująca: `Dzien: int`, `Godzina: int`, `Miesiac: int`, `Minuta: int`, `Rok: int`, `Sekunda: int`.
+* **`Rodzaj wizualizacji` (Enum):** `Wykres`, `Tekst`, `Zdjęcie`, `Tabela`.
+* **`typ zmiany` (Enum):** `nowa wersja`, `zmiana licencji`, `zmiana w punktach kontaktowych`, `zmiana danych`, `zmiana metadanych zbioru`.
+* **`Zakres danych` (Enum):** `Czasowy`, `Geograficzny`.
+* **`motyw` (Enum):** `jasny`, `ciemny`.
+* **`Format` (Enum):** `csv`, `json`, `xml`, `api`, `xlsx`,`api`.
+* **`Licencja` (Enum):** `Publiczna`, `Niepubliczna`.
 
 ---
