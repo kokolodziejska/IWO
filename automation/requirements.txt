@@ -1,3 +1,2 @@
-markdown
-markdown2
-weasyprint
+markdown_pdf
+requests
