@@ -1155,7 +1155,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
   usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
   usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
-  usecase "PU011:\nWyświetlenie szczegółów\nzgłoszenia" as PU011
+  usecase "PU011:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU011
 
   User --> PU001
   User --> PU002
@@ -1179,35 +1179,35 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Użytkownik wprowadza swoje dane uwierzytelniające, takie jak login i hasło, aby uzyskać dostęp do systemu. Po pomyślnym zalogowaniu zostaje przekierowany do ekranu głównego, gdzie ma dostęp do dostępnych funkcji.
+    Użytkownik wprowadza swoje dane uwierzytelniające aby uzyskać dostęp do systemu. Po pomyślnym zalogowaniu zostaje przekierowany do ekranu głównego, gdzie ma dostęp do dostępnych funkcji.
 
   - **(PU002) Wyświetlenie listy zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik przegląda katalog dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje, takie jak nazwa, krótki opis i dostępne formaty. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
+    Użytkownik przegląda listę dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
 
   - **(PU003) Wyświetlenie szczegółów zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik otwiera szczegółowy widok wybranego zbioru danych, w którym znajdują się informacje o jego strukturze, dostępnych formatach oraz metadanych. Może również zobaczyć historię aktualizacji oraz opcje pobrania lub subskrypcji.
+    Użytkownik otwiera szczegółowy widok wybranego zbioru danych. Może również zobaczyć historię aktualizacji oraz opcje pobrania lub subskrypcji.
 
   - **(PU004) Wyświetlenie wizualizacji zbioru danych**
 
     **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:
-    Użytkownik ogląda interaktywną wizualizację danych w postaci wykresów, tabel lub map, które przedstawiają kluczowe aspekty zbioru. Może korzystać z narzędzi do manipulacji danymi, np. zmiany zakresu wartości lub sposobu ich grupowania   
+    Użytkownik ogląda interaktywną wizualizację danych w postaci wykresów, tabel lub map, które przedstawiają kluczowe aspekty zbioru. Może korzystać z narzędzi do manipulacji danymi.
 .
   - **(PU005) Zmienienie parametrów wizualizacji**
 
     **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    Użytkownik dostosowuje sposób prezentacji danych, wybierając różne typy wizualizacji, zmieniając kolory, oś wartości lub filtrując wybrane kategorie. Zmiany są dynamicznie odzwierciedlane na ekranie, umożliwiając precyzyjną analizę danych.
+    Użytkownik dostosowuje sposób prezentacji danych. Zmiany są dynamicznie odzwierciedlane na ekranie, umożliwiając precyzyjną analizę danych.
 
   - **(PU006) Pobranie dystrybucji zbioru danych**
 
@@ -1221,35 +1221,35 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych, np. błędy w metadanych lub nieaktualne informacje. Zgłoszenie jest następnie przesyłane do weryfikatora systemu w celu weryfikacji.
+    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych. Zgłoszona uwaga jest następnie przesyłane do weryfikatora systemu w celu weryfikacji.
 
   - **(PU008) Zasubskrybowanie zbioru danych**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące formy powiadomień (e-mail, powiadomienie systemowe itp.).
+    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące formy powiadomień.
 
   - **(PU009) Wygenerowanie opisów bibliograficznych**
 
     **Waga:** Niska | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik wybiera zbiór danych i generuje opis bibliograficzny zgodny z wybranym standardem cytowania (np. APA, MLA). Może pobrać opis w formacie tekstowym lub skopiować go do schowka.
+    Użytkownik wybiera zbiór danych i generuje opis bibliograficzny zgodny z wybranym standardem cytowania. Może pobrać opis w wybranym formacie lub skopiować go do schowka.
 
   - **(PU010) Wyświetlenie listy zgłoszonych uwag**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych, zawierającą informacje takie jak treść, data dodania oraz status zgłoszenia. Uwagi są uporządkowane według kryteriów, np. daty dodania lub statusu przetwarzania.
+    Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych. Uwagi są uporządkowane według kryteriów, np. daty dodania lub statusu przetwarzania.
 
-  - **(PU011) Wyświetlenie szczegółów zgłoszenia**
+  - **(PU011) Wyświetlenie szczegółów zgłoszonej uwagi**
 
     **Waga:** Średnia | **Trudność**: Niska 
 
     **Opis**:  
-    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszeniem.
+    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszoną uwagą.
     
 
 #### 6.2. Zarządca danych
@@ -1269,7 +1269,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
   usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
-  usecase "PU018:\nZmiana statusu\nzgłoszenia" as PU018
+  usecase "PU018:\nZmiana statusu\nzgłoszonej uwagi" as PU018
 
   usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
   usecase "PU020:\nDodanie schematu" as PU020
@@ -1298,14 +1298,14 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:    
-    Zarządca danych przegląda katalog dostępnych zbiorów danych, zawierający informacje takie jak nazwa, opis, oraz format. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
+    Zarządca danych przegląda listę dostępnych zbiorów danych. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
 
   - **(PU013) Dodanie zbioru danych**
 
     **Waga:** Wysoka  | **Trudność**: Średnia 
 
     **Opis**:  
-    Zarządca danych rejestruje nowy zbiór, podając kluczowe informacje, takie jak nazwa, opis, format i powiązane schematy. Po zatwierdzeniu zbiór jest dostępny dla użytkowników systemu.
+    Zarządca danych rejestruje nowy zbiór, podając kluczowe informacje. Po zatwierdzeniu zbiór jest dostępny dla użytkowników systemu.
 
   - **(PU014) Edytowanie zbioru danych**
 
@@ -1326,16 +1326,16 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Zarządca danych przegląda listę uwag dotyczących zbiorów danych, które przeszły proces weryfikacji. Każda uwaga zawiera treść, datę zgłoszenia oraz status.
+    Zarządca danych przegląda listę uwag dotyczących zbiorów danych, które przeszły proces weryfikacji.
 
   - **(PU017) Wyświetlenie szczegółów zgłoszonej uwagi**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Zarządca danych przegląda pełne informacje o konkretnej uwadze, w tym jej status oraz historię działań.
+    Zarządca danych przegląda pełne informacje o konkretnej uwadze.
 
-  - **(PU018) Zmiana statusu zgłoszenia**
+  - **(PU018) Zmiana statusu zgłoszonej uwagi**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
@@ -1396,7 +1396,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Subskrybent przegląda listę subskrybowanych zbiorów danych, która zawiera informacje takie jak nazwa zbioru, data subskrypcji oraz ustawienia powiadomień. Lista jest uporządkowana w sposób umożliwiający szybkie znalezienie interesujących pozycji.
+    Subskrybent przegląda listę subskrybowanych zbiorów danych. Lista jest uporządkowana w sposób umożliwiający szybkie znalezienie interesujących pozycji.
 
   - **(PU024) Edytowanie ustawień subskrybcji**
 
@@ -1448,7 +1448,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry, takie jak format, ścieżka dostępu, czy licencja. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
+    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
 
   - **(PU028) Usunięcie dystrybucji**
 
@@ -1470,10 +1470,12 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   usecase "PU029:\nWysłanie powiadomienia\no zmianach w zbiorze danych\nsubskrybentom" as PU029
   usecase "PU030:\nWygenerowanie raportów\nczęstotliwości pobrań\nzbiorów danych" as PU030
   usecase "PU031:\nStworzenie backup'u" as PU031
+  usecase "PU032:\nEksport danych do\nsystemu CKAN" as PU032
 
   Time --> PU029
   Time --> PU030
   Time --> PU031
+  Time --> PU032
 
   @enduml
   ```
@@ -1483,7 +1485,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    System automatycznie wysyła powiadomienia do subskrybentów, informując ich o zmianach w subskrybowanych zbiorach danych, takich jak nowe wersje, dodane dystrybucje czy aktualizacje metadanych. Powiadomienia są dostarczane zgodnie z preferencjami użytkownika.
+    System automatycznie wysyła powiadomienia do subskrybentów, informując ich o zmianach w subskrybowanych zbiorach danych. Powiadomienia są dostarczane zgodnie z preferencjami użytkownika.
 
   - **(PU030) Wygenerowanie raportów częstotliwości pobrań zbiorów danych**
 
@@ -1499,6 +1501,13 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     System automatycznie tworzy kopie zapasowe zbiorów danych oraz ich metadanych w określonych odstępach czasu. Backup jest przechowywany w zabezpieczonym repozytorium i może zostać przywrócony w przypadku awarii.
 
+  - **(PU032) Eksport danych do systemu CKAN**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    System eksportuje metadane do systemu CKAN.
+
 
 #### 6.6. Weryfikator
   **Diagram**
@@ -1509,87 +1518,87 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Weryfikator" as Verifier
 
-  usecase "PU032:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU032
-  usecase "PU033:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU033
-  usecase "PU034:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
-  usecase "PU035:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
+  usecase "PU033:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU033
+  usecase "PU034:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
+  usecase "PU035:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
+  usecase "PU036:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU036
 
-  usecase "PU036:\nWyświetlenie listy\nzgłoszonych uwag" as PU036
+  usecase "PU037:\nWyświetlenie listy\nzgłoszonych uwag" as PU037
   usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
-  usecase "PU037:\nPrzesłanie uwagi\ndo zarządcy danych" as PU037
-  usecase "PU038:\nOdrzucenie uwagi" as PU038
+  usecase "PU038:\nPrzesłanie zgłoszonej uwagi\ndo zarządcy danych" as PU038
+  usecase "PU039:\nOdrzucenie zgłoszonej\nuwagi" as PU039
 
-  usecase "PU039:\nWygenerowanie raportu\njakości danych" as PU039
+  usecase "PU040:\nWygenerowanie raportu\njakości danych" as PU040
 
-  Verifier --> PU032
-  Verifier --> PU036
-  Verifier --> PU039
+  Verifier --> PU033
+  Verifier --> PU037
+  Verifier --> PU040
 
-  PU032 ..> PU033 : <<invoke>>
   PU033 ..> PU034 : <<invoke>>
-  PU033 ..> PU035 : <<invoke>>
+  PU034 ..> PU035 : <<invoke>>
+  PU034 ..> PU036 : <<invoke>>
 
-  PU036 ..> PU017 : <<invoke>>
-  PU017 ..> PU037 : <<invoke>>
+  PU037 ..> PU017 : <<invoke>>
   PU017 ..> PU038 : <<invoke>>
+  PU017 ..> PU039 : <<invoke>>
 
   @enduml
   ```
-  - **(PU032) Wyświetlenie listy zbiorów danych**
+  - **(PU033) Wyświetlenie listy zbiorów danych**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:    
-    Weryfikator przegląda listę dostępnych zbiorów danych w systemie, zawierającą informacje takie jak nazwa, źródło oraz status weryfikacji. Zbiory mogą być filtrowane i sortowane według wybranych kryteriów.
+    Weryfikator przegląda listę dostępnych zbiorów danych w systemie. Zbiory mogą być filtrowane i sortowane według wybranych kryteriów.
 
-  - **(PU033) Dodanie zbioru danych**
+  - **(PU034) Wyświetlenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** Wysoka  | **Trudność**: Średnia
-
-    **Opis**:  
-    Weryfikator rejestruje nowy zbiór danych w systemie, wprowadzając jego nazwę, opis oraz źródło po wcześniejszej analizie jakości i zgodności z wytycznymi.
-
-  - **(PU034) Edytowanie zbioru danych**
-
-    **Waga:** Wysoka | **Trudność**: Wysoka
+    **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    Weryfikator aktualizuje informacje o istniejącym zbiorze danych, zmieniając jego nazwę, opis lub inne parametry. Po wprowadzeniu zmian zbiór przechodzi ponowną weryfikację przed zatwierdzeniem.
+    Weryfikator przegląda szczegóły wprowadzonych zmian w zbiorze danych. Zmiany są przedstawiane w przejrzysty sposób, umożliwiając ich dokładną weryfikację.
 
-  - **(PU035) Usunięcie zbioru danych**
+  - **(PU035) Zatwierdzenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** Wysoka  | **Trudność**: Niska
-
-    **Opis**:  
-    Weryfikator usuwa zbiór danych z systemu, jeśli nie spełnia on wymagań jakościowych lub zawiera błędy. Proces usuwania wymaga podania uzasadnienia decyzji przez Weryfikatora.
-
-  - **(PU036) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
-
-    **Waga:** Średnia | **Trudność**: Niska
+    **Waga:** Wysoka | **Trudność**: Średnia 
 
     **Opis**:  
-    Weryfikator przegląda listę zgłoszonych uwag dotyczących zbiorów danych, które zostały zweryfikowane pod kątem zasadności. Lista zawiera informacje takie jak treść uwagi, data zgłoszenia oraz status decyzji.
+    Weryfikator zatwierdza wprowadzone zmiany w zbiorze danych po ich weryfikacji. Zatwierdzenie zmian sprawia, że stają się one częścią ostatecznego zbioru danych w systemie.
 
-  - **(PU037) Wyświetlenie szczegółów zgłoszonej uwagi**
+  - **(PU036) Odrzucenie wprowadzonych zmian w zbiorze danych**
 
-    **Waga:** Średnia | **Trudność**: Niska
+    **Waga:** Średnia | **Trudność**: Średnia 
 
     **Opis**:  
-    Weryfikator otwiera szczegółowy widok zgłoszonej uwagi, w którym widoczna jest jej treść, data dodania oraz aktualny status. Możliwe jest także przejrzenie historii zmian statusu zgłoszenia.
+    Weryfikator odrzuca wprowadzone zmiany w zbiorze danych, jeśli zmiany nie spełniają określonych standardów lub zawierają błędy.
 
-  - **(PU038) Zmiana statusu zgłoszenia**
+  - **(PU037) Wyświetlenie listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:  
+    Weryfikator przegląda listę zgłoszonych uwag dotyczących jakości danych.
+
+  - **(PU038) Przesłanie zgłoszonej uwagi do zarządcy danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Weryfikator przesyła zgłoszoną uwagę do zarządcy danych w celu dalszego rozpatrzenia. Przesłanie uwagi obejmuje szczegóły dotyczące problemu, który wymaga interwencji.
+
+  - **(PU039) Odrzucenie zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:  
+    Weryfikator odrzuca zgłoszoną uwagę, jeśli uzna ją za niezasadną. Odrzucenie uwagi oznacza, że nie będzie ona więcej rozpatrywana.
+
+  - **(PU040) Wygenerowanie raportu jakości danych**
 
     **Waga:** Średnia | **Trudność**: Średnia
 
     **Opis**:  
-    Weryfikator aktualizuje status zgłoszonej uwagi, wybierając spośród dostępnych opcji, takich jak „zaakceptowana”, „odrzucona” lub „wymaga dalszej analizy”. Zmiana statusu może być opatrzona uzasadnieniem.
-
-  - **(PU039) Wygenerowanie raportu jakości danych**
-
-    **Waga:** Średnia | **Trudność**: Średnia
-
-    **Opis**:  
-    Weryfikator tworzy raport podsumowujący jakość danych w systemie, zawierający statystyki dotyczące liczby zgłoszonych uwag, ich kategorii oraz procentu zatwierdzonych zmian. Raport może być zapisany w formacie PDF lub CSV.
+    Weryfikator tworzy raport podsumowujący jakość danych w systemie. Raport może być zapisany w wybranym formacie.
 
 
 #### 6.7. Administrator
@@ -1601,68 +1610,68 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   actor "Administrator" as Admin
 
-  usecase "PU040:\nWyświetlenie\nlogów systemu" as PU040
-  usecase "PU041:\nWyświetlenie listy\nużytkowników" as PU041
-  usecase "PU042:\nNadanie uprawnień\nużytkownikowi" as PU042
-  usecase "PU043:\nDodanie konta\nużytkownika" as PU043
-  usecase "PU044:\nEdytowanie konta\nużytkownika" as PU044
-  usecase "PU045:\nUsunięcie konta\nużytkownika" as PU045
-  usecase "PU046:\nZmienienie parametrów\nsystemu" as PU046
+  usecase "PU041:\nWyświetlenie\nlogów systemu" as PU041
+  usecase "PU042:\nWyświetlenie listy\nużytkowników" as PU042
+  usecase "PU043:\nNadanie uprawnień\nużytkownikowi" as PU043
+  usecase "PU044:\nDodanie konta\nużytkownika" as PU044
+  usecase "PU045:\nEdytowanie konta\nużytkownika" as PU045
+  usecase "PU046:\nUsunięcie konta\nużytkownika" as PU046
+  usecase "PU047:\nZmienienie parametrów\nsystemu" as PU047
 
-  Admin --> PU040
   Admin --> PU041
-  Admin --> PU046
+  Admin --> PU042
+  Admin --> PU047
 
-  PU041 ..> PU042 : <<invoke>>
-  PU041 ..> PU043 : <<invoke>>
-  PU041 ..> PU044 : <<invoke>>
-  PU041 ..> PU045 : <<invoke>>
+  PU042 ..> PU043 : <<invoke>>
+  PU042 ..> PU044 : <<invoke>>
+  PU042 ..> PU045 : <<invoke>>
+  PU042 ..> PU046 : <<invoke>>
 
   @enduml
   ```
-  - **(PU040) Wyświetlenie logów systemu**
+  - **(PU041) Wyświetlenie logów systemu**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Administrator przegląda logi systemowe, które zawierają informacje o operacjach wykonywanych w systemie, błędach oraz innych zdarzeniach technicznych. Logi mogą być filtrowane według zakresu dat, typu zdarzenia i użytkownika.
+    Administrator przegląda logi systemowe. Logi mogą być filtrowane.
 
-  - **(PU041) Wyświetlenie listy użytkowników**
+  - **(PU042) Wyświetlenie listy użytkowników**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi, takimi jak nazwa i rola. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
+    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
 
-  - **(PU042) Nadanie uprawnień użytkownikowi**
+  - **(PU043) Nadanie uprawnień użytkownikowi**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
     Administrator przypisuje użytkownikowi odpowiednie uprawnienia, wybierając z dostępnych ról i poziomów dostępu. Po zapisaniu zmian użytkownik może korzystać z dodatkowych funkcji systemu zgodnie z nadanymi uprawnieniami.
     
-  - **(PU043) Dodanie konta użytkownika**
+  - **(PU044) Dodanie konta użytkownika**
 
     **Waga:** Wysoka | **Trudność**: Średnia
 
     **Opis**:  
-    Administrator tworzy nowe konto użytkownika, podając jego dane, takie jak imię, nazwisko, adres e-mail oraz przypisując odpowiednią rolę.
+    Administrator tworzy nowe konto użytkownika, podając jego dane oraz przypisując odpowiednią rolę.
 
-  - **(PU044) Edytowanie konta użytkownika**
+  - **(PU045) Edytowanie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
-    Administrator aktualizuje dane konta użytkownika, zmieniając informacje takie jak adres e-mail, imię i nazwisko lub przypisane role. Zmiany są od razu zapisywane i obowiązują przy kolejnym logowaniu użytkownika.
+    Administrator aktualizuje dane konta użytkownika, zmieniając dane lub przypisane role. Zmiany są od razu zapisywane i obowiązują przy kolejnym logowaniu użytkownika.
 
-  - **(PU045) Usunięcie konta użytkownika**
+  - **(PU046) Usunięcie konta użytkownika**
 
     **Waga:** Średnia | **Trudność**: Niska
 
     **Opis**:  
     Administrator usuwa konto użytkownika z systemu, dezaktywując dostęp i usuwając powiązane dane zgodnie z polityką retencji. Usunięcie konta może wymagać potwierdzenia decyzji.
     
-  - **(PU046) Zmienienie parametrów systemu**
+  - **(PU047) Zmienienie parametrów systemu**
 
     **Waga:** Wysoka | **Trudność**: Wysoka
 
@@ -1670,7 +1679,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Administrator konfiguruje kluczowe parametry systemu, takie jak ustawienia bezpieczeństwa, limity dostępu czy opcje integracji zewnętrznych.
 
 
-    ### 7. Wymagania jakościowe
+ ### 7. Wymagania jakościowe
 #### (J0001) Wyszukiwanie zbiorów danych przy typowym obciążeniu
 
 |                        |                                                                                                                                           |
@@ -1965,3 +1974,165 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 | **Sposób pomiaru**     | Testy funkcjonalne symulujące sytuacje krytyczne; wielokrotna walidacja wyników przez niezależne podsystemy. |
 | **Oczekiwana wartość** | 100% poprawnych reakcji w testach regresyjnych; brak rozbieżności w podejmowanych decyzjach systemu.          |
     
+=======
+
+## Słownik dziedziny
+
+### 1. **Zbiór danych**
+
+**Opis:**
+Zestaw powiązanych ze sobą informacji.
+
+**Atrybuty:**
+
+* `identyfikator: string`
+* `licencja dostępu: Licencja` (enum)
+* `modyfikacje: Data [0..*]`
+* `opis: string [1..*]`
+* `słowa kluczowe: list<string>`
+* `tytul: string [1..*]`
+* `wersja: int`
+
+---
+
+### 2. **Punkt kontaktowy**
+
+**Opis:**
+Dane osoby lub organizacji kontaktowej.
+
+**Atrybuty:**
+
+* `adres: string`
+* `email: string`
+* `nazwa: string`
+* `telefon: string`
+
+---
+
+### 3. **Dystrybucja danych**
+
+**Opis:**
+Konkretna forma udostępnienia zbioru danych.
+
+**Atrybuty:**
+
+* `format: Format` (enum)
+* `opis: string [1..*]`
+* `tytul: string [1..*]`
+* `url: string`
+
+---
+
+### 4. **Schemat danych**
+
+**Opis:**
+Definicja struktury zbioru danych.
+
+**Atrybuty:**
+
+* `nazwa: string`
+* `opis: string`
+* `struktura: string [1..*]`
+* `wersja: int`
+
+---
+
+### 5. **Uwaga do zbioru danych**
+
+**Opis:**
+Komentarz lub sugestia dotycząca zbioru danych.
+
+**Atrybuty:**
+
+* `data: Data`
+* `dystrybucja: Format` (enum)
+* `tekst: string`
+
+---
+
+### 6. **Użytkownik**
+
+**Opis:**
+Osoba lub system korzystający z portalu.
+
+**Atrybuty:**
+
+* `imie: string [0..1]`
+* `nazwisko: string [0..1]`
+
+---
+
+### 7. **Parametry wizualizacji**
+
+**Opis:**
+Ustawienia konfigurujące wizualizację danych.
+
+**Atrybuty:**
+
+* `motyw: motyw` (enum)
+* `zakres danych: Zakres danych` (enum)
+
+---
+
+### 8. **Subskrypcja**
+
+**Opis:**
+Mechanizm powiadamiania o zmianach w zbiorze danych.
+
+**Atrybuty:**
+
+* `częstotliwość: int`
+* `typ zmiany: typ zmiany` (enum)
+
+---
+
+### 9. **Powiadomienie**
+
+**Opis:**
+Informacja wysyłana w ramach subskrypcji.
+
+**Atrybuty:**
+
+* `data: Data`
+
+---
+
+### 10. **Wizualizacja**
+
+**Opis:**
+Definicja sposobu graficznej prezentacji danych.
+
+**Atrybuty:**
+
+* `rodzaj wizualizacji: Rodzaj wizualizacji` (enum)
+
+---
+
+### 11. **Dane Logowania**
+
+**Opis:**
+Dane uwierzytelniające użytkownika.
+
+**Atrybuty:**
+
+* `email: string`
+* `haslo: string`
+* `nazwa użytkownika: string`
+
+---
+
+### 12. **Typy Danych i Wyliczeniowe**
+
+* **`Data` (DataType):** Struktura przechowująca: `Dzien: int`, `Godzina: int`, `Miesiac: int`, `Minuta: int`, `Rok: int`, `Sekunda: int`.
+* **`Rodzaj wizualizacji` (Enum):** `Wykres`, `Tekst`, `Zdjęcie`, `Tabela`.
+* **`typ zmiany` (Enum):** `nowa wersja`, `zmiana licencji`, `zmiana w punktach kontaktowych`, `zmiana danych`, `zmiana metadanych zbioru`.
+* **`Zakres danych` (Enum):** `Czasowy`, `Geograficzny`.
+* **`motyw` (Enum):** `jasny`, `ciemny`.
+* **`Format` (Enum):** `csv`, `json`, `xml`, `api`, `xlsx`,`api`.
+* **`Licencja` (Enum):** `Publiczna`, `Niepubliczna`.
+
+---
+
+### Diagram
+![Diagram słownika dziedziny](slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
+
