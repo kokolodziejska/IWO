@@ -2,74 +2,78 @@
 
 ## Opis biznesu
 
-### Wstawianie danych do systemu
+### Wstawianie danych
 
 #### Opis
 
 1. Zgłoszenie zapotrzebowania na otwarcie danych
 
-- Rola: Zgłaszający
-- Opis: Zgłaszający zgłasza zapotrzebowanie na udostępnienie danych.
+- Rola: Użytkownik
+- Opis: Użytkownik zgłasza zapotrzebowanie na udostępnienie danych.
 - Kolor: `#palegreen`
 
 2. Analiza możliwości udostępnienia
 
-- Rola: Administrator
-- Opis: Administrator w oparciu o wcześniej zdefiniowane kryteria decyduje o tym czy dane tego typu można udostępnić. Jeżeli nie to proces się kończy.
+- Rola: Zarządca danych
+- Opis: Zarządca danych w oparciu o wcześniej zdefiniowane kryteria decyduje o tym czy dane tego typu można udostępnić. Jeżeli nie to proces się kończy.
 - Kolor `#lightblue`
 
 3. Weryfikacja istnienia danych
 
-- Rola: Administrator
-- Opis: Administrator sprawdza czy istnieje źródło, które udostępnia takie dane.
+- Rola: Zarządca dnaych
+- Opis: Zarządca danych sprawdza czy istnieje źródło, które udostępnia takie dane.
 - Kolor: `#lightblue`
-  3a. Tworzenie danych
-- Rola: Administrator
-- Opis: Administrator zaleca zebranie odpowiednich danych.
-- Kolor: `#lightblue`
+
+  1. Zebranie danych
+
+  - Rola: Dostawca danych
+  - Opis: Dostawca danych zbiera odpowiednich danych.
+  - Kolor: `#lightblue`
 
 4. Zdefiniowanie metadanych
 
-- Rola: Redaktor
-- Opis: Redaktor definiuje zestaw metadanych opisujących dodawany zbiór.
+- Rola: Zarządca danych
+- Opis: Zarządca danych definiuje zestaw metadanych opisujących dodawany zbiór.
 - Kolor: `#gold`
 
 5. Przygotowanie danych
 
-- Rola: Redaktor
-- Opis: Redaktor przygotowuje dane do udostępnienia, to może obejmować np. ich odpowiednie zformatowanie lub przeredagowanie.
+- Rola: Dostawca danych
+- Opis: Dostawca danych przygotowuje dane do udostępnienia, to może obejmować np. ich odpowiednie zformatowanie lub przeredagowanie.
 - Kolor: `#gold`
 
 6. Udostępnienie danych
 
-- Rola: Redaktor
-- Opis: Redaktor udostępnia dane w serwisie.
-- Kolor: `#gold`1. Zgłoszenie
+- Rola: Dostawca danych
+- Opis: Dostawca danych udostępnia dane w serwisie.
+- Kolor: `#gold`
 
 #### Diagram
 
 ```puml
 @startuml
-|#palegreen|Z| Zgłaszający
+|#palegreen|U| Użytkownik
 start
 :Zgłoszenie zapotrzebowania na otwarcie danych;
 
-|#lightblue|A| Administrator
+|#lightblue|Za| Zarządca danych
 :Analiza możliwości udostępnienia;
 if (Czy można udostępnić?) then (Tak)
   :Weryfikacja istnienia danych;
   if (Dane istnieją?) then (Tak)
-    :Przechodzimy dalej;
   else (Nie)
-    :Tworzenie danych;
+    |#gold|D| Dostawca danych
+    :Zebranie danych;
   endif
 
-  |#gold|R| Redaktor
+  |Za|
   :Zdefiniowanie metadanych;
+
+  |D|
   :Przygotowanie danych;
   :Udostępnienie danych;
   stop
-|#lightblue|A| Administrator
+|#lightblue|Za| Zarządca danych
 else (Nie)
   :Brak możliwości udostępnienia;
   stop
@@ -81,56 +85,69 @@ endif
 
 #### Opis
 
-1. Rozpoczęcie przeglądania (wyszukiwanie)
+1. Wyszukanie zbioru danych
 
 - Rola: Użytkownik
 - Opis: Użytkownik wybiera zbiór danych poprzez wyszukanie go lub z zewnętrznego linku.
 - Kolor: `#palegreen`
 
-2. Sprawdzenie dostępności danych
-
-- Rola: System
-- Opis: System sprawdza dostępność danych. Jeżeli danych nieodnaleziono następuje koniec procesu.
-- Kolor: `#lightblue`
-
-3. Wyświetlenie danych
+2. Zasubskrybowanie do zbioru danych
 
 - Rola: Użytkownik
-- Opis: Jeżeli wizualizacja jest możliwa, system wyświetla dane użytkownikowi w postaci np. diagramu bądź tabelki:
+- Opis: Użytkownik może zasubskrybować do wybranego zbioru, by otrzymywać powiadomienia o jego zmianach.
 - Kolor: `#palegreen`
 
-3. Pobranie danych
+3. Zwizualizowanie danych
 
 - Rola: Użytkownik
-- Opis: Jeżeli wizualizacja nie jest dostępna użytkownik pobiera dane np. w postaci plików csv.
-- Kolor: #palegreen
+- Opis: Użytkownik przegląda dane w formie wizualizacji (np. wykresów, tabel), o ile jest to możliwe.
+- Kolor: `#palegreen`
+
+4. Wybranie dystrybucji danych
+
+- Rola: Użytkownik
+- Opis: Przed pobraniem danych użytkownik wybiera odpowiedni format lub sposób dystrybucji.
+- Kolor: `#palegreen`
+
+5. Pobranie danych
+
+- Rola: Użytkownik
+- Opis: Jeśli wizualizacja nie jest dostępna lub użytkownik chce dane w formacie do dalszej pracy, może pobrać dane.
+- Kolor: `#palegreen`
+
+6. Zgłoszenie uwagi
+
+- Rola: Użytkownik
+- Opis: Użytkownik może zgłosić uwagę dotyczącą zbioru danych.
+- Kolor: `#palegreen`
 
 #### Diagram
 
 ```puml
 @startuml
-
 |#palegreen|U| Użytkownik
 start
-:Rozpoczęcie przeglądania (wyszukiwanie);
+:Wyszukanie zbioru danych;
 
-|#lightblue|S| System
-:Sprawdzenie dostępności danych;
-if (Czy dane odnaleziono?) then (Nie)
-  :Brak danych;
-  stop
-else (Tak)
-  if (Czy możliwa wizualizacja?) then (Tak)
-    |U|
-    :Wyświetlanie danych;
-    stop
-  else (Nie)
-    |U|
-    :Pobranie danych;
-    stop
-  endif
+if (Czy chce zasubskrybować do powiadomień o zmianie danych?) then (Tak)
+  :Zasubskrybowanie do zbioru danych;
+else (Nie)
 endif
 
+if (Co chce zrobić z danymi?) then (Zwizualizować)
+  :Zwizualizowanie danych;
+else (Pobrać)
+  :Wybranie dystrybucji;
+  :Pobranie danych;
+endif
+
+if (Czy chce zgłosić uwagę do zbioru danych?) then (Tak)
+  :Zgłoszenie uwagi;
+else (Nie)
+endif
+
+|#palegreen|Temp| _
+stop
 @enduml
 ```
 
@@ -138,32 +155,36 @@ endif
 
 #### Opis
 
-1. Otworzenie zbioru danych
+1. Zgłoszenie uwagi
 
 - Rola: Użytkownik
-- Opis: Użytkownik otwiera zbiór danych
+- Opis: Użytkownik zgłasza uwagę dotyczącą danych.
 - Kolor: `#palegreen`
 
-2. Zgłoszenie uwagi
+2. Wstępna analiza uwagi
 
-- Rola: Użytkownik
-- Opis: Użytkownik zgłasza uwagę
-- Kolor: `#palegreen`
-
-3. Obsłużenie uwagi
-
-- Rola: Redaktor
-- Opis: Redaktor decyduje, czy zgłoszenie tyczy się zbioru danych i czy ma jakiś wpływ na zgloszone obiekcje.
+- Rola: Weryfikator
+- Opis: Weryfikator analizuje zgłoszenie i ocenia jego zasadność.
 - Kolor: `#lightblue`
 
-3. Zaakceptowanie uwagi
-   - Rola: Redaktor
-   - Opis: Redaktor zgłasza problem do administracji.
-   - Kolor: `#lightblue`
-4. Odrzucenie uwagi
-   - Rola: Redaktor
-   - Opis: Redaktor odrzuca uwagę i nie podejmuje dalszych kroków.
-   - Kolor: #lightblue
+  1. Odrzucenie uwagi
+
+  - Rola: Weryfikator
+  - Opis: Jeżeli uwaga nie jest zasadna, zostaje odrzucona bez dalszego postępowania.
+  - Kolor: `#lightblue`
+
+3. Przesłanie uwagi do zarządcy danych
+
+- Rola: Weryfikator
+- Opis: Jeżeli uwaga jest zasadna, zostaje przekazana do zarządcy danych.
+- Kolor: `#lightblue`
+
+4. Rozpatrzenie uwagi
+
+- Rola: Zarządca danych
+- Opis: Zarządca danych analizuje zgłoszoną uwagę i podejmuje decyzję o ewentualnych działaniach.
+- Kolor: `#gold`
+
 
 #### Diagram
 
@@ -172,158 +193,20 @@ endif
 
 |#palegreen|U| Użytkownik
 start
-:Wyszukanie zbioru danych;
-:Wyświetlenie zbioru danych;
 :Zgłoszenie uwagi;
 
-|#lightblue|R| Redaktor
-:Obsłużenie uwagi;
-if (Uwaga zostaje zaakceptowana?) then (Tak)
-  :Zaakceptowanie uwagi;
+|#lightblue|W| Weryfikator
+:Wstępna analiza uwagi;
+if (Uwaga jest zasadna?) then (Tak)
+  :Przesłanie uwagi do zarządcy danych;
+  |#yellow|Z| Zarządca danych
+  :Rozpatrzenie uwagi;
 else (Nie)
+  |W|
   :Odrzucenie uwagi;
 endif
-stop
-@enduml
-```
 
-### Zarządzanie schematami danych
-
-#### Opis
-
-1. Wyszukanie zbioru danych
-   - Rola: Redaktor
-   - Opis: Wyszukanie zbioru danych w celu zarządzania jego schematem danych.
-   - Kolor: #palegreen
-2. Zdefiniowanie schematu
-   - Rola: Redaktor
-   - Opis: Definiowanie struktury danych, włączając typy danych, ograniczenia i relacje pomiędzy elementami danych.
-   - Kolor: #palegreen
-3. Weryfikacja schematu
-   - Rola: System
-   - Opis: Automatyczna walidacja zbiorów danych względem przypisanych schematów w celu identyfikacji rozbieżności i błędów.
-   - Kolor: #lightblue
-   1. Poprawa schematu
-      - Rola: Redaktor
-      - Opis: Redaktor identyfikuje dane, które nie są zgodne ze schematem i wprowadza odpowiednie modyfikacje.
-      - Kolor: #lightblue
-4. Publikacja schematu
-   - Rola: Redaktor
-   - Opis: Udostępnianie schematów użytkownikom i systemom, które potrzebują zrozumieć strukturę zbiorów danych.
-   - Kolor: #palegreen
-
-#### Diagram
-
-```puml
-@startuml
-
-|#palegreen|R| Redaktor
-start
-:Wyszukanie zbioru danych;
-:Zdefiniowanie schematu;
-
-|#lightblue|S| System
-:Weryfikacja schematu;
-if (Dane są zgodne ze schematem) then (Tak)
-else (Nie)
-    |R|
-    :Poprawa schematu;
-endif
-|R|
-:Publikacja schematu;
-stop
-@enduml
-```
-
-### Subskrybcja do powiadomień o zmianie danych
-
-#### Opis
-
-1. Wyszukanie zbioru danych
-   - Rola: Użytkownik
-   - Opis: Użytkownik wyszukuje zbioru danych w celu zasubskrybowania do powiadomień o zmianie danych.
-   - Kolor: #palegreen
-2. Subskrybcja do zbioru danych
-   - Rola: Użytkownik
-   - Opis: Użytkownik zapisuje się na powiadomienia dotyczące wybranego zbioru danych, aby otrzymywać informacje o jego aktualizacjach.
-   - Kolor: #palegreen
-3. Wysłanie powiadomienia o zmianie danych.
-   - Rola: System
-   - Opis: System automatycznie wysyła powiadomienie do subskrybentów w momencie wykrycia zmiany w subskrybowanym zbiorze danych.
-   - Kolor: #lightblue
-
-#### Diagram
-
-```puml
-@startuml
-|#palegreen|U| Użytkownik
-start
-:Wyszukanie zbioru danych;
-:Subskrybcja do zbioru danych;
-
-|#lightblue|S| System
-while (Dane się zmieniły?) is (Tak)
-    :Wysłanie powiadomienia o zmianie danych;
-endwhile
-
--[hidden]->
-detach
-@enduml
-```
-
-### Konwersja formatu danych
-
-#### Opis
-
-1. Wyszukanie zbioru danych
-   - Rola: Użytkownik
-   - Opis: Użytkownik wyszukuje zbioru danych w celu pobrania danych.
-   - Kolor: #palegreen
-2. Zgłoszenie chęci pobrania danych w innym formacie niż dostępne.
-   - Rola: Użytkownik
-   - Opis: Użytkownik chce pobrać dane w przekonwertowanym formacie.
-   - Kolor: #palegreen
-3. Analiza schematu danych
-
-   - Rola: System
-   - Opis: System sprawdza strukturę i zgodność zbioru danych, żeby umożliwić ewentualną konwersję.
-   - Kolor: #lightblue
-
-   1. Zgłoszenie uwagi
-
-      - Rola: Użytkownik
-      - Opis: Użytkownik zgłasza uwagi dotyczące danych, np. brak schematu.
-      - Kolor: #palegreen
-
-   1. Konwersja danych do odpowiedniego formatu
-      - Rola: System
-      - Opis: System automatycznie przekształca dane do formatu wskazanego przez użytkownika, jeśli konwersja jest możliwa.
-      - Kolor: #lightblue
-   1. Pobranie danych
-      - Rola: Użytkownik
-      - Opis: Użytkownik pobiera dane w wybranym formacie.
-      - Kolor: #palegreen
-
-#### Diagram
-
-```puml
-@startuml
-|#palegreen|U| Użytkownik
-start
-:Wyszukanie zbioru danych;
-:Zgłoszenie chęci pobrania danych w innym formacie niż dostępne;
-
-|#lightblue|S| System
-:Analiza schematu danych;
-if (Czy dane mają przypisany schemat?) then (Tak)
-    :Konwersja danych do odpowiedniego formatu;
-
-    |U|
-    :Pobranie danych;
-else (Nie)
-    |U|
-    :Zgłoszenie uwagi;
-endif
+|U|
 stop
 @enduml
 ```
@@ -2135,4 +2018,3 @@ Dane uwierzytelniające użytkownika.
 
 ### Diagram
 ![Diagram słownika dziedziny](slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
-
