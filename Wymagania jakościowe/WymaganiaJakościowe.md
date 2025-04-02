@@ -282,3 +282,23 @@ Poniższy dokument zawiera zestaw wymagań jakościowych, w których każda fisz
 | **Trudność**           | *Średnia*                                                                                                                               |
 | **Sposób pomiaru**     | Testy instalacyjne przeprowadzone na systemach macOS, Windows oraz Linux przy użyciu automatycznych skryptów instalacyjnych oraz manualna weryfikacja funkcjonalności. |
 | **Oczekiwana wartość** | System uruchamia się bez modyfikacji kodu źródłowego na wszystkich trzech platformach; funkcjonalność identyczna (zgodność 100%).          |
+
+#### (J0024) Pokrycie funkcjonalności testami jednostkowymi
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Przydatność funkcjonalna*                                                                                                                             |
+| **Priorytet**          | *Kluczowy*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Analiza pokrycia kodu przy użyciu narzędzia (np. SonarQube, Jacoco). |
+| **Oczekiwana wartość** | Pokrycie funkcjonalności testami jednostkowymi ≥ 95%; brak krytycznych funkcji pozbawionych testów.          |
+
+#### (J0025) Dokładność reakcji na zdarzenia krytyczne
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Przydatność funkcjonalna*                                                                                                                             |
+| **Priorytet**          | *Wysoki*                                                                                                                                  |
+| **Trudność**           | *Wysoki*                                                                                                                               |
+| **Sposób pomiaru**     | Testy funkcjonalne symulujące sytuacje krytyczne; wielokrotna walidacja wyników przez niezależne podsystemy. |
+| **Oczekiwana wartość** | 100% poprawnych reakcji w testach regresyjnych; brak rozbieżności w podejmowanych decyzjach systemu.          |
