@@ -1,5 +1,7 @@
 import re
 import zlib
+import base64
+import requests
 
 from markdown_pdf import MarkdownPdf, Section
 
@@ -39,7 +41,6 @@ img {
 }
 """
 
-
 def plantuml_encode(data):
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
     encoded = ""
@@ -55,13 +56,13 @@ def plantuml_encode(data):
         encoded += alphabet[(value << (6 - bits)) & 0x3F]
     return encoded
 
-
 def generate_plantuml_url(plantuml_text):
     text_bytes = plantuml_text.encode("utf-8")
-    compressed = zlib.compress(text_bytes)[2:-4]
+    # Use raw deflate (wbits=-15) to produce the correct output without zlib header and checksum
+    compressor = zlib.compressobj(level=9, wbits=-15)
+    compressed = compressor.compress(text_bytes) + compressor.flush()
     encoded = plantuml_encode(compressed)
     return BASE_URL + encoded
-
 
 def replace_uml_blocks(markdown_content):
     pattern = r"```(?:puml|plantuml)\n(.*?)```"
@@ -69,23 +70,30 @@ def replace_uml_blocks(markdown_content):
     def repl(match):
         puml_code = match.group(1).strip()
         url = generate_plantuml_url(puml_code)
-        return f"![PlantUML Diagram]({url})"
+        # Download the image from the PlantUML server
+        response = requests.get(url)
+        if response.status_code == 200:
+            image_base64 = base64.b64encode(response.content).decode('utf-8')
+            # Embed the image as a data URI
+            return f"![PlantUML Diagram](data:image/png;base64,{image_base64})"
+        else:
+            # Fallback to the URL if the download fails
+            return f"![PlantUML Diagram]({url})"
 
     return re.sub(pattern, repl, markdown_content, flags=re.DOTALL)
-
 
 def process_markdown_to_pdf(input_md_file, output_pdf_file):
     with open(input_md_file, "r", encoding="utf-8") as f:
         original_md = f.read()
     replaced_md = replace_uml_blocks(original_md)
 
-    pdf = MarkdownPdf(toc_level=2)  # Note: css parameter assumed; adjust if needed
+    pdf = MarkdownPdf(toc_level=2)  # Adjust css parameter if needed
     pdf.add_section(Section(replaced_md))
     pdf.save(output_pdf_file)
     print(f"PDF generated successfully: {output_pdf_file}")
-
 
 if __name__ == "__main__":
     input_md = "dokumentacja.md"
     output_pdf = "dokumentacja.pdf"
     process_markdown_to_pdf(input_md, output_pdf)
+
