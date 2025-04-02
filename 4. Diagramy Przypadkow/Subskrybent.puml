@@ -1,0 +1,14 @@
+@startuml Subskrybent
+left to right direction
+
+actor "Subskrybent" as U
+
+usecase "PU023:\nWyświetlenie listy\nsubskrypcji" as PU023
+usecase "PU024:\nEdytowanie ustawień\nsubskrypcji" as PU024
+usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
+
+U --> PU023
+PU023 ..> PU024 : <<invoke>>
+PU023 ..> PU003 : <<invoke>>
+
+@enduml
