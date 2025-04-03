@@ -18,6 +18,7 @@
 - Daria Koval
 
 **Abstrakt** 
+
 Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publicznych składającą się z wizji systemu, wymagań użytkownika oraz wymagań oprogramowania dla pierwszych iteracji projektu.
 
 **Historia zmian** 
