@@ -25,6 +25,7 @@ Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publ
 ![Tabela_zmian](tabela_zmian.png "Historia Zmian")
 
 ---
+
 ## 1. Wprowadzenie
 ### 1.1 Cel dokumentu
 
@@ -35,6 +36,7 @@ Celem dokumentu jest przedstawienie kompletnej wizji projektowanego systemu oraz
 Dokument zawiera specyfikację wymagań dla systemu do zarządzania otwartymi danymi publicznymi. Opisuje kluczowe problemy związane z utrudnionym dostępem, przetwarzaniem i udostępnianiem informacji publicznej oraz przedstawia wizję rozwiązania tych wyzwań. Zawiera szczegółowe wymagania funkcjonalne i jakościowe systemu, przypadki użycia, słownik pojęć oraz charakterystykę interesariuszy. Uwzględniono również propozycję motta wspierającego promocję projektu: „Otwarte dane – otwarte możliwości”. Dokument pełni rolę podstawy do dalszych etapów analizy, projektowania i implementacji systemu.
 
 ---
+
 ## 2. Opis biznesu
 ### 2.1 Procesy biznesowe
 #### **Wstawianie danych do systemu**
@@ -362,6 +364,7 @@ endif
 stop
 @enduml
 ```
+---
 
 ## 3. Wizja systemu
 
@@ -1167,6 +1170,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Akceptowalne wartości pomiaru**:  
    ≤30 minut.
 
+---
 
 ## 4. Przypadki użycia
 
@@ -1711,6 +1715,8 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
     **Opis**:  
     Administrator konfiguruje kluczowe parametry systemu, takie jak ustawienia bezpieczeństwa, limity dostępu czy opcje integracji zewnętrznych.
+    
+---
 
 ## 5 Słownik dziedziny
 
@@ -1808,7 +1814,7 @@ Ustawienia konfigurujące wizualizację danych.
 * `motyw: motyw` (enum)
 * `zakres danych: Zakres danych` (enum)
 
----
+
 
 ### **Subskrypcja**
 
@@ -1871,6 +1877,7 @@ Dane uwierzytelniające użytkownika.
 ![Diagram słownika dziedziny](slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
 
 ---
+
  ### 6. Wymagania jakościowe
 #### (J0001) Wyszukiwanie zbiorów danych przy typowym obciążeniu
 
@@ -1882,7 +1889,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Wykonanie testów obciążeniowych (np. za pomocą JMeter) na próbie 1000 operacji wyszukiwania, przy użyciu oprogramowania pomiarowego (dokładność 0,01 sekundy). |
 | **Oczekiwana wartość** | Średni czas wyszukiwania ≤ 0,5 sekundy; odchylenie standardowe ≤ 0,1 sekundy.                                                              |
 
----
+
 
 #### (J0002) Wyszukiwanie zbiorów danych przy maksymalnym obciążeniu
 
@@ -1894,7 +1901,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Testy wydajnościowe symulujące 100 000 równoczesnych użytkowników (np. przy użyciu Gatling) oraz 100 prób przy różnych poziomach obciążenia. |
 | **Oczekiwana wartość** | Średni czas wyszukiwania ≤ 3 sekundy przy maksymalnym obciążeniu; najgorszy wynik nie przekracza 5 sekund.                                   |
 
----
+
 
 #### (J0003) Obsługa zapytań na sekundę
 
@@ -1906,7 +1913,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Przeprowadzenie testów obciążeniowych, mierzenie liczby zapytań przetwarzanych na sekundę przy użyciu narzędzia (np. Apache JMeter).        |
 | **Oczekiwana wartość** | System przetwarza minimum 300 zapytań na sekundę, przy zachowaniu stabilności (300–320 zapytań/s).                                           |
 
----
+
 
 #### (J0004) Minimalizacja zużycia zasobów serwera
 
@@ -1918,7 +1925,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Monitoring zasobów serwera przy symulacji 50 000 jednoczesnych użytkowników.                                      |
 | **Oczekiwana wartość** | Zużycie CPU poniżej 50%, zużycie RAM poniżej 70%.                                                                  |
 
----
+
 
 #### (J0005) Integracja z systemem CKAN
 
@@ -1930,7 +1937,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Przeprowadzenie testów integracyjnych – weryfikacja mapowania danych oraz wymiany metadanych przez API CKAN, przy użyciu testów automatycznych. |
 | **Oczekiwana wartość** | 100% zgodności przesyłu metadanych ze specyfikacją CKAN; brak błędów mapowania w 100% przypadków.                                            |
 
----
+
 
 #### (J0006) Kompatybilność z popularnymi przeglądarkami internetowymi
 
@@ -1942,7 +1949,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Przeprowadzenie testów kompatybilności przy użyciu narzędzi automatycznych (np. Selenium) na przeglądarkach: Chrome, Firefox, Edge oraz Safari. |
 | **Oczekiwana wartość** | 95% lub więcej przypadków testowych wykonanych poprawnie we wszystkich wymienionych przeglądarkach.                                         |
 
----
+
 
 #### (J0007) Kompatybilność z systemem CEPiK
 
@@ -1954,7 +1961,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Testy integracyjne z API systemu CEPiK, weryfikacja przesyłu danych oraz rejestracji pojazdów przy różnych poziomach obciążenia.              |
 | **Oczekiwana wartość** | 98% poprawności przesyłu danych przy przepustowości zgodnej z wymaganiami API CEPiK.                                                       |
 
----
+
 
 #### (J0008) Intuicyjny interfejs z kontekstowymi podpowiedziami
 
@@ -1966,7 +1973,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Ankieta SUS przeprowadzona po zakończeniu sesji testowej z użytkownikami.                                   |
 | **Oczekiwana wartość** | Wynik powyżej 90 punktów.                                                                                   |
 
----
+
 
 #### (J0009) Dostępność zgodna z WCAG 2.1 (AA)
 
@@ -1978,7 +1985,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Audyt dostępności z wykorzystaniem narzędzi automatycznych oraz audytu eksperckiego.                                                       |
 | **Oczekiwana wartość** | 100% zgodności z poziomem AA.                                                                                                               |
 
----
+
 
 #### (J0010) Szybkie dodawanie nowego zbioru danych
 
@@ -1990,7 +1997,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Testy użyteczności – pomiar czasu dodania nowego zbioru danych przez 10 użytkowników wykonujących ustalony scenariusz.                       |
 | **Oczekiwana wartość** | Średni czas dodania zbioru danych ≤ 1 minuta; najgorszy wynik nie przekracza 1,5 minuty.                                                    |
 
----
+
 
 #### (J0011) Obsługa skrótów klawiszowych
 
@@ -2002,7 +2009,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Testy funkcjonalne – pomiar liczby operacji wykonanych przy użyciu skrótów w porównaniu z nawigacją tradycyjną, wraz z rejestracją czasu.  |
 | **Oczekiwana wartość** | Skróty skracają czas wykonania operacji o co najmniej 20% w porównaniu do nawigacji; liczba błędów związanych ze skrótami ≤ 2 na 100 operacji. |
 
----
+
 
 #### (J0012) Czytelność powiadomień
 
@@ -2014,7 +2021,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Ankieta przeprowadzona wśród użytkowników, oceniająca przejrzystość i zrozumiałość powiadomień.                                            |
 | **Oczekiwana wartość** | Średni wynik ankiety ≥ 95%.                                                                                                                |
 
----
+
 
 #### (J0013) Wysoka dostępność systemu
 
@@ -2026,7 +2033,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Monitorowanie systemu przy użyciu narzędzi do pomiaru uptime (np. UptimeRobot) przez okres minimum 1 miesiąca w środowisku produkcyjnym.     |
 | **Oczekiwana wartość** | Uptime ≥ 99,9% (nie więcej niż 43 minuty niedostępności miesięcznie).                                                                     |
 
----
+
 
 #### (J0014) Stabilność działania przez długi okres
 
@@ -2038,7 +2045,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Symulacja ciągłego działania systemu w środowisku testowym przez 30 dni przy rzeczywistym obciążeniu.                                         |
 | **Oczekiwana wartość** | Brak restartów systemu; liczba krytycznych błędów ≤ 1 na 30 dni.                                                                            |
 
----
+
 
 #### (J0015) Automatyczne kopie zapasowe i przywracanie danych
 
@@ -2050,7 +2057,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Symulacja awarii i test przywracania danych, mierzenie czasu od inicjacji przywracania do pełnej operacyjności systemu.                        |
 | **Oczekiwana wartość** | Kopie zapasowe tworzone co 12 godzin; czas przywracania ≤ 10 minut; utrata danych nie przekracza 2 minut operacyjnego czasu.                  |
 
----
+
 
 #### (J0016) Odporność na błędy użytkownika
 
@@ -2062,7 +2069,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Testy manualne oraz analiza zgłoszeń błędów podczas sesji testowych.                                                                      |
 | **Oczekiwana wartość** | ≤ 2 błędy krytyczne na 100 operacji.                                                                                                       |
 
----
+
 
 #### (J0017) Definicja ról i uprawnień
 
@@ -2074,7 +2081,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Audyt bezpieczeństwa oraz testy penetracyjne skoncentrowane na kontroli dostępu, weryfikacja polityki ról przy użyciu narzędzi audytowych.  |
 | **Oczekiwana wartość** | 100% zgodność z założeniami polityki dostępu; brak możliwości nieautoryzowanego dostępu.                                                    |
 
----
+
 
 #### (J0018) Odporność na cyberataki
 
@@ -2086,7 +2093,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Audyt ekspercki oraz testy penetracyjne.                                                                                                  |
 | **Oczekiwana wartość** | Brak zagrożeń krytycznych lub wysokich.                                                                                                   |
 
----
+
 
 #### (J0019) Prowadzenie dziennika zdarzeń
 
@@ -2098,7 +2105,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Testy audytowe – symulacja operacji, a następnie próba modyfikacji dziennika przy użyciu sum kontrolnych i mechanizmów zabezpieczających.    |
 | **Oczekiwana wartość** | Każda operacja jest niezmiennie zapisywana; wszelkie próby modyfikacji kończą się niepowodzeniem.                                          |
 
----
+
 
 #### (J0020) Zgodność z wymaganiami RODO
 
@@ -2110,7 +2117,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Audyt ekspercki pod kątem zgodności prawnej i technicznej.                                                                                          |
 | **Oczekiwana wartość** | 100% spełnienie wymagań RODO, brak niezgodności.                                                                                                  |
 
----
+
 
 #### (J0021) Modularność i reużywalność komponentów
 
@@ -2122,7 +2129,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Audyt architektury systemu przeprowadzony przez niezależnych ekspertów, oceniający możliwość modyfikacji pojedynczych modułów bez wpływu na całość. |
 | **Oczekiwana wartość** | Ocena ekspercka ≥ 90% zgodności z wymaganiami modułowości; modyfikacja jednego modułu nie wpływa na działanie innych.                         |
 
----
+
 
 #### (J0022) Testowalność krytycznych funkcji
 
@@ -2134,7 +2141,7 @@ Dane uwierzytelniające użytkownika.
 | **Sposób pomiaru**     | Wykorzystanie narzędzi do analizy pokrycia kodu (np. SonarQube) oraz pomiar czasu wykonania pełnego zestawu testów automatycznych.          |
 | **Oczekiwana wartość** | Pokrycie krytycznych funkcji = 100%; czas wykonania testów ≤ 5 minut.                                                                       |
 
----
+
 
 #### (J0023) Uruchomienie systemu na różnych systemach operacyjnych
 
@@ -2167,6 +2174,7 @@ Dane uwierzytelniające użytkownika.
 | **Oczekiwana wartość** | 100% poprawnych reakcji w testach regresyjnych; brak rozbieżności w podejmowanych decyzjach systemu.          |
     
 ---
+
 ## 7. Wstępna wycena projektu
 
 W wyniku przeprowadzonej analizy oszacowano łączną liczbę punktów przypadków użycia (UCP) na **485,33**. Wartość ta powstała na podstawie 21 przypadków o niskiej trudności, 23 przypadków o średniej trudności oraz 3 przypadków o wysokiej trudności, co dało w sumie **380 punktów UUCW**. Uwzględniono również 7 aktorów systemu, co przełożyło się na **18 punktów UAW**. Zastosowane współczynniki korekcyjne wyniosły: **TCF = 1,065** oraz **ECF = 1,145**. 
