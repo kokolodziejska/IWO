@@ -24,13 +24,20 @@ Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publ
 
 ![Tabela_zmian](tabela_zmian.png "Historia Zmian")
 
+---
+## 1. Wprowadzenie
+### 1.1 Cel dokumentu
 
+Celem dokumentu jest przedstawienie kompletnej wizji projektowanego systemu oraz zebranie i usystematyzowanie wymagań funkcjonalnych, jakościowych i organizacyjnych. Dokument ma służyć jako punkt odniesienia dla zespołu projektowego oraz wszystkich interesariuszy zaangażowanych w rozwój systemu. 
 
+### 1.2 Streszczenie
 
+Dokument zawiera specyfikację wymagań dla systemu do zarządzania otwartymi danymi publicznymi. Opisuje kluczowe problemy związane z utrudnionym dostępem, przetwarzaniem i udostępnianiem informacji publicznej oraz przedstawia wizję rozwiązania tych wyzwań. Zawiera szczegółowe wymagania funkcjonalne i jakościowe systemu, przypadki użycia, słownik pojęć oraz charakterystykę interesariuszy. Uwzględniono również propozycję motta wspierającego promocję projektu: „Otwarte dane – otwarte możliwości”. Dokument pełni rolę podstawy do dalszych etapów analizy, projektowania i implementacji systemu.
 
-## Opis biznesu
-
-### Wstawianie danych do systemu
+---
+## 2. Opis biznesu
+### 2.1 Procesy biznesowe
+#### **Wstawianie danych do systemu**
 
 #### Opis
 
@@ -105,7 +112,7 @@ endif
 @enduml
 ```
 
-### Przeglądanie danych
+#### **Przeglądanie danych**
 
 #### Opis
 
@@ -162,7 +169,7 @@ endif
 @enduml
 ```
 
-### Zgłaszanie uwag
+#### **Zgłaszanie uwag**
 
 #### Opis
 
@@ -215,7 +222,7 @@ stop
 @enduml
 ```
 
-### Zarządzanie schematami danych
+#### **Zarządzanie schematami danych**
 
 #### Opis
 
@@ -263,7 +270,7 @@ stop
 @enduml
 ```
 
-### Subskrybcja do powiadomień o zmianie danych
+#### **Subskrybcja do powiadomień o zmianie danych**
 
 #### Opis
 
@@ -299,7 +306,7 @@ detach
 @enduml
 ```
 
-### Konwersja formatu danych
+#### **Konwersja formatu danych**
 
 #### Opis
 
@@ -356,19 +363,42 @@ stop
 @enduml
 ```
 
-## Wizja systemu
+## 3. Wizja systemu
 
-### 1. Abstrakt
+###  **Motto**
 
-Niniejszy dokument przedstawia wizję systemu zarządzania otwartymi danymi publicznymi, który odpowiada na istotny problem utrudnionego dostępu, przetwarzania i udostępniania informacji publicznej. Projektowany system zapewni efektywne zarządzanie oraz dynamiczne publikowanie danych pochodzących od administracji publicznej, co przyczyni się do poprawy ich jakości, aktualności oraz przejrzystości. W dokumencie wyszczególniono wymagania funkcjonalne oraz jakościowe systemu, uwzględniające kluczowe potrzeby wszystkich zidentyfikowanych interesariuszy. Zaproponowano również motto projektu: **„Otwarte dane – otwarte możliwości”** które ma skutecznie wspierać kampanie promocyjne, budować świadomość społeczną oraz wzmacniać poczucie zaangażowania zespołu projektowego.
+Motto projektu jest kluczowym elementem komunikacji, które wspiera kampanie promocyjne systemu, buduje świadomość społeczną oraz łatwo zapada w pamięć. Dodatkowo powinno inspirować, motywować oraz wzmacniać morale zespołu projektowego, budując ich poczucie przynależności i zaangażowanie we wspólne cele.
 
-### 2. Problem
+Proponujemy motto główne projektu
 
-#### 2.1 Istota problemu
+### *Otwarte dane - otwarte możliwości*
+
+Pozostałe pomysły brane pod uwagę przy wyborze motto:
+
+- „Otwarte dane. Wiedza, która zmienia świat.”
+
+- „Otwórz dane, otwórz przyszłość.”
+
+- „Otwarte dane – Twoje prawo do wiedzy.”
+
+- „Dane publiczne – siła w transparentności.”
+
+- „Dostęp do wiedzy kluczem do rozwoju.”
+
+- „Otwórz się na dane, a dane otworzą się na Ciebie.”
+
+- „Dane otwarte zmieniają rzeczywistość.”
+
+
+
+
+### 3.1 Problem
+
+#### 3.1.2 Istota problemu
 
 Główny problem klienta polega na braku efektywnego systemu do zarządzania otwartymi danymi publicznymi, co utrudnia dostęp do informacji, ich przetwarzanie i udostępnianie. Powiązany jest z nim szereg innych, opisanych poniżej problemów.
 
-#### 2.2 Specyfikacja problemów
+#### 3.1.3 Specyfikacja problemów
 
 - **(P0001) Brak efektywnego systemu do zarządzania otwartymi danymi publicznymi**
 
@@ -418,35 +448,12 @@ Główny problem klienta polega na braku efektywnego systemu do zarządzania otw
 
   **Opis:** Problemem jest trudność zarządzania dużą ilością różnorodnych metadanych, co prowadzi do błędów, utrudnia wyszukiwanie danych i obniża jakość informacji. Rozwiązaniem jest wdrożenie intuicyjnych narzędzi do efektywnego zarządzania metadanymi zgodnymi ze standardem DCAT/AP. Korzyścią będzie usprawnienie zarządzania danymi, poprawa jakości ich dostępności oraz zwiększenie efektywności analizy informacji.
 
-### 3. Motto
 
-Motto projektu jest kluczowym elementem komunikacji, które wspiera kampanie promocyjne systemu, buduje świadomość społeczną oraz łatwo zapada w pamięć. Dodatkowo powinno inspirować, motywować oraz wzmacniać morale zespołu projektowego, budując ich poczucie przynależności i zaangażowanie we wspólne cele.
-
-Proponujemy motto główne projektu
-
-### Otwarte dane - otwarte możliwości
-
-Pozostałe pomysły brane pod uwagę przy wyborze motto:
-
-- „Otwarte dane. Wiedza, która zmienia świat.”
-
-- „Otwórz dane, otwórz przyszłość.”
-
-- „Otwarte dane – Twoje prawo do wiedzy.”
-
-- „Dane publiczne – siła w transparentności.”
-
-- „Dostęp do wiedzy kluczem do rozwoju.”
-
-- „Otwórz się na dane, a dane otworzą się na Ciebie.”
-
-- „Dane otwarte zmieniają rzeczywistość.”
-
-### 4. Interesariusze
+### 3.2 Interesariusze
 
 Tworzony system zarządzania publicznymi danymi otwartymi musi odpowiadać na potrzeby różnych grup interesariuszy. Poniżej przedstawiono szczegółową charakterystykę interesariuszy oraz określono kluczowe interesy każdej z grup.
 
-#### 4.1 Administrator systemu
+#### 3.2.1 Administrator systemu
 
 _Osoba lub grupa osób odpowiedzialna za bieżące zarządzanie, konfigurowanie i monitorowanie systemu._
 
@@ -458,7 +465,7 @@ _Osoba lub grupa osób odpowiedzialna za bieżące zarządzanie, konfigurowanie 
 
 - Łatwość monitorowania stanu systemu, diagnostyka problemów oraz szybkie reagowanie na awarie.
 
-#### 4.2 Użytkownicy końcowi
+#### 3.2.2 Użytkownicy końcowi
 
 _Osoby, które będą bezpośrednio korzystać z danych dostępnych w systemie (obywatele, badacze, studenci, dziennikarze, aktywiści społeczni, analitycy danych, firmy komercyjne)._
 
@@ -474,7 +481,7 @@ _Osoby, które będą bezpośrednio korzystać z danych dostępnych w systemie (
 
 - Możliwość subskrypcji i otrzymywania powiadomień o aktualizacjach interesujących danych.
 
-#### 4.3 Klienci organizacji
+#### 3.2.3 Klienci organizacji
 
 _Podmioty gospodarcze lub osoby fizyczne, które współpracują lub korzystają z usług organizacji dostarczającej dane._
 
@@ -486,7 +493,7 @@ _Podmioty gospodarcze lub osoby fizyczne, które współpracują lub korzystają
 
 - Gwarancja wysokiej jakości oraz aktualności udostępnianych danych.
 
-#### 4.4 Inwestorzy i sponsorzy
+#### 3.2.4 Inwestorzy i sponsorzy
 
 _Podmioty finansujące projekt oraz oczekujące pozytywnego wpływu inwestycji na społeczeństwo lub gospodarkę lokalną._
 
@@ -498,7 +505,7 @@ _Podmioty finansujące projekt oraz oczekujące pozytywnego wpływu inwestycji n
 
 - Poprawa wizerunku oraz zwiększenie zaufania obywateli wobec instytucji publicznych.
 
-#### 4.5 Zamawiający
+#### 3.2.5 Zamawiający
 
 _Osoby podejmujące decyzje strategiczne związane z wdrożeniem systemu._
 
@@ -510,7 +517,7 @@ _Osoby podejmujące decyzje strategiczne związane z wdrożeniem systemu._
 
 - Realizacja celów politycznych, społecznych oraz strategicznych poprzez wdrożenie skutecznego systemu danych otwartych.
 
-#### 4.6 Dział IT
+#### 3.2.6 Dział IT
 
 _Osoby odpowiedzialne za utrzymanie, rozwój techniczny oraz administrację infrastruktury informatycznej obsługującej system._
 
@@ -524,7 +531,7 @@ _Osoby odpowiedzialne za utrzymanie, rozwój techniczny oraz administrację infr
 
 - Zapewnienie skalowalności, bezpieczeństwa oraz ciągłej aktualizacji systemu.
 
-#### 4.7 Partnerzy i integratorzy danych
+#### 3.2.7 Partnerzy i integratorzy danych
 
 _Zewnętrzne organizacje i instytucje dostarczające dane lub współpracujące z systemem na zasadzie integracji lub wymiany danych._
 
@@ -536,7 +543,7 @@ _Zewnętrzne organizacje i instytucje dostarczające dane lub współpracujące 
 
 - Szybka walidacja oraz możliwość błyskawicznego publikowania aktualizacji danych po stronie platformy.
 
-#### 4.8 Analitycy i eksperci ds. danych
+#### 3.2.8 Analitycy i eksperci ds. danych
 
 _Osoby zajmujące się analizą danych oraz ich wykorzystaniem do tworzenia raportów, analiz lub prognoz (badacze, specjaliści ds. urbanistyki, transportu, jakości powietrza itp.)._
 
@@ -548,7 +555,7 @@ _Osoby zajmujące się analizą danych oraz ich wykorzystaniem do tworzenia rapo
 
 - Łatwe cytowanie oraz generowanie poprawnych opisów bibliograficznych do publikacji naukowych.
 
-#### 4.9 Społeczność lokalna (obywatele)
+#### 3.2.9 Społeczność lokalna (obywatele)
 
 _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośredni wpływ na wykorzystanie danych publicznych._
 
@@ -560,9 +567,9 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
 - Uzyskanie wymiernych korzyści społecznych i poprawa jakości życia dzięki efektywnemu wykorzystaniu danych.
 
-### 5. Cechy systemu
 
-#### 5.1 Cechy funkcjonalne
+
+### 3.3 Cechy funkcjonalne
 
 - **(CF0001) Rejestracja i zarządzanie użytkownikami**
 
@@ -713,7 +720,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Opis**:  
    System musi zapewniać możliwość dwuskładnikowego uwierzytelniania użytkowników przy pomocy standardu OAuth2.0.
 
-#### 5.1.1 Pomysły na przyszłość
+#### 3.3.1 Pomysły na przyszłość
 
 - **(CFP0001) Odpłatne udostępnianie wybranych danych w modelu subskrypcyjnym**
 
@@ -778,7 +785,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Opis**:  
    System powinien wspierać integrację z modelami sztucznej inteligencji, takimi jak ChatGPT, umożliwiając użytkownikom prowadzenie interaktywnych analiz oraz generowanie wniosków na podstawie danych.
 
-#### 5.2 Cechy jakościowe
+#### 3.4 Cechy jakościowe
 
 - **(CJU0001) Intuicyjny i łatwy w obsłudze interfejs użytkownika**
 
@@ -1161,10 +1168,9 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
    ≤30 minut.
 
 
+## 4. Przypadki użycia
 
-### 6. Przypadki użycia
-
-#### 6.1. Użytkownik
+### 4.1. Użytkownik
   **Diagram**
 
   ```puml
@@ -1280,7 +1286,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszoną uwagą.
     
 
-#### 6.2. Zarządca danych
+### 4.2. Zarządca danych
   **Diagram**
 
   ```puml
@@ -1399,7 +1405,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Zarządca danych usuwa schemat z systemu, co może wymagać wcześniejszej weryfikacji, czy nie jest on powiązany z aktywnymi zbiorami. W razie potrzeby użytkownicy są informowani o konieczności migracji danych.
 
  
-#### 6.3. Subskrybent
+### 4.3. Subskrybent
   **Diagram**
 
   ```puml
@@ -1434,7 +1440,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Subskrybent zmienia ustawienia subskrypcji, takie jak preferowany sposób otrzymywania informacji lub status aktywności subskrypcji. Wprowadzone zmiany są natychmiastowo zapisywane w systemie.
 
 
-#### 6.4. Dostawca danych
+### 4.4. Dostawca danych
   **Diagram**
 
   ```puml
@@ -1486,7 +1492,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Dostawca danych usuwa dystrybucję z przypisanego zbioru, co skutkuje jej natychmiastowym usunięciem z systemu. W przypadku aktywnych subskrybentów system może wysłać automatyczne powiadomienie o zmianie.
 
 
-#### 6.5. Czas
+### 4.5. Czas
   **Diagram**
 
   ```puml
@@ -1537,7 +1543,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     System eksportuje metadane do systemu CKAN.
 
 
-#### 6.6. Weryfikator
+### 4.6. Weryfikator
   **Diagram**
 
   ```puml
@@ -1629,7 +1635,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     Weryfikator tworzy raport podsumowujący jakość danych w systemie. Raport może być zapisany w wybranym formacie.
 
 
-#### 6.7. Administrator
+### 4.7. Administrator
   **Diagram**
 
   ```puml
@@ -1706,8 +1712,166 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
     **Opis**:  
     Administrator konfiguruje kluczowe parametry systemu, takie jak ustawienia bezpieczeństwa, limity dostępu czy opcje integracji zewnętrznych.
 
+## 5 Słownik dziedziny
 
- ### 7. Wymagania jakościowe
+### **Zbiór danych**
+
+**Opis:**
+Zestaw powiązanych ze sobą informacji.
+
+**Atrybuty:**
+
+* `identyfikator: string`
+* `licencja dostępu: Licencja` (enum)
+* `modyfikacje: Data [0..*]`
+* `opis: string [1..*]`
+* `słowa kluczowe: list<string>`
+* `tytul: string [1..*]`
+* `wersja: int`
+
+
+
+### **Punkt kontaktowy**
+
+**Opis:**
+Dane osoby lub organizacji kontaktowej.
+
+**Atrybuty:**
+
+* `adres: string`
+* `email: string`
+* `nazwa: string`
+* `telefon: string`
+
+
+
+### **Dystrybucja danych**
+
+**Opis:**
+Konkretna forma udostępnienia zbioru danych.
+
+**Atrybuty:**
+
+* `format: Format` (enum)
+* `opis: string [1..*]`
+* `tytul: string [1..*]`
+* `url: string`
+
+
+
+### **Schemat danych**
+
+**Opis:**
+Definicja struktury zbioru danych.
+
+**Atrybuty:**
+
+* `nazwa: string`
+* `opis: string`
+* `struktura: string [1..*]`
+* `wersja: int`
+
+
+
+### **Uwaga do zbioru danych**
+
+**Opis:**
+Komentarz lub sugestia dotycząca zbioru danych.
+
+**Atrybuty:**
+
+* `data: Data`
+* `dystrybucja: Format` (enum)
+* `tekst: string`
+
+
+
+### **Użytkownik**
+
+**Opis:**
+Osoba lub system korzystający z portalu.
+
+**Atrybuty:**
+
+* `imie: string [0..1]`
+* `nazwisko: string [0..1]`
+
+
+
+### **Parametry wizualizacji**
+
+**Opis:**
+Ustawienia konfigurujące wizualizację danych.
+
+**Atrybuty:**
+
+* `motyw: motyw` (enum)
+* `zakres danych: Zakres danych` (enum)
+
+---
+
+### **Subskrypcja**
+
+**Opis:**
+Mechanizm powiadamiania o zmianach w zbiorze danych.
+
+**Atrybuty:**
+
+* `częstotliwość: int`
+* `typ zmiany: typ zmiany` (enum)
+
+
+
+### **Powiadomienie**
+
+**Opis:**
+Informacja wysyłana w ramach subskrypcji.
+
+**Atrybuty:**
+
+* `data: Data`
+
+
+
+### **Wizualizacja**
+
+**Opis:**
+Definicja sposobu graficznej prezentacji danych.
+
+**Atrybuty:**
+
+* `rodzaj wizualizacji: Rodzaj wizualizacji` (enum)
+
+
+### **Dane Logowania**
+
+**Opis:**
+Dane uwierzytelniające użytkownika.
+
+**Atrybuty:**
+
+* `email: string`
+* `haslo: string`
+* `nazwa użytkownika: string`
+
+
+
+### **Typy Danych i Wyliczeniowe**
+
+* **`Data` (DataType):** Struktura przechowująca: `Dzien: int`, `Godzina: int`, `Miesiac: int`, `Minuta: int`, `Rok: int`, `Sekunda: int`.
+* **`Rodzaj wizualizacji` (Enum):** `Wykres`, `Tekst`, `Zdjęcie`, `Tabela`.
+* **`typ zmiany` (Enum):** `nowa wersja`, `zmiana licencji`, `zmiana w punktach kontaktowych`, `zmiana danych`, `zmiana metadanych zbioru`.
+* **`Zakres danych` (Enum):** `Czasowy`, `Geograficzny`.
+* **`motyw` (Enum):** `jasny`, `ciemny`.
+* **`Format` (Enum):** `csv`, `json`, `xml`, `api`, `xlsx`,`api`.
+* **`Licencja` (Enum):** `Publiczna`, `Niepubliczna`.
+
+
+### Diagram
+![Diagram słownika dziedziny](slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
+
+---
+ ### 6. Wymagania jakościowe
 #### (J0001) Wyszukiwanie zbiorów danych przy typowym obciążeniu
 
 |                        |                                                                                                                                           |
@@ -2002,170 +2166,17 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 | **Sposób pomiaru**     | Testy funkcjonalne symulujące sytuacje krytyczne; wielokrotna walidacja wyników przez niezależne podsystemy. |
 | **Oczekiwana wartość** | 100% poprawnych reakcji w testach regresyjnych; brak rozbieżności w podejmowanych decyzjach systemu.          |
     
-=======
-
-## Słownik dziedziny
-
-### 1. **Zbiór danych**
-
-**Opis:**
-Zestaw powiązanych ze sobą informacji.
-
-**Atrybuty:**
-
-* `identyfikator: string`
-* `licencja dostępu: Licencja` (enum)
-* `modyfikacje: Data [0..*]`
-* `opis: string [1..*]`
-* `słowa kluczowe: list<string>`
-* `tytul: string [1..*]`
-* `wersja: int`
-
 ---
+## 7. Wstępna wycena projektu
 
-### 2. **Punkt kontaktowy**
+W wyniku przeprowadzonej analizy oszacowano łączną liczbę punktów przypadków użycia (UCP) na **485,33**. Wartość ta powstała na podstawie 21 przypadków o niskiej trudności, 23 przypadków o średniej trudności oraz 3 przypadków o wysokiej trudności, co dało w sumie **380 punktów UUCW**. Uwzględniono również 7 aktorów systemu, co przełożyło się na **18 punktów UAW**. Zastosowane współczynniki korekcyjne wyniosły: **TCF = 1,065** oraz **ECF = 1,145**. 
 
-**Opis:**
-Dane osoby lub organizacji kontaktowej.
+Po podstawieniu do wzoru, uzyskano wynik:  
+**UCP = (380 + 18) × 1,065 × 1,145 = 485,33**
 
-**Atrybuty:**
+Przy założeniu, że jeden punkt UCP odpowiada 28 roboczogodzinom, całkowity nakład pracy niezbędny do realizacji projektu wynosi:  
+**485,33 × 28 = 13 489 godzin**
 
-* `adres: string`
-* `email: string`
-* `nazwa: string`
-* `telefon: string`
+Wynik ten stanowi podstawę do dalszego planowania harmonogramu oraz alokacji zasobów w projekcie.
 
----
-
-### 3. **Dystrybucja danych**
-
-**Opis:**
-Konkretna forma udostępnienia zbioru danych.
-
-**Atrybuty:**
-
-* `format: Format` (enum)
-* `opis: string [1..*]`
-* `tytul: string [1..*]`
-* `url: string`
-
----
-
-### 4. **Schemat danych**
-
-**Opis:**
-Definicja struktury zbioru danych.
-
-**Atrybuty:**
-
-* `nazwa: string`
-* `opis: string`
-* `struktura: string [1..*]`
-* `wersja: int`
-
----
-
-### 5. **Uwaga do zbioru danych**
-
-**Opis:**
-Komentarz lub sugestia dotycząca zbioru danych.
-
-**Atrybuty:**
-
-* `data: Data`
-* `dystrybucja: Format` (enum)
-* `tekst: string`
-
----
-
-### 6. **Użytkownik**
-
-**Opis:**
-Osoba lub system korzystający z portalu.
-
-**Atrybuty:**
-
-* `imie: string [0..1]`
-* `nazwisko: string [0..1]`
-
----
-
-### 7. **Parametry wizualizacji**
-
-**Opis:**
-Ustawienia konfigurujące wizualizację danych.
-
-**Atrybuty:**
-
-* `motyw: motyw` (enum)
-* `zakres danych: Zakres danych` (enum)
-
----
-
-### 8. **Subskrypcja**
-
-**Opis:**
-Mechanizm powiadamiania o zmianach w zbiorze danych.
-
-**Atrybuty:**
-
-* `częstotliwość: int`
-* `typ zmiany: typ zmiany` (enum)
-
----
-
-### 9. **Powiadomienie**
-
-**Opis:**
-Informacja wysyłana w ramach subskrypcji.
-
-**Atrybuty:**
-
-* `data: Data`
-
----
-
-### 10. **Wizualizacja**
-
-**Opis:**
-Definicja sposobu graficznej prezentacji danych.
-
-**Atrybuty:**
-
-* `rodzaj wizualizacji: Rodzaj wizualizacji` (enum)
-
----
-
-### 11. **Dane Logowania**
-
-**Opis:**
-Dane uwierzytelniające użytkownika.
-
-**Atrybuty:**
-
-* `email: string`
-* `haslo: string`
-* `nazwa użytkownika: string`
-
----
-
-### 12. **Typy Danych i Wyliczeniowe**
-
-* **`Data` (DataType):** Struktura przechowująca: `Dzien: int`, `Godzina: int`, `Miesiac: int`, `Minuta: int`, `Rok: int`, `Sekunda: int`.
-* **`Rodzaj wizualizacji` (Enum):** `Wykres`, `Tekst`, `Zdjęcie`, `Tabela`.
-* **`typ zmiany` (Enum):** `nowa wersja`, `zmiana licencji`, `zmiana w punktach kontaktowych`, `zmiana danych`, `zmiana metadanych zbioru`.
-* **`Zakres danych` (Enum):** `Czasowy`, `Geograficzny`.
-* **`motyw` (Enum):** `jasny`, `ciemny`.
-* **`Format` (Enum):** `csv`, `json`, `xml`, `api`, `xlsx`,`api`.
-* **`Licencja` (Enum):** `Publiczna`, `Niepubliczna`.
-
----
-
-### Diagram
-![Diagram słownika dziedziny](slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
-
-
-# Wstępna wycena projektu
-## Cel Dokumentu
-Celem niniejszego dokumentu jest oszacowanie rozmiaru systemu informatycznego z wykorzystaniem metody punktów przypadków użycia (Use Case Points – UCP). Metoda ta bazuje na analizie przypadków użycia oraz aktorów systemu i dodatkowo uwzględnia czynniki techniczne i środowiskowe, które mają wpływ na złożoność projektu.
 
