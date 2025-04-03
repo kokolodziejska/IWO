@@ -21,17 +21,40 @@
 Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publicznych składającą się z wizji systemu, wymagań użytkownika oraz wymagań oprogramowania dla pierwszych iteracji projektu.
 
 **Historia zmian** 
+```puml
+@startuml
 
-| Wersja | Data      | Kto                                                  | Opis                             |
-|--------|-----------|-------------------------------------------------------|----------------------------------|
-| 1.0.0  | 3.3.2025  | Mikołaj Tradecki, Michał Ciechan                      | Dodano opis biznesu              |
-| 1.1.0  | 9.3.2025  | Dominika Kalinowska, Łukasz Gumienniczuk             | Dodano wizję                     |
-| 1.2.0  | 15.3.2025 | Michał Bibrzycki, Mateusz Borka, Daria Koval         | Dodano diagramy przypadków użycia |
-| 1.2.1  | 19.3.2025 | Michał Bibrzycki, Mateusz Borka, Daria Koval         | Drobne poprawki                  |
-| 1.3.0  | 23.3.2025 | Bartek Janota, Jakub Klenkiewicz                     | Dodano słownik                   |
-| 1.3.1  | 28.3.2025 | Michał Bibrzycki, Mateusz Borka, Daria Koval         | Drobne poprawki                  |
-| 1.4.0  | 2.4.2025  | Mikołaj Frączek, Michał Jagodziński, Maciej Ruakt    | Dodano wymagania jakościowe     |
-| 1.4.1  | 2.4.2025  | Bartek Janota, Jakub Klenkiewicz                     | Drobne poprawki                  |
+title Historia zmian
+
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+}
+
+class "Wersja | Data       | Kto                                             | Opis" as Header {
+}
+
+class "1.0.0   | 3.3.2025   | Mikołaj Tradecki, Michał Ciechan                | Dodano opis biznesu" as R1
+class "1.1.0   | 9.3.2025   | Dominika Kalinowska, Łukasz Gumienniczuk       | Dodano wizję" as R2
+class "1.2.0   | 15.3.2025  | Michał Bibrzycki, Mateusz Borka, Daria Koval   | Dodano diagramy przypadków użycia" as R3
+class "1.2.1   | 19.3.2025  | Michał Bibrzycki, Mateusz Borka, Daria Koval   | Drobne poprawki" as R4
+class "1.3.0   | 23.3.2025  | Bartek Janota, Jakub Klenkiewicz               | Dodano słownik" as R5
+class "1.3.1   | 28.3.2025  | Michał Bibrzycki, Mateusz Borka, Daria Koval   | Drobne poprawki" as R6
+class "1.4.0   | 2.4.2025   | Mikołaj Frączek, Michał Jagodziński, Maciej Ruakt | Dodano wymagania jakościowe" as R7
+class "1.4.1   | 2.4.2025   | Bartek Janota, Jakub Klenkiewicz               | Drobne poprawki" as R8
+
+Header -down-> R1
+R1 -down-> R2
+R2 -down-> R3
+R3 -down-> R4
+R4 -down-> R5
+R5 -down-> R6
+R6 -down-> R7
+R7 -down-> R8
+```
+@enduml
+
+
 
 
 
