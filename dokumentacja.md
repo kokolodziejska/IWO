@@ -364,6 +364,7 @@ endif
 stop
 @enduml
 ```
+
 ---
 
 ## 3. Wizja systemu
