@@ -21,24 +21,8 @@
 Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publicznych składającą się z wizji systemu, wymagań użytkownika oraz wymagań oprogramowania dla pierwszych iteracji projektu.
 
 **Historia zmian** 
-```puml
-@startuml
-salt
-{
-{+
-Wersja | Data       | Kto                                             | Opis
-1.0.0  | 3.3.2025   | Mikołaj Tradecki, Michał Ciechan                | Dodano opis biznesu
-1.1.0  | 9.3.2025   | Dominika Kalinowska, Łukasz Gumienniczuk       | Dodano wizję
-1.2.0  | 15.3.2025  | Michał Bibrzycki, Mateusz Borka, Daria Koval   | Dodano diagramy przypadków użycia
-1.2.1  | 19.3.2025  | Michał Bibrzycki, Mateusz Borka, Daria Koval   | Drobne poprawki
-1.3.0  | 23.3.2025  | Bartek Janota, Jakub Klenkiewicz               | Dodano słownik
-1.3.1  | 28.3.2025  | Michał Bibrzycki, Mateusz Borka, Daria Koval   | Drobne poprawki
-1.4.0  | 2.4.2025   | Mikołaj Frączek, Michał Jagodziński, Maciej Ruakt | Dodano wymagania jakościowe
-1.4.1  | 2.4.2025   | Bartek Janota, Jakub Klenkiewicz               | Drobne poprawki
-}
-@enduml
 
-```
+![Tabela_zmian](tabela_zmian.png "Historia Zmian")
 
 
 
