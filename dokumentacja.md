@@ -14,7 +14,7 @@
 - Michał Ciechan  
 - Łukasz Gumienniczuk  
 - Michał Jagodziński  
-- Maciej Ruakt  
+- Maciej Rukat  
 - Daria Koval
 
 **Abstrakt** 
