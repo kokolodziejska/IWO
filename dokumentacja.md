@@ -23,7 +23,7 @@ Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publ
 
 **Historia zmian** 
 
-![Tabela_zmian](tabela_zmian.png "Historia Zmian")
+![Tabela_zmian](Obrazki%20do%20dokumentacji/tabela_zmian.png "Historia Zmian")
 
 ---
 
@@ -1876,7 +1876,7 @@ Dane uwierzytelniające użytkownika.
 
 
 ### Diagram
-![Diagram słownika dziedziny](slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
+![Diagram słownika dziedziny](Obrazki%20do%20dokumentacji/slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
 
 ---
 
