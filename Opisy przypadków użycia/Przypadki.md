@@ -49,3 +49,7 @@ POST**:** Status uwagi do zbioru danych nie został zmieniony. Żadna informacja
 **Postulaty o zmiany w słowniku dziedziny**
 
 - Dodać status uwagi jako atrybut uwagi do zbioru danych → enum : rozpatrzona/nierozpatrzona
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna zmiany statusu uwagi](oknaPU018.png)
