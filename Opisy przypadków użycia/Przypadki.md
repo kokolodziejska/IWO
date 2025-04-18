@@ -45,7 +45,7 @@ Brak
 
 **Poglądowy widok okien**
 
-![Poglądowy widok okna edycji zbioru danych](oknaPU018.png)
+![Poglądowy widok okna edycji zbioru danych](oknaPU014.png)
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
 ## PU018 Zmiana statusu zgłoszonej uwagi do zbioru - Jakub Klenkiewicz
