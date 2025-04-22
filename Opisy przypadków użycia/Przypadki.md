@@ -90,6 +90,54 @@ Brak
 **Poglądowy widok okien**
 
 ![Poglądowy widok okna edycji zbioru danych](oknaPU014.png)
+## PU016 Wyświetlenie zweryfikowanej listy zgłoszonych uwag - Michał Ciechan
+
+**SCENARIUSZ GŁÓWNY**
+
+PRE: Zarządca danych jest zalogowany
+
+1\. Zarządca danych wybiera opcję "uwagi do rozpatrzenia".  
+2\. System pobiera listę uwag do zbiorów danych ze statusem "zweryfikowana".  
+3\. System wyświetla okno listy uwag do zbiorów danych.  
+<\<invoke\>> [wybrano opcje "szczegóły uwagi"] PU017 Wyświetlenie szczegółów zgłoszonej uwagi.  
+4\. Zarządca danych wybiera opcję "zamknij uwagi do rozpatrzenia".  
+
+FINAL: Sukces  
+POST: Brak zmian w liście uwag do zbiorów danych
+
+**SCENARIUSZ ALTERNATYWNY 1**
+
+1.-3. Tak jak w SCENARIUSZ GŁÓWNY.  
+4a. Zarządca danych wpisuje dane filtrowania uwag do zbiorów danych.  
+5a. System waliduje dane filtrowania uwag do zbiorów danych.  
+[dane poprawne]  
+6a. System filtruje uwagi do zbiorów danych.  
+7a. Powrót do kroku 3 w SCENARIUSZ GŁÓWNY.  
+
+**SCENARIUSZ ALTERNATYWNY 2**
+
+1.-5a. Tak jak w SCENARIUSZ ALTERNATYWNY 1.  
+[dane niepoprawne]  
+6b. System wyświetla komunikat "niepoprawne dane".  
+7b. Powrót do kroku 4a w SCENARIUSZ ALTERNATYWNY 1.  
+
+**SCENOPIS**
+
+![Scenopis PU016](oknaPU016.png)
+
+**SŁOWNIK**
+
+Uwaga do zbioru danych:  
+\+ id: string  
+\+ tytuł: string  
+\+ status: Status uwagi  
+
+Status uwagi: zgłoszona, zweryfikowana, rozpatrzona, odrzucona
+
+Dane filtrowania uwagi do zbioru danych:  
+\+ zbiór danych: Zbiór danych  
+\+ od: Data  
+\+ do: Data  
 
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
