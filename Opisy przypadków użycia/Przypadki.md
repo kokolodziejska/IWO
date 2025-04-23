@@ -28,7 +28,7 @@ Szczegóły zgłoszonej uwagi: Zawierają datę, nazwę użytkownika, status uwa
 
 **Scenopisy do przypadku użycia**
 
-![Poglądowy widok okna zmiany statusu uwagi](PU017.png)
+![Poglądowe scenopisy dla przypadku użycia PU017 ](PU017.png)
 ## PU018 Zmiana statusu zgłoszonej uwagi do zbioru - Jakub Klenkiewicz
 
 **SCENARIUSZ GŁÓWNY**
