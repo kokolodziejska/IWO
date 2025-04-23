@@ -149,3 +149,49 @@ POST: Anulowano przesłanie zgłoszenia uwagi; nic nie zostało zmodyfikowane.
 _**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
 
 ![Okna](oknaPU038.PNG)
+
+## PU023 Wyświetlanie listy subskrybcji - Maciej Rukat
+
+**SCENARIUSZ GŁÓWNY**
+
+PRE: Użytkownik jest zalogowany
+
+1. Użytkownik wybiera opcję "moje subskrybcje"
+2. System pobiera listę subskrybcji
+[użytkownik ma subskrybcje]
+3. System wyświetla okno listy subskrybcji<br>
+ <\<invoke>> [wybrano opcję ustawienia] Edytowanie ustawień subskrybcji<br>
+<\<invoke>> [wybrano opcję szczegóły] Wyświetlenie szczegółów zbioru danych
+4. Użytkownik wybiera opcję "zamknij"
+5. System zamyka okno listy subskrybcji<br>
+final: success
+
+POST: Stan systemu się nie zmienił
+
+**SCENARIUSZ ALTERNATYWNY 1**
+
+1.-2. tak jak w SCENARIUSZU GŁÓWNYM  
+[użytkownik nie ma subskrybji]  
+3a. System wyświetla komunikat "brak subskrybcji"  
+4a. Użytkownik wybier opcję zamknij<br>
+5a. System zamyka komunikat<br>
+final : failure
+
+POST: Stan systemu się nie zmienił
+
+**SCENARIUSZ ALTERNATYWNY 2**
+
+1.-2. tak jak w SCENARIUSZU GŁÓWNYM  
+[błąd systemu]  
+3b. System wyświetla komunikat "brak subskrybcji"<br>
+4b. Użytkownik wybier opcję zamknij<br>
+5b. System zamyka komunikat<br>
+final : failure
+
+POST: Stan systemu się nie zmienił
+
+**Brak zmian w słowniku dziedziny**
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna logowania](oknaPU001.png)
