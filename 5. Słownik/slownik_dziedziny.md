@@ -69,6 +69,7 @@ Komentarz lub sugestia dotycząca zbioru danych.
 * `data: Data`
 * `dystrybucja: Format` (enum)
 * `tekst: string`
+* `dodatkowe informacje uwagi: Dodatkowe Informacje Uwagi`
 
 ---
 
@@ -154,3 +155,9 @@ Dane uwierzytelniające użytkownika.
 * **`Licencja` (Enum):** `Publiczna`, `Niepubliczna`.
 
 ---
+
+## 13. **Dodatkowe Informacje Uwagi**
+
+* `Szacowana trudnosc: int`
+* `Proponowana naprawa blędu: string`
+* `Wlasne uwagi: string`

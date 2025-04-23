@@ -1,5 +1,48 @@
 # Scenariusze oraz scenopisy przypadków użycia
 
+## PU001 Logowanie do systemu - Michał Bibrzycki
+
+**SCENARIUSZ GŁÓWNY**
+
+PRE: Użytkownik jest niezalogowany i jest zarejestrowany w sustemie oraz zna swoje <u>dane logowania</u>
+
+1. Użytkownik wybiera opcję "zaloguj się"
+2. System wyświetla formularz logowania
+3. Użytkownik wprowadza <u>dane logowania</u>
+4. Użytkownik wybiera opcję "zaloguj".  
+[poprawny dostęp Systemu do bazy danych]
+5. System waliduje <u>dane logowania</u>  
+[<u>dane logowania</u> poprawne]
+6. System zmienia stan użytkownika na zalogowany
+7. System wyświetla menu ekranu głównego  
+final: success
+
+POST: Użytkonik jest zalogowany
+
+**SCENARIUSZ ALTERNATYWNY 1**
+
+1.-4. tak jak w SCENARIUSZU GŁÓWNYM  
+[brak dostępu Systemu do bazy danych]  
+5a. System wyświetla informację "Wystąpił błąd systemu, spróbuj ponownie później"  
+final : failure
+
+POST: Użytkonik jest niezalogowany
+
+**SCENARIUSZ ALTERNATYWNY 2**
+
+1.-5. tak jak w SCENARIUSZU GŁÓWNYM  
+[<u>dane logowania</u> niepoprawne]  
+6b. System wyświetla informację "Niepoprawne dane logowania"  
+final : failure
+
+POST: Użytkonik jest niezalogowany
+
+**Brak zmian w słowniku dziedziny**
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna logowania](oknaPU001.png)
+
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
 **SCENARIUSZ GŁÓWNY**
@@ -80,3 +123,57 @@ POST**:** Status uwagi do zbioru danych nie został zmieniony. Żadna informacja
 **Poglądowy widok okien**
 
 ![Poglądowy widok okna zmiany statusu uwagi](oknaPU018.png)
+
+
+## PU038 Przesłanie zgłoszonej uwagi do zarządcy danych - Łukasz Gumienniczuk
+
+**SCENARIUSZ GŁÓWNY:**
+
+PRE: Weryfikator jest zalogowany, Weryfikator ma uprawnienia do zarządzania zgłoszeniami, Weryfikator wybrał zgłoszoną uwagę
+
+1. Weryfikator wybiera opcję "prześlij zgłoszenie uwagi".
+2. System wyświetla formularz przesłania zgłoszonej uwagi.
+3. Weryfikator wpisuje dodatkowe informacje uwagi.
+4. Weryfikator wybiera opcję "prześlij".
+5. System waliduje dodatkowe informacje uwagi.
+    
+    [Dane poprawne]
+
+    6a. System zapisuje dodatkowe informacje uwagi.
+
+    7a. System zmienia status zgłoszonej uwagi na "zweryfikowana".
+
+    8a. Ssytem wyświetla komunikat o poprawnym przesłaniu zgłoszonej uwagi.
+    
+Final: success
+
+Post: Zgłoszona uwaga została przesłana do zarządcy danych.
+
+**SCENARIUSZ ALTERNATYWNY: [Dane niepoprawne]**
+
+1-5. tak jak w scenariuszu głównym
+        
+6b. System wyświetla komunikat o niepoprawnych danych.
+
+7b. Weryfikator wybiera opcję "ok".
+
+Powrót do zdania 3. w scenariuszu głownym.
+
+
+**SCENARIUSZ ALTERNATYWNY: [Anulowanie]**
+
+1-3. tak jak w scenariuszu głownym
+
+4b. Weryfikator wybiera opcję "anuluj".
+
+5b. System wyświetla okno potwierdzenia anulowania przesłania zgłoszonej uwagi.
+
+6b. Weryfikator wybiera opcję "ok".
+
+Final: Failed
+
+POST: Anulowano przesłanie zgłoszenia uwagi; nic nie zostało zmodyfikowane.
+
+_**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
+
+![Okna](oknaPU038.PNG)
