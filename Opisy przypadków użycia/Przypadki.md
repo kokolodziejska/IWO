@@ -132,7 +132,7 @@ Brak
 3. Użytkownik wybiera jedną z opcji: **SMS** lub **E-mail**  
 4. Użytkownik klika przycisk „Subskrybuj”  
 5. System sprawdza poprawność konfiguracji wybranego kanału powiadomień  
-  [a] Kanał skonfigurowany prawidłowo (np. podany numer, zweryfikowany mail)  
+  [Kanał skonfigurowany prawidłowo (np. podany numer, zweryfikowany mail)]
 6. System zapisuje subskrypcję  
 7. System wyświetla komunikat: „Zasubskrybowano pomyślnie”  
 
@@ -147,10 +147,10 @@ Brak
 
 **SCENARIUSZ ALTERNATYWNY 2 (Brak danych do wybranego kanału)**  
 5b. Wybrano SMS, ale numer telefonu nie jest przypisany do konta  
- → System wyświetla komunikat: **„Brak numeru telefonu przypisanego do konta…”**  
+[System wyświetla komunikat: **„Brak numeru telefonu przypisanego do konta…”**]
 **lub**  
 5c. Wybrano E-mail, ale adres e-mail nie jest zweryfikowany  
- → System wyświetla komunikat: **„Adres e-mail nie został zweryfikowany…”**  
+[System wyświetla komunikat: **„Adres e-mail nie został zweryfikowany…”**]
 **final**: failure  
 **POST**: Subskrypcja nie została zapisana  
 
