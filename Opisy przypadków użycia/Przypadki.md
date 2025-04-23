@@ -2,6 +2,33 @@
 
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
+**SCENARIUSZ GŁÓWNY**
+
+PRE : -Zarządca danych jest zalogowany
+
+1. Zarządca danych wybiera opcję "wyświetl szczegóły zgłoszonej uwagi".
+2. System pobiera szczegóły zgłoszonej uwagi. [dane pobrane prawidłowo].
+3. System wyświetla szczegóły uwagi.
+
+POST : Stan systemu bez zmian
+
+**SCENARIUSZ ALTERNATYWNY 1 (błąd pobrania danych)**
+
+PRE : -Zarządca danych jest zalogowany
+
+1. Zarządca danych wybiera opcję "wyświetl szczegóły zgłoszonej uwagi".
+2. System pobiera szczegóły zgłoszonej uwagi. [dane pobrane nieprawidłowo]
+3. System wyświetla okno komunikatu "Błąd pobrania danych".
+
+POST : Stan systemu bez zmian
+
+**Zmiany w słowniku dziedziny**
+
+Szczegóły zgłoszonej uwagi: Zawierają datę, nazwę użytkownika, status uwagi, treść uwagi, nazwę zbioru, którego dotyczy uwaga.
+
+**Scenopisy do przypadku użycia**
+
+![Poglądowy widok okna zmiany statusu uwagi](PU017.png)
 ## PU018 Zmiana statusu zgłoszonej uwagi do zbioru - Jakub Klenkiewicz
 
 **SCENARIUSZ GŁÓWNY**
