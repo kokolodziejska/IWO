@@ -72,7 +72,7 @@ POST: Stan się nie zmienia.
 =======
 
 
-SCENARIUSZ GŁÓWNY
+**SCENARIUSZ GŁÓWNY**
 
 PRE: Użytkownik jest załogowany, użytkownik wyświetlil szczegóły zbioru danych.
 
@@ -87,7 +87,7 @@ final: success
 
 POST: Użytkonik znajduje się w bazie subskrybentów danego zbioru danych.
 
-SCENARIUSZ ALTERNATYWNY 1
+**SCENARIUSZ ALTERNATYWNY 1(Anulowanie)**
 
 1.-5. tak jak w SCENARIUSZU GŁÓWNYM
 [dane niepoprawne]
@@ -98,7 +98,8 @@ SCENARIUSZ ALTERNATYWNY 1
 final:failure
 
 
-![image](https://github.com/user-attachments/assets/ecbc0794-fa30-4a12-a42c-ccd53e3bed65)
+![image](https://github.com/user-attachments/assets/020cd40e-247a-4b24-b309-be5bc7c1e5cd)
+
 
 
 ## PU014 Edytowanie zbioru danych - Michał Jagodziński
