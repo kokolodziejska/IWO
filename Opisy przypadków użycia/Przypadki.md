@@ -69,6 +69,54 @@ POST: Stan się nie zmienia
 final: failure  
 POST: Stan się nie zmienia.  
 ![Poglądowe scenopisy dla przypadku użycia PU003 ](oknaPU003.png)
+=======
+## PU014 Edytowanie zbioru danych - Michał Jagodziński
+
+**SCENARIUSZ GŁÓWNY**
+
+PRE : - Zarządca danych jest zalogowany, lista zbiorów danych jest wyświetlona
+
+1. Zarządca danych wybiera konkretny zbiór danych z listy zbiorów danych
+2. System pobira dane zbioru danych
+3. System wyświetla okno zbioru danych
+4. Zarządca danych naciska guzik "edycja"
+5. System wyświetla formularz edycji danych zbioru danych
+6. Zarządca danych edytuje dane zbioru dancyh
+   [Zatwierdzenie]
+7. System waliduje nowe dane zbioru danych
+   [Dane poprawne]
+8. System wyświelta komunikat "sukces"
+   
+final : success
+
+POST : Zmodyfikowane dane zbioru danych zapisane w systemie
+
+**SCENARIUSZ ALTERNATYWNY 1 (Anulowanie)**
+
+1.-6. tak jak w scenariuszu głównym
+
+7a). Powrót do punktu nr 3.
+
+final : canceled
+
+POST : Dane zbioru danych nie zostały zmodyfikowane
+
+**SCENARIUSZ ALTERNATYWNY 2 (Dane niepoprawne)**
+
+1.-7. tak jak w scenariuszu głównym
+
+8b) System wyświelta komunikat niepowodzenie
+
+final : failure
+POST : Dane zbioru danych nie zostały zmodyfikowane
+
+**Postulaty o zmiany w słowniku dziedziny**
+
+Brak
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna edycji zbioru danych](oknaPU014.png)
 
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
@@ -150,7 +198,6 @@ POST**:** Status uwagi do zbioru danych nie został zmieniony. Żadna informacja
 **Poglądowy widok okien**
 
 ![Poglądowy widok okna zmiany statusu uwagi](oknaPU018.png)
-
 
 ## PU038 Przesłanie zgłoszonej uwagi do zarządcy danych - Łukasz Gumienniczuk
 
