@@ -96,3 +96,56 @@ POST**:** Status uwagi do zbioru danych nie został zmieniony. Żadna informacja
 **Poglądowy widok okien**
 
 ![Poglądowy widok okna zmiany statusu uwagi](oknaPU018.png)
+
+## PU038 Przesłanie zgłoszonej uwagi do zarządcy danych - Łukasz Gumienniczuk
+
+**SCENARIUSZ GŁÓWNY:**
+
+PRE: Weryfikator jest zalogowany, Weryfikator ma uprawnienia do zarządzania zgłoszeniami, Weryfikator wybrał zgłoszoną uwagę
+
+1. Weryfikator wybiera opcję "prześlij zgłoszenie uwagi".
+2. System wyświetla formularz przesłania zgłoszonej uwagi.
+3. Weryfikator wpisuje dodatkowe informacje uwagi.
+4. Weryfikator wybiera opcję "prześlij".
+5. System waliduje dodatkowe informacje uwagi.
+    
+    [Dane poprawne]
+
+    6a. System zapisuje dodatkowe informacje uwagi.
+
+    7a. System zmienia status zgłoszonej uwagi na "zweryfikowana".
+
+    8a. Ssytem wyświetla komunikat o poprawnym przesłaniu zgłoszonej uwagi.
+    
+Final: success
+
+Post: Zgłoszona uwaga została przesłana do zarządcy danych.
+
+**SCENARIUSZ ALTERNATYWNY: [Dane niepoprawne]**
+
+1-5. tak jak w scenariuszu głównym
+        
+6b. System wyświetla komunikat o niepoprawnych danych.
+
+7b. Weryfikator wybiera opcję "ok".
+
+Powrót do zdania 3. w scenariuszu głownym.
+
+
+**SCENARIUSZ ALTERNATYWNY: [Anulowanie]**
+
+1-3. tak jak w scenariuszu głownym
+
+4b. Weryfikator wybiera opcję "anuluj".
+
+5b. System wyświetla okno potwierdzenia anulowania przesłania zgłoszonej uwagi.
+
+6b. Weryfikator wybiera opcję "ok".
+
+Final: Failed
+
+POST: Anulowano przesłanie zgłoszenia uwagi; nic nie zostało zmodyfikowane.
+
+_**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
+
+![Okna](oknaPU038.PNG)
