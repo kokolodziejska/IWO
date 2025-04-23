@@ -43,6 +43,78 @@ POST: Użytkonik jest niezalogowany
 
 ![Poglądowy widok okna logowania](oknaPU001.png)
 
+## PU002 Wyświetlenie listy zbiorów danych - Bartłomiej Janota
+
+**SCENARIUSZ GŁÓWNY:**
+
+PRE: Użytkownik uzyskał dostęp do interfejsu systemu.
+
+1. Użytkownik wybiera zakładkę "Zbiory danych".
+2. System pobiera listę dostępnych zbiorów danych.
+3. System wyświetla dane w formie listy.
+
+final: success
+
+POST: Stan systemu się nie zmienił.
+
+**SCENARIUSZ ALTERNATYWNY 1:**
+
+1-3 tak jak w SCENARIUSZU GŁÓWNYM
+<<invoke>> [Użytkownik klika w wybrany zbiór danych] 4. System przekierowuje użytkownika na stronę ze szczegółami tego zbioru danych.
+
+final: success
+
+POST: Stan systemu się nie zmienił.
+
+**SCENARIUSZ ALTERNATYWNY 2:**
+
+1-3 tak jak w SCENARIUSZU GŁÓWNYM
+4a. Użytkownik wybiera opcje filtrowania.
+5a. System wyświetla listę dostępnych zbiorów danych z zastosowanymi filtrami.
+
+final: success
+
+POST: Stan systemu się nie zmienił.
+
+**SCENARIUSZ ALTERNATYWNY 3:**
+
+1-4 tak jak w SCENARIUSZU ALTERNATYWNYM 2
+[brak zbiorów pasujących do opcji filtrowania]
+5a. System wyświetla komunikat o braku dostępnych zbiorów danych.
+
+final: failure
+
+POST: Stan systemu się nie zmienił.
+
+
+**SCENARIUSZ ALTERNATYWNY 4:**
+
+1 tak jak w SCENARIUSZU GŁÓWNYM
+[brak połączenia z bazą danych]
+2a. System wyświetla komunikat o problemie z połączeniem.
+
+final: failure
+
+POST: Stan systemu się nie zmienił.
+
+
+**SCENARIUSZ ALTERNATYWNY 5:**
+
+1 tak jak w SCENARIUSZU GŁÓWNYM
+[brak zbiorów danych w bazie danych]
+2a. System wyświetla komunikat o braku dostępnych zbiorów danych.
+
+final: failure
+
+POST: Stan systemu się nie zmienił.
+
+**Brak zmian w słowniku dziedziny**
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna logowania](oknaPU002.png)
+
+
 ## PU003 Wyświetlenie szczegółów danych - Mikołaj Tradecki
 
 **SCENARIUSZ GŁÓWNY**
