@@ -70,6 +70,37 @@ final: failure
 POST: Stan się nie zmienia.  
 ![Poglądowe scenopisy dla przypadku użycia PU003 ](oknaPU003.png)
 =======
+
+
+SCENARIUSZ GŁÓWNY
+
+PRE: Użytkownik jest załogowany, użytkownik wyświetlil szczegóły zbioru danych.
+
+1. Użytkownik klika przycisk "Subskrybuj".
+2. System wyświetla formularz z wyborem formwy powiadomienia(e-mail/SMS).
+3. Użytkownik zaznacza znakiem "X" preferowane opcje.
+4. Użytkownik naciska przycisk "Potwierdź".
+5. System weryfikuje punkt kontaktowy użytkownika.
+[dane poprawne]
+6. System dodaje użytkownika do listy subskrybentów danego zbioru danych.
+final: success
+
+POST: Użytkonik znajduje się w bazie subskrybentów danego zbioru danych.
+
+SCENARIUSZ ALTERNATYWNY 1
+
+1.-5. tak jak w SCENARIUSZU GŁÓWNYM
+[dane niepoprawne]
+6a. System wyświetla komunikat o błędnych danych profilu.
+[anulowanie subskrybcji]
+7a. Użytkownik wybiera opcję "Zamknij"
+8a. System zamyka formularz z wyborem formy powiadomienia
+final:failure
+
+
+![image](https://github.com/user-attachments/assets/ecbc0794-fa30-4a12-a42c-ccd53e3bed65)
+
+
 ## PU014 Edytowanie zbioru danych - Michał Jagodziński
 
 **SCENARIUSZ GŁÓWNY**
