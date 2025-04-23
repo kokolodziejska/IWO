@@ -43,6 +43,33 @@ POST: Użytkonik jest niezalogowany
 
 ![Poglądowy widok okna logowania](oknaPU001.png)
 
+## PU003 Wyświetlenie szczegółów danych - Mikołaj Tradecki
+
+**SCENARIUSZ GŁÓWNY**
+
+PRE : Użytkownik znajduje się w ekranie listy zbiorów danych.
+
+1. Użytkownik wybiera zbiór danych z listy
+2. System pobiera metadane zbioru danych 
+   [Poprawne połączenie z bazą danych]
+3. System wyświetla ekran szczogółów zbiorów danych.
+
+\<\<invoke\>\> [Wyświetlenie wizualizacji zbioru danych]   
+\<\<invoke\>\> [Pobranie dystrybucji zbioru danych]  
+\<\<invoke\>\> [Zgłoszenie uwagi do zbioru danych]  
+\<\<invoke\>\> [Zasubskrybowanie zbioru danych]  
+\<\<invoke\>\> [Wygenerowanie opisów bibliograficznych]   
+final: success  
+POST: Stan się nie zmienia   
+
+**SCENARIUSZ ALTERNATYWNY 1**  
+1-2 Tak jak w scenariuszu głównym.   
+3a. System wyświetla komunikato o błędzie połączenia  
+4a. Użytkownik wybiera przycisk zamknij  
+final: failure  
+POST: Stan się nie zmienia.  
+![Poglądowe scenopisy dla przypadku użycia PU003 ](oknaPU003.png)
+=======
 ## PU014 Edytowanie zbioru danych - Michał Jagodziński
 
 **SCENARIUSZ GŁÓWNY**
