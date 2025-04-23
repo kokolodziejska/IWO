@@ -1,5 +1,48 @@
 # Scenariusze oraz scenopisy przypadków użycia
 
+## PU001 Logowanie do systemu - Michał Bibrzycki
+
+**SCENARIUSZ GŁÓWNY**
+
+PRE: Użytkownik jest niezalogowany i jest zarejestrowany w sustemie oraz zna swoje <u>dane logowania</u>
+
+1. Użytkownik wybiera opcję "zaloguj się"
+2. System wyświetla formularz logowania
+3. Użytkownik wprowadza <u>dane logowania</u>
+4. Użytkownik wybiera opcję "zaloguj".  
+[poprawny dostęp Systemu do bazy danych]
+5. System waliduje <u>dane logowania</u>  
+[<u>dane logowania</u> poprawne]
+6. System zmienia stan użytkownika na zalogowany
+7. System wyświetla menu ekranu głównego  
+final: success
+
+POST: Użytkonik jest zalogowany
+
+**SCENARIUSZ ALTERNATYWNY 1**
+
+1.-4. tak jak w SCENARIUSZU GŁÓWNYM  
+[brak dostępu Systemu do bazy danych]  
+5a. System wyświetla informację "Wystąpił błąd systemu, spróbuj ponownie później"  
+final : failure
+
+POST: Użytkonik jest niezalogowany
+
+**SCENARIUSZ ALTERNATYWNY 2**
+
+1.-5. tak jak w SCENARIUSZU GŁÓWNYM  
+[<u>dane logowania</u> niepoprawne]  
+6b. System wyświetla informację "Niepoprawne dane logowania"  
+final : failure
+
+POST: Użytkonik jest niezalogowany
+
+**Brak zmian w słowniku dziedziny**
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna logowania](oknaPU001.png)
+
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
 ## PU018 Zmiana statusu zgłoszonej uwagi do zbioru - Jakub Klenkiewicz
@@ -53,7 +96,6 @@ POST**:** Status uwagi do zbioru danych nie został zmieniony. Żadna informacja
 **Poglądowy widok okien**
 
 ![Poglądowy widok okna zmiany statusu uwagi](oknaPU018.png)
-
 
 ## PU038 Przesłanie zgłoszonej uwagi do zarządcy danych - Łukasz Gumienniczuk
 
