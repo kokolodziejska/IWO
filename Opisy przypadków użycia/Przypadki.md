@@ -194,4 +194,4 @@ POST: Stan systemu się nie zmienił
 
 **Poglądowy widok okien**
 
-![Poglądowy widok okna logowania](oknaPU001.png)
+![Poglądowy widok okna logowania](oknaPU023.png)
