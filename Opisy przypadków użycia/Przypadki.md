@@ -2,8 +2,6 @@
 
 ## PU001 Logowanie do systemu - Michał Bibrzycki
 
-## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
-
 **SCENARIUSZ GŁÓWNY**
 
 PRE: Użytkownik jest niezalogowany i jest zarejestrowany w sustemie oraz zna swoje <u>dane logowania</u>
@@ -45,6 +43,7 @@ POST: Użytkonik jest niezalogowany
 
 ![Poglądowy widok okna logowania](oknaPU001.png)
 
+## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
 ## PU018 Zmiana statusu zgłoszonej uwagi do zbioru - Jakub Klenkiewicz
 
