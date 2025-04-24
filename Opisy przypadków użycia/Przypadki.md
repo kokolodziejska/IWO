@@ -477,3 +477,34 @@ _**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
 ### Poglądowy widok okna
 
 ![Poglądowy widok formularza dodania zbioru danych](oknaPU013.png)
+
+## PU015 Usunięcie zbioru danych - Mikołaj Frączek
+
+# SCENARIUSZ GŁÓWNY
+
+**PRE**: Zarządca danych jest zalogowany
+
+[zarządca ma uprawnienia do usunięcia zbioru danych]
+1. Zarządca danych wybiera opcję "usuń zbiór danych"   
+3. System wyświetla komunikat z prośbą o potwierdzenie usunięcia zbioru  
+4. Zarządca danych wybiera opcję "Potwierdzam"
+4. System sprawdza, czy zbiór może zostać usunięty  
+[zbiór może zostać usunięty]
+5. System usuwa zbiór  
+6. System wyświetla komunikat o pomyślnym usunięciu zbioru  
+
+**final**: success
+
+**POST**: Zbiór został usunięty z systemu
+
+---
+
+# SCENARIUSZ ALTERNATYWNY 1 (zbiór zablokowany)
+
+**1.-5.** tak jak w SCENARIUSZU GŁÓWNYM  
+[Zbiór danych jest blokowany]
+**6a.** System wyświetla komunikat: "Zbiór danych nie może zostać usunięty"
+
+**final**: failure
+
+**POST**: Zbiór nie został usunięty z systemu
