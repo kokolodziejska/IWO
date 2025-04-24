@@ -345,3 +345,63 @@ POST: Anulowano przesłanie zgłoszenia uwagi; nic nie zostało zmodyfikowane.
 _**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
 
 ![Okna](oknaPU038.PNG)
+
+
+## PU019 Dodawanie zbioru danych - Daria Koval
+
+### SCENARIUSZ GŁÓWNY
+
+**PRE:** Zarządca danych jest zalogowany
+
+| Krok | Opis |
+|------|------|
+| 1    | Zarządca danych wybiera opcję "Dodaj zbiór danych" |
+| 2    | System wyświetla formularz dodania nowego zbioru danych |
+| 3    | Zarządca danych wprowadza dane zbioru danych: <br> - identyfikator <br> - licencję dostępu <br> - opis <br> - słowa kluczowe <br> - typ/et <br> - wersję |
+| 4    | System waliduje dane zbioru danych *(dane poprawne)* |
+| 5    | System zapisuje zbiór danych |
+| 6    | System wyświetla potwierdzenie dodania zbioru danych |
+
+**Final:** success  
+
+**POST:** Nowo dodany zbiór danych znajduje się w bazie zbiorów danych
+
+---
+
+### SCENARIUSZ ALTERNATYWNY 1 (dane niepoprawne)
+
+| Krok | Opis |
+|------|------|
+| 1–4  | Jak w scenariuszu głównym *(dane niepoprawne)* |
+| 5a   | System wyświetla komunikat o błędnych danych |
+| 6a   | Zarządca danych wybiera opcję "Zamknij" |
+| 7a   | System zamyka formularz dodania |
+
+**Final:** failure  
+**POST:** Zbiór danych nie znajduje się w bazie zbiorów danych
+
+---
+### SCENARIUSZ ALTERNATYWNY 2 (poprawa danych)
+| Krok | Opis |
+|------|------|
+| 1–5a | Jak w Scenariuszu Alternatywnym 1 |
+| 6b   | Zarządca danych wybiera opcję "Popraw" |
+| 7b   | System wyświetla komunikat o wznowieniu dodania |
+
+**Powrót do punktu 3 scenariusza głównego**
+---
+### SCENARIUSZ ALTERNATYWNY 3 (błąd systemu)
+| Krok | Opis |
+|------|------|
+| 1–4  | Jak w scenariuszu głównym |
+| 5c   | System wyświetla komunikat o błędzie systemu |
+| 6c   | Zarządca danych wybiera opcję "Zamknij" |
+| 7c   | System zamyka formularz dodania |
+
+**Final:** failure  
+**POST:** Zbiór danych nie znajduje się w bazie zbiorów danych
+
+---
+### Poglądowy widok okna
+
+![Poglądowy widok formularza dodania zbioru danych](oknaPU013.png)
