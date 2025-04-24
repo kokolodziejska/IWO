@@ -72,6 +72,8 @@ POST: Stan się nie zmienia.
 =======
 
 
+## PU008 Zasubskrybowanie zbioru danych- Mateusz Borka
+
 **SCENARIUSZ GŁÓWNY**
 
 PRE: Użytkownik jest załogowany, użytkownik wyświetlil szczegóły zbioru danych.
