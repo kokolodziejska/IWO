@@ -499,7 +499,7 @@ _**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
 
 ---
 
-# SCENARIUSZ ALTERNATYWNY 1 (zbiór zablokowany)
+# SCENARIUSZ ALTERNATYWNY 1
 
 **1.-5.** tak jak w SCENARIUSZU GŁÓWNYM  
 [Zbiór danych jest blokowany]
@@ -508,3 +508,5 @@ _**Dodano 'Dodatkowe Infromacje uwagi' do słownika dziedziny**_
 **final**: failure
 
 **POST**: Zbiór nie został usunięty z systemu
+
+![okna](PU015.png)
