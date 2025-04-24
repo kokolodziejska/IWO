@@ -166,6 +166,52 @@ Dane filtrowania uwagi do zbioru danych:
 \+ od: Data  
 \+ do: Data  
 
+## PU008 Zasubskrybowanie zbioru danych – Dominika Kalinowska
+
+**SCENARIUSZ GŁÓWNY**
+
+**PRE**:  
+- Użytkownik jest zalogowany  
+- Użytkownik znajduje się w widoku szczegółów zbioru danych (PU003)  
+- Zbiór danych obsługuje subskrypcje  
+
+1. Użytkownik klika przycisk „Subskrybuj”  
+2. System wyświetla okno subskrypcji z nazwą zbioru oraz wyborem kanału powiadomień  
+3. Użytkownik wybiera jedną z opcji: **SMS** lub **E-mail**  
+4. Użytkownik klika przycisk „Subskrybuj”  
+5. System sprawdza poprawność konfiguracji wybranego kanału powiadomień  
+  [Kanał skonfigurowany prawidłowo (np. podany numer, zweryfikowany mail)]
+6. System zapisuje subskrypcję  
+7. System wyświetla komunikat: „Zasubskrybowano pomyślnie”  
+
+**final**: success  
+**POST**: Subskrypcja została aktywowana, użytkownik będzie otrzymywał powiadomienia o aktualizacjach zbioru  
+
+**SCENARIUSZ ALTERNATYWNY 1 (Nie wybrano kanału powiadomień)**  
+3a. Użytkownik nie zaznacza żadnej opcji  
+4a. System wyświetla komunikat: **„Wybór kanału powiadomień jest wymagany!”**  
+**final**: failure  
+**POST**: Subskrypcja nie została zapisana  
+
+**SCENARIUSZ ALTERNATYWNY 2 (Brak danych do wybranego kanału)**  
+5b. Wybrano SMS, ale numer telefonu nie jest przypisany do konta  
+[System wyświetla komunikat: **„Brak numeru telefonu przypisanego do konta…”**]
+**lub**  
+5c. Wybrano E-mail, ale adres e-mail nie jest zweryfikowany  
+[System wyświetla komunikat: **„Adres e-mail nie został zweryfikowany…”**]
+**final**: failure  
+**POST**: Subskrypcja nie została zapisana  
+
+**SCENARIUSZ ALTERNATYWNY 3 (Błąd systemu)**  
+6a. Wystąpił błąd systemu podczas zapisywania subskrypcji  
+7a. System wyświetla okno błędu: **„Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.”**  
+**final**: failure  
+**POST**: Subskrypcja nie została zapisana  
+
+**Poglądowy widok okien**
+
+![Poglądowy widok okna subskrypcji](oknaPU008.png)
+
 ## PU017 Wyświetlenie szczegółów zgłoszonej uwagi - Kornelia Kołodziejska
 
 **SCENARIUSZ GŁÓWNY**
