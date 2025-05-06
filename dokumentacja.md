@@ -1,8 +1,46 @@
 # Dokumentacja
+# System do udostęniania danych publicznych
+### Specyfikacja wymagań
+#### Informacje podstawowe
+**Autorzy**
+- Kornelia Kołodziejska  
+- Michał Bibrzycki  
+- Bartek Janota  
+- Mikołaj Tradecki  
+- Mikołaj Frączek  
+- Dominika Kalinowska  
+- Mateusz Borka  
+- Jakub Klenkiewicz  
+- Michał Ciechan  
+- Łukasz Gumienniczuk  
+- Michał Jagodziński  
+- Maciej Rukat  
+- Daria Koval
 
-## Opis biznesu
+**Abstrakt** 
 
-### Wstawianie danych do systemu
+Dokument zawiera specyfikację wymagań dla systemu do udostęniania danych publicznych składającą się z wizji systemu, wymagań użytkownika oraz wymagań oprogramowania dla pierwszych iteracji projektu.
+
+**Historia zmian** 
+
+![Tabela_zmian](Obrazki%20do%20dokumentacji/tabela_zmian.png "Historia Zmian")
+
+---
+
+## 1. Wprowadzenie
+### 1.1 Cel dokumentu
+
+Celem dokumentu jest przedstawienie kompletnej wizji projektowanego systemu oraz zebranie i usystematyzowanie wymagań funkcjonalnych, jakościowych i organizacyjnych. Dokument ma służyć jako punkt odniesienia dla zespołu projektowego oraz wszystkich interesariuszy zaangażowanych w rozwój systemu. 
+
+### 1.2 Streszczenie
+
+Dokument zawiera specyfikację wymagań dla systemu do zarządzania otwartymi danymi publicznymi. Opisuje kluczowe problemy związane z utrudnionym dostępem, przetwarzaniem i udostępnianiem informacji publicznej oraz przedstawia wizję rozwiązania tych wyzwań. Zawiera szczegółowe wymagania funkcjonalne i jakościowe systemu, przypadki użycia, słownik pojęć oraz charakterystykę interesariuszy. Uwzględniono również propozycję motta wspierającego promocję projektu: „Otwarte dane – otwarte możliwości”. Dokument pełni rolę podstawy do dalszych etapów analizy, projektowania i implementacji systemu.
+
+---
+
+## 2. Opis biznesu
+### 2.1 Procesy biznesowe
+#### **Wstawianie danych do systemu**
 
 #### Opis
 
@@ -77,7 +115,7 @@ endif
 @enduml
 ```
 
-### Przeglądanie danych
+#### **Przeglądanie danych**
 
 #### Opis
 
@@ -134,7 +172,7 @@ endif
 @enduml
 ```
 
-### Zgłaszanie uwag
+#### **Zgłaszanie uwag**
 
 #### Opis
 
@@ -187,7 +225,7 @@ stop
 @enduml
 ```
 
-### Zarządzanie schematami danych
+#### **Zarządzanie schematami danych**
 
 #### Opis
 
@@ -235,7 +273,7 @@ stop
 @enduml
 ```
 
-### Subskrybcja do powiadomień o zmianie danych
+#### **Subskrybcja do powiadomień o zmianie danych**
 
 #### Opis
 
@@ -271,7 +309,7 @@ detach
 @enduml
 ```
 
-### Konwersja formatu danych
+#### **Konwersja formatu danych**
 
 #### Opis
 
@@ -328,19 +366,44 @@ stop
 @enduml
 ```
 
-## Wizja systemu
+---
 
-### 1. Abstrakt
+## 3. Wizja systemu
 
-Niniejszy dokument przedstawia wizję systemu zarządzania otwartymi danymi publicznymi, który odpowiada na istotny problem utrudnionego dostępu, przetwarzania i udostępniania informacji publicznej. Projektowany system zapewni efektywne zarządzanie oraz dynamiczne publikowanie danych pochodzących od administracji publicznej, co przyczyni się do poprawy ich jakości, aktualności oraz przejrzystości. W dokumencie wyszczególniono wymagania funkcjonalne oraz jakościowe systemu, uwzględniające kluczowe potrzeby wszystkich zidentyfikowanych interesariuszy. Zaproponowano również motto projektu: **„Otwarte dane – otwarte możliwości”** które ma skutecznie wspierać kampanie promocyjne, budować świadomość społeczną oraz wzmacniać poczucie zaangażowania zespołu projektowego.
+###  **Motto**
 
-### 2. Problem
+Motto projektu jest kluczowym elementem komunikacji, które wspiera kampanie promocyjne systemu, buduje świadomość społeczną oraz łatwo zapada w pamięć. Dodatkowo powinno inspirować, motywować oraz wzmacniać morale zespołu projektowego, budując ich poczucie przynależności i zaangażowanie we wspólne cele.
 
-#### 2.1 Istota problemu
+Proponujemy motto główne projektu
+
+### *Otwarte dane - otwarte możliwości*
+
+Pozostałe pomysły brane pod uwagę przy wyborze motto:
+
+- „Otwarte dane. Wiedza, która zmienia świat.”
+
+- „Otwórz dane, otwórz przyszłość.”
+
+- „Otwarte dane – Twoje prawo do wiedzy.”
+
+- „Dane publiczne – siła w transparentności.”
+
+- „Dostęp do wiedzy kluczem do rozwoju.”
+
+- „Otwórz się na dane, a dane otworzą się na Ciebie.”
+
+- „Dane otwarte zmieniają rzeczywistość.”
+
+
+
+
+### 3.1 Problem
+
+#### 3.1.2 Istota problemu
 
 Główny problem klienta polega na braku efektywnego systemu do zarządzania otwartymi danymi publicznymi, co utrudnia dostęp do informacji, ich przetwarzanie i udostępnianie. Powiązany jest z nim szereg innych, opisanych poniżej problemów.
 
-#### 2.2 Specyfikacja problemów
+#### 3.1.3 Specyfikacja problemów
 
 - **(P0001) Brak efektywnego systemu do zarządzania otwartymi danymi publicznymi**
 
@@ -390,35 +453,12 @@ Główny problem klienta polega na braku efektywnego systemu do zarządzania otw
 
   **Opis:** Problemem jest trudność zarządzania dużą ilością różnorodnych metadanych, co prowadzi do błędów, utrudnia wyszukiwanie danych i obniża jakość informacji. Rozwiązaniem jest wdrożenie intuicyjnych narzędzi do efektywnego zarządzania metadanymi zgodnymi ze standardem DCAT/AP. Korzyścią będzie usprawnienie zarządzania danymi, poprawa jakości ich dostępności oraz zwiększenie efektywności analizy informacji.
 
-### 3. Motto
 
-Motto projektu jest kluczowym elementem komunikacji, które wspiera kampanie promocyjne systemu, buduje świadomość społeczną oraz łatwo zapada w pamięć. Dodatkowo powinno inspirować, motywować oraz wzmacniać morale zespołu projektowego, budując ich poczucie przynależności i zaangażowanie we wspólne cele.
-
-Proponujemy motto główne projektu
-
-### Otwarte dane - otwarte możliwości
-
-Pozostałe pomysły brane pod uwagę przy wyborze motto:
-
-- „Otwarte dane. Wiedza, która zmienia świat.”
-
-- „Otwórz dane, otwórz przyszłość.”
-
-- „Otwarte dane – Twoje prawo do wiedzy.”
-
-- „Dane publiczne – siła w transparentności.”
-
-- „Dostęp do wiedzy kluczem do rozwoju.”
-
-- „Otwórz się na dane, a dane otworzą się na Ciebie.”
-
-- „Dane otwarte zmieniają rzeczywistość.”
-
-### 4. Interesariusze
+### 3.2 Interesariusze
 
 Tworzony system zarządzania publicznymi danymi otwartymi musi odpowiadać na potrzeby różnych grup interesariuszy. Poniżej przedstawiono szczegółową charakterystykę interesariuszy oraz określono kluczowe interesy każdej z grup.
 
-#### 4.1 Administrator systemu
+#### 3.2.1 Administrator systemu
 
 _Osoba lub grupa osób odpowiedzialna za bieżące zarządzanie, konfigurowanie i monitorowanie systemu._
 
@@ -430,7 +470,7 @@ _Osoba lub grupa osób odpowiedzialna za bieżące zarządzanie, konfigurowanie 
 
 - Łatwość monitorowania stanu systemu, diagnostyka problemów oraz szybkie reagowanie na awarie.
 
-#### 4.2 Użytkownicy końcowi
+#### 3.2.2 Użytkownicy końcowi
 
 _Osoby, które będą bezpośrednio korzystać z danych dostępnych w systemie (obywatele, badacze, studenci, dziennikarze, aktywiści społeczni, analitycy danych, firmy komercyjne)._
 
@@ -446,7 +486,7 @@ _Osoby, które będą bezpośrednio korzystać z danych dostępnych w systemie (
 
 - Możliwość subskrypcji i otrzymywania powiadomień o aktualizacjach interesujących danych.
 
-#### 4.3 Klienci organizacji
+#### 3.2.3 Klienci organizacji
 
 _Podmioty gospodarcze lub osoby fizyczne, które współpracują lub korzystają z usług organizacji dostarczającej dane._
 
@@ -458,7 +498,7 @@ _Podmioty gospodarcze lub osoby fizyczne, które współpracują lub korzystają
 
 - Gwarancja wysokiej jakości oraz aktualności udostępnianych danych.
 
-#### 4.4 Inwestorzy i sponsorzy
+#### 3.2.4 Inwestorzy i sponsorzy
 
 _Podmioty finansujące projekt oraz oczekujące pozytywnego wpływu inwestycji na społeczeństwo lub gospodarkę lokalną._
 
@@ -470,7 +510,7 @@ _Podmioty finansujące projekt oraz oczekujące pozytywnego wpływu inwestycji n
 
 - Poprawa wizerunku oraz zwiększenie zaufania obywateli wobec instytucji publicznych.
 
-#### 4.5 Zamawiający
+#### 3.2.5 Zamawiający
 
 _Osoby podejmujące decyzje strategiczne związane z wdrożeniem systemu._
 
@@ -482,7 +522,7 @@ _Osoby podejmujące decyzje strategiczne związane z wdrożeniem systemu._
 
 - Realizacja celów politycznych, społecznych oraz strategicznych poprzez wdrożenie skutecznego systemu danych otwartych.
 
-#### 4.6 Dział IT
+#### 3.2.6 Dział IT
 
 _Osoby odpowiedzialne za utrzymanie, rozwój techniczny oraz administrację infrastruktury informatycznej obsługującej system._
 
@@ -496,7 +536,7 @@ _Osoby odpowiedzialne za utrzymanie, rozwój techniczny oraz administrację infr
 
 - Zapewnienie skalowalności, bezpieczeństwa oraz ciągłej aktualizacji systemu.
 
-#### 4.7 Partnerzy i integratorzy danych
+#### 3.2.7 Partnerzy i integratorzy danych
 
 _Zewnętrzne organizacje i instytucje dostarczające dane lub współpracujące z systemem na zasadzie integracji lub wymiany danych._
 
@@ -508,7 +548,7 @@ _Zewnętrzne organizacje i instytucje dostarczające dane lub współpracujące 
 
 - Szybka walidacja oraz możliwość błyskawicznego publikowania aktualizacji danych po stronie platformy.
 
-#### 4.8 Analitycy i eksperci ds. danych
+#### 3.2.8 Analitycy i eksperci ds. danych
 
 _Osoby zajmujące się analizą danych oraz ich wykorzystaniem do tworzenia raportów, analiz lub prognoz (badacze, specjaliści ds. urbanistyki, transportu, jakości powietrza itp.)._
 
@@ -520,7 +560,7 @@ _Osoby zajmujące się analizą danych oraz ich wykorzystaniem do tworzenia rapo
 
 - Łatwe cytowanie oraz generowanie poprawnych opisów bibliograficznych do publikacji naukowych.
 
-#### 4.9 Społeczność lokalna (obywatele)
+#### 3.2.9 Społeczność lokalna (obywatele)
 
 _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośredni wpływ na wykorzystanie danych publicznych._
 
@@ -532,9 +572,9 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
 - Uzyskanie wymiernych korzyści społecznych i poprawa jakości życia dzięki efektywnemu wykorzystaniu danych.
 
-### 5. Cechy systemu
 
-#### 5.1 Cechy funkcjonalne
+
+### 3.3 Cechy funkcjonalne
 
 - **(CF0001) Rejestracja i zarządzanie użytkownikami**
 
@@ -685,7 +725,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Opis**:  
    System musi zapewniać możliwość dwuskładnikowego uwierzytelniania użytkowników przy pomocy standardu OAuth2.0.
 
-#### 5.1.1 Pomysły na przyszłość
+#### 3.3.1 Pomysły na przyszłość
 
 - **(CFP0001) Odpłatne udostępnianie wybranych danych w modelu subskrypcyjnym**
 
@@ -750,7 +790,7 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
   **Opis**:  
    System powinien wspierać integrację z modelami sztucznej inteligencji, takimi jak ChatGPT, umożliwiając użytkownikom prowadzenie interaktywnych analiz oraz generowanie wniosków na podstawie danych.
 
-#### 5.2 Cechy jakościowe
+#### 3.4 Cechy jakościowe
 
 - **(CJU0001) Intuicyjny i łatwy w obsłudze interfejs użytkownika**
 
@@ -1131,3 +1171,1022 @@ _Mieszkańcy oraz społeczność lokalna, którzy mają bezpośredni lub pośred
 
   **Akceptowalne wartości pomiaru**:  
    ≤30 minut.
+
+---
+
+## 4. Przypadki użycia
+
+### 4.1. Użytkownik
+  **Diagram**
+
+  ```puml
+  @startuml
+  left to right direction
+
+  actor "Użytkownik" as User
+
+  usecase "PU001:\nLogowanie do systemu" as PU001
+  usecase "PU002:\nWyświetlenie listy\nzbiorów danych" as PU002
+  usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
+  usecase "PU004:\nWyświetlenie wizualizacji\nzbioru danych" as PU004
+  usecase "PU005:\nZmienienie parametrów\nwizualizacji" as PU005
+  usecase "PU006:\nPobranie dystrybucji\nzbioru danych" as PU006
+  usecase "PU007:\nZgłoszenie uwagi\ndo zbioru danych" as PU007
+  usecase "PU008:\nZasubskrybowanie\nzbioru danych" as PU008
+  usecase "PU009:\nWygenerowanie opisów\nbibliograficznych" as PU009
+  usecase "PU010:\nWyświetlenie listy\nzgłoszonych uwag" as PU010
+  usecase "PU011:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU011
+
+  User --> PU001
+  User --> PU002
+  User --> PU010
+
+  PU002 ..> PU003 : <<invoke>>
+  PU003 ..> PU004 : <<invoke>>
+  PU003 ..> PU007 : <<invoke>>
+  PU003 ..> PU008 : <<invoke>>
+  PU003 ..> PU006 : <<invoke>>
+  PU003 ..> PU009 : <<invoke>>
+  PU004 ..> PU005 : <<invoke>>
+
+  PU010 ..> PU011 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU001) Logowanie do systemu**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik wprowadza swoje dane uwierzytelniające aby uzyskać dostęp do systemu. Po pomyślnym zalogowaniu zostaje przekierowany do ekranu głównego, gdzie ma dostęp do dostępnych funkcji.
+
+  - **(PU002) Wyświetlenie listy zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik przegląda listę dostępnych zbiorów danych w formie listy zawierającej podstawowe informacje. Dane są uporządkowane według określonych kryteriów, umożliwiając ich łatwe przeszukiwanie i filtrowanie.
+
+  - **(PU003) Wyświetlenie szczegółów zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik otwiera szczegółowy widok wybranego zbioru danych. Może również zobaczyć historię aktualizacji oraz opcje pobrania lub subskrypcji.
+
+  - **(PU004) Wyświetlenie wizualizacji zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:
+    Użytkownik ogląda interaktywną wizualizację danych w postaci wykresów, tabel lub map, które przedstawiają kluczowe aspekty zbioru. Może korzystać z narzędzi do manipulacji danymi.
+.
+  - **(PU005) Zmienienie parametrów wizualizacji**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Użytkownik dostosowuje sposób prezentacji danych. Zmiany są dynamicznie odzwierciedlane na ekranie, umożliwiając precyzyjną analizę danych.
+
+  - **(PU006) Pobranie dystrybucji zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik wybiera format i metodę pobrania danych, a następnie inicjuje proces pobierania pliku na swoje urządzenie.
+
+  - **(PU007) Zgłoszenie uwagi do zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik wypełnia formularz zgłoszeniowy, wpisując treść uwagi dotyczącej konkretnego zbioru danych. Zgłoszona uwaga jest następnie przesyłane do weryfikatora systemu w celu weryfikacji.
+
+  - **(PU008) Zasubskrybowanie zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Użytkownik wybiera zbiór danych i aktywuje subskrypcję, aby otrzymywać powiadomienia o jego aktualizacjach. Może również określić preferencje dotyczące formy powiadomień.
+
+  - **(PU009) Wygenerowanie opisów bibliograficznych**
+
+    **Waga:** Niska | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik wybiera zbiór danych i generuje opis bibliograficzny zgodny z wybranym standardem cytowania. Może pobrać opis w wybranym formacie lub skopiować go do schowka.
+
+  - **(PU010) Wyświetlenie listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Użytkownik przegląda listę zgłoszonych uwag dotyczących zbiorów danych. Uwagi są uporządkowane według kryteriów, np. daty dodania lub statusu przetwarzania.
+
+  - **(PU011) Wyświetlenie szczegółów zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:  
+    Użytkownik otwiera szczegóły wybranego zgłoszenia, gdzie znajduje treść zgłoszonej uwagi, jej status oraz ewentualne odpowiedzi zarządcy danych. Może również zobaczyć historię działań związanych ze zgłoszoną uwagą.
+    
+
+### 4.2. Zarządca danych
+  **Diagram**
+
+  ```puml
+  @startuml
+
+  left to right direction
+
+  actor "Zarządca danych" as Admin
+
+  usecase "PU012:\nWyświetlenie listy\nzbiorów danych" as PU012
+  usecase "PU013:\nDodanie\nzbioru danych" as PU013
+  usecase "PU014:\nEdytowanie\nzbioru danych" as PU014
+  usecase "PU015:\nUsunięcie\nzbioru danych" as PU015
+
+  usecase "PU016:\nWyświetlenie zweryfikowanej\nlisty zgłoszonych uwag" as PU016
+  usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+  usecase "PU018:\nZmiana statusu\nzgłoszonej uwagi" as PU018
+
+  usecase "PU019:\nWyświetlenie listy\nschematów" as PU019
+  usecase "PU020:\nDodanie schematu" as PU020
+  usecase "PU021:\nEdytowanie schematu" as PU021
+  usecase "PU022:\nUsunięcie schematu" as PU022
+
+  Admin --> PU012
+  PU012 ..> PU013 : <<invoke>>
+  PU012 ..> PU014 : <<invoke>>
+  PU012 ..> PU015 : <<invoke>>
+
+  Admin --> PU016
+  PU016 ..> PU017 : <<invoke>>
+  PU017 ..> PU018 : <<invoke>>
+
+  Admin --> PU019
+  PU019 ..> PU020 : <<invoke>>
+  PU019 ..> PU021 : <<invoke>>
+  PU019 ..> PU022 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU012) Wyświetlenie listy zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:    
+    Zarządca danych przegląda listę dostępnych zbiorów danych. Lista jest prezentowana w sposób umożliwiający szybkie wyszukiwanie i filtrowanie.
+
+  - **(PU013) Dodanie zbioru danych**
+
+    **Waga:** Wysoka  | **Trudność**: Średnia 
+
+    **Opis**:  
+    Zarządca danych rejestruje nowy zbiór, podając kluczowe informacje. Po zatwierdzeniu zbiór jest dostępny dla użytkowników systemu.
+
+  - **(PU014) Edytowanie zbioru danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych aktualizuje istniejący zbiór, zmieniając jego metadane, formaty dystrybucji lub powiązane schematy. Edycja może wymagać ponownej weryfikacji poprawności danych.
+
+  - **(PU015) Usunięcie zbioru danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych usuwa zbiór danych z systemu.
+
+  - **(PU016) Wyświetlenie zweryfikowanej listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych przegląda listę uwag dotyczących zbiorów danych, które przeszły proces weryfikacji.
+
+  - **(PU017) Wyświetlenie szczegółów zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych przegląda pełne informacje o konkretnej uwadze.
+
+  - **(PU018) Zmiana statusu zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych aktualizuje status zgłoszonej uwagi, np. oznaczając ją jako zaakceptowaną, odrzuconą lub wymagającą dodatkowej analizy. Każda zmiana jest rejestrowana w historii działań.
+
+  - **(PU019) Wyświetlenie listy schematów**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Zarządca danych przegląda dostępne schematy danych. Lista zawiera informacje o strukturze i formacie.
+        
+  - **(PU020) Dodanie schematu**
+
+    **Waga:** Wysoka  | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych tworzy nowy schemat, określając jego strukturę, typy danych i reguły walidacji.
+
+  - **(PU021) Edytowanie schematu**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych aktualizuje istniejący schemat, modyfikując jego strukturę, dodając nowe pola lub zmieniając ich typy. Zmiany mogą wymagać dostosowania istniejących zbiorów danych.
+
+  - **(PU022) Usunięcie schematu**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Zarządca danych usuwa schemat z systemu, co może wymagać wcześniejszej weryfikacji, czy nie jest on powiązany z aktywnymi zbiorami. W razie potrzeby użytkownicy są informowani o konieczności migracji danych.
+
+ 
+### 4.3. Subskrybent
+  **Diagram**
+
+  ```puml
+  @startuml
+  left to right direction
+
+  actor "Subskrybent" as U
+
+  usecase "PU023:\nWyświetlenie listy\nsubskrypcji" as PU023
+  usecase "PU024:\nEdytowanie ustawień\nsubskrypcji" as PU024
+  usecase "PU003:\nWyświetlenie szczegółów\nzbioru danych" as PU003
+
+  U --> PU023
+  PU023 ..> PU024 : <<invoke>>
+  PU023 ..> PU003 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU023) Wyświetlenie listy subskrypcj**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Subskrybent przegląda listę subskrybowanych zbiorów danych. Lista jest uporządkowana w sposób umożliwiający szybkie znalezienie interesujących pozycji.
+
+  - **(PU024) Edytowanie ustawień subskrybcji**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Subskrybent zmienia ustawienia subskrypcji, takie jak preferowany sposób otrzymywania informacji lub status aktywności subskrypcji. Wprowadzone zmiany są natychmiastowo zapisywane w systemie.
+
+
+### 4.4. Dostawca danych
+  **Diagram**
+
+  ```puml
+  @startuml
+  left to right direction
+
+  actor "Dostawca danych" as Provider
+
+  usecase "PU025:\nWyświetlenie listy\nprzypisanych zbiorów danych" as PU025
+  usecase "PU026:\nDodanie dystrybucji" as PU026
+  usecase "PU027:\nEdytowanie dystrybucji" as PU027
+  usecase "PU028:\nUsunięcie dystrybucji" as PU028
+
+  Provider --> PU025
+
+  PU025 ..> PU026 : <<invoke>>
+  PU025 ..> PU027 : <<invoke>>
+  PU025 ..> PU028 : <<invoke>>
+
+  @enduml
+  ```
+
+  - **(PU025) Wyświetlenie listy przypisanych zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Dostawca danych przegląda listę zbiorów, za które jest odpowiedzialny, wraz z informacjami o ich statusie, dacie ostatniej aktualizacji i liczbie powiązanych dystrybucji. Lista jest posortowana według określonych kryteriów dla ułatwienia zarządzania danymi.
+
+  - **(PU026) Dodanie dystrybucji**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Dostawca danych dodaje nową dystrybucję do istniejącego zbioru, określając jej format oraz ścieżkę dostępu. System automatycznie weryfikuje zgodność dystrybucji z wymaganiami przed jej opublikowaniem.
+
+  - **(PU027) Edytowanie dystrybucji**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Dostawca danych aktualizuje istniejącą dystrybucję, zmieniając jej parametry. Po zapisaniu zmian system automatycznie aktualizuje informacje w bazie danych.
+
+  - **(PU028) Usunięcie dystrybucji**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Dostawca danych usuwa dystrybucję z przypisanego zbioru, co skutkuje jej natychmiastowym usunięciem z systemu. W przypadku aktywnych subskrybentów system może wysłać automatyczne powiadomienie o zmianie.
+
+
+### 4.5. Czas
+  **Diagram**
+
+  ```puml
+  @startuml
+  left to right direction
+
+  actor "Czas" as Time
+
+  usecase "PU029:\nWysłanie powiadomienia\no zmianach w zbiorze danych\nsubskrybentom" as PU029
+  usecase "PU030:\nWygenerowanie raportów\nczęstotliwości pobrań\nzbiorów danych" as PU030
+  usecase "PU031:\nStworzenie backup'u" as PU031
+  usecase "PU032:\nEksport danych do\nsystemu CKAN" as PU032
+
+  Time --> PU029
+  Time --> PU030
+  Time --> PU031
+  Time --> PU032
+
+  @enduml
+  ```
+
+  - **(PU029) Wysłanie powiadomień o zmianach w zbiorze danych subskrybentom**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    System automatycznie wysyła powiadomienia do subskrybentów, informując ich o zmianach w subskrybowanych zbiorach danych. Powiadomienia są dostarczane zgodnie z preferencjami użytkownika.
+
+  - **(PU030) Wygenerowanie raportów częstotliwości pobrań zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    System okresowo generuje raporty prezentujące częstotliwość pobierania zbiorów danych przez użytkowników, z podziałem na okresy czasowe i typy dystrybucji. 
+
+  - **(PU031) Stworzenie backup'u**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    System automatycznie tworzy kopie zapasowe zbiorów danych oraz ich metadanych w określonych odstępach czasu. Backup jest przechowywany w zabezpieczonym repozytorium i może zostać przywrócony w przypadku awarii.
+
+  - **(PU032) Eksport danych do systemu CKAN**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    System eksportuje metadane do systemu CKAN.
+
+
+### 4.6. Weryfikator
+  **Diagram**
+
+  ```puml
+  @startuml
+  left to right direction
+
+  actor "Weryfikator" as Verifier
+
+  usecase "PU033:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU033
+  usecase "PU034:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
+  usecase "PU035:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
+  usecase "PU036:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU036
+
+  usecase "PU037:\nWyświetlenie listy\nzgłoszonych uwag" as PU037
+  usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+  usecase "PU038:\nPrzesłanie zgłoszonej uwagi\ndo zarządcy danych" as PU038
+  usecase "PU039:\nOdrzucenie zgłoszonej\nuwagi" as PU039
+
+  usecase "PU040:\nWygenerowanie raportu\njakości danych" as PU040
+
+  Verifier --> PU033
+  Verifier --> PU037
+  Verifier --> PU040
+
+  PU033 ..> PU034 : <<invoke>>
+  PU034 ..> PU035 : <<invoke>>
+  PU034 ..> PU036 : <<invoke>>
+
+  PU037 ..> PU017 : <<invoke>>
+  PU017 ..> PU038 : <<invoke>>
+  PU017 ..> PU039 : <<invoke>>
+
+  @enduml
+  ```
+  - **(PU033) Wyświetlenie listy zbiorów danych**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:    
+    Weryfikator przegląda listę dostępnych zbiorów danych w systemie. Zbiory mogą być filtrowane i sortowane według wybranych kryteriów.
+
+  - **(PU034) Wyświetlenie wprowadzonych zmian w zbiorze danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Weryfikator przegląda szczegóły wprowadzonych zmian w zbiorze danych. Zmiany są przedstawiane w przejrzysty sposób, umożliwiając ich dokładną weryfikację.
+
+  - **(PU035) Zatwierdzenie wprowadzonych zmian w zbiorze danych**
+
+    **Waga:** Wysoka | **Trudność**: Średnia 
+
+    **Opis**:  
+    Weryfikator zatwierdza wprowadzone zmiany w zbiorze danych po ich weryfikacji. Zatwierdzenie zmian sprawia, że stają się one częścią ostatecznego zbioru danych w systemie.
+
+  - **(PU036) Odrzucenie wprowadzonych zmian w zbiorze danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Weryfikator odrzuca wprowadzone zmiany w zbiorze danych, jeśli zmiany nie spełniają określonych standardów lub zawierają błędy.
+
+  - **(PU037) Wyświetlenie listy zgłoszonych uwag**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:  
+    Weryfikator przegląda listę zgłoszonych uwag dotyczących jakości danych.
+
+  - **(PU038) Przesłanie zgłoszonej uwagi do zarządcy danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia 
+
+    **Opis**:  
+    Weryfikator przesyła zgłoszoną uwagę do zarządcy danych w celu dalszego rozpatrzenia. Przesłanie uwagi obejmuje szczegóły dotyczące problemu, który wymaga interwencji.
+
+  - **(PU039) Odrzucenie zgłoszonej uwagi**
+
+    **Waga:** Średnia | **Trudność**: Niska 
+
+    **Opis**:  
+    Weryfikator odrzuca zgłoszoną uwagę, jeśli uzna ją za niezasadną. Odrzucenie uwagi oznacza, że nie będzie ona więcej rozpatrywana.
+
+  - **(PU040) Wygenerowanie raportu jakości danych**
+
+    **Waga:** Średnia | **Trudność**: Średnia
+
+    **Opis**:  
+    Weryfikator tworzy raport podsumowujący jakość danych w systemie. Raport może być zapisany w wybranym formacie.
+
+
+### 4.7. Administrator
+  **Diagram**
+
+  ```puml
+  @startuml
+  left to right direction
+
+  actor "Administrator" as Admin
+
+  usecase "PU041:\nWyświetlenie\nlogów systemu" as PU041
+  usecase "PU042:\nWyświetlenie listy\nużytkowników" as PU042
+  usecase "PU043:\nNadanie uprawnień\nużytkownikowi" as PU043
+  usecase "PU044:\nDodanie konta\nużytkownika" as PU044
+  usecase "PU045:\nEdytowanie konta\nużytkownika" as PU045
+  usecase "PU046:\nUsunięcie konta\nużytkownika" as PU046
+  usecase "PU047:\nZmienienie parametrów\nsystemu" as PU047
+
+  Admin --> PU041
+  Admin --> PU042
+  Admin --> PU047
+
+  PU042 ..> PU043 : <<invoke>>
+  PU042 ..> PU044 : <<invoke>>
+  PU042 ..> PU045 : <<invoke>>
+  PU042 ..> PU046 : <<invoke>>
+
+  @enduml
+  ```
+  - **(PU041) Wyświetlenie logów systemu**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Administrator przegląda logi systemowe. Logi mogą być filtrowane.
+
+  - **(PU042) Wyświetlenie listy użytkowników**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Administrator przegląda listę aktywnych kont użytkowników wraz z ich danymi. Możliwe jest sortowanie i wyszukiwanie użytkowników według wybranych kryteriów.
+
+  - **(PU043) Nadanie uprawnień użytkownikowi**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Administrator przypisuje użytkownikowi odpowiednie uprawnienia, wybierając z dostępnych ról i poziomów dostępu. Po zapisaniu zmian użytkownik może korzystać z dodatkowych funkcji systemu zgodnie z nadanymi uprawnieniami.
+    
+  - **(PU044) Dodanie konta użytkownika**
+
+    **Waga:** Wysoka | **Trudność**: Średnia
+
+    **Opis**:  
+    Administrator tworzy nowe konto użytkownika, podając jego dane oraz przypisując odpowiednią rolę.
+
+  - **(PU045) Edytowanie konta użytkownika**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Administrator aktualizuje dane konta użytkownika, zmieniając dane lub przypisane role. Zmiany są od razu zapisywane i obowiązują przy kolejnym logowaniu użytkownika.
+
+  - **(PU046) Usunięcie konta użytkownika**
+
+    **Waga:** Średnia | **Trudność**: Niska
+
+    **Opis**:  
+    Administrator usuwa konto użytkownika z systemu, dezaktywując dostęp i usuwając powiązane dane zgodnie z polityką retencji. Usunięcie konta może wymagać potwierdzenia decyzji.
+    
+  - **(PU047) Zmienienie parametrów systemu**
+
+    **Waga:** Wysoka | **Trudność**: Wysoka
+
+    **Opis**:  
+    Administrator konfiguruje kluczowe parametry systemu, takie jak ustawienia bezpieczeństwa, limity dostępu czy opcje integracji zewnętrznych.
+    
+---
+
+## 5 Słownik dziedziny
+
+### **Zbiór danych**
+
+**Opis:**
+Zestaw powiązanych ze sobą informacji.
+
+**Atrybuty:**
+
+* `identyfikator: string`
+* `licencja dostępu: Licencja` (enum)
+* `modyfikacje: Data [0..*]`
+* `opis: string [1..*]`
+* `słowa kluczowe: list<string>`
+* `tytul: string [1..*]`
+* `wersja: int`
+
+
+
+### **Punkt kontaktowy**
+
+**Opis:**
+Dane osoby lub organizacji kontaktowej.
+
+**Atrybuty:**
+
+* `adres: string`
+* `email: string`
+* `nazwa: string`
+* `telefon: string`
+
+
+
+### **Dystrybucja danych**
+
+**Opis:**
+Konkretna forma udostępnienia zbioru danych.
+
+**Atrybuty:**
+
+* `format: Format` (enum)
+* `opis: string [1..*]`
+* `tytul: string [1..*]`
+* `url: string`
+
+
+
+### **Schemat danych**
+
+**Opis:**
+Definicja struktury zbioru danych.
+
+**Atrybuty:**
+
+* `nazwa: string`
+* `opis: string`
+* `struktura: string [1..*]`
+* `wersja: int`
+
+
+
+### **Uwaga do zbioru danych**
+
+**Opis:**
+Komentarz lub sugestia dotycząca zbioru danych.
+
+**Atrybuty:**
+
+* `data: Data`
+* `dystrybucja: Format` (enum)
+* `tekst: string`
+
+
+
+### **Użytkownik**
+
+**Opis:**
+Osoba lub system korzystający z portalu.
+
+**Atrybuty:**
+
+* `imie: string [0..1]`
+* `nazwisko: string [0..1]`
+
+
+
+### **Parametry wizualizacji**
+
+**Opis:**
+Ustawienia konfigurujące wizualizację danych.
+
+**Atrybuty:**
+
+* `motyw: motyw` (enum)
+* `zakres danych: Zakres danych` (enum)
+
+
+
+### **Subskrypcja**
+
+**Opis:**
+Mechanizm powiadamiania o zmianach w zbiorze danych.
+
+**Atrybuty:**
+
+* `częstotliwość: int`
+* `typ zmiany: typ zmiany` (enum)
+
+
+
+### **Powiadomienie**
+
+**Opis:**
+Informacja wysyłana w ramach subskrypcji.
+
+**Atrybuty:**
+
+* `data: Data`
+
+
+
+### **Wizualizacja**
+
+**Opis:**
+Definicja sposobu graficznej prezentacji danych.
+
+**Atrybuty:**
+
+* `rodzaj wizualizacji: Rodzaj wizualizacji` (enum)
+
+
+### **Dane Logowania**
+
+**Opis:**
+Dane uwierzytelniające użytkownika.
+
+**Atrybuty:**
+
+* `email: string`
+* `haslo: string`
+* `nazwa użytkownika: string`
+
+
+
+### **Typy Danych i Wyliczeniowe**
+
+* **`Data` (DataType):** Struktura przechowująca: `Dzien: int`, `Godzina: int`, `Miesiac: int`, `Minuta: int`, `Rok: int`, `Sekunda: int`.
+* **`Rodzaj wizualizacji` (Enum):** `Wykres`, `Tekst`, `Zdjęcie`, `Tabela`.
+* **`typ zmiany` (Enum):** `nowa wersja`, `zmiana licencji`, `zmiana w punktach kontaktowych`, `zmiana danych`, `zmiana metadanych zbioru`.
+* **`Zakres danych` (Enum):** `Czasowy`, `Geograficzny`.
+* **`motyw` (Enum):** `jasny`, `ciemny`.
+* **`Format` (Enum):** `csv`, `json`, `xml`, `api`, `xlsx`,`api`.
+* **`Licencja` (Enum):** `Publiczna`, `Niepubliczna`.
+
+
+### Diagram
+![Diagram słownika dziedziny](Obrazki%20do%20dokumentacji/slownik_dziedziny_diagram.png "Diagram Słownika Dziedziny")
+
+---
+
+ ### 6. Wymagania jakościowe
+#### (J0001) Wyszukiwanie zbiorów danych przy typowym obciążeniu
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Efektywność wydajnościowa*                                                                                                                 |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                                 |
+| **Sposób pomiaru**     | Wykonanie testów obciążeniowych (np. za pomocą JMeter) na próbie 1000 operacji wyszukiwania, przy użyciu oprogramowania pomiarowego (dokładność 0,01 sekundy). |
+| **Oczekiwana wartość** | Średni czas wyszukiwania ≤ 0,5 sekundy; odchylenie standardowe ≤ 0,1 sekundy.                                                              |
+
+
+
+#### (J0002) Wyszukiwanie zbiorów danych przy maksymalnym obciążeniu
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Efektywność wydajnościowa*                                                                                                                 |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Testy wydajnościowe symulujące 100 000 równoczesnych użytkowników (np. przy użyciu Gatling) oraz 100 prób przy różnych poziomach obciążenia. |
+| **Oczekiwana wartość** | Średni czas wyszukiwania ≤ 3 sekundy przy maksymalnym obciążeniu; najgorszy wynik nie przekracza 5 sekund.                                   |
+
+
+
+#### (J0003) Obsługa zapytań na sekundę
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Efektywność wydajnościowa*                                                                                                                 |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Przeprowadzenie testów obciążeniowych, mierzenie liczby zapytań przetwarzanych na sekundę przy użyciu narzędzia (np. Apache JMeter).        |
+| **Oczekiwana wartość** | System przetwarza minimum 300 zapytań na sekundę, przy zachowaniu stabilności (300–320 zapytań/s).                                           |
+
+
+
+#### (J0004) Minimalizacja zużycia zasobów serwera
+
+|                        |                                                                                                                  |
+| ---------------------: | ---------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Efektywność wydajnościowa*                                                                                       |
+| **Priorytet**          | *Niski*                                                                                                          |
+| **Trudność**           | *Średnia*                                                                                                        |
+| **Sposób pomiaru**     | Monitoring zasobów serwera przy symulacji 50 000 jednoczesnych użytkowników.                                      |
+| **Oczekiwana wartość** | Zużycie CPU poniżej 50%, zużycie RAM poniżej 70%.                                                                  |
+
+
+
+#### (J0005) Integracja z systemem CKAN
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Kompatybilność*                                                                                                                          |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Przeprowadzenie testów integracyjnych – weryfikacja mapowania danych oraz wymiany metadanych przez API CKAN, przy użyciu testów automatycznych. |
+| **Oczekiwana wartość** | 100% zgodności przesyłu metadanych ze specyfikacją CKAN; brak błędów mapowania w 100% przypadków.                                            |
+
+
+
+#### (J0006) Kompatybilność z popularnymi przeglądarkami internetowymi
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Kompatybilność*                                                                                                                          |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Przeprowadzenie testów kompatybilności przy użyciu narzędzi automatycznych (np. Selenium) na przeglądarkach: Chrome, Firefox, Edge oraz Safari. |
+| **Oczekiwana wartość** | 95% lub więcej przypadków testowych wykonanych poprawnie we wszystkich wymienionych przeglądarkach.                                         |
+
+
+
+#### (J0007) Kompatybilność z systemem CEPiK
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Kompatybilność*                                                                                                                          |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Testy integracyjne z API systemu CEPiK, weryfikacja przesyłu danych oraz rejestracji pojazdów przy różnych poziomach obciążenia.              |
+| **Oczekiwana wartość** | 98% poprawności przesyłu danych przy przepustowości zgodnej z wymaganiami API CEPiK.                                                       |
+
+
+
+#### (J0008) Intuicyjny interfejs z kontekstowymi podpowiedziami
+
+|                        |                                                                                                           |
+| ---------------------: | :--------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Użyteczność*                                                                                             |
+| **Priorytet**          | *Kluczowy*                                                                                                |
+| **Trudność**           | *Średnia*                                                                                                 |
+| **Sposób pomiaru**     | Ankieta SUS przeprowadzona po zakończeniu sesji testowej z użytkownikami.                                   |
+| **Oczekiwana wartość** | Wynik powyżej 90 punktów.                                                                                   |
+
+
+
+#### (J0009) Dostępność zgodna z WCAG 2.1 (AA)
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Użyteczność*                                                                                                                             |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Audyt dostępności z wykorzystaniem narzędzi automatycznych oraz audytu eksperckiego.                                                       |
+| **Oczekiwana wartość** | 100% zgodności z poziomem AA.                                                                                                               |
+
+
+
+#### (J0010) Szybkie dodawanie nowego zbioru danych
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Użyteczność*                                                                                                                             |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Testy użyteczności – pomiar czasu dodania nowego zbioru danych przez 10 użytkowników wykonujących ustalony scenariusz.                       |
+| **Oczekiwana wartość** | Średni czas dodania zbioru danych ≤ 1 minuta; najgorszy wynik nie przekracza 1,5 minuty.                                                    |
+
+
+
+#### (J0011) Obsługa skrótów klawiszowych
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Użyteczność*                                                                                                                             |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Niska*                                                                                                                                   |
+| **Sposób pomiaru**     | Testy funkcjonalne – pomiar liczby operacji wykonanych przy użyciu skrótów w porównaniu z nawigacją tradycyjną, wraz z rejestracją czasu.  |
+| **Oczekiwana wartość** | Skróty skracają czas wykonania operacji o co najmniej 20% w porównaniu do nawigacji; liczba błędów związanych ze skrótami ≤ 2 na 100 operacji. |
+
+
+
+#### (J0012) Czytelność powiadomień
+
+|                        |                                                                                                                                          |
+| ---------------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Użyteczność*                                                                                                                            |
+| **Priorytet**          | *Kluczowy*                                                                                                                               |
+| **Trudność**           | *Średnia*                                                                                                                                |
+| **Sposób pomiaru**     | Ankieta przeprowadzona wśród użytkowników, oceniająca przejrzystość i zrozumiałość powiadomień.                                            |
+| **Oczekiwana wartość** | Średni wynik ankiety ≥ 95%.                                                                                                                |
+
+
+
+#### (J0013) Wysoka dostępność systemu
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Niezawodność*                                                                                                                            |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Monitorowanie systemu przy użyciu narzędzi do pomiaru uptime (np. UptimeRobot) przez okres minimum 1 miesiąca w środowisku produkcyjnym.     |
+| **Oczekiwana wartość** | Uptime ≥ 99,9% (nie więcej niż 43 minuty niedostępności miesięcznie).                                                                     |
+
+
+
+#### (J0014) Stabilność działania przez długi okres
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Niezawodność*                                                                                                                            |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Symulacja ciągłego działania systemu w środowisku testowym przez 30 dni przy rzeczywistym obciążeniu.                                         |
+| **Oczekiwana wartość** | Brak restartów systemu; liczba krytycznych błędów ≤ 1 na 30 dni.                                                                            |
+
+
+
+#### (J0015) Automatyczne kopie zapasowe i przywracanie danych
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Niezawodność*                                                                                                                            |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Symulacja awarii i test przywracania danych, mierzenie czasu od inicjacji przywracania do pełnej operacyjności systemu.                        |
+| **Oczekiwana wartość** | Kopie zapasowe tworzone co 12 godzin; czas przywracania ≤ 10 minut; utrata danych nie przekracza 2 minut operacyjnego czasu.                  |
+
+
+
+#### (J0016) Odporność na błędy użytkownika
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Niezawodność*                                                                                                                            |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Testy manualne oraz analiza zgłoszeń błędów podczas sesji testowych.                                                                      |
+| **Oczekiwana wartość** | ≤ 2 błędy krytyczne na 100 operacji.                                                                                                       |
+
+
+
+#### (J0017) Definicja ról i uprawnień
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Bezpieczeństwo*                                                                                                                          |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Audyt bezpieczeństwa oraz testy penetracyjne skoncentrowane na kontroli dostępu, weryfikacja polityki ról przy użyciu narzędzi audytowych.  |
+| **Oczekiwana wartość** | 100% zgodność z założeniami polityki dostępu; brak możliwości nieautoryzowanego dostępu.                                                    |
+
+
+
+#### (J0018) Odporność na cyberataki
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Bezpieczeństwo*                                                                                                                          |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Wysoka*                                                                                                                                  |
+| **Sposób pomiaru**     | Audyt ekspercki oraz testy penetracyjne.                                                                                                  |
+| **Oczekiwana wartość** | Brak zagrożeń krytycznych lub wysokich.                                                                                                   |
+
+
+
+#### (J0019) Prowadzenie dziennika zdarzeń
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Bezpieczeństwo*                                                                                                                          |
+| **Priorytet**          | *Kluczowy*                                                                                                                                |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Testy audytowe – symulacja operacji, a następnie próba modyfikacji dziennika przy użyciu sum kontrolnych i mechanizmów zabezpieczających.    |
+| **Oczekiwana wartość** | Każda operacja jest niezmiennie zapisywana; wszelkie próby modyfikacji kończą się niepowodzeniem.                                          |
+
+
+
+#### (J0020) Zgodność z wymaganiami RODO
+
+|                        |                                                                                                                                                   |
+| ---------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Bezpieczeństwo*                                                                                                                                 |
+| **Priorytet**          | *Kluczowy*                                                                                                                                       |
+| **Trudność**           | *Wysoka*                                                                                                                                         |
+| **Sposób pomiaru**     | Audyt ekspercki pod kątem zgodności prawnej i technicznej.                                                                                          |
+| **Oczekiwana wartość** | 100% spełnienie wymagań RODO, brak niezgodności.                                                                                                  |
+
+
+
+#### (J0021) Modularność i reużywalność komponentów
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Łatwość utrzymania*                                                                                                                      |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Audyt architektury systemu przeprowadzony przez niezależnych ekspertów, oceniający możliwość modyfikacji pojedynczych modułów bez wpływu na całość. |
+| **Oczekiwana wartość** | Ocena ekspercka ≥ 90% zgodności z wymaganiami modułowości; modyfikacja jednego modułu nie wpływa na działanie innych.                         |
+
+
+
+#### (J0022) Testowalność krytycznych funkcji
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Łatwość utrzymania*                                                                                                                      |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Wykorzystanie narzędzi do analizy pokrycia kodu (np. SonarQube) oraz pomiar czasu wykonania pełnego zestawu testów automatycznych.          |
+| **Oczekiwana wartość** | Pokrycie krytycznych funkcji = 100%; czas wykonania testów ≤ 5 minut.                                                                       |
+
+
+
+#### (J0023) Uruchomienie systemu na różnych systemach operacyjnych
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Przenośność*                                                                                                                             |
+| **Priorytet**          | *Średni*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Testy instalacyjne przeprowadzone na systemach macOS, Windows oraz Linux przy użyciu automatycznych skryptów instalacyjnych oraz manualna weryfikacja funkcjonalności. |
+| **Oczekiwana wartość** | System uruchamia się bez modyfikacji kodu źródłowego na wszystkich trzech platformach; funkcjonalność identyczna (zgodność 100%).          |
+
+#### (J0024) Pokrycie funkcjonalności testami jednostkowymi
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Przydatność funkcjonalna*                                                                                                                             |
+| **Priorytet**          | *Kluczowy*                                                                                                                                  |
+| **Trudność**           | *Średnia*                                                                                                                               |
+| **Sposób pomiaru**     | Analiza pokrycia kodu przy użyciu narzędzia (np. SonarQube, Jacoco). |
+| **Oczekiwana wartość** | Pokrycie funkcjonalności testami jednostkowymi ≥ 95%; brak krytycznych funkcji pozbawionych testów.          |
+
+#### (J0025) Dokładność reakcji na zdarzenia krytyczne
+
+|                        |                                                                                                                                           |
+| ---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Typ**                | *Przydatność funkcjonalna*                                                                                                                             |
+| **Priorytet**          | *Wysoki*                                                                                                                                  |
+| **Trudność**           | *Wysoki*                                                                                                                               |
+| **Sposób pomiaru**     | Testy funkcjonalne symulujące sytuacje krytyczne; wielokrotna walidacja wyników przez niezależne podsystemy. |
+| **Oczekiwana wartość** | 100% poprawnych reakcji w testach regresyjnych; brak rozbieżności w podejmowanych decyzjach systemu.          |
+    
+---
+
+## 7. Wstępna wycena projektu
+
+W wyniku przeprowadzonej analizy oszacowano łączną liczbę punktów przypadków użycia (UCP) na **485,33**. Wartość ta powstała na podstawie 21 przypadków o niskiej trudności, 23 przypadków o średniej trudności oraz 3 przypadków o wysokiej trudności, co dało w sumie **380 punktów UUCW**. Uwzględniono również 7 aktorów systemu, co przełożyło się na **18 punktów UAW**. Zastosowane współczynniki korekcyjne wyniosły: **TCF = 1,065** oraz **ECF = 1,145**. 
+
+Po podstawieniu do wzoru, uzyskano wynik:  
+**UCP = (380 + 18) × 1,065 × 1,145 = 485,33**
+
+Przy założeniu, że jeden punkt UCP odpowiada 28 roboczogodzinom, całkowity nakład pracy niezbędny do realizacji projektu wynosi:  
+**485,33 × 28 = 13 489 godzin**
+
+Wynik ten stanowi podstawę do dalszego planowania harmonogramu oraz alokacji zasobów w projekcie.
+
+

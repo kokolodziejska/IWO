@@ -1,0 +1,30 @@
+@startuml Weryfikator
+left to right direction
+
+actor "Weryfikator" as Verifier
+
+usecase "PU033:\nWyświetlenie listy\nzmienionych zbiorów danych" as PU033
+usecase "PU034:\nWyświetlenie\nwprowadzonych zmian\nw zbiorze danych" as PU034
+usecase "PU035:\nZatwierdzenie\nwprowadzonych zmian\nw zbiorze danych" as PU035
+usecase "PU036:\nOdrzucenie\nwprowadzonych zmian\nw zbiorze danych" as PU036
+
+usecase "PU037:\nWyświetlenie listy\nzgłoszonych uwag" as PU037
+usecase "PU017:\nWyświetlenie szczegółów\nzgłoszonej uwagi" as PU017
+usecase "PU038:\nPrzesłanie zgłoszonej uwagi\ndo zarządcy danych" as PU038
+usecase "PU039:\nOdrzucenie zgłoszonej\nuwagi" as PU039
+
+usecase "PU040:\nWygenerowanie raportu\njakości danych" as PU040
+
+Verifier --> PU033
+Verifier --> PU037
+Verifier --> PU040
+
+PU033 ..> PU034 : <<invoke>>
+PU034 ..> PU035 : <<invoke>>
+PU034 ..> PU036 : <<invoke>>
+
+PU037 ..> PU017 : <<invoke>>
+PU017 ..> PU038 : <<invoke>>
+PU017 ..> PU039 : <<invoke>>
+
+@enduml
