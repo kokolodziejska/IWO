@@ -1,0 +1,23 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> main menu
+02: User <invoke> WyswietlanieListySubskrypcji
+-> rejoin 01
+
+Use case WyswietlanieListySubskrypcji Main scenario
+
+01: Uzytkownik <select> moje subskrybcje
+02: System <read> listaSubskrypcji
+03: System <show> oknoListySubskrypcji
+04: Uzytkownik <select> zamknij
+-> end! Sukces
+
+Data subskrypcja {
+    nazwa: text,
+    linkSzczegoly: text,
+    linkUstawienia: text
+}
+
+Data listaSubskrypcji {
+    subskrypcje: [subskrypcja]
+}
