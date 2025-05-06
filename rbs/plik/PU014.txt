@@ -1,0 +1,43 @@
+Use case Start Main scenario
+00: Zarzadca danych <select> lista zbiorow danych
+01: System <read> lista zbiorow danych
+02: System <show> lista zbiorow danych
+03: Zarzadca danych <invoke> Edytowanie Zbioru Danych
+-> rejoin 02
+
+Use case Edytowanie Zbioru Danych Main scenario
+00: Zarzadca danych <select> zbior danych
+01: System <read> zbior danych
+02: System <show> okno zbioru danych
+03: Zarzadca danych <select> edycja
+04: System <show> formularz edycji zbioru danych
+05: Zarzadca danych <enter> dane zbioru danych
+06: Zarzadca danych <select> zatwierdzenie
+07: System <check> dane zbioru danych
+[ dane zbioru danych ? POPRAWNE ]
+08: System <show> komunikat sukces
+09: Zarzadca danych <select> ok
+-> end ! OK
+
+Scenario
+04: -"- 
+A1: Zarzadca danych <select> anuluj
+-> end ! CANCEL
+
+Scenario
+07: -"- 
+[ dane zbioru danych ? NIEPOPRAWNE ]
+B1: System <show> komunikat niepowodzenie
+B2: Zarzadca danych <select> ok
+-> end ! FAILURE
+
+Data zbior danych {
+  id               : integer,
+  nazwa            : text,
+  opis             : text,
+  data utworzenia  : text
+}
+
+Data lista zbiorow danych {
+  zbiory           : [zbior danych]
+}

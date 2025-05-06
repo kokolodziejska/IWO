@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\smial\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\smial\\.nuget\\packages"
+    ]
+  }
+}
