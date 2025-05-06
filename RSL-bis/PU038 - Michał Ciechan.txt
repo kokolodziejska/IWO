@@ -1,0 +1,51 @@
+Use case Start Main scenario
+00: Weryfikator <select> lista zgloszonych uwag
+01: System <show> okno lista zgloszonych uwag
+02: Weryfikator <select> szczegoly zgloszonej uwagi
+03: System <read> uwaga
+04: System <show> okno szczegolow zgloszonej uwagi
+05: Weryfikator <invoke> Przeslanie zgloszonej uwagi do zarzadcy danych
+-> rejoin 03
+
+Use case Przeslanie zgloszonej uwagi do zarzadcy danych Main scenario
+{uwaga, uwaga ? ZGLOSZONA}
+00: Weryfikator <select> przeslij zgloszona uwage
+01: System <show> formularz przeslania zgloszonej uwagi
+02: Weryfikator <enter> dodatkowe informacje zgloszonej uwagi
+03: Weryfikator <select> przeslij
+04: System <check> dodatkowe informacje zgloszonej uwagi
+[dodatkowe informacje zgloszonej uwagi ? POPRAWNE]
+05: System <update> uwaga
+06: System <show> komunikat poprawnego przeslania zgloszonej uwagi
+07: Weryfikator <select> ok
+-> end ! SUKCES
+
+Scenario
+04: -"-
+[dodatkowe informacje zgloszonej uwagi ? NIEPOPRAWNE]
+A0: System <show> komunikat niepoprawnych dodatkowych informacji zgloszonej uwagi
+A1: Weryfikator <select> ok
+-> rejoin 02
+
+Scenario
+02: -"-
+B0: Weryfikator <select> anuluj
+B1: System <show> komunikat anulowania przeslania zgloszonej uwagi
+B2: Weryfikator <select> ok
+-> end ! NIEPOWODZENIE
+
+Scenario
+B1: -"-
+C0: Weryfikator <select> anuluj
+-> rejoin 02
+
+Data dodatkowe informacje zgloszonej uwagi {
+    szacowana trudnosc: text,
+    uwagi weryfikatora: text
+}
+
+Data uwaga {
+    status: text,
+    tresc: text,
+    dodatkowe informacje: dodatkowe informacje zgloszonej uwagi
+}
