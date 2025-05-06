@@ -1,1 +1,0 @@
-AntlrCSharp C:\Users\Lukasz\Desktop\iwo\rbs\plik C:\Users\Lukasz\Desktop\iwo\rbs\src

@@ -1,0 +1,42 @@
+Use case Start Main scenario
+00: ZarzadcaDanych <select> listazbiorowdanych
+01: System <show> okno listazbiorowdanych
+02: ZarzadcaDanych <invoke> EdytowanieZbioruDanych
+-> rejoin 02
+
+Use case Edytowanie Zbioru Danych Main scenario
+00: ZarzadcaDanych <select> zbiordanych
+01: System <read> zbiordanych
+02: System <show> oknozbiorudanych
+03: ZarzadcaDanych <select> edycja
+04: System <show> formularzedycjizbiorudanych
+05: ZarzadcaDanych <enter> danezbiorudanych
+06: ZarzadcaDanych <select> zatwierdzenie
+07: System <check> danezbiorudanych
+    [danezbiorudanych ? POPRAWNE]
+08: System <show> komunikatsukces
+09: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+04: -"-  
+A1: ZarzadcaDanych <select> anuluj
+-> end ! CANCEL
+
+Scenario
+07: -"-  
+    [danezbiorudanych ? NIEPOPRAWNE]
+B1: System <show> komunikatniepowodzenie
+B2: ZarzadcaDanych <select> ok
+-> end ! FAILURE
+
+Data zbiordanych {
+    id             : integer,
+    nazwa          : text,
+    opis           : text,
+    datautworzenia : text
+}
+
+Data listazbiorowdanych {
+    zbiory         : [zbiordanych]
+}
