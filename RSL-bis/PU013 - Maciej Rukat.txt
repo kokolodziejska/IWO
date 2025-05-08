@@ -1,0 +1,38 @@
+Use case Start Main scenario
+00: ZarzadcaDanych <select> startaplikacji
+01: System <show> okno glowne menu
+02: ZarzadcaDanych <invoke> Dodawanie Zbioru Danych
+-> rejoin 01
+
+Use case Dodawanie Zbioru Danych Main scenario
+01: ZarzadcaDanych <select> dodaj zbior
+02: System <show> formularz dodawaniazbioru
+03: ZarzadcaDanych <enter> danezbioru
+04: ZarzadcaDanych <select> zapisz
+05: System <check> danezbioru
+    [danezbioru ? POPRAWNE]
+06: System <update> danezbioru
+07: System <show> komunikat sukcesdodania
+08: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+05: -"-
+    [danezbioru ? NIEPOPRAWNE]
+A1: System <show> komunikatblednedane
+A2: ZarzadcaDanych <select> zamknij
+-> end ! FAILURE
+
+Scenario
+A1: -"-
+B1: ZarzadcaDanych <select> poprawdane
+-> rejoin 02
+
+Data danezbioru {
+    identyfikator  : text,
+    licencjadostepu: text,
+    opis           : text,
+    slowakluczowe  : text,
+    typetykieta    : text,
+    wersja         : text
+}
