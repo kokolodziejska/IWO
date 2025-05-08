@@ -1,0 +1,59 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> mainmenu
+02: User <select> dataset
+03: User <invoke> SubscribeToDataSetUpdates
+-> rejoin 01
+
+Use case SubscribeToDataSetUpdates Main scenario
+00: User <select> subscribetodataset
+01: System <show> subscriptionform
+02: User <select> smsoption
+03: User <select> emailoption
+04: User <select> confirmsubscription
+05: System <read> notificationchoice
+06: System <check> notificationchoice
+    [notificationchoice ? SELECTED]
+07: System <read> usernotificationstatus
+08: System <check> usernotificationstatus
+    [usernotificationstatus ? OK]
+09: System <read> subscriptionstatus
+10: System <check> subscriptionstatus
+    [subscriptionstatus ? OK]
+11: System <show> confirmationview
+12: User <select> close
+-> end ! SUCCESS
+
+scenario
+06: -"- 
+07: [notificationchoice ? MISSING]
+08: System <show> errormissingnotificationmethod
+09: User <select> retry
+-> end ! MISSINGCHANNEL
+
+scenario
+08: -"- 
+09: [usernotificationstatus ? MISSINGPHONE]
+10: System <show> errormissingphone
+11: User <select> retry
+-> end ! MISSINGPHONE
+
+scenario
+10: -"- 
+11: [subscriptionstatus ? ERROR]
+12: System <show> subscriptionerror
+13: User <select> retry
+-> end ! SERVICEERROR
+
+Data notificationchoice {
+    sms : boolean,
+    email : boolean
+}
+
+Data usernotificationstatus {
+    status : text
+}
+
+Data subscriptionstatus {
+    status : text
+}
