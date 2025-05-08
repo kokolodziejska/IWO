@@ -1,0 +1,48 @@
+Use case Start Main scenario
+00: ZarzadcaDanych <select> listazbiorowdanych
+01: System <show> oknoListyZbiorowDanych
+02: ZarzadcaDanych <select> zbiordanych
+03: ZarzadcaDanych <invoke> UsuniecieZbioruDanych
+-> rejoin 01
+
+Use case UsuniecieZbioruDanych Main scenario
+00: ZarzadcaDanych <select> usunZbiorDanych
+01: System <read> uprawnieniaZarzadcyUsuniecie
+02: System <check> uprawnieniaZarzadcyUsuniecie
+    [uprawnieniaZarzadcyUsuniecie ? OK]
+03: System <show> potwierdzenieUsunieciaZbioru
+04: ZarzadcaDanych <select> potwierdzUsuniecie
+05: System <read> blokadaZbioru
+06: System <check> blokadaZbioru
+    [blokadaZbioru ? BRAK]
+07: System <delete> zbiordanych
+08: System <show> komunikatSukcesUsuniecie
+09: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+02: -"-
+    [uprawnieniaZarzadcyUsuniecie ? BRAK]
+A1: System <show> komunikatBrakUprawnien
+A2: ZarzadcaDanych <select> ok
+-> end ! FAILURE
+
+Scenario
+03: -"-
+B1: ZarzadcaDanych <select> anuluj
+-> end ! CANCEL
+
+Scenario
+06: -"-
+    [blokadaZbioru ? ZABLOKOWANY]
+C1: System <show> komunikatZablokowany
+C2: ZarzadcaDanych <select> ok
+-> end ! FAILURE
+
+Data uprawnieniaZarzadcyUsuniecie {
+    status : text
+}
+
+Data blokadaZbioru {
+    status : text
+}
