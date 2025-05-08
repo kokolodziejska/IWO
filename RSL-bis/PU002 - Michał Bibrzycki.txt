@@ -1,0 +1,78 @@
+Use case Start Main scenario
+00: User   <select> application
+01: System <show>   mainMenu
+02: User   <invoke> ShowDatasetList
+->  rejoin 01
+
+Use case ShowDatasetList Main scenario
+00: User   <select> datasetsTab
+01: System <read>   datasetList
+02: System <check>  datasetList
+[datasetList ? OK]
+03: System <show>   datasetListView
+04: User   <select> closeList
+->  end ! OK
+
+Scenario
+03: -"- 
+A1: User   <select> openDataset
+A2: System <show>   datasetDetailsView
+A3: User   <select> closeDetails
+->  end ! OK
+
+Scenario
+03: -"- 
+B1: User   <select> filterDatasets
+B2: System <read>   datasetList
+B3: System <check>  datasetList
+[datasetList ? OK]
+B4: System <show>   datasetListView
+B5: User   <select> closeList2
+->  end ! OK
+
+Scenario
+B3: -"- 
+[datasetList ? EMPTY]
+C1: System <show>   noDatasetsMessage
+C2: User   <select> closeMessage
+->  end ! FAIL
+
+Scenario
+02: -"- 
+[datasetList ? CONNECTIONERROR]
+D1: System <show>   connectionErrorMessage
+D2: User   <select> closeMessage
+->  end ! FAIL
+
+Scenario
+02: -"- 
+[datasetList ? EMPTY]
+E1: System <show>   noDatasetsMessage
+E2: User   <select> closeMessage2
+->  end ! FAIL
+
+Data dataset {
+  id :            text,
+  license :       text,
+  modification :  text,
+  description :   text,
+  keywords :      text,
+  title :         text,
+  version :       integer
+}
+
+Data datasetList {
+ datasets : [dataset]
+}
+
+View *form*        datasetListView         {Dataset list},
+                   datasetDetailsView      {Dataset details},
+                   noDatasetsMessage       {No datasets},
+                   connectionErrorMessage  {Connection error}
+
+Trigger *tab*      datasetsTab             {Datasets}
+Trigger *button*   openDataset             {Open},
+                   filterDatasets          {Filter},
+                   closeList               {Close},
+                   closeDetails            {Close},
+                   closeMessage            {Close}
