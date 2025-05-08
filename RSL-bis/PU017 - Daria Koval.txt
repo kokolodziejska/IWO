@@ -1,0 +1,28 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> main menu
+02: User <invoke> WyswietlenieSzczegolowZgloszonejUwagi
+-> rejoin 01
+
+
+Use case WyswietlenieSzczegolowZgloszonejUwagi Main scenario
+00: User <select> PokazSzczegolyUwagi
+01: System <show> SzegolyUwagi form
+02: User <select> szczegolyZgloszonejUwagi  
+03: System <read> szczegolyZgloszonejUwagi
+04: System <show> szczegolyZgloszonejUwagi
+05: User <select> Close
+-> end! OK
+
+Scenario  
+01: -"-
+A1: User <select> PokazSzczegolyZBledem
+A2: System <read> szczegolyZgloszonejUwagiZBledem
+A3: System <show> errorMessage
+A4: User <select> Close
+-> rejoin 01
+
+Scenario 
+01: -"-  
+B1: User <select> Cancel  
+-> end ! CANCEL
