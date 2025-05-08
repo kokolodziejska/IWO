@@ -5,7 +5,7 @@ Use case Start Main scenario
 04: System <read> zbiordanych
 05: System <show> oknozbiorudanych
 06: ZarzadcaDanych <invoke> EdytowanieZbioruDanych
--> rejoin 05
+-> rejoin 04
 
 Use case EdytowanieZbioruDanych Main scenario
 00: ZarzadcaDanych <select> edycja
