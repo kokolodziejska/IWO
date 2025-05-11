@@ -1,0 +1,35 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> main menu
+02: User <invoke> WyswietlanieListySubskrypcji
+-> rejoin 01
+
+Use case WyswietlanieListySubskrypcji Main scenario
+
+01: Uzytkownik <select> moje subskrybcje
+02: System <read> listaSubskrypcji
+03: System <check> listaSubskrypcji
+[listaSubskrypcji ? jest]
+04: System <show> oknoListySubskrypcji
+05: Uzytkownik <select> zamknij
+-> end! SUCCESS
+
+Scenario
+03: -"-
+[listaSubskrypcji ? nieMa]
+A1: System <show> komunikatBrakSubskrypcji
+A2: Uzytkownik <select> zamknij
+A3: System <close> komunikatBrakSubskrypcji
+-> end! FAILURE
+
+Data subskrypcja {
+    nazwa: text,
+    linkSzczegoly: text,
+    linkUstawienia: text
+}
+
+Data listaSubskrypcji {
+    subskrypcje: [subskrypcja]
+}
+
+View *message* komunikatBrakSubskrypcji {Brak Subskrypcji}
