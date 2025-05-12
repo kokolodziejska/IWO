@@ -7,10 +7,10 @@ Use case Start Main scenario
 Use case Log in Main scenario
 00: User <select> zaloguj sie
 01: System <show> formularz logowania
-02: User <enter> Formularz logowania
+02: User <enter> formularz logowania
 03: User <select> zaloguj
-04: System <check> logindata
-[logindata ? valid]
+04: System <check> formularz logowania
+[formularz logowania ? valid]
 06: System <show> usermenu
 07: User <select> wyloguj
 -> rejoin 01
@@ -22,14 +22,14 @@ C1: User <invoke> WyswietlanieListySubskrypcji
 
 Scenario
 04: -"- 
-[logindata ? error]
+[formularz logowania ? error]
 A1: System <show> systemerrormessage
 A2: User <select> cancel
 -> end ! FAILURE
 
 Scenario
 04: -"- 
-[logindata ? invalid]
+[formularz logowania ? invalid]
 B1: System <show> invalidloginmessage
 B2: User <select> cancel
 -> end ! FAILURE
@@ -63,7 +63,7 @@ Data listaSubskrypcji {
     subskrypcje: [subskrypcja]
 }
 
-Data logindata {
+Data formularz logowania {
   nazwaUzytkownika : text,
   haslo : text
 }
