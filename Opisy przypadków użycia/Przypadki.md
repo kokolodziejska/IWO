@@ -594,3 +594,50 @@ POST: Stan systemu się nie zmienił
 
 ![okna](PU015.png)
 
+
+## PU037 Wyświetlenie listy zgłoszonych uwag – Dominika Kalinowska (zapomniałam że miałam zrobić nie swój, tylko z kartki :))
+
+**SCENARIUSZ GŁÓWNY**
+
+**PRE**:  
+- Weryfikator jest zalogowany do systemu  
+- W systemie istnieją zgłoszone uwagi  
+
+1. Weryfikator wybiera opcję „Zgłoszone uwagi” w interfejsie systemu  
+2. System pobiera z bazy danych listę zgłoszonych uwag  
+3. System wyświetla listę zgłoszonych uwag z podstawowymi informacjami (ID, tytuł, data zgłoszenia, status)  
+4. Weryfikator może posortować lub przefiltrować listę wg wybranych kryteriów (np. status, data zgłoszenia)  
+5. Weryfikator klika konkretną uwagę  
+6. System przekierowuje do widoku szczegółowego uwagi (PU017)  
+
+**final**: success  
+**POST**: Lista zgłoszonych uwag została wyświetlona, umożliwiono przejście do widoku szczegółowego
+
+---
+
+**SCENARIUSZ ALTERNATYWNY 1 (Brak połączenia z bazą danych)**  
+2a. System nie może połączyć się z bazą danych  
+3a. System wyświetla komunikat: **„Wystąpił problem z połączeniem. Spróbuj ponownie później.”**  
+
+**final**: failure  
+**POST**: Lista nie została załadowana  
+
+---
+
+**SCENARIUSZ ALTERNATYWNY 2 (Brak zgłoszonych uwag)**  
+2b. Baza danych zwraca pustą listę  
+3b. System wyświetla komunikat: **„Brak zgłoszonych uwag.”**  
+
+**final**: failure  
+**POST**: Brak danych do wyświetlenia  
+
+---
+
+**SCENARIUSZ ALTERNATYWNY 3 (Filtrowanie/sortowanie nie zwraca wyników)**  
+4a. Weryfikator ustawia kryteria, które nie pasują do żadnej uwagi  
+5a. System wyświetla komunikat: **„Brak wyników dla wybranych kryteriów.”**  
+
+**final**: canceled  
+**POST**: Widok listy bez zmian  
+
+
