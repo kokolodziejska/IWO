@@ -1,0 +1,75 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> mainmenu
+02: User <invoke> Log in
+-> rejoin 01
+
+Use case Log in Main scenario
+00: User <select> zaloguj sie
+01: System <show> formularz logowania
+02: User <enter> formularz logowania
+03: User <select> zaloguj
+04: System <check> formularz logowania
+[formularz logowania ? valid]
+06: System <show> usermenu
+07: User <select> wyloguj
+-> rejoin 01
+
+Scenario
+06: -"- 
+C1: User <invoke> WyswietlanieListySubskrypcji
+-> rejoin 06
+
+Scenario
+04: -"- 
+[formularz logowania ? error]
+A1: System <show> systemerrormessage
+A2: User <select> cancel
+-> end ! FAILURE
+
+Scenario
+04: -"- 
+[formularz logowania ? invalid]
+B1: System <show> invalidloginmessage
+B2: User <select> cancel
+-> end ! FAILURE
+
+
+Use case WyswietlanieListySubskrypcji Main scenario
+
+01: Uzytkownik <select> moje subskrybcje
+02: System <read> listaSubskrypcji
+03: System <check> listaSubskrypcji
+[listaSubskrypcji ? jest]
+04: System <show> oknoListySubskrypcji
+05: Uzytkownik <select> zamknij
+-> end! SUCCESS
+
+Scenario
+03: -"-
+[listaSubskrypcji ? nieMa]
+A1: System <show> komunikatBrakSubskrypcji
+A2: Uzytkownik <select> zamknij
+A3: System <close> komunikatBrakSubskrypcji
+-> end! FAILURE
+
+Data subskrypcja {
+    nazwa: text,
+    linkSzczegoly: text,
+    linkUstawienia: text
+}
+
+Data listaSubskrypcji {
+    subskrypcje: [subskrypcja]
+}
+
+Data formularz logowania {
+  nazwaUzytkownika : text,
+  haslo : text
+}
+
+Data currentuser {
+  name : text
+}
+
+View *message* komunikatBrakSubskrypcji {Brak Subskrypcji}
