@@ -1,40 +1,53 @@
 Use case Start Main scenario
 00: ZarzadcaDanych <select> listazbiorowdanych
-01: System <show> okno listazbiorowdanych
-02: ZarzadcaDanych <invoke> EdytowanieZbioruDanych
--> rejoin 02
+02: System <show> oknolistyzbiorowdanych
+03: ZarzadcaDanych <select> szczegolyzbiorudanych
+04: System <read> zbiordanych
+05: System <show> oknozbiorudanych
+06: ZarzadcaDanych <invoke> EdytowanieZbioruDanych
+-> rejoin 04
 
-Use case Edytowanie Zbioru Danych Main scenario
-00: ZarzadcaDanych <select> zbiordanych
-01: System <read> zbiordanych
-02: System <show> oknozbiorudanych
-03: ZarzadcaDanych <select> edycja
-04: System <show> formularzedycjizbiorudanych
-05: ZarzadcaDanych <enter> danezbiorudanych
-06: ZarzadcaDanych <select> zatwierdzenie
-07: System <check> danezbiorudanych
+Use case EdytowanieZbioruDanych Main scenario
+00: ZarzadcaDanych <select> edycja
+01: System <show> formularzedycjizbiorudanych
+02: ZarzadcaDanych <enter> danezbiorudanych
+03: ZarzadcaDanych <select> zatwierdzenie
+04: System <check> danezbiorudanych
     [danezbiorudanych ? POPRAWNE]
-08: System <show> komunikatsukces
-09: ZarzadcaDanych <select> ok
+05: System <show> komunikatsukces
+06: ZarzadcaDanych <select> ok
 -> end ! SUCCESS
 
 Scenario
-04: -"-  
+02: -"-  
 A1: ZarzadcaDanych <select> anuluj
 -> end ! CANCEL
 
 Scenario
-07: -"-  
+04: -"-  
     [danezbiorudanych ? NIEPOPRAWNE]
 B1: System <show> komunikatniepowodzenie
 B2: ZarzadcaDanych <select> ok
 -> end ! FAILURE
 
 Data zbiordanych {
-    id             : integer,
-    nazwa          : text,
-    opis           : text,
-    datautworzenia : text
+    identyfikator    : text,
+    licencjaDostepu  : text,
+    modyfikacje      : text,
+    opis             : text,
+    slowaKluczowe    : text,
+    tytul            : text,
+    wersja           : text
+}
+
+Data danezbiorudanych {
+  identyfikator    : text,
+  licencjaDostepu  : text,
+  modyfikacje      : text,
+  opis             : text,
+  slowaKluczowe    : text,
+  tytul            : text,
+  wersja           : text
 }
 
 Data listazbiorowdanych {
