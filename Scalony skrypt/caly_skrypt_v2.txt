@@ -1,0 +1,208 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> mainmenu
+02: User <invoke> Log in
+-> rejoin 01
+
+Use case Log in Main scenario
+00: User <select> zaloguj sie
+01: System <show> formularz logowania
+02: User <enter> formularz logowania
+03: User <select> zaloguj
+04: System <check> formularz logowania
+[formularz logowania ? valid]
+06: System <show> usermenu
+07: User <select> wyloguj
+-> rejoin 01
+
+Scenario
+06: -"-
+C1: User <invoke> WyswietlanieListySubskrypcji
+-> rejoin 06
+
+Scenario
+06: -"-
+D1: User <invoke> ShowDatasetList
+-> rejoin 06
+
+Scenario
+04: -"-
+[formularz logowania ? error]
+A1: System <show> systemerrormessage
+A2: User <select> cancel
+-> end ! FAILURE
+
+Scenario
+04: -"-
+[formularz logowania ? invalid]
+B1: System <show> invalidloginmessage
+B2: User <select> cancel
+-> end ! FAILURE
+
+Use case WyswietlanieListySubskrypcji Main scenario
+01: Uzytkownik <select> moje subskrybcje
+02: System <read> listaSubskrypcji
+03: System <check> listaSubskrypcji
+[listaSubskrypcji ? jest]
+04: System <show> oknoListySubskrypcji
+05: Uzytkownik <select> zamknij
+-> end! SUCCESS
+
+Scenario
+03: -"-
+[listaSubskrypcji ? nieMa]
+A1: System <show> komunikatBrakSubskrypcji
+A2: Uzytkownik <select> zamknij
+A3: System <close> komunikatBrakSubskrypcji
+-> end! FAILURE
+
+Use case ShowDatasetList Main scenario
+00: User <select> Lista Zbiorow Danych
+01: System <read> datasetList
+02: System <check> datasetList
+[datasetList ? OK]
+03: System <show> datasetListView
+04: User <select> Zamknij Liste
+-> end ! OK
+
+Scenario
+03: -"-
+A1: User <select> Zobacz Szczegoly
+A2: System <show> datasetDetailsView
+A4: User <select> Zamknij Szczegoly
+-> rejoin 01
+
+Scenario
+A2: -"-
+F1: User <invoke> EdytowanieZbioruDanych
+-> rejoin 01
+
+Scenario
+03: -"-
+B1: User <select> Filtruj
+B2: System <show> filterWindow
+B3: User <enter> Filtr Zbiorow Danych
+B4: User <select> Zatwierdz Filtr
+B5: System <read> datasetList
+B6: System <check> datasetList
+[datasetList ? OK]
+-> rejoin 01
+
+Scenario
+B6: -"-
+[datasetList ? EMPTY]
+C1: System <show> noDatasetsMessage
+C2: User <select> Zamknij Powiadomienie
+-> end ! FAIL
+
+Scenario
+02: -"-
+[datasetList ? CONNECTIONERROR]
+D1: System <show> connectionErrorMessage
+D2: User <select> closeMessage
+-> end ! FAIL
+
+Scenario
+02: -"-
+[datasetList ? EMPTY]
+E1: System <show> noDatasetsMessage
+E2: User <select> closeMessage2
+-> end ! FAIL
+
+Use case EdytowanieZbioruDanych Main scenario
+00: ZarzadcaDanych <select> edycja
+01: System <show> formularzedycjizbiorudanych
+02: ZarzadcaDanych <enter> danezbiorudanych
+03: ZarzadcaDanych <select> zatwierdzenie
+04: System <check> danezbiorudanych
+[danezbiorudanych ? POPRAWNE]
+05: System <show> komunikatsukces
+06: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+01: -"-
+A1: ZarzadcaDanych <select> anuluj
+-> end ! FAILURE
+
+Scenario
+04: -"-
+[danezbiorudanych ? NIEPOPRAWNE]
+B1: System <show> komunikatniepowodzenie
+B2: ZarzadcaDanych <select> ok
+-> end ! FAILURE
+
+Data subskrypcja {
+    nazwa: text,
+    linkSzczegoly: text,
+    linkUstawienia: text
+}
+
+Data listaSubskrypcji {
+    subskrypcje: [subskrypcja]
+}
+
+Data formularz logowania {
+    nazwaUzytkownika : text,
+    haslo : text
+}
+
+Data currentuser {
+    name : text
+}
+
+Data dataset {
+    id : text,
+    licencja : text,
+    modyfikacja : text,
+    opis : text,
+    slowaKlucz : text,
+    tytul : text,
+    wersja : integer
+}
+
+Data datasetList {
+    datasets : [dataset]
+}
+
+Data Filtr Zbiorow Danych {
+    filtr: text
+}
+
+Data zbiordanych {
+    identyfikator : text,
+    licencjaDostepu : text,
+    modyfikacje : text,
+    opis : text,
+    slowaKluczowe : text,
+    tytul : text,
+    wersja : text
+}
+
+Data danezbiorudanych {
+    identyfikator : text,
+    licencjaDostepu : text,
+    modyfikacje : text,
+    opis : text,
+    slowaKluczowe : text,
+    tytul : text,
+    wersja : text
+}
+
+Data listazbiorowdanych {
+    zbiory : [zbiordanych]
+}
+
+View *message* komunikatBrakSubskrypcji {Brak Subskrypcji}
+
+View *form* datasetListView {Lista Zbiorow Danych},
+            datasetDetailsView {Szczegoly Zbioru Danych},
+            noDatasetsMessage {Brak Zbiorow Danych},
+            connectionErrorMessage {Blad Polaczenia}
+
+Trigger *tab* Lista Zbiorow Danych {Datasets}
+Trigger *button* Zobacz Szczegoly {Open},
+            Filtruj {Filter},
+            Zamknij Liste {Close},
+            Zamknij Szczegoly {Close},
+            Zamknij Powiadomienie {Close}
