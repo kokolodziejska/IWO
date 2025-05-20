@@ -71,6 +71,11 @@ A1: User <invoke> WyswietlenieSzczegolowDanych
 -> rejoin 01
 
 Scenario
+A2: -"-
+F1: User <invoke> EdytowanieZbioruDanych
+-> rejoin 01
+
+Scenario
 03: -"-
 B1: User <select> Filtruj
 B2: System <show> filterWindow
@@ -141,6 +146,30 @@ B1: System <show> komunikatniepowodzenie
 B2: ZarzadcaDanych <select> ok
 -> end ! FAILURE
 
+Use case WyswietlenieZweryfikowanejListyZgloszonychUwag Main scenario
+01: ZarzadcaDanych <select> uwagi do rozpatrzenia
+02: System <read> UwagaDoZbioruDanych
+03: System <show> ListaUwagDoZbiorowDanych
+04: ZarzadcaDanych <select> szczegoly uwagi
+05: ZarzadcaDanych <select> zamknij uwagi do rozpatrzenia
+-> end! Sukces
+
+Scenario
+03: -"-
+A1: ZarzadcaDanych <enter> DaneFiltrowaniaUwagi
+A2: ZarzadcaDanych <select> okej jeden
+A3: System <check> DaneFiltrowaniaUwagi
+[DaneFiltrowaniaUwagi? poprawne]
+A4: System <read> UwagaDoZbioruDanych
+-> rejoin 03
+
+Scenario
+A3: -"-
+[DaneFiltrowaniaUwagi? niepoprawne]
+B1: System <show> KomunikatNiepoprawneDane
+B2: ZarzadcaDanych <select> okej dwa
+-> rejoin 03
+
 Data subskrypcja {
     nazwa: text,
     linkSzczegoly: text,
@@ -202,12 +231,31 @@ Data listazbiorowdanych {
     zbiory : [zbiordanych]
 }
 
+Data StatusUwagi {
+    wartosc: text
+}
+
+Data UwagaDoZbioruDanych {
+    id: text,
+    tytul: text,
+    status: StatusUwagi
+}
+
+Data DaneFiltrowaniaUwagi {
+    zbiordanych: zbiordanych,
+    od: text,
+    do: text
+}
+
 View *message* komunikatBrakSubskrypcji {Brak Subskrypcji}
 
 View *form* datasetListView {Lista Zbiorow Danych},
             datasetDetailsView {Szczegoly Zbioru Danych},
             noDatasetsMessage {Brak Zbiorow Danych},
             connectionErrorMessage {Blad Polaczenia}
+
+View *window* ListaUwagDoZbiorowDanych
+View *message* KomunikatNiepoprawneDane
 
 Trigger *tab* Lista Zbiorow Danych {Datasets}
 Trigger *button* Zobacz Szczegoly {Open},
