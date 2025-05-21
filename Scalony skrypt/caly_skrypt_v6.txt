@@ -26,6 +26,16 @@ D1: User <invoke> ShowDatasetList
 -> rejoin 06
 
 Scenario
+06: -"-
+E1: Weryfikator <invoke> Wyswietlanie listy uwag
+-> rejoin 06
+
+Scenario
+06: -"-
+F1: ZarzadcaDanych <invoke> Dodawanie Zbioru Danych
+-> rejoin 06
+
+Scenario
 04: -"-
 [formularz logowania ? error]
 A1: System <show> systemerrormessage
@@ -146,6 +156,61 @@ B1: System <show> komunikatniepowodzenie
 B2: ZarzadcaDanych <select> ok
 -> end ! FAILURE
 
+Use case Wyswietlanie listy uwag Main scenario
+00: Weryfikator <select> lista uwag
+01: System <show> lista uwag
+02: Weryfikator <select> zamknij
+-> end ! SUKCES
+
+Scenario
+01: -"-
+A1: Weryfikator <invoke> Wyswietlanie szczegolow uwagi
+-> rejoin 01
+
+Use case Wyswietlanie szczegolow uwagi Main scenario
+00: Weryfikator <select> szczegoly uwagi
+01: System <read> uwaga
+02: System <show> szczegoly uwagi
+03: Weryfikator <select> zamknij
+-> end ! SUKCES
+
+Scenario
+02: -"-
+A1: Weryfikator <invoke> Przeslanie zgloszonej uwagi do zarzadcy danych
+-> rejoin 01
+
+Use case Przeslanie zgloszonej uwagi do zarzadcy danych Main scenario
+{uwaga, uwaga ? ZGLOSZONA}
+00: Weryfikator <select> przeslij zgloszona uwage
+01: System <show> formularz przeslania zgloszonej uwagi
+02: Weryfikator <enter> dodatkowe informacje zgloszonej uwagi
+03: Weryfikator <select> przeslij
+04: System <check> dodatkowe informacje zgloszonej uwagi
+[dodatkowe informacje zgloszonej uwagi ? POPRAWNE]
+05: System <update> uwaga
+06: System <show> komunikat poprawnego przeslania zgloszonej uwagi
+07: Weryfikator <select> ok
+-> end ! SUKCES
+
+Scenario
+04: -"-
+[dodatkowe informacje zgloszonej uwagi ? NIEPOPRAWNE]
+A0: System <show> komunikat niepoprawnych dodatkowych informacji zgloszonej uwagi
+A1: Weryfikator <select> ok
+-> rejoin 01
+
+Scenario
+02: -"-
+B0: Weryfikator <select> anuluj
+B1: System <show> komunikat anulowania przeslania zgloszonej uwagi
+B2: Weryfikator <select> ok
+-> end ! ANULOWANO
+
+Scenario
+B1: -"-
+C0: Weryfikator <select> anuluj
+-> rejoin 01
+
 Use case WyswietlenieZweryfikowanejListyZgloszonychUwag Main scenario
 01: ZarzadcaDanych <select> uwagi do rozpatrzenia
 02: System <read> UwagaDoZbioruDanych
@@ -169,6 +234,32 @@ A3: -"-
 B1: System <show> KomunikatNiepoprawneDane
 B2: ZarzadcaDanych <select> okej dwa
 -> rejoin 03
+
+Use case Dodawanie Zbioru Danych Main scenario
+01: ZarzadcaDanych <select> dodaj zbior
+02: System <show> formularz dodawaniazbioru
+03: ZarzadcaDanych <enter> danezbioru
+04: ZarzadcaDanych <select> zapisz
+05: System <check> danezbioru
+    [danezbioru ? POPRAWNE]
+06: System <update> danezbioru
+07: System <show> komunikatSukcesDodania 
+08: ZarzadcaDanych <select> Zamknij
+09: System <close> komunikatSukcesDodania 
+-> end ! SUCCESS
+
+Scenario
+05: -"-
+    [danezbioru ? NIEPOPRAWNE]
+A1: System <show> komunikatBledneDane 
+A2: ZarzadcaDanych <select> zamknij
+A3: System <close> komunikatBledneDane 
+-> end ! FAILURE
+
+Scenario
+A1: -"-
+B1: ZarzadcaDanych <select> popraw dane
+-> rejoin 02
 
 Data subskrypcja {
     nazwa: text,
@@ -203,6 +294,14 @@ Data datasetList {
     datasets : [dataset]
 }
 
+Data danezbioru {
+    identyfikator  : text,
+    tytul	   : text,
+    opis           : text,
+    slowa kluczowe  : text,
+    wersja         : text
+}
+
 Data Filtr Zbiorow Danych {
     filtr: text
 }
@@ -235,10 +334,17 @@ Data StatusUwagi {
     wartosc: text
 }
 
+Data DodatkoweInformacjeZgloszonejUwagi {
+    szacowana trudnosc: text,
+    uwagi weryfikatora: text
+}
+
 Data UwagaDoZbioruDanych {
     id: text,
     tytul: text,
-    status: StatusUwagi
+    status: StatusUwagi,
+    tresc: text,
+    dodatkowe informacje: DodatkoweInformacjeZgloszonejUwagi
 }
 
 Data DaneFiltrowaniaUwagi {
@@ -256,6 +362,9 @@ View *form* datasetListView {Lista Zbiorow Danych},
 
 View *window* ListaUwagDoZbiorowDanych
 View *message* KomunikatNiepoprawneDane
+
+View *message* komunikatBledneDane {Bledne dane}
+View *message* komunikatSukcesDodania {Poprawne dane}
 
 Trigger *tab* Lista Zbiorow Danych {Datasets}
 Trigger *button* Zobacz Szczegoly {Open},
