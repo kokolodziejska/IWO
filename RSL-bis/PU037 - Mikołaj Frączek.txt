@@ -1,0 +1,43 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> mainMenu
+02: User <invoke> ShowIssueList
+-> rejoin 01
+
+Use case ShowIssueList Main scenario
+00: User <select> showIssueList
+01: System <read> issueList
+02: System <show> issueListForm
+03: User <select> cancel
+-> end ! success
+
+Scenario
+02: -"-  
+A1: User <select> checkIfEmpty
+A2: System <show> noIssuesMessage
+A4: User <select> ok
+-> end ! failure
+
+Scenario
+02: -"- 
+B1: User <select> filter
+B2: System <read> filterResult
+B4: System <show> noMatchingIssuesMessage
+B5: User <select> ok
+-> end ! canceled
+
+Data issue {
+  id: integer,
+  title: text,
+  creationDate: date,
+  status: text
+}
+
+Data issueList {
+  issues: [issue]
+}
+
+
+View form issueListForm {Lista zgloszonych uwag}
+View message noIssuesMessage {Brak zgloszonych uwag}
+View message noMatchingIssuesMessage {Brak wynikow filtrowania}
