@@ -40,7 +40,7 @@ Scenario
 G1: Supplier <invoke> AddDistribution
 -> rejoin 06
 
-Scenaro
+Scenario
 06: -"-
 H1: DostawcaDanych <invoke> WyswietlenieListyPrzypisanychZbiorowDanych
 -> rejoin 06
@@ -405,6 +405,7 @@ Use case WyswietlenieListyPrzypisanychZbiorowDanych Main scenario
 03: System <show> oknoListyPrzypisanychZbiorowDanych
 04: DostawcaDanych <enter> kryteriumPosortowaniaDanych
 05: DostawcaDanych <select> zamknij 
+06: System <close> oknoListyPrzypisanychZbiorowDanych
 -> end ! SUCCESS
 
 Scenario
@@ -572,6 +573,8 @@ View *message* komunikatSukcesDodaniaSchematu {Dodales Schemat}
 
 View *kom* komunikatUsuniecia { Dane zostaly usuniete }
 View *kom* potwierdzenieUsuniecia { Czy na pewno chcesz usunac dane? }
+
+View *kom* komunikatBrakPrzypisanychZbiorowDanych {Brak przypisanych zbiorow danych}
 
 Trigger *tab* Lista Zbiorow Danych {Datasets}
 Trigger *button* Zobacz Szczegoly {Open},
