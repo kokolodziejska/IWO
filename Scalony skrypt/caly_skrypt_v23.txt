@@ -374,10 +374,10 @@ Use case Przeslanie zgloszonej uwagi do zarzadcy danych Main scenario
 {uwaga, uwaga ? ZGLOSZONA}
 00: Weryfikator <select> przeslij zgloszona uwage
 01: System <show> formularz przeslania zgloszonej uwagi
-02: Weryfikator <enter> dodatkowe informacje zgloszonej uwagi
+02: Weryfikator <enter> DodatkoweInformacjeZgloszonejUwagi
 03: Weryfikator <select> przeslij
-04: System <check> dodatkowe informacje zgloszonej uwagi
-[dodatkowe informacje zgloszonej uwagi ? POPRAWNE]
+04: System <check> DodatkoweInformacjeZgloszonejUwagi
+[DodatkoweInformacjeZgloszonejUwagi ? POPRAWNE]
 05: System <update> uwaga
 06: System <show> komunikat poprawnego przeslania zgloszonej uwagi
 07: Weryfikator <select> ok
@@ -385,7 +385,7 @@ Use case Przeslanie zgloszonej uwagi do zarzadcy danych Main scenario
 
 Scenario
 04: -"-
-[dodatkowe informacje zgloszonej uwagi ? NIEPOPRAWNE]
+[DodatkoweInformacjeZgloszonejUwagi ? NIEPOPRAWNE]
 A0: System <show> komunikat niepoprawnych dodatkowych informacji zgloszonej uwagi
 A1: Weryfikator <select> ok
 -> rejoin 01
@@ -452,16 +452,6 @@ Scenario
 B1: System <show> komunikatBlednaPosiadnaychUprawnien
 B2: Administrator <select> zamknijc
 -> end ! FAILURE
-
-
-
-
-
-
-
-
-
-
 
 Use case WyswietlenieZweryfikowanejListyZgloszonychUwag Main scenario
 01: ZarzadcaDanych <select> uwagi do rozpatrzenia
