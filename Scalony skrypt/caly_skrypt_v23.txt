@@ -1,0 +1,934 @@
+Use case Start Main scenario
+00: User <select> application
+01: System <show> mainmenu
+02: User <invoke> Log in
+-> rejoin 01
+
+Use case Log in Main scenario
+00: User <select> zaloguj sie
+01: System <show> formularz logowania
+02: User <enter> formularz logowania
+03: User <select> zaloguj
+04: System <check> formularz logowania
+[formularz logowania ? valid]
+06: System <show> usermenu
+07: User <select> wyloguj
+-> rejoin 01
+
+Scenario
+06: -"-
+C1: User <invoke> WyswietlanieListySubskrypcji
+-> rejoin 06
+
+Scenario
+06: -"-
+D1: User <invoke> ShowDatasetList
+-> rejoin 06
+
+Scenario
+06: -"-
+E1: Weryfikator <invoke> Wyswietlanie listy uwag
+-> rejoin 06
+
+
+
+Scenario
+06: -"-
+H1: DostawcaDanych <invoke> WyswietlenieListyPrzypisanychZbiorowDanych
+-> rejoin 06
+
+
+Scenario
+06: -"-
+K1: ZarzadcaDanych <invoke> WyswietlenieListyUzytkownikow
+-> rejoin 06
+
+
+Scenario
+06: -"-
+C1: User <invoke> WyswietlenieListySchematow
+-> rejoin 06
+
+Scenario
+04: -"-
+[formularz logowania ? invalid]
+B1: System <show> komunikatInvalidData
+B2: User <select> zamknij
+B3: System <close> komunikatInvalidData
+-> rejoin 01
+
+Scenario
+04: -"-
+[formularz logowania ? error]
+A1: System <show> komunikatErrorLogownia
+A2: User <select> zamknijKomunikat
+A3: System <close> komunikatErrorLogownia
+-> rejoin 01
+
+
+
+Use case WyswietlenieListySchematow Main scenario
+01: Uzytkownik <select> Lista schematow
+02: System <read> listaschematow
+02: System <check> listaschematow
+[listaschematow ? OK]
+04: System <show> Lista Schematow
+05: Uzytkownik <select> zamknij
+-> end ! SUCCESS
+
+
+Scenario
+04: -"-  
+A1: ZarzadcaDanych <invoke> Edytowanie Schematu Danych
+-> rejoin 02
+
+Scenario
+04: -"-
+B1: ZarzadcaDanych <invoke> Usuniecie Schematu
+-> rejoin 02
+
+Scenario
+04: -"-
+C1: ZarzadcaDanych <invoke> Dodawanie Schematu Danych
+-> rejoin 02
+
+
+
+Use case WyswietlanieListySubskrypcji Main scenario
+01: Uzytkownik <select> moje subskrybcje
+02: System <read> listaSubskrypcji
+03: System <check> listaSubskrypcji
+[listaSubskrypcji ? jest]
+04: System <show> oknoListySubskrypcji
+05: Uzytkownik <enter> listaSubskrypcji
+06: Uzytkownik <select> zamknij
+-> end! SUCCESS
+
+Scenario
+03: -"-
+[listaSubskrypcji ? nieMa]
+A1: System <show> komunikatBrakSubskrypcji
+A2: Uzytkownik <select> zamknij
+A3: System <close> komunikatBrakSubskrypcji
+-> end! FAILURE
+
+Scenario
+05: -"- 
+G1: Uzytkownik <invoke> EdytowanieUstawienSubskrypcji 
+-> rejoin 02
+
+Use case ShowDatasetList Main scenario
+00: User <select> Lista Zbiorow Danych
+01: System <read> datasetList
+02: System <check> datasetList
+[datasetList ? OK]
+03: System <show> datasetListView
+04: User <select> Zamknij Liste
+-> end ! OK
+
+Scenario
+03: -"-
+A1: User <invoke> WyswietlenieSzczegolowDanych
+-> rejoin 01
+
+Scenario
+03: -"-
+F1: User <invoke> EdytowanieZbioruDanych
+-> rejoin 01
+
+Scenario
+03: -"-
+G1: User <invoke> Dodawanie Zbioru Danych
+-> rejoin 01
+
+Scenario
+03: -"-
+B1: User <select> Filtruj
+B2: System <show> filterWindow
+B3: User <enter> Filtr Zbiorow Danych
+B4: User <select> Zatwierdz Filtr
+B5: System <read> datasetList
+B6: System <check> datasetList
+[datasetList ? OK]
+-> rejoin 01
+
+Scenario
+B6: -"-
+[datasetList ? EMPTY]
+C1: System <show> noDatasetsMessage
+C2: User <select> Zamknij Powiadomienie
+-> end ! FAIL
+
+Scenario
+02: -"-
+[datasetList ? CONNECTIONERROR]
+D1: System <show> connectionErrorMessage
+D2: User <select> closeMessage
+-> end ! FAIL
+
+Scenario
+02: -"-
+[datasetList ? EMPTY]
+E1: System <show> noDatasetsMessage
+E2: User <select> closeMessage2
+-> end ! FAIL
+
+Use case WyswietlenieSzczegolowDanych Main scenario
+00: User <select> Zobacz Szczegoly
+01: System <read> dataset
+02: System <check> dataset
+[dataset ? OK]
+03: System <show> datasetDetailsView
+04: User <invoke> Wyswietlenie wizualizacji zbioru danych, Pobranie dystrybucji zbioru danych, Zgloszenie uwagi do zbioru danych, ZasubskrybowanieZbioruDanych, Wygenerowanie opisow bibliograficznych, UsuniecieZbioruDanych
+-> end ! SUCCESS
+
+Scenario
+02: -"-
+[dataset ? CONNECTIONERROR]
+A1: System <show> connectionErrorMessage
+A2: User <select> Zamknij Szczegoly
+-> end ! FAILURE
+
+Scenario
+03: -"-
+B1: User <invoke> PobranieDystrybucji
+-> rejoin 01
+
+Use case UsuniecieZbioruDanych Main scenario
+00: ZarzadcaDanych <select> Usun zbior danych
+01: System <show> potwierdzenieUsuniecia
+02: ZarzadcaDanych <select> Ok
+03: System <show> komunikatUsuniecia
+04: ZarzadcaDanych <select> Ok
+-> end ! ok
+
+Scenario
+01: -"- 
+A1: ZarzadcaDanych <select> Anuluj
+-> end ! CANCEL
+
+
+Use case ZasubskrybowanieZbioruDanych Main scenario
+00: User <select> Subskrybuj zbior danych
+01: System <show> formularzSubskrypcjiZbioruDanych
+02: User <select> SMS
+03: System <read> telefonUzytkownika
+04: System <check> telefonUzytkownika
+[telefonUzytkownika ? TAK]
+05: System <show> zasubskrybowanoSMS
+06: User <select> Ok
+-> end ! SUCCESS
+
+Scenario
+01: -"-
+A1: User <select> EMAIL
+A2: System <read> emailUzytkownika
+A3: System <check> emailUzytkownika
+[emailUzytkownika ? TAK]
+A4: System <show> zasubskrybowanoEmail
+A5: User <select> Ok
+-> end ! SUCCESS
+
+Scenario
+04: -"-
+[telefonUzytkownika ? NIE]
+B1: System <show> nieZasubskrybowanoSMS
+B2: User <select> Ok
+-> end ! FAILURE
+
+Scenario
+A3: -"-
+[emailUzytkownika ? NIE]
+C1: System <show> nieZasubskrybowanoEmail
+C2: User <select> Ok
+-> end ! FAILURE
+
+Use case EdytowanieZbioruDanych Main scenario
+00: ZarzadcaDanych <select> edycja
+01: System <show> formularzedycjizbiorudanych
+02: ZarzadcaDanych <enter> danezbiorudanych
+03: ZarzadcaDanych <select> zatwierdzenie
+04: System <check> danezbiorudanych
+[danezbiorudanych ? POPRAWNE]
+05: System <show> komunikatsukces
+06: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+01: -"-
+A1: ZarzadcaDanych <select> anuluj
+-> end ! FAILURE
+
+Scenario
+04: -"-
+[danezbiorudanych ? NIEPOPRAWNE]
+B1: System <show> komunikatniepowodzenie
+B2: ZarzadcaDanych <select> ok
+-> end ! FAILURE
+
+Use case PobranieDystrybucji Main scenario
+00: User   <select> dystrybuchaTab
+01: System <read>   dystrybucjaList
+02: System <check>  dystrybucjaList
+[dystrybucjaList ? OK]
+03: System <show>   oknoPobieraniaDystrybucji
+04: User   <enter>  dystrybucjaList
+05: User   <select> zamknijInfrmacjeDystrybucji
+->  end ! OK
+
+Scenario
+02: -"-
+[dystrybucjaList ? ERROR]
+A1: System <show>   informacjaBleduDystrybucji
+A2: User   <select> zamknijInformacjaBleduDystrybucji
+->  end ! FAIL
+
+Scenario
+03: -"-
+B1: User   <select> pobierzDystrybucje
+B2: System <read>   distribution
+B3: System <check>  distribution
+[distribution ? OK]
+B4: System <show>   informacjaPobieraniaDystrybucji
+B5: User   <select> zamknijOknoPobieraniaDystrybucji
+->  end ! OK
+
+Scenario
+B3: -"-
+[distribution ? ERROR]
+C1: System <show>   informacjaBleduDystrybucjiB
+C2: User   <select> zamknijInformacjaBleduDystrybucjiB
+->  rejoin 01
+
+Use case Wyswietlanie listy uwag Main scenario
+00: Weryfikator <select> lista uwag
+01: System <read> issueList
+02: System <show> issueListForm
+04: Weryfikator <select> zamknij
+-> end ! SUKCES
+
+Scenario
+02: -"-
+A1: Weryfikator <invoke> Wyswietlanie szczegolow uwagi
+-> rejoin 01
+
+Scenario
+02: -"-  
+A1: User <select> checkIfEmpty
+A2: System <show> noIssuesMessage
+A4: User <select> ok
+-> rejoin 01
+
+Scenario
+02: -"- 
+B1: User <select> filter
+B2: System <read> filterResult
+B4: System <show> noMatchingIssuesMessage
+B5: User <select> ok
+-> rejoin 01
+
+Use case Wyswietlanie szczegolow uwagi Main scenario
+00: Weryfikator <select> szczegoly uwagi
+01: System <read> uwaga
+02: System <show> szczegoly uwagi
+03: Weryfikator <select> zamknij
+-> end ! SUKCES
+
+Scenario
+02: -"-
+A1: Weryfikator <invoke> Przeslanie zgloszonej uwagi do zarzadcy danych
+-> rejoin 01
+
+Scenario
+02: -"-
+B1: ZarzadcaDanych <invoke> ZmianaStatusuZgloszonejUwagi
+-> rejoin 01
+
+Use case ZmianaStatusuZgloszonejUwagi Main scenario
+00: ZarzadcaDanych <select> zmien status uwagi
+01: System <show> formularzZmianyStatusuUwagi
+02: ZarzadcaDanych <enter> nowyStatusUwagi
+03: ZarzadcaDanych <select> zatwierdz
+04: System <check> nowyStatusUwagi
+[nowyStatusUwagi ? POPRAWNY]
+05: System <read> statusUwagi
+06: System <update> statusUwagi
+07: System <show> komunikatSukcesZmianyStatusu
+08: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+04: -"-
+[nowyStatusUwagi ? BLAD_POLACZENIA]
+A1: System <show> komunikatBladZmianyStatusu
+A2: ZarzadcaDanych <select> ok
+-> end ! FAILURE
+
+Scenario
+02: -"-
+B1: ZarzadcaDanych <select> anuluj
+B2: System <close> formularzZmianyStatusuUwagi
+-> end ! CANCELED
+
+Use case Przeslanie zgloszonej uwagi do zarzadcy danych Main scenario
+{uwaga, uwaga ? ZGLOSZONA}
+00: Weryfikator <select> przeslij zgloszona uwage
+01: System <show> formularz przeslania zgloszonej uwagi
+02: Weryfikator <enter> dodatkowe informacje zgloszonej uwagi
+03: Weryfikator <select> przeslij
+04: System <check> dodatkowe informacje zgloszonej uwagi
+[dodatkowe informacje zgloszonej uwagi ? POPRAWNE]
+05: System <update> uwaga
+06: System <show> komunikat poprawnego przeslania zgloszonej uwagi
+07: Weryfikator <select> ok
+-> end ! SUKCES
+
+Scenario
+04: -"-
+[dodatkowe informacje zgloszonej uwagi ? NIEPOPRAWNE]
+A0: System <show> komunikat niepoprawnych dodatkowych informacji zgloszonej uwagi
+A1: Weryfikator <select> ok
+-> rejoin 01
+
+Scenario
+02: -"-
+B0: Weryfikator <select> anuluj
+B1: System <show> komunikat anulowania przeslania zgloszonej uwagi
+B2: Weryfikator <select> ok
+-> end ! ANULOWANO
+
+Scenario
+B1: -"-
+C0: Weryfikator <select> anuluj
+-> rejoin 01
+
+Use case WyswietlenieListyUzytkownikow Main scenario
+00: Administrator <select> Wyswielt Liste Uzytkownikow
+01: System <read> Lista Uzytkownikow
+02: System <check> Lista Uzytkownikow
+[Lista Uzytkownikow ? OK]
+03: System <show> widokListyUzytkownikow
+04: Administrator <select> Zamknij
+-> end ! OK
+
+Scenario
+03: -"- 
+L1: User <invoke> NadanieUprawnienUrzytkwnikowi
+-> rejoin 01
+
+Scenario
+02: -"- 
+[Lista Uzytkownikow ? notOK]
+A1: System <show> Brak polaczenia z baza danych
+A2: Administrator <select> Ok
+-> end ! notOK
+
+
+
+
+Use case NadanieUprawnienUrzytkwnikowi Main scenario
+
+00: Administrator <select> Nadaj Uprawnienia
+01: System <show> konfiguracjaUprawnien
+02: Administrator <enter> konfiguracjaUprawnien
+03: Administrator <select> zatwierdz
+04: System <check> konfiguracjaUprawnien
+[konfiguracjaUprawnien ? valid]
+05: System <show> komunikatZmianyUprawnien
+07: System <close> komunikatZmianyUprawnien
+08: Administrator <select> zamknij
+-> end! SUCCESS
+
+Scenario
+04: -"-
+[konfiguracjaUprawnien ? error]
+A1: System <show> komunikatBlednaKonfiguracjaUprawnien
+A2: Administrator <select> zamknijKomunikat
+-> end ! FAILURE
+
+Scenario
+04: -"-
+[konfiguracjaUprawnien ? errorUprawnienia]
+B1: System <show> komunikatBlednaPosiadnaychUprawnien
+B2: Administrator <select> zamknijc
+-> end ! FAILURE
+
+
+
+
+
+
+
+
+
+
+
+Use case WyswietlenieZweryfikowanejListyZgloszonychUwag Main scenario
+01: ZarzadcaDanych <select> uwagi do rozpatrzenia
+02: System <read> UwagaDoZbioruDanych
+03: System <show> ListaUwagDoZbiorowDanych
+04: ZarzadcaDanych <select> szczegoly uwagi
+05: ZarzadcaDanych <select> zamknij uwagi do rozpatrzenia
+-> end! Sukces
+
+Scenario
+03: -"-
+A1: ZarzadcaDanych <enter> DaneFiltrowaniaUwagi
+A2: ZarzadcaDanych <select> okej jeden
+A3: System <check> DaneFiltrowaniaUwagi
+[DaneFiltrowaniaUwagi? poprawne]
+A4: System <read> UwagaDoZbioruDanych
+-> rejoin 03
+
+Scenario
+A3: -"-
+[DaneFiltrowaniaUwagi? niepoprawne]
+B1: System <show> KomunikatNiepoprawneDane
+B2: ZarzadcaDanych <select> okej dwa
+-> rejoin 03
+
+Use case Dodawanie Zbioru Danych Main scenario
+01: ZarzadcaDanych <select> dodaj zbior
+02: System <show> formularz dodawaniazbioru
+03: ZarzadcaDanych <enter> danezbioru
+04: ZarzadcaDanych <select> zapisz
+05: System <check> danezbioru
+    [danezbioru ? POPRAWNE]
+06: System <update> danezbioru
+07: System <show> komunikatSukcesDodania 
+08: ZarzadcaDanych <select> Zamknij
+09: System <close> komunikatSukcesDodania 
+-> end ! SUCCESS
+
+Scenario
+05: -"-
+    [danezbioru ? NIEPOPRAWNE]
+A1: System <show> komunikatBledneDane 
+A2: ZarzadcaDanych <select> zamknij
+A3: System <close> komunikatBledneDane 
+-> end ! FAILURE
+
+Scenario
+A1: -"-
+B1: ZarzadcaDanych <select> popraw dane
+-> rejoin 02
+
+Use case EdytowanieUstawienSubskrypcji Main scenario
+
+01: Uzytkownik <select> edytuj
+02: System <read> UstawieniaSubskrypcji
+03: System <check> UstawieniaSubskrypcji
+	[UstawieniaSubskrypcji? POPRAWNE]
+04: System <show> FormularzEdycjiUstawienSubskrypcji
+05: Uzytkownik <enter> UstawieniaSubskrypcji
+06: Uzytkownik <select> zapisz
+07: System <check> UstawieniaSubskrypcji
+	[UstawieniaSubskrypcji? POPRAWNE]
+08: System <update> UstawieniaSubskrypcji
+-> end! SUCCESS
+
+Scenario
+03: -"-
+   [UstawieniaSubskrypcji? NIEPOPRAWNE]
+A1: System <show> KomunikatBleduWczytaniaDanych
+A2: Uzytkownik <select> zamknij
+-> end! FAILURE
+
+Scenario
+05: -"-
+A1: Uzytkownik <select> anuluj
+-> end! FAILURE
+
+Scenario
+07: -"-
+   [UstawieniaSubskrypcji ?NIEPOPRAWNE]
+B1: System <show> KomunikatNiepoprawnychDanychUstawien
+B2: Uzytkownik <select> zamknijKomunikatNiepoprawnychDanych
+-> end! FAILURE
+
+Use case AddDistribution Main scenario
+00: Supplier <select> Dodaj Dystrybucje
+01: System <show> addDistributionForm
+02: Supplier <enter> distribution
+03: Supplier <select> submit
+04: System <check> distribution
+    [distribution ? VALID]
+05: System <update> distribution
+06: System <show> distributionAddedMessage
+07: Supplier <select> ok
+-> end ! success
+
+Scenario
+01: -"-
+A1: User <select> cancel
+-> rejoin 01
+
+Scenario
+04: -"-
+	[distribution ? INVALID]
+B1: System <show> invalidDistributionMessage
+B2: Supplier <select> submit
+-> rejoin 01
+
+Use case Dodawanie Schematu Danych Main scenario
+01: ZarzadcaDanych <select> dodaj schemat
+02: System <show> formularz dodawaniaschematu
+03: ZarzadcaDanych <enter> daneschematu
+04: ZarzadcaDanych <select> zapisz
+05: System <check> daneschematu
+    [daneschematu ? POPRAWNE]
+06: System <update> daneschematu
+07: System <show> komunikatSukcesDodaniaSchematu 
+08: ZarzadcaDanych <select> Zamknij
+09: System <close> komunikatSukcesDodaniaSchematu 
+
+-> end ! SUCCESS
+
+Scenario
+05: -"-
+    [daneschematu ? NIEPOPRAWNE]
+A1: System <show> komunikatBledneDaneSchematu 
+A2: ZarzadcaDanych <select> zamknij
+A3: System <close> komunikatBledneDaneSchematu 
+-> end ! FAILURE
+
+Scenario
+A1: -"-
+B1: ZarzadcaDanych <select> popraw dane
+-> rejoin 02
+
+Use case Usuniecie Schematu Main scenario
+00: ZarzadcaDanych <select> Usun Schemat
+01: System <show> Potwierdzenie Usuniecia Schematu
+02: ZarzadcaDanych <select> Potwierdz
+03: System <show> Komunikat Sukcesu Usuniecia
+04: ZarzadcaDanych <select> Ok
+-> end! SUCCESS
+
+Scenario
+01: -"-
+A1: ZarzadcaDanych <select> Anuluj
+-> end! CANCELED
+
+Use case Edytowanie Schematu Danych Main scenario
+00: ZarzadcaDanych <select> Edytuj schemat
+01: System <show> formularz edycjischematu
+02: ZarzadcaDanych <enter> daneschematu
+03: ZarzadcaDanych <select> zapisz
+04: System <check> daneschematu
+    [daneschematu ? POPRAWNE]
+05: System <update> daneschematu
+06: System <show> komunikatSukcesAktualizacjiSchematu
+07: ZarzadcaDanych <select> ok
+-> end ! SUCCESS
+
+Scenario
+02: -"-  
+A1: ZarzadcaDanych <select> anuluj
+-> end ! CANCELED
+
+Scenario
+04: -"-  
+[daneschematu ? NIEPOPRAWNE]
+B1: System <show> komunikatBledneDaneSchematu
+B2: ZarzadcaDanych <select> ok
+-> rejoin 01
+
+Use case WyswietlenieListyPrzypisanychZbiorowDanych Main scenario
+00: DostawcaDanych <select> wyswietl lista przypisanych zbiorow danych
+01: System <read> listaPrzypisanychZbiorowDanych
+02: System <check> listaPrzypisanychZbiorowDanych
+[listaPrzypisanychZbiorowDanych ? jest]
+03: System <show> oknoListyPrzypisanychZbiorowDanych
+04: DostawcaDanych <enter> kryteriumPosortowaniaDanych
+05: DostawcaDanych <select> zamknij 
+06: System <close> oknoListyPrzypisanychZbiorowDanych
+-> end ! SUCCESS
+
+Scenario
+02: -"-
+[listaPrzypisanychZbiorowDanych ? nieMa]
+A1: System <show> komunikatBrakPrzypisanychZbiorowDanych
+A2: DostawcaDanych <select> zamknij
+A3: System <close> komunikatBrakPrzypisanychZbiorowDanych
+-> end ! FAILURE
+
+Scenario
+04: -"-
+B1: DostawcaDanych <select> zatwierdz kryterium
+B2: System <read> listaPrzypisanychZbiorowDanych
+-> rejoin 03
+
+Scenario
+03: -"-
+C1: Supplier <invoke> AddDistribution
+-> rejoin 01
+
+Scenario
+03: -"-
+D1: DostawcaDanych <invoke> Edytowanie dystrybucji
+-> rejoin 01
+
+Use case Edytowanie dystrybucji Main scenario
+01: DostawcaDanych <select> edytuj dystrybucje
+02: System <read> distribution
+03: System <show> formularz edycji dystrybucji
+04: DostawcaDanych <enter> distribution
+05: DostawcaDanych <select> zatwierdz
+06: System <check> distribution
+[distribution ? POPRAWNA]
+07: System <update> distribution
+08: System <show> komunikat powodzenia
+09: DostawcaDanych <select> ok
+-> end ! POWODZENIE
+
+Scenario
+04: -"-
+A1: DostawcaDanych <select> anuluj
+-> end ! ANULOWANO
+
+Scenario
+06: -"-
+[distribution ? NIEPOPRAWNA]
+B1: System <show> komunikat niepoprawnych danych
+B2: DostawcaDanych <select> ok
+-> rejoin 04
+
+Data Uzytkownik {
+	imie: text,
+	nazwisko: text
+}
+
+Data Lista {
+    nazwaSchemtu: text
+}
+
+Data listaschematow {
+    lista : [Lista]
+}
+
+Data ListaUzytkownikow {
+	uzytkownicy: [Uzytkownik]
+}
+
+Data ListaUzytkownikow {
+	uzytkownicy: [Uzytkownik]
+}
+
+Data daneschematu {
+    nazwa    : text,
+    opis     : text,
+    struktura: text,
+    wersja   : text
+}
+
+Data UstawieniaSubskrypcji {
+    czestotliwosc: text,
+    nazwazbiorudanych: text
+}
+
+Data subskrypcja {
+    nazwazbiorudanych: text,
+    czestotliwosc: text,
+    typzmiany: text
+}
+
+Data listaSubskrypcji {
+    subskrypcje: [subskrypcja]
+}
+
+Data formularz logowania {
+    nazwaUzytkownika : text,
+    haslo : text
+}
+
+Data currentuser {
+    name : text
+}
+
+Data emailUzytkownika {
+    czyZweryfikowany: text
+}
+
+Data telefonUzytkownika {
+    czyPodany: text
+}
+
+Data dataset {
+    id : text,
+    licencja : text,
+    modyfikacja : text,
+    opis : text,
+    slowaKlucz : text,
+    tytul : text,
+    wersja : integer
+}
+
+Data datasetList {
+    datasets : [dataset]
+}
+
+Data danezbioru {
+    identyfikator  : text,
+    tytul	   : text,
+    opis           : text,
+    slowa kluczowe  : text,
+    wersja         : text
+}
+
+Data Filtr Zbiorow Danych {
+    filtr: text
+}
+
+Data zbiordanych {
+    identyfikator : text,
+    licencjaDostepu : text,
+    modyfikacje : text,
+    opis : text,
+    slowaKluczowe : text,
+    tytul : text,
+    wersja : text
+}
+
+Data listaPrzypisanychZbiorowDanych {
+    zbiorydanych: [zbiordanych]
+}
+
+Data kryteriumPosortowaniaDanych {
+    kryterium: text
+}
+
+Data danezbiorudanych {
+    identyfikator : text,
+    licencjaDostepu : text,
+    modyfikacje : text,
+    opis : text,
+    slowaKluczowe : text,
+    tytul : text,
+    wersja : text
+}
+
+Data listazbiorowdanych {
+    zbiory : [zbiordanych]
+}
+
+Data statusUwagi {
+    wartosc: text
+}
+
+Data DodatkoweInformacjeZgloszonejUwagi {
+    szacowana trudnosc: text,
+    uwagi weryfikatora: text
+}
+
+Data UwagaDoZbioruDanych {
+    id: text,
+    tytul: text,
+    status: statusUwagi,
+    tresc: text,
+    dodatkowe informacje: DodatkoweInformacjeZgloszonejUwagi
+}
+
+Data DaneFiltrowaniaUwagi {
+    zbiordanych: zbiordanych,
+    od: text,
+    do: text
+}
+
+Data issue {
+  id: integer,
+  title: text,
+  creationDate: date,
+  status: text
+}
+
+Data issueList {
+  issues: [issue]
+}
+
+Data distribution {
+	format: text,
+	opis: text,
+	tytul: text,
+	url: text
+}
+
+Data dystrybucjaList {
+ dystrybucje : [distribution]
+}
+
+
+Data nowyStatusUwagi {
+  status : text
+}
+
+Data historiaDzialan {
+  zmiana : text,
+  data : text,
+  uzytkownik : text
+}
+
+Data konfiguracjaUprawnien {
+    rola: text,
+    poziomyDostepu: text
+}
+
+View *window* komunikatZmianyUprawnien {Pomyslnie nadano nowe uprawnienia}
+View *window* komunikatBlednaKonfiguracjaUprawnien {Wybrano niepoprawna konfiguracje uprawnien}
+View *window* komunikatBlednaPosiadnaychUprawnien {Nie posiadasz uprawnien do nadania nowej roli}
+
+View *message* komunikatBrakSubskrypcji {Brak Subskrypcji}
+
+View *form* datasetListView {Lista Zbiorow Danych},
+            datasetDetailsView {Szczegoly Zbioru Danych},
+            noDatasetsMessage {Brak Zbiorow Danych},
+            connectionErrorMessage {Blad Polaczenia},
+            informacjaPobieraniaDystrybucji {Za chwile rozpocznie sie pobieranie},
+            oknoPobieraniaDystrybucji {Lista dystrybucji},
+            informacjaBleduDystrybucji {Blad systemu},
+	    informacjaBleduDystrybucjiB {Blad pobierania}
+
+View *window* ListaUwagDoZbiorowDanych
+View *message* KomunikatNiepoprawneDane
+
+View *message* komunikatErrorLogownia {Blad logowania}
+View *message* komunikatInvalidData {Wprowadzono niepoprawne dane logowania}
+
+View *message* komunikatBledneDane {Bledne dane}
+View *message* komunikatSukcesDodania {Dodales zbior}
+
+View *message* komunikatBledneDaneSchematu {Bledne dane schematu}
+View *message* komunikatSukcesDodaniaSchematu {Dodales Schemat}
+
+View *kom* komunikatUsuniecia { Dane zostaly usuniete }
+View *kom* potwierdzenieUsuniecia { Czy na pewno chcesz usunac dane? }
+
+View *kom* komunikatBrakPrzypisanychZbiorowDanych {Brak przypisanych zbiorow danych}
+
+View *form* formularzZmianyStatusuUwagi {Formularz zmiany statusu uwagi}
+View *message* komunikatSukcesZmianyStatusu {Status zostal zmieniony pomyslnie}
+View *message* komunikatBladZmianyStatusu {Blad podczas zmiany statusu uwagi}
+
+View *kom* zasubskrybowanoSMS { Zasubskrybowano przez SMS}
+View *kom* zasubskrybowanoEmail { Zasubskrybowano przez Email }
+View *kom* nieZasubskrybowanoSMS { Nie zasubskrybowano przez SMS wprowadz numer telefonu w ustawieniach }
+View *kom* nieZasubskrybowanoEmail { Nie zasubskrybowano przez Email zweryfikuj swoj adres email }
+
+Trigger *tab* Lista Zbiorow Danych {Datasets}
+Trigger *button* Zobacz Szczegoly {Open},
+            Filtruj {Filter},
+            Zamknij Liste {Close},
+            Zamknij Szczegoly {Close},
+            Zamknij Powiadomienie {Close}
+
+Trigger Usun zbior danych
+Trigger Ok
+Trigger Anuluj
+
+View form issueListForm {Lista zgloszonych uwag}
+View message noIssuesMessage {Brak zgloszonych uwag}
+View message noMatchingIssuesMessage {Brak wynikow filtrowania}
+
+View *form* addDistributionForm {Formularz dodawania dystrybucji}
+View *message* distributionAddedMessage {Dodano dystrybucje}
+View *message* invalidDistributionMessage {Niepoprawne dane dystrybucji}
