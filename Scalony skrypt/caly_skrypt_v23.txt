@@ -6,7 +6,7 @@ Use case Start Main scenario
 
 Use case Log in Main scenario
 00: User <select> zaloguj sie
-01: System <show> formularz logowania
+01: System <show> okno formularz logowania
 02: User <enter> formularz logowania
 03: User <select> zaloguj
 04: System <check> formularz logowania
@@ -429,7 +429,7 @@ A2: Administrator <select> Ok
 Use case NadanieUprawnienUrzytkwnikowi Main scenario
 
 00: Administrator <select> Nadaj Uprawnienia
-01: System <show> konfiguracjaUprawnien
+01: System <show> OknokonfiguracjaUprawnien
 02: Administrator <enter> konfiguracjaUprawnien
 03: Administrator <select> zatwierdz
 04: System <check> konfiguracjaUprawnien
@@ -860,7 +860,7 @@ Data historiaDzialan {
 
 Data konfiguracjaUprawnien {
     rola: text,
-    poziomyDostepu: text
+    poziomDostepu: text
 }
 
 View *window* komunikatZmianyUprawnien {Pomyslnie nadano nowe uprawnienia}
